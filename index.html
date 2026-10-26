@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Five useful GitHub projects a day, with practical recommendations in English and Simplified Chinese.">
+  <title>High Star News</title>
+  <style>
+    :root{color-scheme:light;--ink:#182a29;--muted:#536660;--paper:#f5f4ec;--line:#d5dcd1;--accent:#245d49}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:3px}button,select{font:inherit}button,select,.download{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:#fff;color:var(--ink)}button{cursor:pointer}button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #c87827;outline-offset:4px}
+    .shell{max-width:1100px;margin:auto;padding:0 28px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0;border-bottom:1px solid var(--line)}.brand{font-size:17px;font-weight:750;letter-spacing:-.4px}.languages{display:flex;gap:7px}.eyebrow{color:var(--accent);font-size:12px;font-weight:750;letter-spacing:2px;text-transform:uppercase;margin-top:48px}h1{font-size:clamp(34px,5.5vw,62px);line-height:1.12;letter-spacing:-2px;max-width:850px;margin:16px 0 20px}h2{font-size:25px;letter-spacing:-.7px;line-height:1.3}h3{font-size:14px;margin:20px 0 5px}.intro{color:var(--muted);max-width:760px;font-size:18px}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:30px 0}.toolbar label{color:var(--muted)}.download{margin-left:auto;text-decoration:none}.summary{border-top:1px solid var(--line);padding:18px 0 26px;color:var(--muted)}.picks{background:#e4ecdf;border:1px solid #c7d3bd;border-radius:12px;padding:21px 24px;margin-bottom:30px}.picks h2{font-size:20px;margin:0 0 8px}.picks p{margin:0}
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}.project{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}.project:last-child:nth-child(odd){grid-column:1/-1}.project-top{display:flex;justify-content:space-between;gap:14px}.number{font:14px/1.5 ui-monospace,monospace;color:var(--muted)}.stars{font:13px/1.5 ui-monospace,monospace;white-space:nowrap;color:var(--accent)}.project h2{margin:10px 0}.project h2 a{text-decoration:none;color:var(--ink)}.tagline{font-size:17px;color:var(--muted)}.category{font-size:12px;color:var(--accent);font-weight:700}.project p{margin:5px 0 14px}.project ol{padding-left:23px;margin:5px 0}.project li{margin:5px 0}.sources{border-top:1px solid var(--line);padding-top:15px;margin-top:20px;display:flex;gap:15px;flex-wrap:wrap;font-size:14px}.notes{border-top:1px solid var(--line);margin-top:38px;padding-top:20px;color:var(--muted)}footer{padding:24px 0 38px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}.empty{padding:40px 0}
+    @media(max-width:700px){.shell{padding:0 18px}header{align-items:flex-start}.brand{max-width:120px}.languages button{padding:7px 10px}.projects{grid-template-columns:1fr}.project{padding:21px}.download{margin-left:0}h1{letter-spacing:-1px}.eyebrow{margin-top:34px}footer{flex-direction:column;gap:6px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><span class="brand" id="brand"></span><nav class="languages" aria-label="Language"><button type="button" data-lang="zh" lang="zh-Hans">简体中文</button><button type="button" data-lang="en" lang="en">English</button></nav></header>
+    <main id="main"></main>
+    <footer><span id="footer-text"></span><a id="repository" href="https://github.com/yirenyinjiuzui/high-star-news"></a></footer>
+  </div>
+  <script src="reports.js"></script>
+  <script>
+    const copy = {
+      en:{brand:'High Star News',language:'Language',eyebrow:'A daily shortlist · GitHub',title:'Good tools. Clear reasons.',intro:'Five useful projects, explained through what they do, why they matter, and where they could help you.',edition:'Edition',download:'Download report (English)',snapshot:'Star snapshot',projects:'projects',start:'Where to start today',use:'What it does',why:'Why we recommend it',help:'How it could help you',fit:'Who it fits & what to expect',try:'A small first step',maintenance:'Maintenance check',readme:'Official README',updates:'Update evidence',notes:'About this edition',footer:'Selected for usefulness. Popularity is a starting point, not a guarantee.',repository:'View repository',empty:'No editions published yet.',approx:'about '},
+      zh:{brand:'高星项目日报',language:'语言',eyebrow:'每日精选 · 开源项目',title:'好用的工具，清楚的推荐理由。',intro:'每天约五个实用项目，讲清楚有什么用、为什么推荐，以及它们可能怎样帮到你。',edition:'日报日期',download:'下载报告（英文）',snapshot:'星标数核查时间',projects:'个项目',start:'今天从哪里开始',use:'它有什么用',why:'为什么推荐',help:'它可能怎样帮助你',fit:'适合谁与使用门槛',try:'一个小尝试',maintenance:'维护情况核查',readme:'官方说明',updates:'更新依据',notes:'本期说明',footer:'以实用价值筛选。热度是参考，不能保证质量。',repository:'查看仓库',empty:'暂时还没有已发布的日报。',approx:'约 '}
+    };
+    let language = 'en';
+    try { if(localStorage.getItem('high-star-language') === 'zh') language = 'zh'; } catch {}
+    const editions = [...window.REPORTS].sort((a,b)=>b.date.localeCompare(a.date));
+    let selected = editions[0]?.date;
+    const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const paragraph = (label,value) => `<h3>${escape(label)}</h3><p>${escape(value)}</p>`;
+    function render(){
+      const t=copy[language], report=editions.find(r=>r.date===selected);
+      document.documentElement.lang=language==='zh'?'zh-Hans':'en';
+      document.title=t.brand;
+      document.querySelector('meta[name="description"]').content=t.intro;
+      document.querySelector('nav').setAttribute('aria-label',t.language);
+      document.getElementById('brand').textContent=t.brand;
+      document.getElementById('footer-text').textContent=t.footer;
+      document.getElementById('repository').textContent=t.repository;
+      document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===language)));
+      const main=document.getElementById('main');
+      if(!report){main.innerHTML=`<p class="empty">${escape(t.empty)}</p>`;return;}
+      const locale=language==='zh'?'zh-CN':'en-GB';
+      main.innerHTML=`<p class="eyebrow">${escape(t.eyebrow)}</p><h1>${escape(t.title)}</h1><p class="intro">${escape(t.intro)}</p>
+        <div class="toolbar"><label for="edition">${escape(t.edition)}</label><select id="edition">${editions.map(r=>`<option value="${escape(r.date)}" ${r.date===selected?'selected':''}>${escape(r.date)}</option>`).join('')}</select><a class="download" href="reports/${encodeURIComponent(report.date)}.md" download>${escape(t.download)}</a></div>
+        <div class="summary">${report.projects.length} ${escape(t.projects)} · ${escape(t.snapshot)}: ${escape(report.checkedAt)} (UTC+08:00)</div>
+        <aside class="picks"><h2>${escape(t.start)}</h2><p>${escape(report.pick[language])}</p></aside>
+        <section class="projects">${report.projects.map((project,i)=>{
+          const p=project[language];
+          return `<article class="project"><div class="project-top"><span class="number">${String(i+1).padStart(2,'0')}</span><span class="stars">★ ${project.approx?t.approx:''}${project.stars.toLocaleString(locale)}</span></div><span class="category">${escape(p.category)}</span><h2><a href="https://github.com/${escape(project.repo)}">${escape(project.name)}</a></h2><p class="tagline">${escape(p.tagline)}</p>${paragraph(t.use,p.use)}${paragraph(t.why,p.why)}<h3>${escape(t.help)}</h3><ol>${p.help.map(x=>`<li>${escape(x)}</li>`).join('')}</ol>${paragraph(t.fit,p.fit)}${paragraph(t.try,p.try)}${paragraph(t.maintenance,p.maintenance)}<div class="sources"><a href="https://github.com/${escape(project.repo)}#readme">${escape(t.readme)}</a><a href="${escape(project.evidence)}">${escape(t.updates)}</a></div></article>`;
+        }).join('')}</section><section class="notes"><h2>${escape(t.notes)}</h2><p>${escape(report.note[language])}</p></section>`;
+      document.getElementById('edition').addEventListener('change',event=>{selected=event.target.value;render();});
+    }
+    document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{
+      language=button.dataset.lang;
+      try{localStorage.setItem('high-star-language',language);}catch{}
+      render();
+    }));
+    render();
+  </script>
+</body>
+</html>
