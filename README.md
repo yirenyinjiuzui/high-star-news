@@ -1,8 +1,10 @@
 # High Star News
 
+[![简体中文](assets/lang-zh.svg)](README.zh-CN.md) [![English](assets/lang-en.svg)](README.md)
+
 About five useful GitHub projects per day: what they do, why they are recommended, how they could help, and a practical first step.
 
-- **English by default.** The **简体中文** and **English** buttons switch the complete interface and recommendation text. Repository and product names remain unchanged. Your choice is remembered in this browser.
+- **English by default.** The website's **简体中文** and **English** buttons switch the complete interface and recommendation text. Repository and product names remain unchanged. Your choice is remembered in this browser. The buttons at the top of this README link to the corresponding translated README.
 - Open [index.html](index.html) after downloading the repository, or serve the repository as a static site. GitHub's file viewer does not execute HTML or JavaScript.
 - Read or download the [English report for 2026-10-26](reports/2026-10-26.md). Earlier editions remain available in the date selector.
 
