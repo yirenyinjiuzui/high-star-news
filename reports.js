@@ -133,4 +133,184 @@ window.REPORTS = [
       }
     ]
   }
+,
+{
+  "date": "2026-10-27",
+  "checkedAt": "2026-10-27 16:03–16:05",
+  "pick": {
+    "en": "Try LocalSend first if you move files between a phone and computer: one successful transfer gives an immediate, observable result. For organizing study notes or research summaries, try Joplin next. Excalidraw is the easiest browser-based alternative when your main need is explaining an idea visually. Save Syncthing for recurring folder synchronization, and ripgrep for text-heavy or coding workflows.",
+    "zh": "如果常在手机和电脑之间传资料，先试 LocalSend，一次成功传输就能验证是否合适。整理学习笔记或研究摘要，可以再试 Joplin；主要需要画图解释想法，则选浏览器里的 Excalidraw。Syncthing 留给持续同步文件夹的需求，ripgrep 更适合大量文本或代码检索。"
+  },
+  "note": {
+    "en": "Checked on October 27, 2026, at 16:03–16:05 Asia/Shanghai; this is the actual research time, not a claim that the scheduled 09:00 run happened on time. Selection combines a GitHub productivity search with five manually chosen, non-repeating candidates. All five have over 10,000 stars and were not archived at the check. Star counts are exact API snapshots, not daily growth. These repositories were absent from yesterday's edition, so no comparable previous-day snapshot is available. Features and platforms were checked against official READMEs; maintenance statements use repository pushed_at metadata, which is not a release date or proof that every feature is stable. Joplin's root LICENSE and Syncthing's getting-started and file-versioning documentation were also checked. Recommendations, scenarios, and priorities are editorial judgments; no recommended software was installed, run, or benchmarked. The website's existing English/Chinese controls and both README language buttons are preserved. GitHub Pages was not enabled at this check; repository publication does not mean the website has been deployed.",
+    "zh": "实际核查时间为北京时间 2026 年 10 月 27 日 16:03–16:05，并不表示原计划 09:00 已准时执行。本期结合 GitHub 效率主题搜索和人工候选筛选，五个项目均超过一万星，核查时未归档，且与昨天不重复。星标来自 API 精确快照，不是每日增量；昨天没有这些项目的可比快照，因此不能计算日增量。功能与平台根据官方说明核查；维护情况采用仓库最近推送时间，并非版本发布日期，也不能证明全部功能稳定。另核对了 Joplin 根许可证、Syncthing 入门与文件版本管理文档。推荐理由、场景及优先级属于编辑判断，未安装、运行或测试这些推荐软件。既有网页中英文切换及两份自述文件的语言按钮均保留。核查时 GitHub Pages 尚未启用，发布仓库文件不等于网站已经部署。"
+  },
+  "projects": [
+    {
+      "name": "LocalSend",
+      "repo": "localsend/localsend",
+      "stars": 95963,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/localsend/localsend",
+      "en": {
+        "category": "Nearby file transfer · Easy start",
+        "tagline": "Move files between nearby devices without a cloud detour.",
+        "use": "A free, open-source app for sending files and messages over a local network, without an internet connection or third-party transfer server. Official downloads cover Windows, macOS, Linux, Android, and iOS. The README describes HTTPS-based communication between devices.",
+        "why": "Its purpose in this shortlist is to remove a small, repeated handoff problem: getting material from one device to another. It is most useful when those devices can reach each other on the same network. It is not a recommendation for unattended folder synchronization or sending a file to someone across the internet.",
+        "help": [
+          "Move a phone's lecture photos or scanned notes to a computer before sorting them into a study folder, without first attaching them to a chat message.",
+          "Send a presentation draft from one nearby laptop to another before a meeting, then check that the recipient received the intended file."
+        ],
+        "fit": "Good for mixed-device households or workspaces. The repository uses Apache-2.0 licensing and the app is free. Install it on both devices and use a network that permits local device communication. Guest-network isolation or firewall rules can prevent discovery; follow the official troubleshooting steps rather than weakening network protections. Throughput depends on the network and devices.",
+        "try": "In 15–20 minutes, install from the official distribution links on two compatible devices you control. Send one non-sensitive text file or photo, accept it on the receiver, and open the result. Check the receiver name and destination folder before attempting a larger batch. No transfer was performed for this report.",
+        "maintenance": "API snapshot: 95,963 stars, not archived; last repository push 2026-10-25 12:11 UTC. Source: repository metadata. The README's download and troubleshooting sections provide the starting instructions."
+      },
+      "zh": {
+        "category": "附近设备传文件 · 容易上手",
+        "tagline": "让附近设备直接传文件，减少绕行云端的步骤。",
+        "use": "免费的开源应用，可通过局域网发送文件和消息，无需互联网连接或第三方中转服务器。官方下载覆盖 Windows、macOS、Linux、Android 和 iOS，说明文档介绍了设备之间基于 HTTPS 的通信方式。",
+        "why": "推荐目的是解决反复出现的小问题：把资料从一台设备交到另一台设备。两台设备在同一网络内可以互相访问时更实用。它适合单次传输，不用于代替无人值守的文件夹同步，也不能理解为跨互联网给任意人发文件。",
+        "help": [
+          "把手机拍摄的课堂照片或扫描笔记传到电脑，再整理进学习目录，减少先发聊天附件的步骤。",
+          "开会前把演示文稿从一台附近电脑传到另一台，随后核对接收方和文件内容。"
+        ],
+        "fit": "适合同时使用多种设备的人。仓库采用 Apache-2.0 许可，应用免费。双方都需要安装，并使用允许设备互通的网络。访客网络隔离或防火墙规则可能影响发现设备，应按官方排障说明处理，不随意降低网络防护；速度取决于网络与设备。",
+        "try": "用 15 至 20 分钟从官方渠道在两台自有兼容设备上安装，用一份非敏感文本或照片尝试传输，在接收端确认并打开结果。先检查设备名与保存位置，再考虑大量传输。本期未实际传文件。",
+        "maintenance": "API 快照为 95,963 星，未归档；最近仓库推送为 2026-10-25 12:11 UTC。依据为仓库元数据，下载与排障步骤可见官方说明。"
+      }
+    },
+    {
+      "name": "Joplin",
+      "repo": "laurent22/joplin",
+      "stars": 56895,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/laurent22/joplin",
+      "en": {
+        "category": "Notes and study organization · Easy to moderate",
+        "tagline": "Keep searchable notes available even when you are offline.",
+        "use": "An offline-first note-taking and to-do application with notebooks, tags, full-text search, Markdown, and attachments. Official clients cover Windows, macOS, Linux, Android, and iOS. It can import Markdown and Evernote exports, and offers browser clipping and synchronization options.",
+        "why": "Recommend it when the bottleneck is retrieving your own notes, rather than producing more of them. A small notebook-and-tag convention can connect reading notes, open questions, and follow-up tasks. It does not automatically validate citations or replace a dedicated reference manager.",
+        "help": [
+          "Keep each course or learning topic in a notebook; add a source link, a short summary, and an unresolved question to each reading note.",
+          "Build a searchable record of project decisions and troubleshooting notes, so the next similar issue starts from your previous reasoning."
+        ],
+        "fit": "Useful for people who want local access plus optional cross-device sync. The application is free; Joplin Cloud is a separate paid service, while other sync targets have their own requirements. End-to-end encryption is supported but must be configured. The root LICENSE specifies AGPL-3.0-or-later with directory-specific exceptions and separate branding terms; do not assume every component shares one license. A stable existing notes workflow may be preferable to migrating immediately.",
+        "try": "Spend 20–30 minutes creating one notebook and three notes from non-sensitive material. Tag them, search for a phrase, export a Markdown copy, and confirm you can read it outside the app. Evaluate this basic loop before configuring sync or importing a large archive.",
+        "maintenance": "API snapshot: 56,895 stars, not archived; last repository push 2026-10-27 00:06 UTC. Platform, offline, search, and sync claims come from the README; licensing was checked in the root LICENSE."
+      },
+      "zh": {
+        "category": "笔记与学习整理 · 低至中等门槛",
+        "tagline": "离线也能查看和搜索自己的笔记。",
+        "use": "以离线使用为先的笔记和待办应用，提供笔记本、标签、全文搜索、Markdown 和附件。官方客户端覆盖 Windows、macOS、Linux、Android 与 iOS，可导入 Markdown 和 Evernote 导出资料，也提供网页剪藏与同步选项。",
+        "why": "推荐给主要难点在于找回已有笔记的人。简单的笔记本与标签约定，可以把阅读摘要、待解决问题和后续任务联系起来。它不会自动验证引文，也不能直接替代专业文献管理器。",
+        "help": [
+          "为课程或学习主题建立笔记本，每篇阅读笔记保留来源链接、简短摘要和一个未解决问题。",
+          "记录项目决策与排障经过，下次遇到类似问题时可以找到此前的判断过程。"
+        ],
+        "fit": "适合希望本地可用、按需跨设备同步的人。应用免费，Joplin Cloud 是单独收费的服务，其他同步目标也有自身要求。支持端到端加密，但需配置。根许可证为 AGPL-3.0-or-later，同时有子目录例外及品牌条款，不能假设所有组件许可相同；现有笔记流程稳定时不必立刻迁移。",
+        "try": "用 20 至 30 分钟建立一个笔记本和三篇非敏感笔记，添加标签、搜索短语，再导出 Markdown 并确认能在应用之外阅读。先验证这套基本流程，再考虑配置同步或导入全部旧笔记。",
+        "maintenance": "API 快照为 56,895 星，未归档；最近仓库推送为 2026-10-27 00:06 UTC。平台、离线、搜索与同步能力来自官方说明，许可另核对根 LICENSE 文件。"
+      }
+    },
+    {
+      "name": "Syncthing",
+      "repo": "syncthing/syncthing",
+      "stars": 89792,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/syncthing/syncthing",
+      "en": {
+        "category": "Continuous folder sync · Moderate setup",
+        "tagline": "Keep selected folders aligned between computers you control.",
+        "use": "A continuous file-synchronization program for two or more devices. You pair devices using their IDs and choose which folders to share. The core includes a browser administration interface; the README links to Windows, macOS, and Linux GUI wrappers and official setup documentation.",
+        "why": "Recommend it for a repeated folder workflow where manually sending the latest copy has become unreliable. Unlike a one-off transfer app, it keeps watching the selected folders. Use it for ordinary file directories, not an application's live database unless that application explicitly supports such use.",
+        "help": [
+          "Keep a folder of exported Markdown notes and reference text aligned between a desktop and laptop, without manually selecting files each time.",
+          "Maintain the same non-sensitive project assets on two computers, while keeping unrelated directories outside the shared folder."
+        ],
+        "fit": "Free software under MPL-2.0, with moderate setup and ongoing device-management needs. Synchronization is not an independent backup: deletions and replacements can propagate. Official versioning documentation says version history is off by default and applies to changes received from another device, not every local edit. Keep a separate backup and check platform-specific clients; this core repository does not establish equivalent support on every phone platform.",
+        "try": "Use 30 minutes to read the getting-started guide, pair two computers, and share only a new folder containing disposable files. Verify one edit propagates. Read the versioning settings before using important data. If you have only one suitable device, finish the setup plan instead of forcing a live trial. Official guides: https://docs.syncthing.net/intro/getting-started.html and https://docs.syncthing.net/users/versioning.html.",
+        "maintenance": "API snapshot: 89,792 stars, not archived; last repository push 2026-10-27 01:21 UTC. README and official setup/versioning documentation were checked. This recommendation is about the core desktop synchronization workflow."
+      },
+      "zh": {
+        "category": "持续同步文件夹 · 中等配置门槛",
+        "tagline": "让自己管理的电脑保持选定文件夹一致。",
+        "use": "面向两台或更多设备的持续文件同步程序，通过设备 ID 配对并选择共享文件夹。核心程序带浏览器管理界面，官方说明链接到 Windows、macOS 与 Linux 的图形封装及入门文档。",
+        "why": "推荐给反复需要手动发送最新文件、容易混淆版本的人。它会持续关注选定文件夹，而不是只发送一次。适合普通文件目录；应用程序的实时数据库只有在该应用明确支持时才考虑使用。",
+        "help": [
+          "在台式机和笔记本之间同步导出的 Markdown 笔记与参考文本，不必每次逐个选择文件。",
+          "让两台电脑拥有一致的非敏感项目素材，只共享相关目录，其他文件不加入同步。"
+        ],
+        "fit": "采用 MPL-2.0 许可的软件，免费，但需配置并持续管理设备。同步不等于独立备份，删除和覆盖也可能传播。官方版本管理说明指出，默认不保留旧版本，启用后主要记录从其他设备接收的变更，并非所有本地编辑；重要资料仍需单独备份。核心仓库也不能证明每种手机平台都有等同客户端。",
+        "try": "用 30 分钟阅读入门说明、配对两台电脑，只共享装有测试文件的新目录，验证一次编辑能否传播。使用重要资料前先了解版本设置。只有一台合适设备时先完成配置计划。官方入门：https://docs.syncthing.net/intro/getting-started.html；版本管理：https://docs.syncthing.net/users/versioning.html。",
+        "maintenance": "API 快照为 89,792 星，未归档；最近仓库推送为 2026-10-27 01:21 UTC。核对了官方说明、入门和版本管理文档。本项推荐以核心桌面同步流程为主。"
+      }
+    },
+    {
+      "name": "ripgrep",
+      "repo": "BurntSushi/ripgrep",
+      "stars": 69483,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/BurntSushi/ripgrep",
+      "en": {
+        "category": "Text and code search · Terminal basics",
+        "tagline": "Find matching lines across a directory instead of opening files one by one.",
+        "use": "A command-line search tool, invoked as rg, that recursively searches text using literal strings or regular expressions. It supports Windows, macOS, and Linux. By default it respects ignore rules and skips hidden and binary files; file-type filters and line-number output help narrow the search.",
+        "why": "Recommend it as a retrieval tool for text-heavy work. If you know a phrase but not which file contains it, directory-wide search can provide a short list of locations. It is a literal/regex search tool, not a semantic question-answering system, and no speed benchmark was run for this edition.",
+        "help": [
+          "Search a folder of Markdown notes for a concept or exact quotation, then open the matching files with line numbers for context.",
+          "Locate a configuration key or error message across a code checkout before changing anything, and compare where the same text appears."
+        ],
+        "fit": "A good fit for people comfortable with a terminal and text-based files. The README offers MIT or Unlicense licensing. Scanned PDFs and Word documents need appropriate text extraction rather than being treated as plain text. A no-match result does not prove a phrase is absent from ignored, hidden, binary, or differently encoded material. Regex syntax also changes how patterns are interpreted.",
+        "try": "In 15–20 minutes, install from an official release or documented package source. In a folder containing three test Markdown files, compare rg -n -F \"project deadline\" . with rg -n -g \"*.md\" \"deadline\" . . Check the matching line and its context. These are suggested commands, not a software execution performed for this report.",
+        "maintenance": "API snapshot: 69,483 stars, not archived; last repository push 2026-10-23 20:00 UTC. Default filtering, supported platforms, licensing, and search options were checked in the official README."
+      },
+      "zh": {
+        "category": "文本与代码搜索 · 需要终端基础",
+        "tagline": "跨目录定位匹配行，减少逐个打开文件。",
+        "use": "命令名为 rg 的文本搜索工具，可递归检索普通字符串或正则表达式，支持 Windows、macOS 和 Linux。默认遵守忽略规则，跳过隐藏及二进制文件，并提供文件类型筛选和行号输出。",
+        "why": "推荐目的是改善大量文本的检索。只记得一句话、却不知道在哪个文件时，可以先找出少量候选位置。它提供字符串或正则搜索，不是语义问答系统；本期也没有进行速度测试。",
+        "help": [
+          "在 Markdown 笔记目录里查找某个概念或准确引文，结合行号回到相关文件查看上下文。",
+          "修改代码之前，先跨整个项目定位配置键或报错文本，比较同样内容出现在哪里。"
+        ],
+        "fit": "适合愿意使用终端、主要处理文本文件的人。官方说明提供 MIT 或 Unlicense 许可。扫描 PDF 和 Word 文件需要合适的文字提取流程，不能直接当纯文本处理。未找到结果不代表忽略、隐藏、二进制或其他编码资料中一定不存在，正则符号也会改变匹配含义。",
+        "try": "用 15 至 20 分钟按官方渠道安装，在含三份测试 Markdown 的目录中，比较 rg -n -F \"project deadline\" . 和 rg -n -g \"*.md\" \"deadline\" . 的结果，核对匹配行和上下文。本期未安装或执行这些建议命令。",
+        "maintenance": "API 快照为 69,483 星，未归档；最近仓库推送为 2026-10-23 20:00 UTC。默认过滤、平台、许可与搜索选项根据官方 README 核查。"
+      }
+    },
+    {
+      "name": "Excalidraw",
+      "repo": "excalidraw/excalidraw",
+      "stars": 134629,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/excalidraw/excalidraw",
+      "en": {
+        "category": "Visual explanation · Browser-based start",
+        "tagline": "Sketch a flow, a system, or a rough interface before polishing slides.",
+        "use": "An open-source whiteboard editor with a hand-drawn appearance, shapes, arrows, text, images, and reusable shape libraries. It exports PNG, SVG, and editable .excalidraw files. The hosted app adds collaboration, local browser autosave, shareable links, and offline-capable PWA behavior.",
+        "why": "Recommend it when a visual explanation could reveal missing steps or relationships faster than another page of prose. Rough diagrams can help you discuss an idea before investing in a polished presentation. A diagram still needs accurate labels and evidence; appearance does not validate a technical argument.",
+        "help": [
+          "Draw a research or software workflow with inputs, processing steps, and outputs, then use the diagram to ask where assumptions or dependencies are missing.",
+          "Sketch a proposed screen or learning plan as simple boxes and arrows, export an image for discussion, and retain the editable file for later revision."
+        ],
+        "fit": "Useful for learners, writers, and developers who need informal visual explanations. The editor is free and MIT-licensed; Excalidraw+ is a separate commercial offering. Hosted-app features are not automatically identical to embedding the npm editor. Browser autosave should not be your only durable copy: export the editable file. Read sharing behavior before using sensitive material.",
+        "try": "Spend 15–20 minutes in the official editor at https://excalidraw.com/ using public or invented content. Draw five labeled boxes and their arrows, export a PNG and an .excalidraw file, then reopen the editable export. No hosted editor session or sharing action was performed for this report.",
+        "maintenance": "API snapshot: 134,629 stars, not archived; last repository push 2026-10-26 22:29 UTC. README sections distinguish editor capabilities from the hosted app's additional functionality."
+      },
+      "zh": {
+        "category": "可视化解释 · 浏览器即可起步",
+        "tagline": "先用草图说明流程、系统或界面，再考虑精修演示稿。",
+        "use": "具有手绘风格的开源白板，提供形状、箭头、文字、图片和形状库，可导出 PNG、SVG 与可继续编辑的 .excalidraw 文件。官方托管应用另提供协作、浏览器本地自动保存、分享链接与支持离线的渐进式网页应用功能。",
+        "why": "推荐给需要借助图形发现步骤或关系遗漏的人。先画粗略示意图，便于在投入精修演示稿之前讨论想法。图形仍需准确标注和证据，美观并不能证明技术论点成立。",
+        "help": [
+          "把研究或软件流程画成输入、处理与输出，借助图示查找遗漏的假设和依赖。",
+          "用简单方框与箭头画出拟议界面或学习计划，导出图片讨论，同时保留可编辑文件继续修改。"
+        ],
+        "fit": "适合需要非正式图示的学习者、写作者和开发者。编辑器免费且采用 MIT 许可，Excalidraw+ 是单独的商业服务；托管应用的功能不等于嵌入 npm 编辑器后自动全部具备。浏览器自动保存不应作为唯一长期副本，应导出可编辑文件，敏感资料使用前先了解分享行为。",
+        "try": "用 15 至 20 分钟打开官方编辑器 https://excalidraw.com/，使用公开或虚构内容画五个带标签的方框和箭头，导出 PNG 与 .excalidraw 文件，再重新打开可编辑导出文件。本期未操作托管编辑器或执行分享。",
+        "maintenance": "API 快照为 134,629 星，未归档；最近仓库推送为 2026-10-26 22:29 UTC。官方说明区分编辑器本身与托管应用的附加能力。"
+      }
+    }
+  ]
+}
 ];
