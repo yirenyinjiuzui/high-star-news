@@ -6,7 +6,7 @@ About five useful GitHub projects per day: what they do, why they are recommende
 
 - **English by default.** The website's **简体中文** and **English** buttons switch the complete interface and recommendation text. Repository and product names remain unchanged. Your choice is remembered in this browser. The buttons at the top of this README link to the corresponding translated README.
 - Open [index.html](index.html) after downloading the repository, or serve the repository as a static site. GitHub's file viewer does not execute HTML or JavaScript.
-- Read or download the [English report for 2026-10-27](reports/2026-10-27.md). Earlier editions remain available in the date selector.
+- Read or download the [English report for 2026-10-28](reports/2026-10-28.md). Earlier editions remain available in the date selector.
 
 ## GitHub Pages
 

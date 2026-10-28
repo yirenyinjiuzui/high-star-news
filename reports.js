@@ -312,5 +312,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-10-28",
+  "checkedAt": "2026-10-28 16:06–16:55",
+  "pick": {
+    "en": "Today's theme is a small terminal toolbox. Start with fd if finding the right filename is your main frustration, or jq if you regularly inspect API responses and JSON exports. bat helps you read the resulting files; fzf helps choose from long lists; delta helps review changes before committing. Try one tool against a real recurring task before combining them. If you rarely use a terminal, today's selection is lower priority than yesterday's visual and device-transfer tools.",
+    "zh": "今天聚焦小型终端工具箱：经常找不到文件名，可以先试 fd；需要检查接口返回值或 JSON 导出数据，可以先试 jq。bat 帮助阅读文件，fzf 帮助从长列表中选择，delta 帮助提交前检查改动。先用一个工具验证真实的重复任务，再考虑组合使用。很少使用终端的人，可以优先回看昨天的图形和跨设备工具。"
+  },
+  "note": {
+    "en": "Research was checked on October 28, 2026, at 16:06–16:55 Asia/Shanghai. This is the actual checking window, not a claim of an on-time 09:00 execution. This edition intentionally focuses on five developer/terminal utilities selected by practical role, not a global popularity ranking. All five had at least 10,000 stars and were unarchived in the repository API snapshots. Counts are exact snapshots and are not daily star gains; these candidates have no comparable snapshot in prior editions. Official READMEs and repository metadata support the feature and maintenance descriptions; additional license files were checked for fd, bat, fzf, and delta. jq's README explains its code, documentation, and included-library license distinctions. Last-push timestamps are not release dates and do not prove product quality. Proposed benefits and priorities are editorial judgments. No recommended tool was installed, run, or benchmarked. A secondary documentation web lookup was unavailable; the report relies on the successfully retrieved official repository materials. Existing website language controls, README language buttons, and earlier editions are preserved. GitHub Pages remained disabled when checked; uploading repository files is not website deployment.",
+    "zh": "实际核查窗口为北京时间 2026 年 10 月 28 日 16:06–16:55，不表示原计划 09:00 已准时执行。本期按实际分工挑选五个开发与终端工具，并非全站热度排名。仓库 API 快照显示五个项目均超过一万星且未归档，星标为当次精确值，不是每日新增；这些候选在前几期没有可比快照，不能计算日增量。功能和维护情况根据成功读取的官方说明与仓库元数据核查，另检查 fd、bat、fzf 和 delta 的许可文件；jq 的官方说明区分了代码、文档和所含第三方库的许可。最近推送时间不是版本发布日期，也不证明产品质量。收益与优先级属于编辑判断，未安装、运行或测试这些推荐工具。补充文档的网页检索不可用，本期以已成功读取的官方仓库资料为依据。保留网页语言切换、自述文件双语按钮与历史版次。核查时 GitHub Pages 仍未启用，上传文件不等于网站部署。"
+  },
+  "projects": [
+    {
+      "name": "jq",
+      "repo": "jqlang/jq",
+      "stars": 35982,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/jqlang/jq",
+      "en": {
+        "category": "Structured data · Terminal basics",
+        "tagline": "Ask precise questions of JSON without writing a full script.",
+        "use": "A lightweight command-line JSON processor for selecting fields, filtering arrays, mapping records, and transforming structured data. The README describes a portable C implementation with no runtime dependencies and links to standalone release executables. Its filters operate on JSON values, rather than treating the file as unstructured text.",
+        "why": "Recommend it when you repeatedly open an API response or exported JSON just to retrieve a few fields. A short saved filter makes the extraction explicit and repeatable. It is useful between a raw response and a spreadsheet or script, but it does not infer the meaning of fields or decide whether the source data is correct.",
+        "help": [
+          "Extract project names and star counts from an already-downloaded JSON export, instead of copying them one record at a time.",
+          "Filter a list of task records by an explicit status and inspect only the fields needed for a report; keep the original export for comparison."
+        ],
+        "fit": "Good for people comfortable with terminal commands and nested data. Official release binaries are the easiest starting point; choose the asset for your operating system. The README states MIT licensing for jq code, CC BY 3.0 for documentation, and separate ICU terms for included decNumber code. JSON input, filter syntax, shell quoting, and missing fields still need care. For substantial multi-step business logic, an ordinary script may be clearer.",
+        "try": "Spend 20 minutes making a disposable sample.json with three objects in an items array, each with name and status fields. Try jq '.items[] | select(.status == \"open\") | .name' sample.json using quoting appropriate to your shell. Compare each output to the source and try a missing field. No command was executed for this report.",
+        "maintenance": "Snapshot: 35,982 stars; not archived; last repository push 2026-10-25 05:40 UTC. Features and license distinctions were checked in the official README. The push timestamp is maintenance evidence, not a release date."
+      },
+      "zh": {
+        "category": "结构化数据处理 · 需要终端基础",
+        "tagline": "对 JSON 做准确筛选，不必先写完整脚本。",
+        "use": "轻量的命令行 JSON 处理器，可提取字段、筛选数组、映射记录和转换结构。官方说明介绍了使用可移植 C 编写、无运行时依赖的实现，并提供独立发布文件入口。它按 JSON 数据结构工作，而不是把文件当作没有层级的文字。",
+        "why": "推荐给经常打开接口返回值或 JSON 导出文件、只为找出几个字段的人。保存简短筛选表达式，可以让提取规则明确且便于重复。适合连接原始返回值与表格或脚本，但不能推断字段含义，也不会判断源数据是否真实正确。",
+        "help": [
+          "从已下载的 JSON 导出资料中提取项目名和星标数，减少逐条复制。",
+          "按明确状态筛选任务记录，只查看报告需要的字段，同时保留原始文件供核对。"
+        ],
+        "fit": "适合愿意使用终端并理解嵌套数据的人，可从适配操作系统的官方发布文件起步。README 说明代码为 MIT 许可、文档为 CC BY 3.0，所含 decNumber 代码另有 ICU 条款。仍需注意 JSON 格式、表达式、终端引号及缺失字段；较复杂的多步骤业务逻辑可能用普通脚本更清楚。",
+        "try": "用 20 分钟准备含三条测试记录的 sample.json，items 数组内各记录有 name 和 status 字段。按当前终端的引号规则尝试 jq '.items[] | select(.status == \"open\") | .name' sample.json，逐项与原文比较，再试缺失字段。本期未运行命令。",
+        "maintenance": "快照为 35,982 星，未归档；最近仓库推送为 2026-10-25 05:40 UTC。功能与许可区别来自官方 README，推送时间仅用于了解维护活动，不是版本发布日期。"
+      }
+    },
+    {
+      "name": "fd",
+      "repo": "sharkdp/fd",
+      "stars": 44878,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/sharkdp/fd",
+      "en": {
+        "category": "File discovery · Simple terminal workflow",
+        "tagline": "Find filenames and directory entries with a small, readable command.",
+        "use": "A filesystem search utility with regular-expression and glob patterns, extension filters, and optional full-path matching. It searches recursively, uses smart-case behavior, and by default omits hidden entries and paths ignored by Git. It aims to cover common find-style tasks with opinionated defaults, not every advanced feature of find.",
+        "why": "Recommend it for the moment when you remember part of a filename or its extension but not the containing folder. It complements yesterday's ripgrep: fd locates entries by name or path, while ripgrep searches text inside files. That separation helps choose the right search instead of opening many folders manually.",
+        "help": [
+          "Locate all Markdown files whose names contain a topic across a notes directory, then open only the relevant candidates.",
+          "Find a configuration filename in a large checkout and inspect its full path before deciding which environment it belongs to."
+        ],
+        "fit": "Good for terminal users who navigate large directory trees. Official distributions cover common desktop platforms; choose the documented installation route. The repository provides MIT and Apache-2.0 license files. Default hidden/ignore filtering can omit a file you expect, and patterns are regex unless another mode is chosen. It is not a document-content or semantic search engine. Leave command-execution features out of the first trial.",
+        "try": "Spend 15–20 minutes in a disposable directory with nested text and Markdown files. Compare fd -e md with fd -g '*.md', then search for a fragment of a known filename. Read the help for hidden and ignored entries and verify why a result is present or absent. Do not attach deletion or other bulk actions to the search.",
+        "maintenance": "Snapshot: 44,878 stars; not archived; last repository push 2026-10-28 07:16 UTC. The official README documents default filtering, glob/regex matching, extensions, and full-path behavior; the MIT file was also checked."
+      },
+      "zh": {
+        "category": "定位文件 · 简单终端工作流",
+        "tagline": "用简短易读的命令查找文件名与目录项。",
+        "use": "文件系统搜索工具，支持正则表达式、通配模式、扩展名筛选和按完整路径匹配。递归搜索，采用智能大小写规则，默认跳过隐藏项及 Git 忽略的路径。侧重常见 find 类任务的便捷默认行为，不追求覆盖 find 的每个高级功能。",
+        "why": "推荐给只记得文件名的一部分或扩展名、却不知道在哪个目录的人。它与昨天的 ripgrep 分工不同：fd 定位文件名或路径，ripgrep 查找文件内容，明确分工后能减少来回打开目录的步骤。",
+        "help": [
+          "在笔记目录中找出文件名含某主题的 Markdown 文件，再只打开相关候选。",
+          "在大型项目中定位配置文件名，先查看完整路径，再判断属于哪个环境。"
+        ],
+        "fit": "适合经常通过终端浏览目录树的人，常见桌面平台可按官方文档选择安装渠道。仓库同时提供 MIT 和 Apache-2.0 许可文件。隐藏与忽略过滤可能排除预期结果，默认模式还是正则表达式；它不负责文档正文或语义搜索。首次试用先不用执行外部命令的高级功能。",
+        "try": "用 15 至 20 分钟，在含嵌套测试文件的目录里比较 fd -e md 与 fd -g '*.md'，再搜索已知文件名片段。查看帮助了解隐藏和忽略行为，解释为何某文件出现或缺失。先只定位，不把删除或批量修改动作接到结果上。",
+        "maintenance": "快照为 44,878 星，未归档；最近仓库推送为 2026-10-28 07:16 UTC。默认过滤、正则与通配、扩展名和完整路径行为来自官方 README，另核对 MIT 文件。"
+      }
+    },
+    {
+      "name": "bat",
+      "repo": "sharkdp/bat",
+      "stars": 60975,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/sharkdp/bat",
+      "en": {
+        "category": "Reading text files · Easy after installation",
+        "tagline": "Read code and configuration with syntax context and visible changes.",
+        "use": "A cat-like terminal viewer with syntax highlighting, Git modification indicators, line numbers, and optional display of non-printable characters. It pages long interactive output, supports explicit language selection, and prints plain content when it detects redirected output. The README also describes integration with file finders and other tools.",
+        "why": "Recommend it when the file is already located but reading it in a terminal is awkward. Syntax cues and line numbers can help discuss a small configuration fragment or understand a code sample without opening a full editor. It is a viewer: highlighting does not validate syntax, execute code, or explain the author's intent.",
+        "help": [
+          "Read a configuration file beside an error message and use line numbers to identify the exact setting that needs further investigation.",
+          "Inspect a Markdown or source-code example in a checkout, with local Git modification indicators helping distinguish edited lines from the indexed version."
+        ],
+        "fit": "Useful for terminal-based text and code work; a regular editor may be better for navigation and editing large documents. Official packages are available on common desktop platforms. The repository supplies MIT and Apache-2.0 terms; the MIT file was checked. Some distributions call the executable batcat. Pager behavior, terminal colors, and display decorations can affect copying, so use documented plain-output options when needed. No default shell aliases need changing for a first test.",
+        "try": "Use 15 minutes to compare bat README.md with bat --paging=never README.md in a test folder. Inspect a small JSON file with explicit syntax selection, then use bat -A on disposable text containing tabs. Confirm whether what you see is file content or a viewer decoration. These are proposed checks, not tests performed on the tool.",
+        "maintenance": "Snapshot: 60,975 stars; not archived; last repository push 2026-10-20 19:18 UTC. README sections on syntax, Git integration, paging, copying, and non-printable characters were reviewed."
+      },
+      "zh": {
+        "category": "阅读文本文件 · 安装后容易起步",
+        "tagline": "借助语法与改动提示，更清楚地阅读代码和配置。",
+        "use": "类似 cat 的终端查看器，提供语法高亮、Git 修改标记、行号及不可打印字符显示。交互查看长内容时会分页，可指定语言；检测到重定向时会输出普通内容。官方说明还介绍了与文件查找等工具的组合。",
+        "why": "推荐给已经找到文件、却觉得终端阅读不方便的人。语法提示和行号有助于讨论配置片段或理解代码示例，不必总是打开完整编辑器。它是查看器，高亮不等于语法验证、运行代码或解释作者意图。",
+        "help": [
+          "对照报错阅读配置，用行号准确指出需要进一步检查的设置。",
+          "查看项目中的 Markdown 或代码示例，通过 Git 修改标记区分本地编辑行与暂存索引中的版本。"
+        ],
+        "fit": "适合终端中的文本与代码阅读，复杂导航和编辑通常仍用编辑器更合适。常见桌面平台有官方推荐包渠道。仓库提供 MIT 与 Apache-2.0 条款，本期核对 MIT 文件；部分发行版命令名为 batcat。分页、颜色和装饰可能影响复制，需要时用官方普通输出选项，初次试用无需改变默认终端别名。",
+        "try": "用 15 分钟在测试目录比较 bat README.md 与 bat --paging=never README.md，再对小 JSON 文件指定语法，使用 bat -A 观察含制表符的测试文本。确认看到的是文件内容还是查看器装饰。这些是建议步骤，本期未运行工具。",
+        "maintenance": "快照为 60,975 星，未归档；最近仓库推送为 2026-10-20 19:18 UTC。核查了官方说明中的语法、Git 集成、分页、复制及不可打印字符功能。"
+      }
+    },
+    {
+      "name": "fzf",
+      "repo": "junegunn/fzf",
+      "stars": 83838,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/junegunn/fzf",
+      "en": {
+        "category": "Interactive selection · Moderate terminal setup",
+        "tagline": "Narrow a long list interactively when you remember only fragments.",
+        "use": "A general-purpose fuzzy finder and terminal interface toolkit. It accepts candidate lists, lets you filter them interactively, and can support file selection, command-history browsing, previews, and custom menus. Official documentation lists binaries and package options, including Windows, plus integrations for several shells and editors.",
+        "why": "Recommend it for choosing among many already-available candidates instead of repeatedly retyping exact paths. It is especially useful once fd, a script, or another tool has produced the candidate list. It does not discover facts beyond its input, and fuzzy matching does not establish that the top result is the one you intended.",
+        "help": [
+          "Choose a notes filename from a generated list by typing a few memorable fragments, then inspect the selected path before opening it.",
+          "Browse a prepared list of task names or project directories interactively, reducing manual scrolling without changing any files."
+        ],
+        "fit": "Best for people who already work in terminals. MIT-licensed and free, with standalone binaries for a basic trial. Windows availability does not mean Bash/Zsh/Fish keybindings automatically apply to PowerShell. Shell integration is a separate setup step, and optional previews or execute bindings run configured commands. Start with a static, non-sensitive list and leave command-executing integrations unconfigured until you understand them.",
+        "try": "In 20 minutes, create a three-line list of invented filenames and pipe it into fzf using your shell's normal text-input command. Filter, select, and cancel; confirm exactly what is returned. Then try a larger disposable list. Leave global keybindings and previews for a later decision. No shell integration was changed for this report.",
+        "maintenance": "Snapshot: 83,838 stars; not archived; last repository push 2026-10-25 13:44 UTC. README introduction, Windows package options, shell-integration instructions, and MIT licensing were checked."
+      },
+      "zh": {
+        "category": "交互式筛选 · 中等终端配置门槛",
+        "tagline": "只记得片段时，也能从长列表中逐步缩小选择范围。",
+        "use": "通用模糊查找器与终端交互工具，可接收候选列表并让你交互筛选，用于选文件、浏览命令历史、预览或制作菜单。官方说明列出包括 Windows 在内的发布文件和安装包，以及多种终端和编辑器集成方式。",
+        "why": "推荐目的是帮助你从已有候选中做选择，减少反复输入准确路径。fd、脚本或其他工具先产生列表时尤其适用。它不会发现输入之外的信息，模糊匹配排第一的结果也不一定就是你要的文件。",
+        "help": [
+          "从生成的笔记文件名列表输入几个记得的片段进行筛选，确认路径后再打开。",
+          "交互浏览事先准备的任务名或项目目录列表，减少手动滚动，同时不修改文件。"
+        ],
+        "fit": "更适合已有终端工作流的人，采用 MIT 许可且免费，基本试用可用独立发布文件。支持 Windows 不代表 Bash、Zsh 或 Fish 快捷键自动适用于 PowerShell；终端集成需另配置，可选预览或执行绑定还会运行所设命令。先用非敏感静态列表，理解后再决定高级集成。",
+        "try": "用 20 分钟写三行虚构文件名，按当前终端的文本输入方式传给 fzf，尝试筛选、选择与取消，确认输出究竟是什么，再用更长的测试列表。全局快捷键和预览留待后续决定；本期没有修改任何终端集成。",
+        "maintenance": "快照为 83,838 星，未归档；最近仓库推送为 2026-10-25 13:44 UTC。核查官方简介、Windows 包渠道、终端集成说明与 MIT 许可。"
+      }
+    },
+    {
+      "name": "delta",
+      "repo": "dandavison/delta",
+      "stars": 32597,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/dandavison/delta",
+      "en": {
+        "category": "Reviewing Git changes · Git knowledge required",
+        "tagline": "Make the difference between two versions easier to inspect.",
+        "use": "A pager for Git, diff, and grep output with syntax highlighting, word-level change emphasis, side-by-side layouts, line numbers, and navigation between sections. The README documents improved merge-conflict and blame displays. Package managers often call the package git-delta, while the executable is delta.",
+        "why": "Recommend it for the final review before a commit: clearly seeing what changed can reveal an accidental edit or missing context. It changes presentation, not the underlying patch or correctness of a change. Keep the plain Git output available when you need an unstyled reference or want to resolve ambiguity.",
+        "help": [
+          "Review a Markdown report edit and distinguish a small word change from a whole rewritten paragraph before publishing.",
+          "Inspect a code diff side by side, then check whether the surrounding logic supports the change rather than relying only on colored lines."
+        ],
+        "fit": "Useful for people already using Git in a terminal; occasional repository readers may prefer GitHub's built-in diff. MIT-licensed and free, with common desktop installation options in the official guidance. A compatible terminal and pager configuration matter. Colors can be misleading or inaccessible depending on theme, and narrow windows can make side-by-side review awkward. You can try a command-scoped pager without changing global Git settings.",
+        "try": "Spend 20–30 minutes in a disposable Git repository with one small committed text file and an uncommitted edit. After installing through the documented channel, compare git --no-pager diff with git -c core.pager=delta diff. Verify the same changes appear in both. Keep this local to the command until you choose a layout; the report made no Git configuration changes.",
+        "maintenance": "Snapshot: 32,597 stars; not archived; last repository push 2026-10-28 02:45 UTC. Official README features and setup guidance plus the MIT license file were reviewed. Last-push activity is not a functional test."
+      },
+      "zh": {
+        "category": "检查 Git 改动 · 需要 Git 基础",
+        "tagline": "让两个版本之间的差异更容易核对。",
+        "use": "面向 Git、diff 和 grep 输出的分页查看工具，提供语法高亮、单词级修改提示、并排布局、行号和区块跳转，官方说明还介绍合并冲突与 blame 显示改进。安装包常名为 git-delta，实际命令为 delta。",
+        "why": "推荐用于提交前的最后一次检查：清楚地看见变化，有助于发现误改或遗漏上下文。它改变的是展示方式，不会改变底层补丁或证明修改正确。存在歧义或需要无样式参考时，仍应查看普通 Git 输出。",
+        "help": [
+          "发布前检查 Markdown 日报修改，分辨是个别措辞变化还是整段重写。",
+          "并排查看代码差异，再结合周边逻辑判断修改是否合理，不仅依赖着色结果。"
+        ],
+        "fit": "适合已通过终端使用 Git 的人；偶尔阅读仓库时，GitHub 内置差异页可能已经足够。采用 MIT 许可且免费，官方指导提供常见桌面安装方式。终端和分页设置会影响体验，颜色受主题与可读性影响，窄窗口也未必适合并排布局。可先用单条命令指定分页工具，无需修改全局 Git 设置。",
+        "try": "用 20 至 30 分钟，在一次性测试 Git 仓库中准备已提交的小文本文件及一处未提交编辑。按官方渠道安装后，对比 git --no-pager diff 与 git -c core.pager=delta diff，确认变化一致。选择布局前先局限于单条命令；本期没有更改 Git 配置。",
+        "maintenance": "快照为 32,597 星，未归档；最近仓库推送为 2026-10-28 02:45 UTC。核查官方 README 功能、配置说明和 MIT 文件。近期推送不等于功能实测通过。"
+      }
+    }
+  ]
 }
+
 ];
