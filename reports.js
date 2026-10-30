@@ -491,6 +491,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-10-30",
+  "checkedAt": "2026-10-30 08:56–08:57",
+  "pick": {
+    "en": "Today's theme is a practical data-analysis workflow. Start with pandas if you already know basic Python and repeatedly clean tables; choose DuckDB first if SQL feels more natural. JupyterLab gives an exploratory workspace, Streamlit can turn a useful analysis into an interactive local app, and MLflow becomes relevant when you need to inspect and evaluate repeated AI application runs. These are complementary roles, not five packages that everyone needs to install.",
+    "zh": "今天聚焦实用数据分析流程。已有 Python 基础且经常清洗表格，可以先试 pandas；更熟悉 SQL 则先选 DuckDB。JupyterLab 提供探索工作区，Streamlit 可把有用分析做成可交互的本地应用；反复调试与评估 AI 应用时再考虑 MLflow。这些是互补分工，不需要把五个项目全部安装。"
+  },
+  "note": {
+    "en": "Checked October 30, 2026, at 08:56–08:57 Asia/Shanghai. Five manually selected active public repositories were checked through official READMEs and GitHub repository metadata, rather than an exhaustive ranking. All exceeded 10,000 stars and were unarchived. Counts are exact API snapshots; last-push timestamps are maintenance evidence, not release dates. No previous-day snapshots for these five projects exist in this report's history, so daily star growth cannot be calculated. The fetched archive contains October 26–28; this edition is dated October 30 and does not fabricate an October 29 edition. Functions, installation routes, and license labels come from official project materials; benefits, priorities, and example workflows are editorial judgments. No recommended package was installed, run, or benchmarked, and no model API call was made. Hosting, compute, storage, optional services, and dependencies can carry costs beyond the open-source package. Existing bilingual controls, README language buttons, and past editions are preserved. GitHub Pages remained disabled at the check; repository synchronization is not website deployment.",
+    "zh": "实际核查时间为北京时间 2026 年 10 月 30 日 08:56–08:57。人工选择五个活跃公开仓库，核对官方说明和 GitHub 仓库元数据，并非全站排名。五个项目均超过一万星且未归档。星标为 API 精确快照，最近推送仅说明维护活动，不是发布日期。历史中没有这些项目的前一天快照，不能计算每日增长。读取的归档包含 10 月 26 至 28 日，本期使用真实日期 10 月 30 日，不虚构 29 日版次。功能、安装渠道与许可标签来自官方资料，收益、优先级与示例流程属于编辑判断。本期未安装、运行或测试推荐软件，也没有调用模型接口；托管、算力、存储、可选服务和依赖可能另有成本。保留网页中英文切换、自述文件语言按钮和历史日报。核查时 GitHub Pages 尚未启用，同步仓库不等于网站部署。"
+  },
+  "projects": [
+    {
+      "name": "pandas",
+      "repo": "pandas-dev/pandas",
+      "stars": 50256,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/pandas-dev/pandas",
+      "en": {
+        "category": "Table cleaning · Basic Python required",
+        "tagline": "Turn repeated spreadsheet transformations into an explicit analysis.",
+        "use": "A Python toolkit for labeled and tabular data, built around structures such as DataFrame. Official features include missing-value handling, selection, merging, grouping, reshaping, time-series operations, and reading or writing formats such as CSV and Excel. It can express a sequence of transformations that would otherwise be performed manually in a workbook.",
+        "why": "Recommend it when the same cleanup must be repeated each week or across several files. A saved transformation can make your assumptions visible and easier to revisit. It does not decide what missing values mean, whether two identifiers really match, or whether an apparent trend supports a conclusion.",
+        "help": [
+          "Combine similarly structured survey or course-result CSV exports, standardize date fields, and count records by category while checking the original row totals.",
+          "Compare two project inventory tables by an explicit identifier, inspecting unmatched records before treating them as additions or removals."
+        ],
+        "fit": "Useful for people with basic Python and recurring table work; an occasional small edit may be easier in a spreadsheet. The repository uses BSD-3-Clause licensing. Python, dependencies, and optional file-format engines need compatible versions; data and intermediate objects consume memory. Identifier types, missing values, duplicate keys, and implicit alignment can change results. Package availability does not guarantee that a large dataset fits your computer.",
+        "try": "Use 20–30 minutes to prepare a disposable ten-row CSV with an identifier, category, and one missing value. In an isolated Python environment, follow the official installation instructions, read the file, group counts by category, and export a new CSV. Manually check the row count and treatment of the missing value. These are proposed steps, not executed tests.",
+        "maintenance": "API snapshot: 50,256 stars, not archived; last push 2026-10-29 23:58 UTC. The README documents table operations, I/O, installation, and BSD licensing; see its linked user guides for specific operations."
+      },
+      "zh": {
+        "category": "表格清洗 · 需要 Python 基础",
+        "tagline": "把反复执行的表格转换写成明确的分析流程。",
+        "use": "处理带标签和表格数据的 Python 工具，以 DataFrame 等结构为基础，提供缺失值处理、筛选、合并、分组、重塑、时间序列及 CSV、Excel 读写。可将原本在工作簿里手动重复的转换表达成连续步骤。",
+        "why": "推荐给每周或多份文件都要重复清洗数据的人。保存转换流程有助于看清并复查假设，但工具不会判断缺失值的含义、两个编号是否确实对应，也不能决定某趋势是否支持结论。",
+        "help": [
+          "合并结构相近的问卷或课程结果 CSV，统一日期并按类别统计，同时核对原始总行数。",
+          "用明确编号比较两份项目清单，先检查未匹配记录，再判断是否新增或移除。"
+        ],
+        "fit": "适合有 Python 基础且经常处理表格的人，偶尔少量编辑仍可能直接用表格软件更省事。仓库为 BSD-3-Clause 许可；Python、依赖及可选格式引擎需要兼容版本。数据和中间结果占用内存，编号类型、缺失值、重复键和自动对齐会影响结果，安装成功不代表大数据一定装得下。",
+        "try": "用 20 至 30 分钟准备含编号、类别和一项缺失值的十行测试 CSV。在独立 Python 环境按官方说明安装，读入、按类别计数并导出新 CSV，人工核对总行数和缺失值处理。本期未执行这些建议步骤。",
+        "maintenance": "API 快照为 50,256 星，未归档；最近推送为 2026-10-29 23:58 UTC。官方 README 说明表格操作、读写、安装和 BSD 许可，具体操作可查其链接的用户指南。"
+      }
+    },
+    {
+      "name": "DuckDB",
+      "repo": "duckdb/duckdb",
+      "stars": 42674,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/duckdb/duckdb",
+      "en": {
+        "category": "Local SQL analytics · SQL basics required",
+        "tagline": "Query analytical files without setting up a separate database server.",
+        "use": "An in-process analytical database with a standalone command-line client and language clients including Python and R. The README demonstrates querying CSV and Parquet files directly and describes JSON support, joins, window functions, and integrations with data tools. Extensions add further formats and database connectors.",
+        "why": "Recommend it when an analysis is naturally a SQL query over files and a separately managed server would add work. It can complement pandas rather than replace every data tool. Its suitability depends on query shape, available memory, disk, file layout, and extension needs; no performance comparison was run here.",
+        "help": [
+          "Summarize exported transaction-like or event records by category and date without first importing them into a separately administered database.",
+          "Join two local CSV or Parquet datasets to find missing identifiers, then inspect a small result before producing a report."
+        ],
+        "fit": "A good fit for analysts who know SQL or want to learn it, with common desktop client options. Core licensing is MIT. It is oriented toward analytical queries; that alone does not make it the right backend for every multi-user transactional app. Optional extensions may require downloads and their own terms. Remote-file queries can use network services and credentials; a local start needs neither. Storage and compute still cost resources.",
+        "try": "Spend 20–30 minutes with the official CLI or Python client and a small non-sensitive CSV. Run a count, a grouped total, and one query selecting a known identifier; compare all results with the source rows. Keep the first trial local, and inspect the selected data types before trusting totals. Official documentation is linked from the README.",
+        "maintenance": "API snapshot: 42,674 stars, not archived; last push 2026-10-29 20:58 UTC. The README supports the embedded architecture, CLI/client choices, direct-file examples, and extension caveats; repository metadata identifies MIT licensing."
+      },
+      "zh": {
+        "category": "本地 SQL 分析 · 需要 SQL 基础",
+        "tagline": "无需另搭数据库服务器，也能查询分析文件。",
+        "use": "运行在进程内的分析数据库，提供独立命令行及 Python、R 等客户端。README 演示直接查询 CSV 和 Parquet，说明 JSON、连接、窗口函数及数据工具集成，额外格式和数据库连接可由扩展提供。",
+        "why": "推荐给适合用 SQL 查询文件、但不想额外管理服务器的分析任务。它能与 pandas 配合，不必替代全部数据工具；适用性取决于查询形式、内存、磁盘、文件布局和扩展要求，本期没有性能比较。",
+        "help": [
+          "按类别与日期汇总事件记录或业务导出数据，不必先导入单独运维的数据库。",
+          "连接两份本地 CSV 或 Parquet，查找缺失编号，先检查小范围结果再生成报告。"
+        ],
+        "fit": "适合了解或准备学习 SQL 的分析者，常见桌面系统有客户端选择。核心为 MIT 许可。面向分析查询不代表适合作为所有多人事务应用的后端；可选扩展可能要下载并有自身条款。远程查询还可能涉及网络服务和凭据，第一次本地试用无需这些配置，算力与存储仍需资源。",
+        "try": "用 20 至 30 分钟，选择官方命令行或 Python 客户端，读取小型非敏感 CSV，做一次计数、分组总计和已知编号查询，对照原始记录核实。先限定本地数据，并检查识别的数据类型后再信任汇总；官方文档入口见 README。",
+        "maintenance": "API 快照为 42,674 星，未归档；最近推送为 2026-10-29 20:58 UTC。嵌入式架构、客户端、直接查询文件与扩展信息来自官方说明，MIT 标签来自仓库元数据。"
+      }
+    },
+    {
+      "name": "JupyterLab",
+      "repo": "jupyterlab/jupyterlab",
+      "stars": 15381,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/jupyterlab/jupyterlab",
+      "en": {
+        "category": "Exploratory workspace · Python environment setup",
+        "tagline": "Keep explanatory notes, code, and outputs together while exploring.",
+        "use": "A browser-based interface for the Jupyter ecosystem, combining notebooks, a text editor, terminal, file browser, and rich outputs. It supports extensions and installation through pip, conda, or mamba. Launching jupyter lab opens the working interface in a browser while computation runs in configured kernels.",
+        "why": "Recommend it for learning or exploratory work where you want to inspect an intermediate result and explain the next step beside the code. It helps communicate an analysis, but a notebook is not automatically reproducible: execution order, data files, and package versions still matter.",
+        "help": [
+          "Explore a small dataset in stages, placing a short explanation beside each cleaning decision and output table.",
+          "Prepare a learning example with input assumptions and visible results, then check that another run from a clean kernel follows the same sequence."
+        ],
+        "fit": "Useful for interactive analysis; a simple script may suit a finished unattended task better. The repository uses BSD-3-Clause licensing. A compatible Python setup, browser, and relevant kernel packages are needed. Notebook files can contain outputs and embedded data; review them before sharing. Avoid running an unfamiliar notebook merely because it displays harmless-looking text, and keep the first workspace local.",
+        "try": "In 20–30 minutes, follow the README's installation route in an isolated environment and start a local workspace. Make a disposable notebook with an explanation, a tiny invented table, and a calculation; restart its kernel and run cells in order. Save and inspect the result. This edition did not create or execute a notebook.",
+        "maintenance": "API snapshot: 15,381 stars, not archived; last push 2026-10-29 21:28 UTC. The README describes interface components, package installation, browser use, and links to the official user documentation."
+      },
+      "zh": {
+        "category": "探索式工作区 · 需要配置 Python 环境",
+        "tagline": "探索过程中把说明、代码和结果放在一起。",
+        "use": "Jupyter 体系的浏览器工作界面，集合笔记本、文本编辑器、终端、文件浏览器与丰富输出，可扩展并通过 pip、conda 或 mamba 安装。运行 jupyter lab 后在浏览器操作，计算由所配置的内核完成。",
+        "why": "推荐给需要逐步查看中间结果、并在代码旁解释判断的学习与探索任务。它方便交流分析，但笔记本不自动保证复现，单元执行顺序、数据文件和依赖版本仍会影响结果。",
+        "help": [
+          "分步探索小型数据集，每次清洗都配简短原因和输出表，方便之后复查。",
+          "准备含输入假设与可见结果的学习案例，再检查从干净内核开始是否能按相同顺序完成。"
+        ],
+        "fit": "适合交互分析，已稳定的无人值守任务可能直接写脚本更合适。仓库为 BSD-3-Clause 许可，需要兼容的 Python、浏览器及内核依赖。笔记本可能包含输出和嵌入数据，分享前要检查；陌生笔记本即使文字看起来正常也不应直接运行，首次工作区保持本地即可。",
+        "try": "用 20 至 30 分钟，在独立环境按 README 安装并启动本地工作区，建立包含说明、虚构小表和计算的测试笔记本，重启内核后按顺序运行并保存检查。本期没有创建或执行笔记本。",
+        "maintenance": "API 快照为 15,381 星，未归档；最近推送为 2026-10-29 21:28 UTC。界面组件、安装渠道、浏览器操作及官方用户文档入口来自 README。"
+      }
+    },
+    {
+      "name": "Streamlit",
+      "repo": "streamlit/streamlit",
+      "stars": 46164,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/streamlit/streamlit",
+      "en": {
+        "category": "Interactive data app · Basic Python required",
+        "tagline": "Give an analysis a usable interface before building a full web product.",
+        "use": "A Python framework for interactive data applications, with widgets, tables, charts, layouts, and multi-page capabilities. The README shows a slider driving a calculation and describes running an app with streamlit run. You can start locally; hosting is a separate deployment choice.",
+        "why": "Recommend it when a notebook result is useful but someone needs to change an input without editing your code. It can make a prototype easier to review. It does not supply sound analysis, access controls, or a production operations plan simply because a page opens successfully.",
+        "help": [
+          "Build a local dashboard over a public dataset where a category selector changes the displayed table and chart.",
+          "Turn a small planning calculation into a slider-based prototype, allowing a reviewer to inspect how assumptions change the result."
+        ],
+        "fit": "Good for Python users making internal prototypes or small data tools; complex custom frontends may need another approach. The repository uses Apache-2.0 licensing. Local execution requires Python and dependencies; remote hosting, storage, model APIs, and other services may add cost or limits. A published app changes who can access data, so treat deployment as a separate decision. No hosting account is needed for a local first test.",
+        "try": "Spend 20–30 minutes following the official quickstart in an isolated environment. Use invented inputs, add one slider and one calculated output, and run the app locally. Change the input and confirm the result matches a manual calculation. Test a boundary value before adding real data. No app or deployment was created for this recommendation.",
+        "maintenance": "API snapshot: 46,164 stars, not archived; last push 2026-10-30 00:43 UTC. Installation, widgets, tables, charts, and the quickstart example were checked in the official README; licensing comes from repository metadata."
+      },
+      "zh": {
+        "category": "交互数据应用 · 需要 Python 基础",
+        "tagline": "先为分析做出可用界面，再考虑完整网站产品。",
+        "use": "使用 Python 编写交互数据应用的框架，提供控件、表格、图表、布局和多页面能力。官方示例用滑块驱动计算，通过 streamlit run 启动应用；可以从本地使用开始，托管部署另行选择。",
+        "why": "推荐给分析结果已有价值、但使用者需要调整输入又不想改代码的情况。原型更方便审阅，但页面能打开不代表分析正确、访问控制完备或生产运维方案已经成立。",
+        "help": [
+          "用公开数据做本地仪表盘，通过类别选择器改变表格和图表。",
+          "把小型规划计算做成滑块原型，让审阅者观察假设变化如何影响结果。"
+        ],
+        "fit": "适合用 Python 做内部原型或小数据工具的人，复杂定制前端可能需要其他方案。仓库为 Apache-2.0 许可，本地需 Python 与依赖；远程托管、存储、模型接口和其他服务可能另收费或有限额。发布应用会改变数据访问范围，应把部署作为单独决策，本地首次试用无需托管账号。",
+        "try": "用 20 至 30 分钟，在独立环境按官方快速入门，用虚构输入制作一个滑块和一个计算结果，运行本地应用，改变输入并人工核算，再检查边界值后考虑真实资料。本项推荐没有实际创建或部署应用。",
+        "maintenance": "API 快照为 46,164 星，未归档；最近推送为 2026-10-30 00:43 UTC。安装、控件、表格、图表和快速示例来自官方 README，许可标签来自仓库元数据。"
+      }
+    },
+    {
+      "name": "MLflow",
+      "repo": "mlflow/mlflow",
+      "stars": 28587,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/mlflow/mlflow",
+      "en": {
+        "category": "AI application inspection · Moderate setup",
+        "tagline": "Make repeated AI runs easier to inspect and compare.",
+        "use": "An open-source AI engineering platform for agents, LLM applications, and models. Its README describes tracing, evaluation, prompt management, and integrations, plus a local server and logging setup. The practical role here is to retain evidence about a run rather than relying only on its final answer.",
+        "why": "Recommend it when you are already building an AI application and need to understand a failure or compare revisions. Captured traces can show where to investigate, while evaluation records can organize checks. Neither automated scores nor a trace prove that a system is reliable; representative examples and human review remain necessary.",
+        "help": [
+          "Inspect the steps of a toy AI workflow to distinguish a retrieval problem from an unexpected model response before changing the prompt.",
+          "Compare a small fixed set of test cases across two prompt revisions and record both successes and failure examples, rather than judging from one appealing output."
+        ],
+        "fit": "Useful for developers with an existing model or agent workflow; occasional chatbot use does not justify this setup. The repository is Apache-2.0 licensed. A local server, storage, instrumentation, and framework-compatible dependencies require attention. Model providers and hosted platforms may charge separately. Traces can contain prompts, retrieved text, and outputs, so decide what to record before logging real material.",
+        "try": "Use 30 minutes to read the official quickstart, identify one existing non-sensitive toy workflow, and decide which steps and outputs should be logged. If its environment is already ready, follow the local-server and manual logging instructions and inspect a single test trace. Otherwise, finish the instrumentation plan first; no need to buy model credits just to evaluate the tool.",
+        "maintenance": "API snapshot: 28,587 stars, not archived; last push 2026-10-30 00:22 UTC. The README supports the tracing/evaluation focus, local server setup, and integration scope. This edition made no model API calls and does not claim an end-to-end integration test."
+      },
+      "zh": {
+        "category": "AI 应用检查 · 中等配置门槛",
+        "tagline": "让重复的 AI 运行更容易检查和比较。",
+        "use": "面向智能体、大模型应用和模型的开源 AI 工程平台。官方说明介绍追踪、评估、提示词管理与多种集成，并展示本地服务器及日志配置。本期关注的是保留运行证据，而不是只看最终回答。",
+        "why": "推荐给已经开发 AI 应用、需要理解失败原因或比较修改版本的人。追踪可帮助定位检查方向，评估记录有助于组织验证；自动评分和追踪都不能证明系统可靠，仍需有代表性的案例与人工审阅。",
+        "help": [
+          "查看测试 AI 流程的步骤，先区分是检索问题还是意外模型回答，再决定是否改提示词。",
+          "用一组固定小测试集比较两版提示词，同时记录成功和失败案例，避免只凭一次漂亮输出判断。"
+        ],
+        "fit": "适合已有模型或智能体工作流的开发者，偶尔聊天无需为此配置。仓库为 Apache-2.0 许可，但本地服务器、存储、埋点和框架兼容依赖需要管理，模型提供方及托管平台可能另收费。追踪可能包含提示词、检索内容与输出，记录真实材料前应先明确日志范围。",
+        "try": "用 30 分钟阅读官方快速入门，选择现有非敏感测试流程，明确需要记录的步骤和结果。环境已就绪时按本地服务器与手动日志说明检查一次测试追踪；否则先完成埋点计划，不必为了试工具购买模型额度。",
+        "maintenance": "API 快照为 28,587 星，未归档；最近推送为 2026-10-30 00:22 UTC。追踪评估、本地服务器和集成范围来自官方 README。本期未调用模型接口，也不声称完成集成实测。"
+      }
+    }
+  ]
 }
 
 ];
