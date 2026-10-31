@@ -670,6 +670,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-10-31",
+  "checkedAt": "2026-10-31 08:59–09:00",
+  "pick": {
+    "en": "For the quickest browser-based trial, start with CyberChef using invented text. For long-term document protection, evaluate restic through a small backup-and-restore exercise before choosing storage. rclone is useful when transfers span storage providers. Kavita and Immich are more involved self-hosting choices for reading collections and photos; assess storage and maintenance before importing real libraries. These tools solve different jobs: transfer, recovery, reading, media organization, and text conversion.",
+    "zh": "最快的浏览器试用可先选 CyberChef，使用虚构文本即可。希望长期保护文档，可先用 restic 做小型备份与恢复练习，再选择存储。跨存储提供方搬运文件时考虑 rclone。Kavita 和 Immich 分别面向阅读资料与照片管理，自托管门槛更高，导入真实资料前先评估存储和维护。五个工具的分工是传输、恢复、阅读、媒体整理与文本转换。"
+  },
+  "note": {
+    "en": "Checked October 31, 2026, at 08:59–09:00 Asia/Shanghai. This edition reviews five manually selected public repositories through official READMEs and repository API metadata, not an exhaustive GitHub ranking. All exceeded 10,000 stars and were unarchived. Counts are exact snapshots; last-push timestamps show repository activity, not release dates or verified reliability. None repeats the archived October 26–30 recommendations. There are no comparable prior-day snapshots for these five projects, so daily star growth is unknown. Features and license labels are sourced; priorities and suggested benefits are editorial judgments. No recommended application was installed or run, no files were transferred or backed up, and no service was deployed. Open-source licensing does not include storage, hosting, or paid extensions. The existing website and README language controls and earlier reports are preserved. GitHub Pages was disabled at the check; publishing repository files is not website deployment.",
+    "zh": "实际核查时间为北京时间 2026 年 10 月 31 日 08:59–09:00。本期人工挑选五个公开仓库，核对官方 README 与 API 元数据，并非全站排名。均超过一万星且未归档；星标为精确快照，最近推送代表仓库活动，不是版本发布日期或可靠性实测。与现有 10 月 26 至 30 日归档推荐均不重复。没有这五个项目的前日可比快照，无法计算日增量。功能与许可标签有来源，优先级及收益建议属于编辑判断。未安装或运行推荐应用，没有传输、备份文件或部署服务。开源许可不包含存储、托管或付费扩展成本。网页和自述文件语言按钮、历史报告均保留。核查时 GitHub Pages 未启用，发布仓库文件不等于部署网站。"
+  },
+  "projects": [
+    {
+      "name": "rclone",
+      "repo": "rclone/rclone",
+      "stars": 60656,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/rclone/rclone",
+      "en": {
+        "category": "Storage transfers · Terminal and account setup",
+        "tagline": "Use one transfer tool across different storage providers.",
+        "use": "A command-line program for transferring and synchronizing files between local storage and many cloud backends. Its README distinguishes copying new or changed files, making a directory identical with one-way sync, bidirectional synchronization, and checking file hashes. Optional backends provide encryption, compression, and other behavior.",
+        "why": "Recommend it when repeated transfers between providers have become a manual download-and-upload routine. An explicit source, destination, and operation can make the workflow easier to repeat. It is not a substitute for deciding retention rules or verifying recovery; a synchronized directory alone is not a versioned backup strategy.",
+        "help": [
+          "Copy a non-sensitive exported report folder to a configured storage destination, with a clear plan for what is transferred.",
+          "Move a collection between storage providers and separately check the resulting files before retiring the original copy."
+        ],
+        "fit": "Useful for terminal users managing several storage locations; a single occasional transfer may be simpler in the provider's interface. MIT-licensed, with Windows, macOS, and Linux distributions. Cloud storage, requests, and data egress may cost money. Provider access and supported operations differ. Sync is a stronger operation than copying and can change destination contents; verify its documentation before choosing it.",
+        "try": "Spend 20–30 minutes reading the official Copy, Sync, and Check links in the README. Use two disposable local folders first, copy a few test files, and inspect the result. Do not begin with an important cloud directory or configure automatic synchronization until you can explain the chosen operation. This report performed no transfer.",
+        "maintenance": "Snapshot: 60,656 stars; not archived; last push 2026-10-30 17:11 UTC. Feature distinctions come from the README's Features section; MIT licensing is stated there."
+      },
+      "zh": {
+        "category": "存储间传输 · 需要终端和账号配置",
+        "tagline": "用同一套工具处理不同存储提供方的文件传输。",
+        "use": "在本地与多种云存储之间传输和同步文件的命令行工具。README 区分复制新增或变化文件、让目录一致的单向同步、双向同步和文件哈希校验，可选后端还提供加密、压缩等行为。",
+        "why": "推荐给经常在不同存储之间手动下载再上传的人。明确源、目标与操作类型有助于重复执行，但仍需自己决定保留规则和验证恢复；同步目录本身不能当作版本化备份方案。",
+        "help": [
+          "把非敏感导出报告目录复制到已配置的存储目标，明确本次传哪些文件。",
+          "在不同提供方之间迁移资料，另外核对结果，再决定何时停用原始副本。"
+        ],
+        "fit": "适合用终端管理多个存储位置的人，偶尔传一次也许直接用服务界面更简单。采用 MIT 许可，提供 Windows、macOS 与 Linux 发行方式。云存储、请求及出站流量可能收费，不同提供方权限和能力也不同；同步比复制影响更大，选择前应读清目标内容会如何变化。",
+        "try": "用 20 至 30 分钟阅读 README 中 Copy、Sync 与 Check 文档入口，先在两个一次性本地文件夹中复制少量测试文件并检查结果。能解释所选操作前，不使用重要云目录或自动同步。本期没有传输文件。",
+        "maintenance": "快照为 60,656 星，未归档；最近推送为 2026-10-30 17:11 UTC。功能区别来自官方 Features 章节，README 也明确 MIT 许可。"
+      }
+    },
+    {
+      "name": "restic",
+      "repo": "restic/restic",
+      "stars": 36892,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/restic/restic",
+      "en": {
+        "category": "Versioned backups · Restore practice required",
+        "tagline": "Keep recoverable snapshots instead of only another current copy.",
+        "use": "A backup program for Windows, macOS, Linux, and additional systems. It stores snapshots, deduplicates repeated data, protects backup confidentiality and integrity, and supports local directories and remote backends. The README demonstrates initialization, backup, and restoration, and stresses that recovery matters more than merely creating a backup.",
+        "why": "Recommend it when an accidental overwrite or lost file must be recoverable from an earlier state. It addresses a different need from live synchronization. Its value depends on a restore procedure you have actually checked, suitable storage separation, and access to the required repository password.",
+        "help": [
+          "Keep snapshots of exported notes or project documents so a previous version can be restored after a mistaken edit.",
+          "Prepare a recovery copy of a small project archive on independently managed storage, then practice restoring a sample into another folder."
+        ],
+        "fit": "Good for users willing to manage backup storage and verify restores. BSD-2-Clause licensed; storage and network backends may have their own costs. The README warns that losing the repository password makes the data unrecoverable, and that same-machine copies alone are not a complete strategy. Snapshot retention and maintenance need planning; do not start by pruning existing backups.",
+        "try": "Use 30 minutes with disposable files and a separate test repository. Follow the official quickstart, make an initial snapshot, edit a test file, and restore the earlier copy into a different directory. Verify its contents. Store the password appropriately and keep the trial independent from real backups. No backup or restore was performed here.",
+        "maintenance": "Snapshot: 36,892 stars; not archived; last push 2026-10-18 14:23 UTC. This is recent repository activity, not a claim of daily updates. Snapshot, backend, password, and restoration details come from the official README."
+      },
+      "zh": {
+        "category": "版本化备份 · 需要练习恢复",
+        "tagline": "保存可恢复的快照，而不只是另一份当前副本。",
+        "use": "支持 Windows、macOS、Linux 等系统的备份程序，保存快照、对重复数据去重，并保护备份机密性和完整性，支持本地目录与远程后端。官方说明展示初始化、备份与恢复，强调恢复比仅生成备份更重要。",
+        "why": "推荐给需要在误覆盖或丢失文件后找回先前状态的人，解决的需求与实时同步不同。价值取决于已验证的恢复流程、适当分离的存储，以及能否取得仓库密码。",
+        "help": [
+          "为导出的笔记或项目文档保存快照，误编辑后可以恢复旧版。",
+          "在独立管理的存储上准备小型项目归档，再练习将样本恢复到另一个文件夹。"
+        ],
+        "fit": "适合愿意管理备份存储并验证恢复的人。采用 BSD-2-Clause 许可，存储和网络后端可能收费。README 提醒仓库密码丢失会导致无法恢复，同机副本也不是完整策略。需要规划保留与维护，不应从清理现有备份开始试用。",
+        "try": "用 30 分钟，准备测试文件和单独测试仓库，按官方入门创建初始快照，编辑一个文件，再将旧副本恢复到另一目录并核对内容。妥善保存密码，测试与真实备份分开。本期没有执行备份或恢复。",
+        "maintenance": "快照为 36,892 星，未归档；最近推送为 2026-10-18 14:23 UTC，只说明近期仓库活动，不代表每日更新。快照、后端、密码和恢复信息来自官方 README。"
+      }
+    },
+    {
+      "name": "Kavita",
+      "repo": "Kareadita/Kavita",
+      "stars": 11980,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/Kareadita/Kavita",
+      "en": {
+        "category": "Reading library · Self-hosting required",
+        "tagline": "Give an owned collection a searchable shelf and browser reader.",
+        "use": "A self-hosted reading server for books and comics, including EPUB and PDF. The README describes responsive readers, metadata search and filtering, collections, reading lists, user roles, and EPUB annotations/highlights. Some enhanced metadata and related features are provided through the separate Kavita+ offering.",
+        "why": "Recommend it when files are scattered across folders but you want a consistent reading interface on different devices. It organizes access to a collection you already have; it does not provide books or settle copyright permissions. If you read only a handful of files, a standalone reader may be enough.",
+        "help": [
+          "Organize legally held EPUB study material into a themed reading list and return to it from a tablet browser.",
+          "Keep public-domain comics or books on a household server with separate user access instead of copying the entire library to every device."
+        ],
+        "fit": "Useful for people prepared to run a server; Windows, Linux, macOS, and container installation choices should be checked against the official setup wiki. The repository is GPL-3.0, while Kavita+ is paid. Hosting, storage, metadata quality, and updates require attention. The checked README describes ongoing development and warns about possible data loss or restarts; keep original files and back up server state before upgrades.",
+        "try": "Spend 30 minutes reading the setup wiki linked in the README and evaluating whether you have a suitable always-available host. If a test environment already exists, import two public-domain EPUB/PDF samples and check indexing and reading on one device. Otherwise finish the storage and maintenance plan first. No server was installed for this report.",
+        "maintenance": "Snapshot: 11,980 stars; not archived; last push 2026-10-30 23:15 UTC. Formats, collections, roles, paid features, and the development notice were checked in the official README."
+      },
+      "zh": {
+        "category": "阅读资料库 · 需要自托管",
+        "tagline": "为自有阅读资料提供可检索书架和浏览器阅读器。",
+        "use": "面向图书和漫画的自托管阅读服务器，包含 EPUB 与 PDF，提供适配不同屏幕的阅读器、元数据搜索筛选、合集、阅读列表、用户角色和 EPUB 批注高亮。部分增强元数据等能力由独立的 Kavita+ 提供。",
+        "why": "推荐给资料分散在文件夹、希望跨设备使用统一阅读界面的人。它管理已有资料，不提供书籍或替你解决版权授权；只有少量文件时，单独阅读器可能就够用。",
+        "help": [
+          "将合法持有的 EPUB 学习材料整理为主题阅读列表，在平板浏览器中继续阅读。",
+          "在家庭服务器管理公版漫画或图书，为不同用户设置访问，减少给每台设备复制完整资料库。"
+        ],
+        "fit": "适合愿意维护服务器的人，Windows、Linux、macOS 与容器安装条件应按官方设置指南核对。仓库为 GPL-3.0 许可，Kavita+ 收费，托管、存储、元数据质量和更新都需要管理。核查的 README 仍有开发阶段和可能丢失数据或重建的提示，升级前保留原始文件并备份服务状态。",
+        "try": "用 30 分钟阅读 README 链接的设置指南，评估是否有合适的常开主机。已有测试环境时，用两份公版 EPUB/PDF 检查索引及单设备阅读；否则先完成存储与维护计划。本期未安装服务器。",
+        "maintenance": "快照为 11,980 星，未归档；最近推送为 2026-10-30 23:15 UTC。格式、合集、角色、付费功能及开发提示来自官方 README。"
+      }
+    },
+    {
+      "name": "Immich",
+      "repo": "immich-app/immich",
+      "stars": 117746,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/immich-app/immich",
+      "en": {
+        "category": "Photos and video · Server and storage planning",
+        "tagline": "Manage a personal media collection with your own hosting.",
+        "use": "A self-hosted photo and video management system with mobile and web interfaces. The README lists uploads, albums, multi-user support, metadata views, search, facial grouping, and mobile backup behavior. Server administration is a distinct responsibility from using its gallery.",
+        "why": "Recommend it for people who want more control over organizing and accessing personal media and are comfortable maintaining a service. It is not a way to avoid storage planning: originals, database state, and recovery copies need consideration. A successful upload does not by itself prove the media is safely recoverable.",
+        "help": [
+          "Browse a test set of owned photos by album and metadata from both a browser and phone, checking whether this matches how you actually find images.",
+          "Keep an organized family-event collection under a server you manage, making deliberate choices about users and album access."
+        ],
+        "fit": "Best for users ready to maintain a supported server and mobile/web clients. The repository uses AGPL-3.0 licensing. Storage, compute, upgrades, and any hosting services require resources; advanced processing can add load. The project's own README emphasizes an independent 3-2-1 backup plan. Mobile background behavior and format support should be tested on your devices rather than assumed.",
+        "try": "Use 30 minutes to review the official requirements and a backup plan. If a disposable server is already ready, import a few non-sensitive owned photos, check metadata and download them back, and compare the recovered files. Otherwise assess disk, memory, and maintenance needs first. This report uploaded no personal media and deployed no service.",
+        "maintenance": "Snapshot: 117,746 stars; not archived; last push 2026-10-30 23:51 UTC. Web/mobile capabilities and the backup warning come from the official README; AGPL labeling appears in project materials."
+      },
+      "zh": {
+        "category": "照片与视频 · 需要规划服务器和存储",
+        "tagline": "通过自己的托管环境管理个人媒体资料。",
+        "use": "提供手机与网页界面的自托管照片视频管理系统，README 列出上传、相册、多用户、元数据查看、搜索、人脸分组及手机备份行为。使用相册和维护服务器是两项不同责任。",
+        "why": "推荐给希望更自主整理和访问个人媒体、同时愿意维护服务的人。它不能省去存储规划，原文件、数据库状态和恢复副本都要考虑；上传成功本身也不证明资料可以安全恢复。",
+        "help": [
+          "用一组自有测试照片，在浏览器和手机按相册及元数据浏览，判断是否符合自己的查找习惯。",
+          "在自己管理的服务器整理家庭活动照片，明确决定用户与相册访问范围。"
+        ],
+        "fit": "适合能维护受支持服务器及手机、网页客户端的人。仓库采用 AGPL-3.0 许可，存储、算力、升级与托管需要资源，额外处理会增加负载。项目 README 自身强调独立的 3-2-1 备份计划，手机后台行为和格式兼容应在实际设备验证，不宜默认一致。",
+        "try": "用 30 分钟查阅官方硬件要求与备份方案。已有一次性服务器时，导入少量非敏感自有照片，检查元数据并下载回来比较；否则先评估磁盘、内存和维护。本期未上传个人媒体或部署服务。",
+        "maintenance": "快照为 117,746 星，未归档；最近推送为 2026-10-30 23:51 UTC。手机网页能力与备份提示来自官方 README，AGPL 标注见项目资料。"
+      }
+    },
+    {
+      "name": "CyberChef",
+      "repo": "gchq/CyberChef",
+      "stars": 36268,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/gchq/CyberChef",
+      "en": {
+        "category": "Text and data conversion · Browser-based start",
+        "tagline": "Chain small conversion steps and inspect the intermediate result.",
+        "use": "A browser application for encoding conversions, hashes, checksums, compression, timestamp transformations, and other data operations. You compose a recipe from operations, inspect input/output, and can step through stages. Its README states that processing happens client-side and describes local use.",
+        "why": "Recommend it when a small conversion would otherwise require finding several unrelated websites or writing throwaway code. Visible recipe steps help you describe the transformation. Automatic encoding guesses are hints, not proof of what data means, and Base64 is encoding rather than confidentiality protection.",
+        "help": [
+          "Decode an invented Base64 string, then compare the result with the original text to understand the representation.",
+          "Convert sample timestamp or hexadecimal values and inspect each stage before applying an equivalent process to a non-sensitive dataset."
+        ],
+        "fit": "A practical option for occasional conversions without terminal experience. Apache-2.0 licensed, with an official browser app and local deployment choices. Large inputs may consume substantial memory or stall processing. The README says shared URLs can include both recipe and input; inspect them before sharing. Client-side operation does not make every possible sharing action private.",
+        "try": "Spend 15–20 minutes in the official app using invented text only. Apply To Base64 followed by From Base64, remove one operation to understand the intermediate value, and save the recipe without sensitive input. You can also examine the official local-use instructions. No browser recipe was run or shared for this edition.",
+        "maintenance": "Snapshot: 36,268 stars; not archived; last push 2026-10-30 03:06 UTC. Recipe behavior, browser processing, URL contents, local use, and Apache licensing were checked in the official README."
+      },
+      "zh": {
+        "category": "文本与数据转换 · 浏览器即可起步",
+        "tagline": "连接小型转换步骤，逐步检查中间结果。",
+        "use": "浏览器数据处理应用，提供编码转换、哈希校验、压缩、时间戳转换等操作。将操作组合成配方后查看输入输出，并可逐步检查阶段。README 明确介绍客户端处理和本地运行方式。",
+        "why": "推荐给只需做少量转换、不想临时找多个网站或写一次性代码的人。可见步骤有助于说明处理过程，但自动编码识别只是线索，不证明数据含义，Base64 也是编码而非保密加密。",
+        "help": [
+          "解码虚构 Base64 字符串，再对比原始文字理解表示方式。",
+          "转换测试时间戳或十六进制值，检查每一步后，再考虑应用于非敏感数据。"
+        ],
+        "fit": "适合偶尔转换数据且不熟悉终端的人，采用 Apache-2.0 许可，提供官方网页与本地部署选择。大量输入可能占用很多内存或导致处理缓慢；README 提醒分享链接可包含配方和输入，分享前应检查。客户端处理不代表所有分享操作都自动保密。",
+        "try": "用 15 至 20 分钟在官方应用输入虚构文字，依次添加 To Base64 和 From Base64，移除一步观察中间值，再保存不含敏感输入的配方，也可先阅读官方本地使用说明。本期未运行或分享浏览器配方。",
+        "maintenance": "快照为 36,268 星，未归档；最近推送为 2026-10-30 03:06 UTC。配方、浏览器处理、链接输入、本地使用及 Apache 许可均根据官方 README 核查。"
+      }
+    }
+  ]
 }
 
 ];
