@@ -849,6 +849,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-11-01",
+  "checkedAt": "2026-11-01 09:54–09:55",
+  "pick": {
+    "en": "Start with Anki for material you need to recall repeatedly, or Zotero when the problem is keeping research sources and citations organized. For broader knowledge work, choose one workspace to test: AppFlowy for documents and task databases, Logseq for linked notes, or AFFiNE for combining writing with a canvas. The last three overlap; trial one with a small non-critical project instead of migrating your entire collection.",
+    "zh": "需要反复记忆的材料先试 Anki；研究来源与引文容易混乱则先试 Zotero。综合知识管理只选一个工作区测试：AppFlowy 偏文档与任务数据库，Logseq 偏关联笔记，AFFiNE 偏文字和画布结合。后三项有重叠，先用小型非关键项目试用，不必迁移全部资料。"
+  },
+  "note": {
+    "en": "Checked November 1, 2026, at 09:54–09:55 Asia/Shanghai; this is the actual research window, not an on-time 09:00 execution claim. Five manually selected public projects were checked against official READMEs and repository API metadata, with Anki's official homepage, Zotero's quick-start guide, and the Anki/Zotero/AFFiNE license files as additional sources. All exceeded 10,000 stars, were unarchived, and do not repeat the existing archive. Counts are exact API snapshots, not daily growth; these candidates lack prior-day snapshots in this report's history. Last-push timestamps are maintenance evidence, not release dates or stability guarantees. Features and license descriptions are sourced; suggested benefits, scenarios, and priorities are editorial judgments. No software was installed, no cards or libraries were imported, and no AI service was called. Paid clients, hosted services, AI access, and storage may have separate terms and costs. Existing bilingual website/README controls and previous editions are preserved. GitHub Pages remained disabled at the check; repository publication is not website deployment.",
+    "zh": "实际核查窗口为北京时间 2026 年 11 月 1 日 09:54–09:55，不表示计划中的 09:00 已准时执行。人工选择五个公开项目，核对官方 README 和仓库 API，并补查 Anki 官网、Zotero 入门指南，以及 Anki、Zotero、AFFiNE 许可文件。均超过一万星且未归档，与已有归档不重复。星标为精确快照，不是每日增长；历史中没有这些项目的前日快照。最近推送仅代表维护活动，不是发布日期或稳定性保证。功能与许可有来源，收益、场景和优先级属于编辑判断。没有安装软件、导入卡片或资料库，也未调用 AI 服务。付费客户端、托管、AI 和存储可能有额外条款或费用。保留网页、自述文件双语按钮和历史版次。核查时 GitHub Pages 未启用，发布仓库不等于部署网站。"
+  },
+  "projects": [
+    {
+      "name": "Anki",
+      "repo": "ankitects/anki",
+      "stars": 32437,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/ankitects/anki",
+      "en": {
+        "category": "Recall practice · Easy initial trial",
+        "tagline": "Turn a small set of important facts into scheduled retrieval practice.",
+        "use": "A spaced-repetition flashcard application. The desktop repository points to the official site, which describes review scheduling based on your recall rating, media-rich cards, deck organization, and optional AnkiWeb synchronization. It is a review tool rather than a full course or an automatic explanation engine.",
+        "why": "Recommend it for information you repeatedly forget but need to recall without looking it up. Small question-and-answer cards can turn passive rereading into a concrete practice routine. The benefit depends on meaningful prompts and consistent review; it cannot guarantee an exam result or replace understanding the underlying topic.",
+        "help": [
+          "Make a few vocabulary cards that include a phrase and a usage example, then check whether you can recall the meaning before revealing it.",
+          "Convert recurring mistakes from a technical topic into focused questions, keeping a source reference so incorrect cards can be corrected."
+        ],
+        "fit": "Useful for learners willing to review regularly; unsuitable for treating an entire textbook as thousands of unedited cards. Desktop versions cover major operating systems and are free. The official iOS AnkiMobile client is paid, while AnkiDroid is a separate contributor-developed Android app. The desktop LICENSE is AGPL-3.0-or-later with listed exceptions; do not assume identical licensing or pricing across all clients.",
+        "try": "Spend 15–20 minutes with the official desktop release. Create five original cards on one non-sensitive topic, review them, and revise any ambiguous prompt. Choose a deliberately small review workload before importing shared decks. Official product and download details: https://apps.ankiweb.net/ . No deck or client was installed for this report.",
+        "maintenance": "Snapshot: 32,437 stars; not archived; last push 2026-10-29 14:31 UTC. Repository README and LICENSE plus the official homepage support the product, platform, synchronization, and pricing distinctions."
+      },
+      "zh": {
+        "category": "主动回忆练习 · 容易开始",
+        "tagline": "把少量重要知识变成有计划的回忆练习。",
+        "use": "间隔重复记忆卡片应用。桌面仓库链接的官网介绍按回忆评分安排复习、卡片媒体、牌组与可选 AnkiWeb 同步。它用于复习，不是完整课程或自动解释引擎。",
+        "why": "推荐给反复遗忘、却需要不查资料就能想起的内容。简短问答卡可把被动重读变成具体练习，但效果取决于问题质量和持续复习，不能保证考试成绩或替代理解。",
+        "help": [
+          "制作少量含短语与例句的词汇卡，在揭示答案前先尝试回忆意思。",
+          "把某技术主题的重复错题改成聚焦问题，并保留来源，方便修正错误卡片。"
+        ],
+        "fit": "适合愿意规律复习的人，不适合把整本书直接塞成未经整理的大量卡片。主要桌面系统客户端免费；官方 iOS AnkiMobile 收费，AnkiDroid 是贡献者另行开发的 Android 应用。桌面 LICENSE 为 AGPL-3.0-or-later 并有例外，不能假设所有客户端许可或价格一致。",
+        "try": "用 15 至 20 分钟，选择官方桌面版本，为一个非敏感主题自制五张卡并复习，遇到歧义立即改题。导入共享牌组前，先确定小而能坚持的复习量。官方说明与下载：https://apps.ankiweb.net/ 。本期未安装客户端或导入牌组。",
+        "maintenance": "快照 32,437 星，未归档；最近推送为 2026-10-29 14:31 UTC。产品、平台、同步与收费区别根据仓库 README、LICENSE 及官网核查。"
+      }
+    },
+    {
+      "name": "Zotero",
+      "repo": "zotero/zotero",
+      "stars": 15820,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/zotero/zotero",
+      "en": {
+        "category": "Sources and citations · Low to moderate setup",
+        "tagline": "Keep a research claim connected to the source you actually used.",
+        "use": "A reference manager for collecting, organizing, citing, and sharing research sources. The official quick-start guide covers item metadata, collections, tags, notes and attachments, searches, identifier-based capture, and bibliographies. Word-processor integrations can insert citations into supported writing tools.",
+        "why": "Recommend it when the difficult part of reading is finding the right source again or formatting references consistently. A structured library can keep a paper, your notes, and its bibliographic record connected. Automatically captured metadata and generated references still need verification against the original publication.",
+        "help": [
+          "Create a collection for a small literature question, attach source notes, and record which passages support a claim.",
+          "Generate a bibliography from a handful of checked records, then inspect author names, dates, titles, and identifiers before submitting a document."
+        ],
+        "fit": "Useful for students, researchers, and writers who handle repeated citations; a few casual bookmarks may not need a reference manager. Desktop clients are available for major operating systems. The app is free; optional attachment storage and other services can have separate limits or costs. COPYING specifies AGPLv3 source licensing and notes third-party rights. Tool organization does not grant access to paywalled full text.",
+        "try": "Use 20–30 minutes to add three public sources, verify their metadata, put them into a collection, and attach a short note to each. Export a small bibliography and compare it with the originals. Start without importing an entire existing library. Official guide: https://www.zotero.org/support/quick_start_guide . No library changes were made here.",
+        "maintenance": "Snapshot: 15,820 stars; not archived; last push 2026-10-31 12:01 UTC. Features were checked in the official README and quick-start guide; source licensing was checked in COPYING."
+      },
+      "zh": {
+        "category": "来源与引文管理 · 低至中等配置",
+        "tagline": "让研究中的表述始终能回到实际使用的来源。",
+        "use": "用于收集、整理、引用和分享研究来源的文献管理器。官方入门介绍条目元数据、合集、标签、笔记附件、搜索、标识符导入与参考文献，文字处理器集成可在受支持写作工具中插入引文。",
+        "why": "推荐给阅读后难以找回来源、或要反复统一引用格式的人。结构化资料库有助于把论文、笔记和书目信息对应起来，但自动抓取元数据与生成引文仍需对照原出版物核实。",
+        "help": [
+          "为一个小型文献问题建合集，附阅读笔记，标明支持某论点的段落。",
+          "用少量已核对记录生成参考文献，交稿前检查作者、日期、标题和标识符。"
+        ],
+        "fit": "适合经常引用文献的学生、研究者和写作者，少量普通书签未必需要。主要操作系统有桌面客户端，应用免费，可选附件存储或服务另有额度和费用。COPYING 说明源码采用 AGPLv3 并有第三方权利信息；管理工具不等于获得付费全文权限。",
+        "try": "用 20 至 30 分钟添加三份公开来源，核对元数据，放进合集并各附简短笔记，导出小型参考文献与原件比较。先不导入全部旧库。官方指南：https://www.zotero.org/support/quick_start_guide 。本期未修改资料库。",
+        "maintenance": "快照 15,820 星，未归档；最近推送为 2026-10-31 12:01 UTC。功能根据官方 README 和入门指南核查，源码许可另查 COPYING。"
+      }
+    },
+    {
+      "name": "AppFlowy",
+      "repo": "AppFlowy-IO/AppFlowy",
+      "stars": 78046,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/AppFlowy-IO/AppFlowy",
+      "en": {
+        "category": "Documents and tasks · Workspace trial",
+        "tagline": "Connect a project's notes with a visible task database.",
+        "use": "An open-source workspace whose README presents documents, task/project databases, kanban views, comments, and desktop/mobile access, with self-hosting documentation. It also advertises AI features, which should be evaluated separately from the basic document-and-task workflow.",
+        "why": "Recommend it when project notes and action items currently live in unrelated places. A small shared structure may make the next action easier to identify. It overlaps with other workspace tools; the point is to test whether its model fits one project, not to assume immediate feature parity with every alternative.",
+        "help": [
+          "Keep a learning plan beside a simple task board, linking a task to the note explaining what finished means.",
+          "Collect project decisions and pending questions in a workspace so that a status update refers back to the relevant document."
+        ],
+        "fit": "Useful for people wanting structured documents and databases; plain files may suit a lightweight personal workflow better. Official downloads cover Windows, macOS, Linux, iPhone, and supported Android devices. The repository uses AGPL-3.0 labeling. Cloud, AI, collaboration tiers, and self-hosting resources can have separate requirements or costs; open-source source access does not include every hosted capability.",
+        "try": "Spend 20–30 minutes reviewing the official desktop download and creating a disposable workspace with one document and a three-item task board. Move one task between statuses and check how its related note is opened. Review export and synchronization documentation before moving important material. No workspace was created or synchronized for this report.",
+        "maintenance": "Snapshot: 78,046 stars; not archived; last push 2026-10-28 06:07 UTC. The official README supplies installation links, project/task and document examples, AGPL labeling, and self-hosting references."
+      },
+      "zh": {
+        "category": "文档与任务 · 工作区试用",
+        "tagline": "把项目说明与可见的任务数据库联系起来。",
+        "use": "开源工作区，README 展示文档、任务与项目数据库、看板、评论及桌面手机使用，并链接自托管说明。还宣传 AI 能力，但应与基本文档任务流程分开评估。",
+        "why": "推荐给项目笔记和行动项分散在不同地方的人。简单统一结构可能更容易看清下一步，但它与其他工作区工具重叠，应验证一个项目是否适合，而不是默认与所有替代品功能完全一致。",
+        "help": [
+          "把学习计划和小型任务板放在一起，任务链接到说明完成标准的笔记。",
+          "在同一工作区记录项目决定和待确认问题，让状态更新能回到相应文档。"
+        ],
+        "fit": "适合希望结合结构化文档与数据库的人，轻量个人流程也许普通文件就够用。官方提供 Windows、macOS、Linux、iPhone 和受支持 Android 下载；仓库标注 AGPL-3.0。云端、AI、协作套餐与自托管资源可能有额外要求或费用，源码开放不代表全部托管能力免费。",
+        "try": "用 20 至 30 分钟查看官方桌面下载，建立含一份文档和三项任务的测试工作区，移动任务状态并检查如何打开相关笔记。迁移重要资料前先了解导出与同步。本期未创建或同步工作区。",
+        "maintenance": "快照 78,046 星，未归档；最近推送为 2026-10-28 06:07 UTC。下载、项目任务与文档示例、AGPL 标注和自托管入口来自官方 README。"
+      }
+    },
+    {
+      "name": "Logseq",
+      "repo": "logseq/logseq",
+      "stars": 45437,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/logseq/logseq",
+      "en": {
+        "category": "Linked knowledge · Version choice matters",
+        "tagline": "Build connections between small notes, questions, and tasks.",
+        "use": "A knowledge-management and collaboration platform with linked-note workflows, PDF annotation, task management, and support for formats including Markdown and Org-mode. The README separately describes database graphs, a newer mobile app, and real-time collaboration, with different maturity levels from the established workflows.",
+        "why": "Recommend it when your notes contain recurring ideas across topics and you want to revisit their connections. Linking a question to earlier notes can support reflection, but the graph does not establish that the relationship is scientifically valid. This is an alternative workspace to trial, not another archive to maintain automatically.",
+        "help": [
+          "Connect reading notes on the same concept and keep a short question about where two sources disagree.",
+          "Link a project task to the note containing its assumptions so that later revisions retain the original context."
+        ],
+        "fit": "Useful for people comfortable with structured linked notes; linear documents may be easier for others. The repository is AGPL-3.0 labeled. Crucially, the checked README calls the DB version beta and its new mobile/RTC features alpha, with possible data loss. File-based and DB workflows have different storage and migration behavior; verify the chosen version. Do not assume Android or synchronization parity across versions.",
+        "try": "Use 20–30 minutes to read the version distinctions and create only a dedicated non-critical test graph. Add three notes and two links, then inspect the chosen version's export and backup options before adding more. Avoid migrating an existing library during the first trial. No graph, sync connection, or migration was created here.",
+        "maintenance": "Snapshot: 45,437 stars; not archived; last push 2026-11-01 01:36 UTC. Functional scope and explicit beta/alpha cautions were checked in the official README rather than inferred from the star count."
+      },
+      "zh": {
+        "category": "关联知识管理 · 需要区分版本",
+        "tagline": "把小型笔记、问题与任务建立联系。",
+        "use": "知识管理与协作平台，提供关联笔记、PDF 批注、任务管理，以及 Markdown、Org-mode 等格式支持。README 另外介绍数据库图谱、新手机应用和实时协作，各项成熟度与已有流程不同。",
+        "why": "推荐给笔记中经常出现跨主题概念、希望回看关联的人。将问题链接到旧笔记有助于反思，但图谱不证明关联在科学上有效。它是可选择的替代工作区，不必自动再维护一份档案。",
+        "help": [
+          "关联讨论同一概念的阅读笔记，记录两份来源在哪一点不同。",
+          "把项目任务链接到记有假设的笔记，后续修改仍能看到原始背景。"
+        ],
+        "fit": "适合习惯结构化关联笔记的人，也有人更适合线性文档。仓库标注 AGPL-3.0。特别要注意本次 README 将 DB 版标为测试版，新手机与 RTC 仍为早期测试，可能丢失数据；文件版和数据库版存储迁移不同，不能假设 Android 或同步能力完全一致。",
+        "try": "用 20 至 30 分钟阅读版本差别，只建非关键测试图谱，添加三篇笔记和两个链接，检查所选版本导出与备份后再增加内容。首次不迁移旧库。本期未创建图谱、同步连接或迁移。",
+        "maintenance": "快照 45,437 星，未归档；最近推送为 2026-11-01 01:36 UTC。功能和测试阶段提示直接根据官方 README 核查，不由星标数推断。"
+      }
+    },
+    {
+      "name": "AFFiNE",
+      "repo": "toeverything/AFFiNE",
+      "stars": 74026,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/toeverything/AFFiNE",
+      "en": {
+        "category": "Documents and canvas · Low to moderate setup",
+        "tagline": "Explain the same project in prose and on a visual canvas.",
+        "use": "A local-first workspace combining documents, whiteboard/canvas blocks, tables, linked pages, and planning. The README describes web and cross-platform clients, synchronization/collaboration, AI features, and a self-hosting path. Hosted, local, and self-hosted usage should be distinguished before selecting a workflow.",
+        "why": "Recommend it when an idea needs both a written explanation and a spatial arrangement of notes or shapes. Keeping those representations together may reduce the friction of updating separate tools. It overlaps with AppFlowy and Logseq; choose it if visual arrangement is central, not merely because it has many stars.",
+        "help": [
+          "Place a project brief and a visual dependency sketch in one workspace, keeping the explanation beside the diagram.",
+          "Organize reading questions as canvas notes, then turn a chosen cluster into a written outline with links back to source pages."
+        ],
+        "fit": "Useful for mixed writing-and-diagram work; a simple text document may be sufficient for a small checklist. The top-level LICENSE is mixed: much content is MIT, while specified backend/native directories have separately defined terms and third-party components retain their own licenses. Do not describe the entire repository as uniformly MIT. Hosted plans, AI usage, and server resources can add costs; inspect export and backup options.",
+        "try": "Spend 20–30 minutes following the official client links with invented material. Make one brief and a canvas of five related notes, then check whether you can preserve or export the result in a usable form. Leave AI and remote collaboration out of the initial trial. This report did not create an account, workspace, or deployment.",
+        "maintenance": "Snapshot: 74,026 stars; not archived; last push 2026-10-31 14:58 UTC. Document/canvas, local-first and self-hosting descriptions come from the README; mixed licensing was checked in the root LICENSE."
+      },
+      "zh": {
+        "category": "文档与画布 · 低至中等配置",
+        "tagline": "同一个项目同时用文字和画布解释。",
+        "use": "将文档、白板画布、表格、链接页面与规划结合的本地优先工作区。README 介绍网页和跨平台客户端、同步协作、AI 及自托管路径，选择前应区分托管、本地与自托管模式。",
+        "why": "推荐给需要同时写说明和空间排列便笺或图形的想法。让两种表达在一起，可能减少分开维护的步骤。它与 AppFlowy、Logseq 重叠，重点看画布是否是核心需求，不只看星标。",
+        "help": [
+          "把项目简述与依赖草图放同一工作区，让解释靠近图示。",
+          "在画布上整理阅读问题，将某一组转成文字提纲，并保留指向来源页的链接。"
+        ],
+        "fit": "适合文字和图示混合工作，小清单可能普通文档足够。根 LICENSE 采用混合条款：很多内容为 MIT，指定 backend、native 目录有单独许可，第三方保留原许可，不能将全仓库笼统称为 MIT。托管套餐、AI 和服务器资源可能增加费用，需检查导出与备份。",
+        "try": "用 20 至 30 分钟按官方客户端入口，以虚构资料制作一份简述及五张相关便笺画布，检查是否能保存或导出可用结果。初次先不启用 AI 或远程协作。本期没有注册账号、建立工作区或部署。",
+        "maintenance": "快照 74,026 星，未归档；最近推送为 2026-10-31 14:58 UTC。文档画布、本地优先和自托管说明来自 README，混合许可另核对根 LICENSE。"
+      }
+    }
+  ]
 }
 
 ];
