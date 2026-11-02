@@ -1028,6 +1028,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-11-02",
+  "checkedAt": "2026-11-02 11:32–11:33",
+  "pick": {
+    "en": "For repeated work across apps, start with n8n and a manual workflow that uses sample data. For a first local-model experiment, choose Ollama; for audio-to-text, choose whisper.cpp instead. Langflow helps you understand and prototype an AI pipeline visually, while LiteLLM is worth considering once you actually need more than one model provider. You do not need to deploy all five together.",
+    "zh": "跨应用反复处理同类任务，可以先从 n8n 和使用样例数据的手动流程入手。想试本地模型，选 Ollama；主要需要语音转文字，选 whisper.cpp。Langflow 适合用可视化方式理解和试做 AI 流程；真正需要多个模型供应商时，再考虑 LiteLLM。没有必要把这五个一起部署。"
+  },
+  "note": {
+    "en": "Research checked five selected repositories' metadata and official READMEs, plus the n8n and LiteLLM license files, during the time shown above. This edition was prepared after the scheduled 09:00 slot and uses the actual research time. All five exceed 10,000 stars; displayed counts are exact API snapshots, not rounded estimates or a GitHub-wide ranking. None appeared in the six available previous editions. There is no previous-day snapshot for these five, so daily star growth cannot be calculated. Repository pushed_at timestamps below show recent repository activity, not a security audit, release guarantee, or evidence that every feature is stable. Capabilities and license boundaries come from official materials; priorities, scenarios, and proposed trials are editorial judgments. No recommended software was installed, executed, or benchmarked. Trials are suggestions for the reader and may take longer if downloads or hardware setup are needed. Cloud/API charges and model licenses are separate from repository licenses. Both languages are prepared in reports.js; the static page makes no translation-service or live GitHub API requests. GitHub Pages remains disabled for this repository; source publication does not mean a hosted site is deployed.",
+    "zh": "在上述实际核查时段内，检查了五个精选仓库的元数据与官方 README，并补查 n8n、LiteLLM 的许可证文件。本期晚于计划的 09:00 时点制作，因此记录实际研究时间。五个项目均超过 1 万 stars；显示数值为 API 的精确快照，不是四舍五入约数，也不是全 GitHub 排名。六期既有日报中没有推荐过这五个项目。缺少它们的前一天快照，不能计算每日 star 增量。下文 pushed_at 仅表示近期仓库活动，不代表安全审计、正式发布保证或所有功能均稳定。功能与许可范围来自官方材料，推荐顺序、帮助场景及试用建议属于编辑判断。本期未安装、运行或测试这些软件；入门尝试由读者自行决定，下载或硬件配置可能使耗时超过建议窗口。云服务/API 费用及模型许可与仓库许可证分开计算。双语预先写入 reports.js，静态页面不会调用在线翻译或实时 GitHub API。该仓库仍未启用 GitHub Pages，源码同步不等于网站已上线。"
+  },
+  "projects": [
+    {
+      "name": "n8n",
+      "repo": "n8n-io/n8n",
+      "stars": 209316,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/n8n-io/n8n",
+      "en": {
+        "category": "Cross-app automation · intermediate",
+        "tagline": "Connect triggers, data transformations, app actions, and optional AI steps on a visual canvas.",
+        "use": "n8n builds workflows from connected nodes, with conditions, integrations, and custom JavaScript or Python where supported. Its official README describes self-hosting or cloud use, model-provider connections, and human approval steps. This is a workflow service that you configure and operate; it does not automatically discover safe automations for your accounts.",
+        "why": "Recommended to make a recurring process explicit: what starts it, which fields move between apps, and where a person should review the result. It is most useful when the same structured task happens repeatedly. Start without AI if ordinary rules can do the job, and add a model only for a step that needs interpretation.",
+        "help": [
+          "Prepare a draft weekly reading digest from a small sample list: transform titles and links, filter a chosen category, and inspect the resulting text before connecting a publishing destination.",
+          "Convert a test form payload into a normalized task record, branch on missing fields, and route incomplete records to review rather than silently creating bad entries."
+        ],
+        "fit": "Fits someone willing to learn credentials, workflow logic, and service maintenance; less suitable for a one-off copy/paste task or someone expecting zero setup. The editor runs in a browser; self-hosting needs a running host, persistent storage, and, for the documented Docker route, Docker. Cloud, enterprise features, external APIs, and hosting can cost money. n8n is source-available fair-code under Sustainable Use and Enterprise licenses, not an unrestricted MIT-style project. The root license limits ordinary use to internal business or personal/non-commercial purposes and treats redistribution and enterprise files separately. Check the official license before offering a hosted product to others. Retries or repeated triggers can repeat external actions; review behavior before enabling unattended writes.",
+        "try": "15–30 minutes after setup: follow the official README's Docker instructions or use a cloud trial if available, create Manual Trigger → sample data transformation → conditional branch, and inspect both branches. Keep it manual and disconnected from real write destinations until the output is correct. License source: https://github.com/n8n-io/n8n/blob/master/LICENSE.md .",
+        "maintenance": "Not archived at check time; repository metadata reports pushed_at 2026-11-02T00:35:19Z. README and root LICENSE.md were checked. Recent pushes are activity evidence only; select a documented release for an actual deployment."
+      },
+      "zh": {
+        "category": "跨应用自动化 · 中等门槛",
+        "tagline": "用可视化画布连接触发、数据转换、应用操作，以及按需加入的 AI 步骤。",
+        "use": "n8n 将节点连接成工作流，支持条件判断、应用集成，以及在支持的环境中使用 JavaScript 或 Python 自定义逻辑。官方 README 介绍自托管、云端运行、连接模型供应商和人工审批步骤。它是需要你配置与维护的流程服务，不会自动为你的账号发现并安排可靠的自动化。",
+        "why": "推荐它的目的是把重复流程讲清楚：什么触发任务，哪些字段在应用间传递，以及哪里需要人工复核。同一种结构化任务反复发生时更值得用。如果普通规则已经能完成任务，先不加 AI；只有需要理解语义的步骤再引入模型。",
+        "help": [
+          "用少量样例阅读条目试做每周摘要：整理标题与链接、按类别过滤，先检查生成文本，再决定是否连接发布位置。",
+          "把测试表单数据整理成统一任务记录，对缺失字段分支处理，将不完整记录留给人工审核，避免悄悄创建错误条目。"
+        ],
+        "fit": "适合愿意学习凭据管理、流程逻辑与服务维护的人；一次性的复制粘贴任务、期待完全免配置的人收益较小。编辑器在浏览器运行，自托管需要持续运行的主机、持久存储；官方 Docker 路线需要 Docker。云服务、企业功能、外部 API 和主机可能收费。n8n 属于源码可见的 fair-code，采用 Sustainable Use 与 Enterprise 许可证，不能按无限制的 MIT 项目理解。根许可证将一般用途限定为企业内部或个人/非商业用途，分发和企业文件另有条件；向他人提供托管产品前应核对官方许可。重试或重复触发可能重复执行外部操作，开启无人值守写入前要检查行为。",
+        "try": "配置完成后用 15–30 分钟，按官方 README 的 Docker 指引或可用的云端试用方式，建立“手动触发 → 样例数据转换 → 条件分支”，检查两个分支。在输出正确前保持手动运行，不接入真实写入目标。许可证来源：https://github.com/n8n-io/n8n/blob/master/LICENSE.md 。",
+        "maintenance": "核查时未归档；仓库元数据 pushed_at 为 2026-11-02T00:35:19Z。已读 README 与根目录 LICENSE.md。近期推送仅作活动证据，实际部署应选有文档的正式版本。"
+      }
+    },
+    {
+      "name": "Langflow",
+      "repo": "langflow-ai/langflow",
+      "stars": 156235,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/langflow-ai/langflow",
+      "en": {
+        "category": "Visual AI prototyping · intermediate",
+        "tagline": "Build and inspect AI workflows visually, then expose them through APIs or MCP.",
+        "use": "Langflow connects model, prompt, retrieval, and tool components in a visual editor. Its playground supports step-by-step experimentation, Python components can be customized, and workflows can be exported as JSON or served through built-in API and MCP interfaces. It helps assemble an application pipeline; choosing good sources and evaluating the generated answers remain your work.",
+        "why": "Recommended for learning what happens between an input and an AI answer. Seeing each component can make it easier to isolate a bad prompt, missing retrieval result, or wrong model configuration than starting with a large opaque assistant. It also offers a path from a prototype to a callable flow, without implying that the prototype is ready for production.",
+        "help": [
+          "Create a small question-answering experiment over two non-sensitive notes, then ask one question the notes answer and one they do not; inspect retrieved context and whether the answer admits missing evidence.",
+          "Make a reusable text-classification flow with fixed labels, test ten sample inputs in the playground, and export the flow definition for review before connecting another application."
+        ],
+        "fit": "Fits curious builders who can configure a model and understand inputs/outputs; less useful for someone who only wants a finished chat application. Desktop packages are available for Windows and macOS; Python and Docker routes support other suitable environments. The current README lists Python 3.10–3.14 for the package route. Repository code is MIT licensed, but model APIs, vector storage, cloud hosting, and hardware are separate costs. Local models need their own resources. Use authentication for a server, and keep provider keys out of exported or shared examples. Retrieval can omit relevant passages and models can invent answers; visual wiring is not an accuracy guarantee.",
+        "try": "15–30 minutes after installation: use the Desktop option or follow the current package quickstart at https://github.com/langflow-ai/langflow#readme . Start with input → prompt → one configured model → output, run three ordinary and two ambiguous inputs, then export the JSON. If using an official server package, follow the README's password/authentication setup rather than copying old auto-login tutorials.",
+        "maintenance": "Not archived; metadata reports pushed_at 2026-11-02T00:26:45Z. Official README and its current installation/authentication instructions were checked; metadata identifies MIT. Recent activity does not certify the security or reliability of an exported flow."
+      },
+      "zh": {
+        "category": "可视化 AI 原型 · 中等门槛",
+        "tagline": "以可视化方式搭建和检查 AI 流程，再通过 API 或 MCP 提供调用。",
+        "use": "Langflow 在可视化编辑器中连接模型、提示词、检索与工具组件。交互试验区支持逐步检查，组件可以用 Python 修改，流程能导出为 JSON，或通过内置 API、MCP 接口提供服务。它负责组装应用流程；选择可靠资料、评价回答质量仍由你完成。",
+        "why": "推荐目的是帮助理解输入到 AI 回答之间发生了什么。逐个查看组件，比直接面对庞大助手更容易定位提示词不合适、检索漏掉资料或模型配置错误。它也提供从原型到可调用流程的路径，但原型完成并不等于可以直接投入生产。",
+        "help": [
+          "使用两篇无敏感信息的笔记做小型问答试验，各问一个资料能够回答和无法回答的问题，检查检索上下文，以及回答是否承认缺少依据。",
+          "制作固定标签的文本分类流程，在试验区测试十条样例，导出流程定义供复核，再考虑接入其他应用。"
+        ],
+        "fit": "适合愿意配置模型、理解输入输出的搭建者；只想直接使用成品聊天应用的人不一定需要。桌面版提供 Windows、macOS，Python 或 Docker 路线可用于其他合适环境；当前 README 的包安装路线列出 Python 3.10–3.14。仓库代码采用 MIT，但模型 API、向量存储、云主机与硬件费用另计，本地模型也有资源要求。服务端应配置认证，导出和分享样例时避免带上供应商密钥。检索可能漏掉关键段落，模型也可能编造回答；可视化连线不保证正确率。",
+        "try": "安装后用 15–30 分钟，选择桌面版或按当前包安装指引 https://github.com/langflow-ai/langflow#readme ，先搭建“输入 → 提示词 → 一个已配置模型 → 输出”，测试三条普通输入和两条模糊输入，再导出 JSON。使用官方服务端包时按 README 设置密码与认证，避免照搬旧版自动登录教程。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-11-02T00:26:45Z。已核查官方 README、当前安装与认证说明，元数据标明 MIT。近期活动不能证明导出流程的安全性或可靠性。"
+      }
+    },
+    {
+      "name": "Ollama",
+      "repo": "ollama/ollama",
+      "stars": 185614,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/ollama/ollama",
+      "en": {
+        "category": "Local model runtime · beginner to intermediate",
+        "tagline": "Run supported language models locally and make them available through a command line or HTTP API.",
+        "use": "Ollama downloads and runs supported models, offers interactive chat, and serves model-management and inference APIs. Official Python and JavaScript libraries can call the runtime. The README also describes cloud models and application integrations; local execution and a cloud-backed session are different operating choices.",
+        "why": "Recommended to test whether a local model is useful on hardware you already own before building a larger AI stack. It can provide one model endpoint for multiple experiments. The point is control over model choice and execution location, not a promise that a laptop will match a hosted model's speed or answer quality.",
+        "help": [
+          "Try rewriting a short, non-sensitive draft with a small local model and compare the result against the original for missing facts, awkward wording, and measured wait time.",
+          "Point a small test script at the local chat API and classify ten sample notes into a fixed set of categories, keeping expected answers so you can judge whether local inference is sufficient."
+        ],
+        "fit": "Fits someone prepared to download model files and check RAM/VRAM; less suitable if storage is tight or you need guaranteed low-latency answers without hardware planning. Installers support Windows, macOS, and Linux, with Docker also documented. The runtime is MIT licensed; model weights have their own licenses, and cloud access may involve plans or usage charges. Local execution still uses storage, memory, compute, and electricity. Requirements depend on model size, quantization, and context length; there is no universal minimum that makes every model work. A locally running model does not make a connected app's plugins, logs, or cloud calls local. Generated facts still need verification.",
+        "try": "15–30 minutes: inspect the official model library and your available disk/RAM, then choose one small supported model whose license fits your use. Follow the README installation route and run `ollama run <model-name>` with the selected real name. Ask the same three short prompts and record accuracy and wait time. Confirm you selected a local model rather than a cloud entry. Downloads may exceed the trial window.",
+        "maintenance": "Not archived; metadata reports pushed_at 2026-11-02T03:30:35Z. Official README, API examples, download options, and metadata license were reviewed. No model was downloaded or benchmarked for this report."
+      },
+      "zh": {
+        "category": "本地模型运行环境 · 初级至中等门槛",
+        "tagline": "在本机运行支持的语言模型，通过命令行或 HTTP API 使用它们。",
+        "use": "Ollama 提供模型下载与运行、交互聊天，以及模型管理和推理 API；官方 Python、JavaScript 库能够调用运行环境。README 也介绍了云端模型与应用集成；本地执行和连接云模型是不同的使用方式。",
+        "why": "推荐目的是先用现有电脑检验本地模型是否有实际价值，再决定是否搭建更大的 AI 系统。它能为不同试验提供统一的模型入口。价值在于选择模型和执行位置的控制权，不是保证笔记本能达到云端模型的速度或回答质量。",
+        "help": [
+          "用小型本地模型改写一段不含敏感信息的草稿，对照原文检查遗漏事实、不自然表达，并记录等待时间。",
+          "让小型测试脚本调用本地聊天 API，把十条样例笔记归到固定类别，保留预期答案，用结果判断本地推理是否够用。"
+        ],
+        "fit": "适合愿意下载模型文件、检查内存与显存的人；磁盘空间紧张、希望完全不规划硬件就获得稳定低延迟的人需要谨慎选择。提供 Windows、macOS、Linux 安装方式，也有 Docker 文档。运行环境采用 MIT；模型权重有独立许可，云端访问可能涉及套餐或用量费用。本地运行仍消耗磁盘、内存、计算与电力。需求随模型大小、量化方式、上下文长度变化，不存在能适用所有模型的统一最低配置。模型在本机运行，不代表连接它的应用插件、日志和云端调用也都留在本机；生成的事实仍需核对。",
+        "try": "用 15–30 分钟先查看官方模型库及可用磁盘/内存，选择一个许可合适的小型支持模型。按 README 安装后，以选中的真实名称运行 `ollama run <model-name>`。重复测试三条短提示词，记录正确性与等待时间，并确认选的是本地模型而非云端条目。模型下载可能超过建议试用窗口。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-11-02T03:30:35Z。已核对官方 README、API 示例、下载方式及元数据许可。本期没有下载模型或测试性能。"
+      }
+    },
+    {
+      "name": "whisper.cpp",
+      "repo": "ggml-org/whisper.cpp",
+      "stars": 54849,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/ggml-org/whisper.cpp",
+      "en": {
+        "category": "Offline speech-to-text · intermediate",
+        "tagline": "Transcribe audio on your own device using a C/C++ implementation of Whisper inference.",
+        "use": "whisper.cpp runs Whisper speech recognition with CPU-only and several hardware-accelerated backends. The repository includes command-line transcription, an HTTP server example, streaming examples, quantization, and voice-activity detection. It performs inference rather than training. With a compatible model already downloaded, supported workflows can process audio without sending it to a transcription service.",
+        "why": "Recommended when you want searchable text from recordings and can tolerate setup and proofreading. It provides a concrete local alternative to paying for each transcription request, while leaving hardware time and review effort visible. It is not a finished meeting-management product or a guarantee of accurate speaker names.",
+        "help": [
+          "Turn a two-minute recording of your own spoken study notes into a draft transcript, then correct names and technical terms while listening to the audio.",
+          "Create draft captions for a short video you are allowed to process, inspect timestamps and omissions, and revise the transcript before sharing it."
+        ],
+        "fit": "Fits users comfortable with a CLI or developers embedding speech recognition; less suitable for someone expecting a polished recorder with no setup or an unreviewed verbatim transcript. Windows, macOS, Linux, mobile examples, and WebAssembly are documented. Code is MIT licensed; obtain model files and check their own terms. A compiler/CMake or an appropriate prebuilt route, model storage, and CPU/GPU resources are needed. The official table gives base roughly 142 MiB on disk and about 388 MB memory, and large roughly 2.9 GiB and about 3.9 GB; actual backend/runtime use can differ. Noise, overlapping voices, language choice, and silence can cause mistakes or invented text. The documented CLI expects 16-bit WAV input.",
+        "try": "15–30 minutes if build tools are ready: follow the official quickstart, choose tiny/base for a short trial, and run the CLI on the included sample before a one-minute personal recording converted to 16 kHz mono PCM 16-bit WAV. For Chinese, use a multilingual model rather than a `.en` variant. Compare every line with the audio; stop the trial at setup verification if downloading or compilation takes longer.",
+        "maintenance": "Not archived; metadata reports pushed_at 2026-10-30T05:51:01Z. Official README was checked for supported platforms, quickstart, memory table, audio format, and inference-only limitation; metadata identifies MIT. No transcription speed or accuracy was measured."
+      },
+      "zh": {
+        "category": "离线语音转文字 · 中等门槛",
+        "tagline": "通过 Whisper 的 C/C++ 推理实现，在自己的设备上转写音频。",
+        "use": "whisper.cpp 支持 CPU 推理和多种硬件加速后端。仓库提供命令行转写、HTTP 服务示例、流式示例、量化及语音活动检测。它用于推理而非训练；下载兼容模型后，支持的使用流程可以不向转写服务上传音频。",
+        "why": "当你希望把录音变成可搜索文本，并能接受配置和校对时，值得考虑。它提供具体的本地转写路线，可以避开逐次 API 转写计费，但仍需计算硬件耗时和人工复核成本。它不是完整的会议管理产品，也不能保证准确识别说话人姓名。",
+        "help": [
+          "将自己录制的两分钟学习口述转成初稿，一边听原音一边修正姓名和专业词汇。",
+          "为你有权处理的短视频生成字幕初稿，检查时间戳和遗漏内容，修订后再分享。"
+        ],
+        "fit": "适合熟悉命令行的人或需要集成语音识别的开发者；希望完全免配置录音、直接得到无需复核的逐字稿时并不合适。官方列出 Windows、macOS、Linux、移动端示例及 WebAssembly。代码为 MIT，模型文件需单独获取并核对相应条款。需要编译器/CMake 或合适的预构建方式、模型磁盘空间和 CPU/GPU 资源。官方表格给出 base 磁盘约 142 MiB、内存约 388 MB，large 磁盘约 2.9 GiB、内存约 3.9 GB；实际后端与运行环境会改变资源占用。噪声、多人重叠、语言选择和静音可能造成错字或凭空出现的文字。文档中的 CLI 要求 16 位 WAV 输入。",
+        "try": "构建工具已就绪时，用 15–30 分钟按官方快速入门选择 tiny/base 进行短试验，先转写自带样例，再尝试一段转换为 16 kHz 单声道 PCM 16 位 WAV 的一分钟个人录音。中文应选多语言模型，不选 `.en` 版本。逐行对照原音；若下载或编译过久，本次先完成环境核对即可。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-10-30T05:51:01Z。已核查官方 README 的平台、快速入门、内存表、音频格式与仅推理限制，元数据标明 MIT。本期未测量转写速度或准确率。"
+      }
+    },
+    {
+      "name": "LiteLLM",
+      "repo": "BerriAI/litellm",
+      "stars": 62509,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/BerriAI/litellm",
+      "en": {
+        "category": "Multi-provider AI integration · intermediate to advanced",
+        "tagline": "Use a common interface for model providers, either in a Python SDK or through a shared gateway.",
+        "use": "LiteLLM maps requests to many model providers using a common API format. The Python SDK supports direct integration; the proxy adds a central endpoint with routing, virtual keys, spend tracking, and management features. Provider support varies by endpoint and model, so a familiar request shape does not imply identical tool calling, output, or errors everywhere.",
+        "why": "Recommended when a real application already needs multiple providers, controlled fallback, or a place to observe model spending. It can reduce repeated integration work and centralize configuration. For a single small script with one provider, the original provider SDK may be simpler; do not add a gateway just because it is popular.",
+        "help": [
+          "Send the same ten non-sensitive classification examples through two supported models using one calling interface, then compare label accuracy, latency, and reported usage before choosing a default.",
+          "Give two test applications separate virtual keys through a local gateway so usage can be attributed separately, and inspect how a deliberately failed request is reported before enabling fallback."
+        ],
+        "fit": "Fits developers and service operators who can manage provider credentials, request semantics, and deployment; not a consumer chat app. A supported Python environment is enough for SDK experiments; a shared proxy needs a running host and may need persistent database configuration for management features. The root LICENSE grants MIT terms outside `enterprise/`; that directory uses separate terms. Hosted and enterprise services, provider tokens, hosting, and storage can cost money. Fallback may create extra billable requests and must respect data-location requirements; gateway logs can contain prompts. Usage and cost tracking depend on provider data and configuration, so inspect actual billing rather than treating a dashboard as a guaranteed spending cap.",
+        "try": "15–30 minutes: follow the Python SDK section in the official README in a fresh environment, use one provider key from an environment variable, and make one short non-sensitive completion with an explicit small output limit. Save the response, usage fields, and error behavior before trying a second provider. Choose the regular SDK distribution for this trial; the README warns not to install overlapping `litellm` and `litellm-core` distributions together. License: https://github.com/BerriAI/litellm/blob/main/LICENSE .",
+        "maintenance": "Not archived; metadata reports pushed_at 2026-11-02T03:28:48Z. Official README, endpoint/provider descriptions, installation warning, and root LICENSE were checked. Activity is not a guarantee that all providers or enterprise features work with the same version; no gateway was deployed here."
+      },
+      "zh": {
+        "category": "多供应商 AI 集成 · 中高门槛",
+        "tagline": "通过 Python SDK 或共享网关，用统一接口调用不同模型供应商。",
+        "use": "LiteLLM 用统一 API 格式将请求映射到不同模型供应商。Python SDK 用于直接集成；代理网关提供集中入口，并加入路由、虚拟密钥、用量费用跟踪与管理功能。不同模型和端点的支持范围不同，因此请求格式相似不代表工具调用、输出和错误行为完全一致。",
+        "why": "真正已有应用需要多个供应商、受控回退或集中观察模型开销时，才值得引入。它可以减少重复接入工作并集中配置。只有一个供应商的小脚本，直接用原厂 SDK 可能更简单，不应仅因高 star 就增加网关。",
+        "help": [
+          "用同一套调用方式，把十条无敏感信息的分类样例发给两个受支持模型，对比标签准确性、延迟和返回用量，再决定默认模型。",
+          "通过本地网关给两个测试应用分配独立虚拟密钥，以便分别归集用量；刻意制造一次失败请求，确认错误如何呈现，再决定是否开启回退。"
+        ],
+        "fit": "适合能够管理供应商凭据、请求差异和部署的开发者或服务维护者，不是面向普通用户的聊天应用。SDK 试验需要兼容的 Python 环境；共享代理需要持续运行的主机，管理功能可能需要持久数据库配置。根 LICENSE 将 `enterprise/` 之外的内容置于 MIT，企业目录另有条款。托管与企业服务、模型 token、主机和存储均可能收费。回退可能额外产生付费请求，也必须符合数据处理地域要求；网关日志可能包含提示词。用量与费用跟踪依赖供应商数据及配置，应核对实际账单，不能把仪表盘视作保证生效的支出上限。",
+        "try": "用 15–30 分钟，在新环境中按官方 README 的 Python SDK 部分，使用环境变量传入一个供应商密钥，做一次无敏感信息的短补全请求，并明确设置较小输出上限。保存响应、用量字段与错误表现，再考虑第二个供应商。本次选常规 SDK 发行包；README 提醒 `litellm` 与 `litellm-core` 文件重叠，不应一起安装。许可证：https://github.com/BerriAI/litellm/blob/main/LICENSE 。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-11-02T03:28:48Z。已核查官方 README、端点与供应商说明、安装注意事项及根 LICENSE。近期活动不保证同一版本下所有供应商或企业功能均可用；本期没有部署网关。"
+      }
+    }
+  ]
 }
 
 ];
