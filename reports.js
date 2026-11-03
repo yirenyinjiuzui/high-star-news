@@ -1207,6 +1207,185 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-11-03",
+  "checkedAt": "2026-11-03 16:48–16:50",
+  "pick": {
+    "en": "Choose one API client first: Bruno if you want request collections as local files reviewed in Git, or Hoppscotch if a browser-first interface fits better. xh is the small command-line option for inspecting an individual request. DBeaver addresses a different problem: exploring database tables and SQL results. Reserve mitmproxy for diagnosing traffic in an application you own or are authorized to test. These are options for different tasks, not a stack you need to install together.",
+    "zh": "接口客户端先选一个：希望把请求集合保存为本地文件并用 Git 审阅，选 Bruno；更习惯浏览器界面，选 Hoppscotch。xh 适合在命令行检查单个请求。DBeaver 解决另一类问题：查看数据库表和 SQL 结果。mitmproxy 则留给你拥有或已获授权测试的应用流量排查。它们分别服务不同任务，无需一起安装。"
+  },
+  "note": {
+    "en": "Checked five selected repositories' official READMEs and GitHub metadata, plus Bruno and Hoppscotch root license files, during the actual research window above. Publication is later than the scheduled 09:00 slot. Four exceed 10,000 stars. xh is an explicit exception at 8,165: it has recent repository activity and a focused single-binary HTTP inspection workflow that complements the visual tools. Counts are exact API snapshots (approx=false), not rounded estimates or a complete GitHub ranking. These five do not repeat the seven available previous editions. Without yesterday's snapshots for these projects, daily star growth cannot be calculated. pushed_at is repository activity evidence, not a release date or a security/stability assessment. Capabilities and licensing statements come from official sources; recommendations, fit, and sample tasks are editorial judgments. No recommended program was installed, executed, or benchmarked. The 15–30 minute trials are proposed exercises after prerequisite setup; downloads can take longer. Prices, enterprise features, hosted services, and third-party database/API charges should be checked separately. Complete English and Simplified Chinese are bundled in reports.js; the page uses no live translation or visitor GitHub API calls. GitHub Pages remains disabled; the repository update is not a hosted-site deployment.",
+    "zh": "在上述实际时段核查五个精选仓库的官方 README、GitHub 元数据，以及 Bruno、Hoppscotch 根许可证。本期制作晚于计划的 09:00。四个项目超过 1 万 stars；xh 为明确例外，快照 8,165 stars：近期仍有仓库活动，单文件 HTTP 检查流程明确，可补充图形工具。数值为精确 API 快照（approx=false），不是四舍五入约数，也不是全站排名。五个项目均未与既有七期重复。缺少这些项目昨日的快照，不能计算每日增量。pushed_at 仅表示仓库活动，不等于发布日期或安全、稳定性评价。功能与许可说明来自官方来源，推荐、适用性和样例任务为编辑判断。本期未安装、运行或测试推荐软件；15–30 分钟为前置配置完成后的建议练习，下载可能耗时更长。价格、企业功能、托管服务及第三方数据库/API 费用需要分别核对。完整中英文保存在 reports.js，页面不调用实时翻译或访客 GitHub API。仓库仍未开启 GitHub Pages，此次同步不代表网站已部署。"
+  },
+  "projects": [
+    {
+      "name": "Bruno",
+      "repo": "usebruno/bruno",
+      "stars": 48002,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/usebruno/bruno",
+      "en": {
+        "category": "Local API collections · beginner to intermediate",
+        "tagline": "Keep reusable API requests in local text files that can travel with your code.",
+        "use": "Bruno is a desktop API client that stores collections in filesystem folders using the Bru text format. The official README describes Git-based collaboration, offline-only collection storage without built-in cloud sync, and a CLI for running collections in automated workflows. Requests still contact the chosen API: offline storage does not mean network requests happen without a network.",
+        "why": "Recommended when an API example should be reviewable and reusable alongside a project. A changed URL or request field can be inspected in a version-control diff instead of being buried in someone's personal client workspace. It is less compelling if you only need to send a single request once.",
+        "help": [
+          "Save a test service's health and list requests in a small collection, then change one query parameter and inspect exactly which local file changed.",
+          "Prepare a reproducible bug example using sample data: store the request and expected response notes so a collaborator can reproduce it without copying your real credentials."
+        ],
+        "fit": "Fits people testing APIs and teams comfortable with files or Git; it does not replace knowing the API's authentication and semantics. Downloads support Windows, macOS, and Linux. Repository code is MIT licensed, while the project also sells commercial editions; check the edition for any specific feature. Desktop installation needs disk and memory, and the CLI needs its documented runtime or Docker route. API usage may be billed. Local collections can still leak secrets if committed or shared, and imported request scripts should be reviewed. Avoid assuming another client's imports will preserve every setting.",
+        "try": "15–30 minutes after installation: create a new collection outside a sensitive project, save two read-only requests against a service you control, change a harmless parameter, and inspect the Bru files. Add only sanitized examples to version control. Official README: https://github.com/usebruno/bruno/blob/main/readme.md ; license: https://github.com/usebruno/bruno/blob/main/license.md .",
+        "maintenance": "Not archived at check time; metadata pushed_at 2026-11-03T06:19:02Z. The actual lowercase readme.md and license.md were checked, including the CLI and commercial-edition distinction. Recent pushes do not guarantee import fidelity or that all features are included in the free edition."
+      },
+      "zh": {
+        "category": "本地接口请求集合 · 初级至中等门槛",
+        "tagline": "把可复用的 API 请求保存为本地文本文件，与代码一起管理。",
+        "use": "Bruno 是桌面 API 客户端，将请求集合保存在文件夹中，使用 Bru 文本格式。官方 README 介绍基于 Git 的协作、不内置云同步的离线集合存储，以及可在自动化流程运行集合的 CLI。请求仍然会连接指定 API；离线存储并不代表没有网络也能发送请求。",
+        "why": "推荐目的是让 API 示例能够随项目审阅和复用。URL 或请求字段变化可以在版本差异中直接查看，不再只留在某人的私人客户端工作区。仅需偶尔发送一次请求时，未必值得建立集合。",
+        "help": [
+          "把测试服务的健康检查与列表查询保存成小集合，修改一个查询参数，查看究竟哪个本地文件发生变化。",
+          "用样例数据准备可复现的问题请求，保存请求及预期响应说明，让协作者无需拿到真实凭据也能复现。"
+        ],
+        "fit": "适合接口测试者和愿意使用文件或 Git 的团队；不能替代对认证和 API 行为的理解。支持 Windows、macOS、Linux。仓库代码为 MIT，同时存在商业版本，具体功能应核对所属版本。桌面安装需要磁盘与内存；CLI 需要文档对应运行环境或 Docker。API 使用可能收费。本地集合被提交或分享时仍可能泄漏密钥，导入的请求脚本需要先审阅，也不能假定其他客户端的所有设置都能完整导入。",
+        "try": "安装后用 15–30 分钟，在非敏感目录建立集合，保存两个指向自己服务的只读请求，修改无害参数并查看 Bru 文件。仅把脱敏示例加入版本管理。官方 README：https://github.com/usebruno/bruno/blob/main/readme.md ；许可：https://github.com/usebruno/bruno/blob/main/license.md 。",
+        "maintenance": "核查时未归档；元数据 pushed_at 为 2026-11-03T06:19:02Z。已读实际采用小写名称的 readme.md、license.md，并核对 CLI 与商业版本区别。近期推送不保证导入完全一致，也不代表所有功能都在免费版。"
+      }
+    },
+    {
+      "name": "Hoppscotch",
+      "repo": "hoppscotch/hoppscotch",
+      "stars": 80727,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/hoppscotch/hoppscotch",
+      "en": {
+        "category": "Browser-first API exploration · beginner to intermediate",
+        "tagline": "Explore HTTP and realtime APIs in a visual client with collections and environments.",
+        "use": "Hoppscotch offers request construction, formatted response views, collections, environment variables, pre-request scripts, and post-request tests. Its README also describes GraphQL, WebSocket and other realtime interfaces, browser/PWA use, desktop clients, and self-hosting. It helps inspect and organize calls; it does not prove the remote service behaves correctly under load.",
+        "why": "Recommended for learning the relationship between method, URL, headers, body, and response without starting with shell syntax. Compared with a local-file workflow, its browser-first and workspace options may fit quick exploration better. Choose it or Bruno according to how you want to store and share requests.",
+        "help": [
+          "Explore a public demonstration API with non-sensitive data, change a filter, and compare status, response headers, and returned JSON before writing integration code.",
+          "Store two test environments with different base URLs, reuse the same read-only request, and add a simple status assertion to spot an accidental environment mismatch."
+        ],
+        "fit": "Fits visual learners and API users; less suited to someone needing only a tiny terminal command. Web/PWA and Windows, Linux, macOS desktop clients are documented. The root repository license is MIT, but hosted, enterprise, collaboration, and infrastructure terms must be checked separately; README feature lists do not guarantee identical availability in every edition. Self-hosting takes deployment resources. Browser CORS rules can prevent direct requests; an extension or proxy changes how traffic travels. A proxy or cloud sync can receive request content, so do not assume a web client keeps everything local, and sanitize shared URLs and exported collections.",
+        "try": "15–30 minutes: use the official web or desktop option from the README, enter a read-only demonstration endpoint, inspect headers and JSON, save a collection, then export it and check what it contains. Use dummy tokens. If CORS blocks it, read the documented connection options before choosing a proxy. Source: https://github.com/hoppscotch/hoppscotch#readme ; license: https://github.com/hoppscotch/hoppscotch/blob/main/LICENSE .",
+        "maintenance": "Not archived; metadata pushed_at 2026-10-31T09:16:29Z. Official README and root LICENSE were checked. No hosted plan, extension, or self-hosted deployment was tested."
+      },
+      "zh": {
+        "category": "浏览器优先的接口探索 · 初级至中等门槛",
+        "tagline": "通过图形客户端、集合和环境变量探索 HTTP 与实时接口。",
+        "use": "Hoppscotch 提供请求构建、格式化响应、集合、环境变量、请求前脚本和响应后测试。README 也介绍 GraphQL、WebSocket 等实时接口、浏览器/PWA、桌面客户端和自托管。它帮助查看与整理调用，不代表已经验证远端服务的负载能力。",
+        "why": "推荐给希望先理解方法、URL、请求头、正文和响应之间关系，而不想先学习命令行语法的人。浏览器优先与工作区方式适合快速探索；与 Bruno 之间，可根据希望怎样保存和分享请求来选择。",
+        "help": [
+          "用无敏感信息的公开演示 API 修改过滤条件，对比状态码、响应头和 JSON，再动手编写接入代码。",
+          "建立两个基础 URL 不同的测试环境，复用同一只读请求，加一个简单状态断言，帮助发现误选环境。"
+        ],
+        "fit": "适合喜欢图形界面的学习者和接口使用者；只需要终端小命令时不一定必要。文档列出 Web/PWA 和 Windows、Linux、macOS 桌面版。根许可证为 MIT，但托管、企业、协作与基础设施条款需另查；README 列出功能不代表每个版本均提供。自托管需要部署资源。浏览器 CORS 规则可能阻止直接请求，扩展或代理会改变流量路径。代理、云同步可能接触请求内容，不能假定网页客户端的数据全部留在本机；分享 URL、导出集合应脱敏。",
+        "try": "用 15–30 分钟从官方 README 选择网页或桌面方式，访问只读演示端点，检查响应头与 JSON，保存集合再导出查看内容。仅使用虚拟 token。遇到 CORS 时先读连接选项再决定代理方式。来源：https://github.com/hoppscotch/hoppscotch#readme ；许可：https://github.com/hoppscotch/hoppscotch/blob/main/LICENSE 。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-10-31T09:16:29Z。已核对官方 README、根 LICENSE。本期未测试托管套餐、扩展或自托管部署。"
+      }
+    },
+    {
+      "name": "DBeaver Community",
+      "repo": "dbeaver/dbeaver",
+      "stars": 52283,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/dbeaver/dbeaver",
+      "en": {
+        "category": "Database exploration and SQL · intermediate",
+        "tagline": "Inspect database schemas and query results through one desktop workspace.",
+        "use": "DBeaver is a multi-database desktop tool with a SQL editor, schema browsing, data viewing/editing, diagrams, and data export/import tools. The README separates Community-supported drivers from commercial extensions. This is a client for an existing database, not a database engine or an automatic backup system.",
+        "why": "Recommended to make unfamiliar tables and query results easier to inspect across different database systems. The value is seeing structure and data together while you learn or debug SQL. SQL dialects, permissions, and transaction behavior still belong to the connected database.",
+        "help": [
+          "Open a copy of a small SQLite dataset, inspect column types and relationships, and run a SELECT with a row limit to understand its contents before analysis.",
+          "Connect a read-only account to a test database, check the rows behind a report, and export a small sanitized result for comparison with a spreadsheet."
+        ],
+        "fit": "Fits people learning SQL or working with databases; unnecessary for someone who only needs to open a plain text file. Desktop distributions target Windows, macOS, and Linux and require Java; the current README says distributions include OpenJDK 25. Community code uses Apache-2.0, while PRO products, some drivers/connectors, AI services, and the database itself can have separate terms or charges. Runtime, drivers, and result grids use disk/RAM, and large queries consume server resources. Table editing and SQL can modify real data; use a copy or read-only credentials for exploration. AI integrations can send schema context to a configured provider; they are not required for the core exercise.",
+        "try": "15–30 minutes: choose the official Community download, connect to a noncritical SQLite copy or existing test database, inspect one table, run one SELECT with a dialect-appropriate limit, and export ten sanitized rows. Check the connection and transaction settings before any edits. Official source and downloads: https://github.com/dbeaver/dbeaver#readme .",
+        "maintenance": "Not archived; metadata pushed_at 2026-11-03T08:45:17Z. Official README, Community/PRO driver lists, runtime notes, and metadata license were checked. No database connection or SQL execution was performed."
+      },
+      "zh": {
+        "category": "数据库查看与 SQL · 中等门槛",
+        "tagline": "通过统一桌面工作区查看数据库结构与查询结果。",
+        "use": "DBeaver 是多数据库桌面工具，提供 SQL 编辑、结构浏览、数据查看/编辑、关系图及导入导出。README 区分社区版支持的驱动与商业扩展。它连接已有数据库，不是数据库引擎，也不是自动备份系统。",
+        "why": "推荐目的是在学习或排查 SQL 时，同时看清陌生表的结构和数据，并能在不同数据库之间使用类似的操作界面。SQL 方言、权限与事务行为仍由连接的数据库决定。",
+        "help": [
+          "打开小型 SQLite 数据集的副本，查看列类型与关系，用带行数限制的 SELECT 先了解内容，再开展分析。",
+          "用只读账号连接测试数据库，核查报表背后的记录，导出少量脱敏结果，与电子表格对照。"
+        ],
+        "fit": "适合学习 SQL 或需要操作数据库的人；只想打开普通文本文件时没有必要。桌面发行版面向 Windows、macOS、Linux，依赖 Java；当前 README 说明发行包含 OpenJDK 25。社区代码采用 Apache-2.0，PRO 产品、部分驱动/连接器、AI 服务和数据库本身可能有独立条款与费用。运行环境、驱动和结果网格占用磁盘/内存，大查询也消耗服务器资源。表编辑与 SQL 可能改动真实数据，探索时使用副本或只读凭据。AI 集成可能向所配供应商发送结构上下文，本次基础练习无需启用 AI。",
+        "try": "用 15–30 分钟选择官方 Community 下载，连接不重要的 SQLite 副本或已有测试库，查看一张表，运行一条符合对应方言、限制行数的 SELECT，导出十行脱敏数据。编辑前先检查连接及事务设置。官方来源与下载：https://github.com/dbeaver/dbeaver#readme 。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-11-03T08:45:17Z。已核对官方 README、社区/PRO 驱动列表、运行环境说明及元数据许可。本期未连接数据库或执行 SQL。"
+      }
+    },
+    {
+      "name": "mitmproxy",
+      "repo": "mitmproxy/mitmproxy",
+      "stars": 46590,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/mitmproxy/mitmproxy",
+      "en": {
+        "category": "Application traffic debugging · advanced",
+        "tagline": "Observe HTTP traffic through a local debugging proxy with terminal and web interfaces.",
+        "use": "mitmproxy is an interactive SSL/TLS-capable intercepting proxy. The README lists HTTP/1, HTTP/2, and WebSocket support, mitmproxy's console interface, mitmdump for command-line use, and mitmweb for a browser interface. Unlike constructing a standalone API request, this workflow lets you examine the traffic generated by a configured client.",
+        "why": "Recommended when your own application sends something different from what you expected and ordinary application logs do not show enough detail. Seeing the actual request and response can help distinguish a client configuration problem from a server error. It adds network setup complexity, so use a normal API client first if that answers the question.",
+        "help": [
+          "Route only a test client's harmless HTTP request through the proxy and compare its actual URL, headers, and response with the application's intended request.",
+          "Reproduce an error in an authorized test environment, inspect the response returned to that client, and record a sanitized example for debugging rather than collecting unrelated browsing traffic."
+        ],
+        "fit": "Fits developers comfortable with proxies, TLS trust, and network configuration; not a general speed booster or a way to gain access to another person's traffic. Consult the official installation page for your OS and supported interface; do not assume console and web interfaces have identical platform support. Code is MIT licensed. A local process and storage for captured flows are needed; large sessions consume memory/disk. HTTPS inspection requires an explicitly configured trust setup, and certificate-pinned clients may refuse it. Captures can contain tokens and personal data. Use a dedicated test client and only traffic you own or are authorized to inspect; remove temporary proxy/trust configuration afterward.",
+        "try": "15–30 minutes: read the installation guide linked by the official README at https://github.com/mitmproxy/mitmproxy#readme , choose the appropriate interface, and observe a single non-sensitive HTTP request from an explicitly configured test client. Begin without adding an HTTPS interception certificate. Compare the request, close the proxy, and restore the client's settings. Treat HTTPS trust setup as a separate deliberate exercise.",
+        "maintenance": "Not archived; metadata pushed_at 2026-11-01T22:07:37Z. Official README was checked for the three interfaces and protocol scope; metadata identifies MIT. No proxy, interception certificate, or traffic capture was configured for this report."
+      },
+      "zh": {
+        "category": "应用流量排查 · 较高门槛",
+        "tagline": "通过本地调试代理及终端、网页界面观察 HTTP 流量。",
+        "use": "mitmproxy 是支持 SSL/TLS 的交互式拦截代理。README 列出 HTTP/1、HTTP/2、WebSocket 支持，以及 mitmproxy 控制台、mitmdump 命令行、mitmweb 网页三种界面。与单独构造 API 请求不同，这种方式可以检查已配置客户端实际发出的流量。",
+        "why": "当自己的应用实际发送内容与预期不同，而普通日志又缺少细节时，值得考虑。查看真实请求与响应可以帮助区分客户端配置问题和服务端错误。它增加网络配置复杂度；普通接口客户端已能回答的问题，先用简单工具即可。",
+        "help": [
+          "仅让测试客户端的一次无敏感信息 HTTP 请求经过代理，将实际 URL、请求头和响应与应用预期对照。",
+          "在已授权测试环境复现错误，查看返回给客户端的真实响应，记录脱敏示例供调试，而不是收集无关浏览流量。"
+        ],
+        "fit": "适合熟悉代理、TLS 信任和网络配置的开发者；不是通用加速器，也不能用于获取他人的流量。按官方安装页核对系统及界面支持，不能假定控制台和网页界面支持的平台完全相同。代码为 MIT。需要本地进程及流量存储空间，大会话消耗内存/磁盘。HTTPS 检查需要明确配置信任，证书固定的客户端可能拒绝连接。捕获内容可能含 token、个人信息；只使用专门测试客户端，检查自己拥有或已获授权的流量，结束后撤销临时代理及信任配置。",
+        "try": "用 15–30 分钟阅读官方 README 链接的安装指南 https://github.com/mitmproxy/mitmproxy#readme ，选择合适界面，从明确配置的测试客户端观察一次无敏感信息 HTTP 请求。先不添加 HTTPS 拦截证书。对照请求后关闭代理、恢复客户端设置；HTTPS 信任配置作为单独、明确的后续练习。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-11-01T22:07:37Z。已读官方 README 的三种界面及协议范围，元数据标明 MIT。本期未配置代理、拦截证书或捕获流量。"
+      }
+    },
+    {
+      "name": "xh",
+      "repo": "ducaale/xh",
+      "stars": 8165,
+      "approx": false,
+      "evidence": "https://api.github.com/repos/ducaale/xh",
+      "en": {
+        "category": "HTTP command-line inspection · intermediate · threshold exception",
+        "tagline": "Construct readable HTTP requests in a small command-line tool, including an offline preview mode.",
+        "use": "xh implements much of HTTPie's request syntax in Rust, with JSON/form fields, headers, authentication, sessions, formatted output, HTTP/2 support, and translation to curl commands. Its --offline mode constructs a request without sending it. The README also lists missing HTTPie features and the absence of a plugin system; it is not a complete drop-in replacement.",
+        "why": "At 8,165 stars, this is today's explicit exception below 10,000. Recent maintenance and a narrow single-binary workflow justify inclusion: it is useful when you want a request you can inspect or paste into a bug report without opening a full workspace. The project claims speed advantages; this report did not benchmark them.",
+        "help": [
+          "Preview a JSON request with dummy fields offline, checking that strings, numeric JSON values, and query parameters are placed where intended before sending anything.",
+          "Inspect a read-only development endpoint from a terminal, then generate a curl equivalent to share a sanitized reproduction with someone who uses another client."
+        ],
+        "fit": "Fits terminal users and people learning HTTP syntax; less suited to visual collection management or workflows dependent on HTTPie plugins. Prebuilt binaries cover Windows, macOS, and Linux; source builds need the documented Rust toolchain. Code is MIT licensed, with local binary storage and network access sufficient for basic use; external APIs may charge. Different package builds can have different TLS options. Shell quoting matters, command history can retain secrets, and network requests can change server data. A successful request is not proof that an API is reliable or secure.",
+        "try": "15–30 minutes after choosing an official binary/package: run `xh --offline https://example.com/test name=demo count:=2` and inspect the generated request. Next read `xh help`, then try a read-only endpoint you control and inspect the curl translation with `--curl`. Use dummy credentials and explicit HTTPS. Source, syntax, and limitations: https://github.com/ducaale/xh#readme .",
+        "maintenance": "Not archived; metadata pushed_at 2026-10-29T19:36:51Z. Official README was checked for installation, offline mode, syntax, and compatibility limitations; metadata identifies MIT. The star threshold exception is explicit, and no performance comparison was run."
+      },
+      "zh": {
+        "category": "HTTP 命令行检查 · 中等门槛 · star 门槛例外",
+        "tagline": "用小型命令行工具构造易读 HTTP 请求，支持离线预览。",
+        "use": "xh 用 Rust 实现 HTTPie 的大部分请求语法，支持 JSON/表单字段、请求头、认证、会话、格式化输出、HTTP/2，以及生成 curl 命令。--offline 只构造请求而不发送。README 也列出尚未实现的 HTTPie 功能与没有插件系统的限制，不能视为完全兼容替代品。",
+        "why": "本期快照 8,165 stars，明确低于 1 万门槛。保留它是因为近期仍有维护，单文件流程集中：无需打开完整工作区就能检查请求或准备问题复现。项目声称有速度优势，但本期没有做性能对比。",
+        "help": [
+          "用虚拟字段离线预览 JSON 请求，确认字符串、JSON 数字与查询参数的位置，再决定是否发送。",
+          "从终端检查只读开发端点，再生成 curl 等价命令，向使用其他客户端的人分享脱敏复现示例。"
+        ],
+        "fit": "适合终端用户或希望学习 HTTP 语法的人；需要可视化集合管理、依赖 HTTPie 插件的流程不一定合适。提供 Windows、macOS、Linux 预构建程序，源码构建需要文档对应的 Rust 工具链。代码为 MIT，基本使用需要本地程序存储与网络，外部 API 可能收费。不同软件包构建的 TLS 选项可能不同。要注意 shell 引号，命令历史可能保留密钥，网络请求也可能修改服务端数据。单次请求成功不能证明接口可靠或安全。",
+        "try": "选择官方程序/软件包后用 15–30 分钟，先运行 `xh --offline https://example.com/test name=demo count:=2` 检查生成请求，再读 `xh help`，然后尝试自己控制的只读端点，并用 `--curl` 查看转换。使用虚拟凭据与明确的 HTTPS。来源、语法及限制：https://github.com/ducaale/xh#readme 。",
+        "maintenance": "未归档；元数据 pushed_at 为 2026-10-29T19:36:51Z。已读官方 README 的安装、离线模式、语法和兼容限制，元数据标明 MIT。已明确说明 star 门槛例外，本期未做性能对比。"
+      }
+    }
+  ]
 }
 
 ];
