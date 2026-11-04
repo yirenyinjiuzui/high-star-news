@@ -1386,6 +1386,184 @@ window.REPORTS = [
       }
     }
   ]
+},
+{
+  "date": "2026-11-04",
+  "checkedAt": "2026-11-04 13:01–13:02",
+  "pick": {
+    "en": "Choose by the output you need: Pandoc for another editable format, Typst for a typeset PDF, Docling for extracting data from an existing PDF, Paperless-ngx for a permanent searchable archive, or Mermaid for a small diagram in your docs. If you only have one file to process, start with that file and the tool for its specific task.",
+    "zh": "按交付物选工具：需要另一种可编辑格式，用 Pandoc；要排版后的 PDF，用 Typst；要从现成 PDF 提取数据，用 Docling；要长期保存并搜索扫描件，用 Paperless-ngx；要在说明文档中放一张小图，用 Mermaid。手头只有一份文件时，先选能解决这份文件具体问题的工具。"
+  },
+  "note": {
+    "en": "Reviewed the official READMEs, repository metadata and release records for five selected public repositories, plus Paperless-ngx’s feature documentation. Times in the check header are in Asia/Shanghai; release and push timestamps use UTC. Counts are exact API snapshots at the time of review, with no rounding. All five meet the 10,000-star threshold and none repeats an existing edition. This selection is not a GitHub-wide ranking, and daily star gains cannot be calculated without a prior-day snapshot for the same repositories. Use cases and trial plans are editorial suggestions; the programs were not installed, run or benchmarked. Trial estimates assume setup is complete. GitHub Pages is not enabled for this report repository; the bilingual buttons run when the HTML is opened in a browser.",
+    "zh": "核查范围为五个精选公开仓库的官方 README、仓库元数据和发行记录，并补查 Paperless-ngx 的功能文档。页首核查时段采用北京时间，发行与推送时间使用 UTC。星标数为核查时的 API 精确快照，未取约数。五个项目均达到 1 万 stars，且未与既有日报重复。本期不是 GitHub 全站排名；缺少同一批仓库的前日快照，不能计算日增量。应用场景与试用方案是编辑建议；本期没有安装、运行或测试项目性能，入门估时假定前置配置已就绪。日报仓库未启用 GitHub Pages，在浏览器打开 HTML 才能使用双语按钮。"
+  },
+  "projects": [
+    {
+      "name": "Pandoc",
+      "repo": "jgm/pandoc",
+      "stars": 46794,
+      "approx": false,
+      "evidence": "https://github.com/jgm/pandoc/releases/tag/3.13",
+      "en": {
+        "category": "Document conversion · intermediate",
+        "tagline": "Turn a structured document into another format from the command line.",
+        "use": "Pandoc reads a document into a common structure and writes it in a target format. It supports conversions such as Markdown to DOCX or HTML and DOCX to Markdown. Its Markdown dialect supports tables, footnotes and citations. PDF output uses a separate engine, with setup varying by the route you choose.",
+        "why": "Use it when one source needs to serve several readers or publishing systems. Maintaining one Markdown file can make revisions easier to track while still giving someone an editable Word copy. Check one representative document before committing to a batch conversion.",
+        "help": [
+          "Keep a project handout in Markdown and generate DOCX for reviewers who prefer Word. Check headings, links and the image caption in the result.",
+          "Convert a copy of a legacy Word guide to Markdown for a documentation repository. Compare the original and output to identify tables or callouts that need repair."
+        ],
+        "fit": "Fits readers comfortable with a terminal and simple text files. If exact Word layout or tracked review is central, keep the original editing workflow. Local CLI builds are available for Windows, macOS and Linux; plain DOCX/HTML conversion needs no hosted service. The README says GPL v2 or later; check separate terms for templates, fonts and PDF engines. Complex tables, custom styling and page margins may not survive conversion.",
+        "try": "15–25 minutes after installation: create notes.md with two headings, a link and a small table. Run `pandoc notes.md -o notes.docx` and `pandoc notes.md -s -o notes.html`. Compare structure in both outputs. Leave PDF and complicated layouts for a second test. Official guide: https://pandoc.org/MANUAL.html .",
+        "maintenance": "Not archived at review. GitHub reports a repository push at 2026-11-03T16:48:02Z; the latest release returned by GitHub is 3.13, published 2026-10-26T21:37:45Z. This is maintenance evidence, not a compatibility test."
+      },
+      "zh": {
+        "category": "文档格式转换 · 中等门槛",
+        "tagline": "通过命令行将结构化文档转换为另一种格式。",
+        "use": "Pandoc 先读取文档结构，再写出目标格式。它支持 Markdown 转 DOCX 或 HTML、DOCX 转 Markdown 等操作。它的 Markdown 方言支持表格、脚注与引用。输出 PDF 需要另配引擎，具体依赖取决于所选方案。",
+        "why": "当同一份源文件需要交给不同读者或发布系统时值得试用。维护一份 Markdown 便于追踪修订，同时可以给他人提供可编辑的 Word 副本。批量转换前先选一份有代表性的文档验证。",
+        "help": [
+          "将项目讲义保存在 Markdown 中，给习惯 Word 的审阅人生成 DOCX，检查标题、链接和图片说明。",
+          "把旧版 Word 指南的副本转换成 Markdown 放入文档仓库，对照原文，找出需要修补的表格或提示框。"
+        ],
+        "fit": "适合能使用终端和文本文件的人。如果必须保留 Word 的精确版式或修订流程，宜继续用原有编辑方式。Windows、macOS、Linux 有本地 CLI；普通 DOCX/HTML 转换无需托管服务。README 标明 GPL v2 或更高版本；模板、字体与 PDF 引擎的许可另查。复杂表格、自定义样式及页边距可能无法保留。",
+        "try": "安装后用 15–25 分钟创建 notes.md，放入两个标题、一个链接和小表格。运行 `pandoc notes.md -o notes.docx` 和 `pandoc notes.md -s -o notes.html`，对比两个输出的结构。PDF 与复杂版式留到第二次验证。官方指南：https://pandoc.org/MANUAL.html 。",
+        "maintenance": "核查时未归档。GitHub 记录的仓库推送时间为 2026-11-03T16:48:02Z；GitHub 返回的最新发行为 3.13，发布于 2026-10-26T21:37:45Z。这些是维护记录，不代表兼容性测试。"
+      }
+    },
+    {
+      "name": "Typst",
+      "repo": "typst/typst",
+      "stars": 56970,
+      "approx": false,
+      "evidence": "https://github.com/typst/typst/releases/tag/v0.15.1",
+      "en": {
+        "category": "Technical typesetting · beginner to intermediate",
+        "tagline": "Write a document as text and compile it into a designed PDF.",
+        "use": "Typst combines markup for headings, lists and equations with rules and functions for styling. The CLI compiles local .typ files and can rebuild when a source file changes. It can use additional font directories and supports bibliographies, useful when documents include formulas and citations.",
+        "why": "Try it when your recurring output is a printable PDF and you want to reuse page and heading styles. A small template can keep the layout consistent between editions while you revise the content in a text editor.",
+        "help": [
+          "Build a one-page formula sheet with numbered sections and equations, then change the page margins once to see how the whole page reflows.",
+          "Make a reusable two-page report with the same heading style and a bibliography; edit one reference and regenerate the PDF before sharing it."
+        ],
+        "fit": "Fits people willing to learn lightweight markup; may not suit a journal that mandates a specific LaTeX template or collaborators who need editable DOCX. The Apache-2.0 CLI has releases for Windows, macOS and Linux. It needs the binary, relevant fonts and any template packages; hosted collaboration plans and third-party font or package terms are separate. Font substitution and package versions can change the result, so inspect the exported PDF.",
+        "try": "15–25 minutes: create a .typ file with a heading, list and one equation. Run `typst compile sample.typ`, add numbered headings, and compile again. If writing in Chinese, include a Chinese line and check that your installed font covers it. Official docs: https://typst.app/docs/ .",
+        "maintenance": "Not archived at review. GitHub reports a repository push at 2026-10-30T02:02:23Z; the latest release returned by GitHub is v0.15.1, published 2026-07-17T11:12:06Z. This is maintenance evidence, not a compatibility test."
+      },
+      "zh": {
+        "category": "技术排版 · 初级至中等门槛",
+        "tagline": "以文本写文档，再编译成排版后的 PDF。",
+        "use": "Typst 用标记写标题、列表与公式，用规则和函数控制样式。CLI 能编译本地 .typ 文件，并在源文件变化时重建。它支持额外字体目录与参考文献，适合含公式和引用的文档。",
+        "why": "如果反复交付可打印的 PDF，并希望复用页面和标题样式，可以尝试。用小模板固定各期版式，内容继续在文本编辑器里修改。",
+        "help": [
+          "做一张带编号小节和公式的单页速查表，只改一次页边距，观察整页如何重新排版。",
+          "做一份带统一标题与参考文献的两页报告模板，修改一条参考文献，重新生成 PDF 后再分享。"
+        ],
+        "fit": "适合愿意学轻量标记的人；必须使用指定 LaTeX 模板的期刊、需要可编辑 DOCX 的协作者可能不适用。Apache-2.0 CLI 有 Windows、macOS、Linux 发行版。需要程序、所用字体及模板依赖包；托管协作套餐、第三方字体和包的条款另算。字体替换、包版本会改变成品，须打开 PDF 检查。",
+        "try": "用 15–25 分钟建立 .typ 文件，写标题、列表和一个公式。运行 `typst compile sample.typ`，添加标题编号再编译一次。如要写中文，加入一行中文检查所装字体是否覆盖。官方文档：https://typst.app/docs/ 。",
+        "maintenance": "核查时未归档。GitHub 记录的仓库推送时间为 2026-10-30T02:02:23Z；GitHub 返回的最新发行为 v0.15.1，发布于 2026-07-17T11:12:06Z。这些是维护记录，不代表兼容性测试。"
+      }
+    },
+    {
+      "name": "Docling",
+      "repo": "docling-project/docling",
+      "stars": 70081,
+      "approx": false,
+      "evidence": "https://github.com/docling-project/docling/releases/tag/v2.146.0",
+      "en": {
+        "category": "Document extraction and OCR · intermediate to advanced",
+        "tagline": "Extract document content into Markdown or structured data for later processing.",
+        "use": "Docling parses documents such as PDF and DOCX, and its PDF pipeline can identify layout, reading order and table structure. OCR handles image-based input, and the CLI and Python library can export Markdown or structured formats such as JSON. Local execution is supported; some configurations use different models or services.",
+        "why": "Recommended when copying text or extracting a table by hand is the bottleneck. It helps prepare material for search or analysis, and gives you output you can inspect before passing it to an AI system.",
+        "help": [
+          "Extract a two-column technical article, then compare the order of headings and paragraphs against the PDF before using the text for search.",
+          "Convert a public PDF with a table, inspect merged headers, units and five cells against the source, and decide whether automated extraction is dependable enough for similar documents."
+        ],
+        "fit": "Fits readers comfortable with Python or a CLI. Less suitable for perfect visual reproduction or unattended extraction of critical figures. The README lists Python 3.10+ on Windows, macOS and Linux. Code is MIT; model licenses vary. Installations can need model downloads and appreciable RAM, disk and CPU time. GPU needs depend on the pipeline; optional remote services may charge. Scans, complex layout and OCR can introduce errors; verify values and reading order.",
+        "try": "15–30 minutes once installed and models are ready: choose a short public PDF or a local sample without private data, run `docling sample.pdf`, then compare the Markdown with three headings and a table in the original. Decide whether the misses are acceptable before processing a folder. Official docs: https://docling-project.github.io/docling/ .",
+        "maintenance": "Not archived at review. GitHub reports a repository push at 2026-11-03T17:22:40Z; the latest release returned by GitHub is v2.146.0, published 2026-11-03T06:40:56Z. This is maintenance evidence, not a compatibility test."
+      },
+      "zh": {
+        "category": "文档提取与 OCR · 中高门槛",
+        "tagline": "将文档内容提取为 Markdown 或结构化数据，方便后续处理。",
+        "use": "Docling 能解析 PDF、DOCX 等文档，PDF 流程可识别版面、阅读顺序及表格结构。OCR 处理图像输入，CLI 和 Python 库可以导出 Markdown 或 JSON 等结构化格式。它支持本地执行；不同配置可能使用不同模型或服务。",
+        "why": "手工复制正文或抄表是瓶颈时值得尝试。它可以为搜索、分析准备材料，也能先让你检查输出，再交给 AI 系统。",
+        "help": [
+          "提取一篇双栏技术文章，对照 PDF 核对标题和段落顺序，再决定是否用于检索。",
+          "转换一份有表格的公开 PDF，对照核查合并表头、单位和五个单元格，再判断能否把提取流程用于同类文档。"
+        ],
+        "fit": "适合熟悉 Python 或命令行的人。需要完美复刻视觉版式、无人复核地提取关键数字时不合适。README 列出 Windows、macOS、Linux 及 Python 3.10+。代码为 MIT；模型许可各异。可能需要下载模型，并占用内存、磁盘和 CPU 时间；GPU 要求取决于处理流程，可选远程服务可能收费。扫描件、复杂排版及 OCR 都可能引入错误，须核对数值与阅读顺序。",
+        "try": "安装和模型准备好后，用 15–30 分钟选一份简短公开 PDF 或无私人内容的本地样例，运行 `docling sample.pdf`，将输出与原件的三个标题和一张表对照。先判断遗漏是否可接受，再处理整个文件夹。官方文档：https://docling-project.github.io/docling/ 。",
+        "maintenance": "核查时未归档。GitHub 记录的仓库推送时间为 2026-11-03T17:22:40Z；GitHub 返回的最新发行为 v2.146.0，发布于 2026-11-03T06:40:56Z。这些是维护记录，不代表兼容性测试。"
+      }
+    },
+    {
+      "name": "Paperless-ngx",
+      "repo": "paperless-ngx/paperless-ngx",
+      "stars": 47658,
+      "approx": false,
+      "evidence": "https://github.com/paperless-ngx/paperless-ngx/releases/tag/v3.4.2",
+      "en": {
+        "category": "Searchable document archive · intermediate to advanced",
+        "tagline": "Make scanned documents searchable and organize them in a self-hosted web library.",
+        "use": "Paperless-ngx imports documents, runs OCR, indexes full text, and lets you organize the archive with tags, correspondents and document types. The docs describe storing an archival PDF/A alongside the original. Its default workflow is useful for keeping and finding documents over time.",
+        "why": "Recommended when finding a specific phrase or sender inside older scans is harder than adding a file. It puts text search and filters in one place. The benefit comes from consistent intake and maintenance; decide on a backup plan before replacing any existing archive.",
+        "help": [
+          "Import mock receipts with inconsistent filenames, tag them by category, then find one by a phrase inside the scan rather than by filename.",
+          "Create a saved view for example notices of one type, filter by sender, and compare the scan with its OCR text before relying on the index."
+        ],
+        "fit": "Fits households or teams able to manage a server, storage and backups; a folder and desktop search may be easier for a handful of PDFs. The GPL-3.0 project documents Docker Compose and a browser interface. Budget for host storage, backups and OCR CPU/RAM; optional external OCR or AI services can cost money and may process data remotely. OCR can miss words; keep originals, configure access, and test restores. A running service alone does not protect against disk loss.",
+        "try": "15–25 minutes: explore the demo linked by the official README using only existing demo data, or import two fabricated scans in your own test instance. Try a text search and tag filter, open the original, then read the setup and backup guidance before a real import. Official docs: https://docs.paperless-ngx.com/ .",
+        "maintenance": "Not archived at review. GitHub reports a repository push at 2026-11-04T01:25:12Z; the latest release returned by GitHub is v3.4.2, published 2026-11-03T21:57:15Z. This is maintenance evidence, not a compatibility test."
+      },
+      "zh": {
+        "category": "可搜索文档归档 · 中高门槛",
+        "tagline": "把扫描文档变成可搜索内容，在自托管网页库里整理。",
+        "use": "Paperless-ngx 导入文档、执行 OCR、建立全文索引，可按标签、往来方与文档类型管理。文档说明可在保留原件的同时保存归档 PDF/A。适合长期保存并检索资料。",
+        "why": "如果找旧扫描件里的某句话或发件方比录入文件更麻烦，可以尝试。它把正文搜索和筛选放在一个界面中。收益来自持续录入和维护；替代原有档案前先制定备份方案。",
+        "help": [
+          "导入文件名不统一的模拟收据，添加类别标签，再通过扫描件正文中的词句找回一张，而不用依赖文件名。",
+          "为一种样例通知建立保存视图，按发件方筛选，比较原始扫描件与 OCR 文本，再决定能否依赖索引。"
+        ],
+        "fit": "适合能管理服务器、存储和备份的个人或团队；只有几份 PDF 时，文件夹加桌面搜索更省事。项目采用 GPL-3.0，官方说明提供 Docker Compose 及浏览器界面。要考虑主机磁盘、备份及 OCR 的 CPU/内存开销；可选外部 OCR 或 AI 服务可能收费并在远端处理数据。OCR 会漏字；保留原件，配置访问权限并试做恢复。服务正常运行本身无法防止磁盘故障导致的数据丢失。",
+        "try": "用 15–25 分钟查看官方 README 链接的演示，仅使用已有演示数据；或在自己的测试实例导入两份虚构扫描件。试正文搜索、标签过滤及打开原件，再读部署与备份指引后考虑真实导入。官方文档：https://docs.paperless-ngx.com/ 。",
+        "maintenance": "核查时未归档。GitHub 记录的仓库推送时间为 2026-11-04T01:25:12Z；GitHub 返回的最新发行为 v3.4.2，发布于 2026-11-03T21:57:15Z。这些是维护记录，不代表兼容性测试。"
+      }
+    },
+    {
+      "name": "Mermaid",
+      "repo": "mermaid-js/mermaid",
+      "stars": 91004,
+      "approx": false,
+      "evidence": "https://github.com/mermaid-js/mermaid/releases/tag/%40mermaid-js/tiny%4012.3.0",
+      "en": {
+        "category": "Diagrams from text · beginner",
+        "tagline": "Describe flows and interactions in text that can be rendered alongside documentation.",
+        "use": "Mermaid is a JavaScript renderer for diagrams written with a Markdown-inspired syntax. It supports flowcharts, sequence diagrams and more. GitHub renders supported Mermaid blocks in Markdown, and the project links a live editor for prototyping. Diagrams are stored as text, so their changes can be reviewed as diffs.",
+        "why": "Use it for small diagrams that should stay close to the instructions or code they explain. A reviewer can inspect changes to a step or arrow without opening a separate design file. A good diagram still needs correct labels and a clear scope.",
+        "help": [
+          "Add a three-step document approval flow to a README and change one branch when the process changes. Check that the written instructions and arrows agree.",
+          "Draw a short sequence for an app request and an error response, then use it during a handoff to identify which component should handle the failure."
+        ],
+        "fit": "Fits people who prefer editing labels and relationships as text. Detailed print layouts, pixel-specific placement and very large diagrams may be better in a visual tool. The core code is MIT; supported hosts can render it in a browser, while embedding requires a compatible JavaScript environment. Hosted products may have separate terms. Rendering and feature support vary by host/version, so verify the target viewer. Avoid putting private workflow details into a shared editor or URL.",
+        "try": "15–25 minutes: use a harmless example in a supported Markdown preview or the editor linked by the README. Start with `flowchart LR` and `A --> B`, then add a decision and label both exits. Check how the actual destination renders it before sharing. Official docs: https://mermaid.ai/open-source/ .",
+        "maintenance": "Not archived at review. GitHub reports a repository push at 2026-11-03T16:38:45Z; the Tiny package release is @mermaid-js/tiny@12.3.0, published 2026-11-03T13:11:22Z. This is maintenance evidence, not a compatibility test."
+      },
+      "zh": {
+        "category": "文本绘图 · 初级门槛",
+        "tagline": "用文本描述流程与交互，并在文档旁渲染成图。",
+        "use": "Mermaid 是 JavaScript 绘图渲染器，使用类似 Markdown 的文本语法。它支持流程图、时序图等。GitHub 可渲染支持的 Mermaid Markdown 代码块；项目也提供在线编辑器链接用于试画。图源是文本，可以审阅版本差异。",
+        "why": "适合需要与说明或代码放在一起的小图。步骤或箭头变化时，审阅人不用另开设计文件就能看到差异。图是否有用仍取决于标注是否正确、范围是否清楚。",
+        "help": [
+          "给 README 加一张三步文档审批图，流程变化时修改一个分支，检查箭头与文字说明是否一致。",
+          "画一张应用请求与错误响应的简短时序图，交接时用它确定应由哪个组件处理失败。"
+        ],
+        "fit": "适合愿意用文本编辑标签与关系的人。复杂印刷版式、精确位置控制和大型图可能更适合图形工具。核心代码为 MIT；兼容平台可以在浏览器渲染，自行嵌入需要兼容的 JavaScript 环境。托管产品条款另查。不同平台和版本的渲染与功能支持不一，须在最终查看环境确认。共享编辑器或 URL 不宜包含私密流程细节。",
+        "try": "用 15–25 分钟在支持的 Markdown 预览或 README 所链编辑器里使用无敏感信息的示例。先写 `flowchart LR` 和 `A --> B`，再加入一个判断并标明两条出口。分享前检查实际发布位置能否正确渲染。官方文档：https://mermaid.ai/open-source/ 。",
+        "maintenance": "核查时未归档。GitHub 记录的仓库推送时间为 2026-11-03T16:38:45Z；Tiny 包的发布记录为 @mermaid-js/tiny@12.3.0，发布于 2026-11-03T13:11:22Z。这些是维护记录，不代表兼容性测试。"
+      }
+    }
+  ]
 }
-
 ];
