@@ -1788,5 +1788,184 @@ window.REPORTS = [
         "evidence": "https://api.github.com/repos/ActivityWatch/activitywatch"
       }
     ]
+  },
+  {
+    "date": "2026-11-07",
+    "checkedAt": "2026-11-07 16:06–16:09",
+    "pick": {
+      "en": "Start with tldr-pages for command lookup or zoxide for repeated navigation. Choose Lazygit if you already understand basic Git. Lazydocker needs an existing Docker environment; btop fits resource inspection on its supported operating systems.",
+      "zh": "查命令先试 tldr-pages，反复切目录先试 zoxide。已有 Git 基础再试 Lazygit；Lazydocker 需要现成 Docker 环境，btop 用于支持系统上的资源查看。"
+    },
+    "note": {
+      "en": "Five selected official READMEs and repository metadata were reviewed. All exceed 10,000 stars and do not repeat the previous ten editions. Stars are exact API snapshots, not a global ranking; no previous-day snapshot is available for these projects, so daily growth is unknown. Recommendations and scenarios are editorial judgments. No recommended code was installed or run; recent pushes do not establish feature correctness. English and Chinese are prewritten with no visitor-side GitHub or translation API calls.",
+      "zh": "核对五个项目的官方 README 和仓库元数据，全部超过 1 万 stars，与此前十期不重复。星标为 API 精确快照，并非全站排名；缺少这些项目的前日快照，日增量未知。推荐与场景为编辑判断。本期未安装或运行推荐代码，近期推送不等于功能正确。中英文预先编写，不依赖访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "Lazygit",
+        "repo": "jesseduffield/lazygit",
+        "stars": 83698,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/jesseduffield/lazygit",
+        "en": {
+          "category": "Git review · intermediate",
+          "tagline": "A terminal interface for reviewing and staging Git changes.",
+          "use": "Shows files, diffs, branches and commits, with hunk/line staging and interactive history operations. The interface exposes Git operations rather than replacing the underlying repository.",
+          "why": "Recommended when reviewing a mixed working tree is cumbersome. Selecting a small, coherent change can make commits easier to understand.",
+          "fit": "MIT; free binaries for Windows, macOS and Linux, with Git and a compatible terminal required. No GPU or hosted service needed. Not a substitute for understanding Git. Reset and rebase operations can discard changes or rewrite history; undo does not cover every working-tree action.",
+          "try": "20–30 minutes in a disposable local Git repository: edit two files, launch lazygit, inspect diffs, stage one hunk and make one local commit. Compare the result with git status. Leave reset, rebase and remote push for later. Follow the README basics tutorial.",
+          "help": [
+            "Separate documentation edits from code edits before committing.",
+            "Compare two commits while tracing when behavior changed."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-06T20:45:48Z at review. Push activity is maintenance evidence, not a release or compatibility test."
+        },
+        "zh": {
+          "category": "Git 审阅 · 中等门槛",
+          "tagline": "用终端界面查看和暂存 Git 改动。",
+          "use": "显示文件、差异、分支和提交，支持按片段或行暂存及交互式历史操作。界面呈现 Git 操作，不会替代底层仓库。",
+          "why": "当混杂工作区难以审阅时值得尝试。选择小而完整的改动，有助于让每次提交更清楚。",
+          "fit": "MIT 免费程序，提供 Windows、macOS、Linux 二进制，需要 Git 和兼容终端，不需要 GPU 或托管服务。不能代替 Git 知识；重置和变基可能丢弃内容或改写历史，撤销不覆盖所有工作区操作。",
+          "try": "在一次性本地 Git 仓库用 20–30 分钟修改两个文件，运行 lazygit，查看差异、暂存一个片段并做一次本地提交。用 git status 对照结果，重置、变基和远程推送留到以后。按 README 基础教程起步。",
+          "help": [
+            "提交前将文档改动与代码改动分开暂存。",
+            "比较两个提交，追查某项行为何时发生变化。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-06T20:45:48Z。推送仅为维护证据，不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Lazydocker",
+        "repo": "jesseduffield/lazydocker",
+        "stars": 53281,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/jesseduffield/lazydocker",
+        "en": {
+          "category": "Container inspection · intermediate",
+          "tagline": "See container state, logs and resource graphs in one terminal.",
+          "use": "Offers a terminal UI for Docker and optional Compose services, including log viewing, metrics, image layers and lifecycle actions.",
+          "why": "Useful when checking several local services otherwise requires many terminals. Keeping status and logs together helps identify which service needs closer investigation.",
+          "fit": "MIT free client for Linux, macOS and Windows. Requires a compatible running Docker engine and access to it; current README specifies Docker 29.0.0+, with Compose optional. Engine/Desktop licensing, container images and compute costs are separate. Not useful without containers. Restart, remove and prune actions can disrupt services or delete data; resource graphs do not establish root cause.",
+          "try": "15–25 minutes with an existing disposable Docker environment: run lazydocker, inspect a container's state, logs and image layers, then exit without lifecycle actions. Check README requirements against your installed engine before setup; this report does not provision a container environment.",
+          "help": [
+            "Select a failed demo service and inspect its logs beside its state.",
+            "Compare resource graphs for two development containers before changing their settings."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-04-19T02:51:06Z at review. Push activity is maintenance evidence, not a release or compatibility test."
+        },
+        "zh": {
+          "category": "容器查看 · 中等门槛",
+          "tagline": "在一个终端中查看容器状态、日志和资源图。",
+          "use": "为 Docker 及可选 Compose 服务提供终端界面，包含日志、指标、镜像层和生命周期操作。",
+          "why": "检查多个本地服务需要开很多终端时值得尝试。将状态和日志放在一起，有助于确定需进一步调查的服务。",
+          "fit": "MIT 免费客户端，支持 Linux、macOS、Windows。需要兼容且正在运行的 Docker 引擎及访问权限；当前 README 要求 Docker 29.0.0+，Compose 可选。引擎/Desktop 许可、镜像和计算资源费用另算。没有容器时无需使用。重启、删除、清理可能中断服务或删除数据，资源图本身不能证明根因。",
+          "try": "已有一次性 Docker 环境时，用 15–25 分钟启动 lazydocker，查看容器状态、日志和镜像层，不执行生命周期操作后退出。配置前对照 README 检查引擎要求；本期未搭建容器环境。",
+          "help": [
+            "选择失败的演示服务，对照其状态检查日志。",
+            "调整配置前比较两个开发容器的资源图。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-04-19T02:51:06Z。推送仅为维护证据，不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "btop",
+        "repo": "aristocratos/btop",
+        "stars": 35276,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/aristocratos/btop",
+        "en": {
+          "category": "Resource monitoring · beginner in a terminal",
+          "tagline": "Inspect CPU, memory, disk, network and processes together.",
+          "use": "A C++ terminal resource monitor with graphs, a process list and keyboard/mouse navigation. GPU coverage depends on platform, build options and available driver libraries.",
+          "why": "Recommended for a first look at a slow local task. Multiple resource views can suggest whether to investigate CPU, memory or I/O next, without claiming a definitive diagnosis.",
+          "fit": "Apache-2.0 free software for Linux, macOS and supported BSD systems; native Windows is a separate btop4win project. Needs a compatible terminal, fonts and OS metrics access. No AI model needed. GPU monitoring is not universal. Not a long-term telemetry archive, and WSL observations describe that environment rather than all Windows activity.",
+          "try": "15–20 minutes after installing the appropriate package: run btop, identify CPU and memory panels, sort the process list, and compare idle readings with a harmless file copy. Do not terminate processes during this exercise. Read the README prerequisites if symbols or graphs render incorrectly.",
+          "help": [
+            "Watch memory and CPU while a small data conversion runs.",
+            "Compare idle network and disk activity with activity during a file copy."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-06T04:58:56Z at review. Push activity is maintenance evidence, not a release or compatibility test."
+        },
+        "zh": {
+          "category": "资源监控 · 终端初级门槛",
+          "tagline": "集中查看 CPU、内存、磁盘、网络与进程。",
+          "use": "C++ 终端资源监控器，提供图表、进程列表与键鼠导航。GPU 支持取决于平台、编译选项及驱动库。",
+          "why": "适合先观察本地任务为何变慢。多个资源视图可提示下一步调查 CPU、内存或 I/O，但不能据此保证找到根因。",
+          "fit": "Apache-2.0 免费软件，适用于 Linux、macOS 及支持的 BSD；原生 Windows 是另一个 btop4win 项目。需要兼容终端、字体和系统指标访问，不需要 AI 模型。GPU 监控并非普遍可用，不是长期遥测档案；WSL 所见也不代表完整 Windows 活动。",
+          "try": "安装合适包后用 15–20 分钟启动 btop，识别 CPU 与内存面板，排序进程列表，对照空闲与一次无害文件复制的读数。练习中不终止进程，符号或图表异常时查看 README 前置要求。",
+          "help": [
+            "小规模资料转换时观察内存与 CPU。",
+            "比较空闲时与复制文件时的网络、磁盘活动。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-06T04:58:56Z。推送仅为维护证据，不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "zoxide",
+        "repo": "ajeetdsouza/zoxide",
+        "stars": 40484,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/ajeetdsouza/zoxide",
+        "en": {
+          "category": "Directory navigation · beginner with shell setup",
+          "tagline": "Jump to frequently visited directories using a short name.",
+          "use": "Remembers visited directories and ranks matches for its z command. Multiple keywords narrow matches; optional interactive selection uses fzf. Shell initialization connects directory tracking to normal navigation.",
+          "why": "Recommended for repeatedly switching between deeply nested project folders. It shortens navigation once your own directory history has useful entries.",
+          "fit": "MIT free binary for Windows, macOS and Linux; supports PowerShell and major Unix shells. Needs shell initialization and a small local directory database; fzf is optional for interactive selection. Not a file-content search tool. Rankings may choose an unexpected path and a new database has little history; verify the current directory before subsequent commands.",
+          "try": "15–25 minutes: follow the README setup for your actual shell, visit three disposable directories normally, then try z with one and two keywords. Print the current directory after each jump. If shell behavior changes unexpectedly, remove the initialization line to return to normal cd usage.",
+          "help": [
+            "Move between a report folder and a source folder using distinct keywords.",
+            "Disambiguate two similarly named projects with a second directory keyword."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-07T03:44:01Z at review. Push activity is maintenance evidence, not a release or compatibility test."
+        },
+        "zh": {
+          "category": "目录跳转 · 需配置 Shell，初级门槛",
+          "tagline": "用简短名称跳转到经常访问的目录。",
+          "use": "记住访问过的目录，为 z 命令排序匹配结果。多个关键词可缩小范围，可选交互选择使用 fzf。Shell 初始化将目录记录接入日常导航。",
+          "why": "反复切换深层项目目录时值得尝试。有了自己的目录记录后，可以减少输入路径的步骤。",
+          "fit": "MIT 免费程序，适用于 Windows、macOS、Linux，支持 PowerShell 和主要 Unix Shell。需要 Shell 初始化及小型本地目录数据库，交互选择可选 fzf。它不是文件正文搜索器；排序可能选中意外路径，新数据库也缺少历史，因此后续执行命令前应确认当前目录。",
+          "try": "用 15–25 分钟按 README 配置实际使用的 Shell，正常访问三个测试目录，再尝试单关键词和双关键词 z 跳转。每次打印当前目录核对；Shell 行为异常时可移除初始化行，恢复普通 cd 用法。",
+          "help": [
+            "用不同关键词切换报告目录与源码目录。",
+            "用第二个目录关键词区分两个名称相近的项目。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-07T03:44:01Z。推送仅为维护证据，不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "tldr-pages",
+        "repo": "tldr-pages/tldr",
+        "stars": 64152,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/tldr-pages/tldr",
+        "en": {
+          "category": "Command examples · beginner",
+          "tagline": "Look up common command patterns before reading the full manual.",
+          "use": "A community-maintained Markdown collection of concise command examples. Official Python and Rust clients, a web client and downloadable PDFs provide different ways to read the pages; translations vary in coverage.",
+          "why": "Recommended as a starting point for an unfamiliar command or a forgotten option. Examples provide context quickly, while the command's own help remains important for version-specific details.",
+          "fit": "Pages use CC BY 4.0; clients have separate licenses and runtime requirements. Free reading via the linked web client or local client on supported platforms; downloaded caches/PDFs need disk space. Not every flag or platform is covered. Examples can differ from your command version; do not paste destructive commands without understanding their targets.",
+          "try": "15–20 minutes: open the web client linked by the official README at https://tldr.inbrowser.app and read tar and git diff pages. Compare two examples with local --help or the relevant manual. Try only a read-only example on disposable files if desired, and check whether a translation covers the same options.",
+          "help": [
+            "Find a tar listing example before inspecting an archive.",
+            "Look up a git diff example, then compare its options with your installed Git help."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-07T06:26:03Z at review. Push activity is maintenance evidence, not a release or compatibility test."
+        },
+        "zh": {
+          "category": "命令示例 · 初级门槛",
+          "tagline": "先查常见命令用法，再阅读完整手册。",
+          "use": "社区维护的精简 Markdown 命令示例集合。官方 Python、Rust 客户端、网页客户端和 PDF 提供不同阅读方式，各语言翻译覆盖不一。",
+          "why": "适合第一次接触命令或忘记选项时起步。示例能快速提供使用情境，具体版本差异仍要对照命令自带帮助。",
+          "fit": "页面为 CC BY 4.0，客户端另有许可证和运行时要求。可通过所链网页或支持平台上的本地客户端免费阅读；离线缓存/PDF 占用磁盘。不覆盖所有选项与平台，示例可能与本机版本不同；不理解目标时不要粘贴破坏性命令。",
+          "try": "用 15–20 分钟打开官方 README 所链 https://tldr.inbrowser.app ，阅读 tar 与 git diff 页面。将两个示例与本机 --help 或手册对照；如要实操，仅在测试文件上试只读示例，并查看译文是否覆盖相同选项。",
+          "help": [
+            "检查归档前查找 tar 的列目录示例。",
+            "查看 git diff 示例，再将选项与本机 Git 帮助对照。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-07T06:26:03Z。推送仅为维护证据，不代表发布或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
