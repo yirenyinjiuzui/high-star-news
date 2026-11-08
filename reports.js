@@ -1967,5 +1967,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-08",
+    "checkedAt": "2026-11-08 14:48–14:50",
+    "pick": {
+      "en": "Choose the step you need: Polars prepares tables, scikit-learn establishes a baseline, Optuna searches its parameters, Plotly.py explains results interactively, and Gradio gives a function a demo interface. These are complementary roles, not five required installations.",
+      "zh": "按需要选一步：Polars 整理表格，scikit-learn 建立基线，Optuna 搜索参数，Plotly.py 交互展示结果，Gradio 给函数加演示界面。这些是互补职责，无需全部安装。"
+    },
+    "note": {
+      "en": "Reviewed five official READMEs, scikit-learn's getting-started source and current repository metadata. All exceed 10,000 stars and are new relative to the previous eleven editions. Counts are exact API snapshots, not a global ranking. No previous-day snapshot exists for these projects, so daily growth is unknown. Fit and scenarios are editorial judgments; no recommended project was installed or run, and no performance benefit was measured. English and Chinese are prewritten; the page needs no visitor GitHub API or translation calls.",
+      "zh": "核对五个官方 README、scikit-learn 入门文档源码及当前仓库元数据。全部超过 1 万 stars，与此前十一期不重复。数字为 API 精确快照，并非全站排名；缺少这些项目的前日快照，日增量未知。适用性与场景属于编辑判断，本期未安装或运行推荐项目，也未测量性能收益。中英文预先编写，页面不需要访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "Polars",
+        "repo": "pola-rs/polars",
+        "stars": 40283,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/pola-rs/polars",
+        "en": {
+          "category": "Data preparation · intermediate Python",
+          "tagline": "Express table transformations as queries that can be inspected and reused.",
+          "use": "A Rust-based analytical engine with DataFrame and SQL interfaces, expression-based filtering, grouping and joins, lazy query optimization and parallel execution. Python is one supported interface; GPU acceleration is optional.",
+          "why": "Try it when repeated CSV/Parquet transformations have outgrown manual spreadsheet edits. Explicit expressions can make the cleaning rules easier to review; speed depends on the workload and is not benchmarked here.",
+          "fit": "MIT local library on compatible Windows, macOS and Linux environments. Needs Python and a suitable binary/CPU, RAM and disk for data; optional GPU or cloud products have separate requirements and costs. Not a drop-in pandas replacement: expressions, null behavior and data types need checking. Larger-than-memory capability does not make every query fit any machine.",
+          "try": "20–30 minutes in a fresh environment: follow https://docs.pola.rs/ , load a tiny fabricated table, filter one category and group totals. Repeat using a lazy query, inspect its plan and compare row counts and sums by hand. Scale up only after correctness checks.",
+          "help": [
+            "Summarize a public orders table by customer after filtering cancelled rows.",
+            "Join two small reference tables and inspect missing matches before exporting a cleaned dataset."
+          ],
+          "maintenance": "At review archived=false; repository pushed_at=2026-11-07T11:15:51Z. This is maintenance activity, not a release or executed feature test."
+        },
+        "zh": {
+          "category": "表格预处理 · Python 中等门槛",
+          "tagline": "把表格转换写成可以检查和复用的查询。",
+          "use": "基于 Rust 的分析引擎，提供 DataFrame、SQL、表达式筛选、分组与连接，支持惰性查询优化和并行执行。Python 是支持接口之一，GPU 加速可选。",
+          "why": "当反复处理 CSV/Parquet 已超出手工表格修改范围时可尝试。明确表达式有助于审阅清洗规则；速度取决于任务，本期未测试性能。",
+          "fit": "MIT 本地库，适用于兼容的 Windows、macOS、Linux 环境。需要 Python、合适二进制与 CPU，以及数据所需内存和磁盘；可选 GPU 或云产品另有要求及费用。不是 pandas 的直接替代品，表达式、空值行为和类型需核对；超内存能力不等于任意查询都能在任意机器执行。",
+          "try": "在独立环境用 20–30 分钟按 https://docs.pola.rs/ 读取虚构小表，筛选一个类别并分组求和。改用惰性查询查看计划，手工对照行数和总和，正确后再扩大规模。",
+          "help": [
+            "筛除取消订单后，按客户汇总公开订单表。",
+            "连接两张小型参考表，检查缺失匹配后再导出清洗结果。"
+          ],
+          "maintenance": "核查时 archived=false，仓库 pushed_at=2026-11-07T11:15:51Z。这是维护活动，不代表稳定版发布或已执行功能测试。"
+        }
+      },
+      {
+        "name": "scikit-learn",
+        "repo": "scikit-learn/scikit-learn",
+        "stars": 68090,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/scikit-learn/scikit-learn",
+        "en": {
+          "category": "Classical machine learning · intermediate",
+          "tagline": "Build and evaluate a modest baseline before trying a larger model.",
+          "use": "Provides supervised and unsupervised estimators, preprocessing, pipelines, model selection and evaluation. The official getting-started guide uses a consistent fit/predict interface and demonstrates combining transformations with an estimator.",
+          "why": "Recommended for learning a complete baseline workflow, including held-out evaluation, rather than judging a model by training accuracy alone.",
+          "fit": "BSD-3-Clause library for compatible Python environments on major desktop OSs. The development README currently specifies Python 3.12+ and numerical dependencies; check the chosen stable release separately. CPU/RAM requirements grow with data and estimator; no GPU is required for a small baseline. Not a general deep-learning framework. Leakage, unsuitable splits and biased data can make scores misleading.",
+          "try": "20–30 minutes after environment setup: follow https://scikit-learn.org/stable/getting_started.html using a small bundled dataset, a train/test split and one pipeline. Record the split seed and test metric; do not tune repeatedly on the held-out test set. This is a learning example, not evidence of real-world model validity.",
+          "help": [
+            "Compare a simple classifier with a trivial baseline on a small public dataset.",
+            "Put scaling and prediction in one pipeline so validation fits preprocessing on training data rather than the full dataset."
+          ],
+          "maintenance": "At review archived=false; repository pushed_at=2026-11-06T12:37:21Z. This is maintenance activity, not a release or executed feature test."
+        },
+        "zh": {
+          "category": "传统机器学习 · 中等门槛",
+          "tagline": "先建立并评估小型基线，再考虑更大模型。",
+          "use": "提供监督与无监督估计器、预处理、流水线、模型选择及评估。官方入门指南采用一致的 fit/predict 接口，演示将转换与估计器组合。",
+          "why": "推荐用于学习包含留出评估的完整基线流程，避免只用训练准确率判断模型。",
+          "fit": "BSD-3-Clause 库，可在主要桌面系统的兼容 Python 环境使用。开发版 README 当前要求 Python 3.12+ 和数值依赖，所选稳定版本需另查。CPU/内存需求随数据与估计器增长，小基线不需要 GPU。不是通用深度学习框架；泄漏、不合适划分或数据偏差会使分数误导。",
+          "try": "环境准备后用 20–30 分钟按 https://scikit-learn.org/stable/getting_started.html 选择内置小数据、训练测试划分和一个流水线，记录随机种子及测试指标。不反复用留出测试集调参；这是学习示例，不代表实际模型有效性。",
+          "help": [
+            "在小型公开数据上将简单分类器与朴素基线比较。",
+            "将缩放与预测放入流水线，让验证时的预处理只拟合训练数据。"
+          ],
+          "maintenance": "核查时 archived=false，仓库 pushed_at=2026-11-06T12:37:21Z。这是维护活动，不代表稳定版发布或已执行功能测试。"
+        }
+      },
+      {
+        "name": "Optuna",
+        "repo": "optuna/optuna",
+        "stars": 15013,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/optuna/optuna",
+        "en": {
+          "category": "Parameter search · intermediate to advanced",
+          "tagline": "Turn a parameter experiment into a bounded, recorded study.",
+          "use": "An optimization framework with Python-defined search spaces, samplers, pruning and parallel studies. Each trial executes your objective; optional visualization and a separate dashboard help inspect trial histories.",
+          "why": "Useful after a meaningful objective and validation strategy already exist. It replaces ad hoc parameter edits with an explicit search budget, but cannot repair a poorly chosen metric.",
+          "fit": "MIT Python library; current README lists Python 3.10–3.15. Runs across supported OS environments. Objective evaluations consume CPU/GPU and time according to your model; storage/dashboard dependencies and cloud compute are additional. Not an accuracy guarantee. Repeated validation optimization can overfit and parallel workers multiply cost.",
+          "try": "15–25 minutes: follow https://optuna.readthedocs.io/en/stable/tutorial/ with a cheap quadratic objective and a budget of 20 trials. Inspect best parameters and trial history, then set an explicit timeout before adapting to a model. Keep a final test set outside the search.",
+          "help": [
+            "Search a small model's depth range using the same cross-validation objective.",
+            "Compare a handful of preprocessing parameters while recording failed and completed trials."
+          ],
+          "maintenance": "At review archived=false; repository pushed_at=2026-11-04T07:56:15Z. This is maintenance activity, not a release or executed feature test."
+        },
+        "zh": {
+          "category": "参数搜索 · 中高门槛",
+          "tagline": "将参数实验变成有预算和记录的研究流程。",
+          "use": "优化框架，提供 Python 定义搜索空间、采样器、剪枝和并行研究。每次 trial 执行目标函数，可选可视化和独立仪表盘帮助检查历史。",
+          "why": "适合已定义合理目标及验证策略之后使用。把随手改参数变成明确预算的搜索，但不能修复选错的指标。",
+          "fit": "MIT Python 库，当前 README 列出 Python 3.10–3.15，可在支持的系统环境运行。目标评估按模型消耗 CPU/GPU 与时间，存储、仪表盘依赖及云计算另算。不能保证准确率提升；反复优化验证指标可能过拟合，并行会放大成本。",
+          "try": "用 15–25 分钟按 https://optuna.readthedocs.io/en/stable/tutorial/ 先对低成本二次函数执行 20 次试验，查看最佳参数及历史。迁移到模型前设置明确超时，并将最终测试集留在搜索之外。",
+          "help": [
+            "使用相同交叉验证目标，搜索小模型的深度范围。",
+            "比较少量预处理参数，同时保留失败及完成的试验记录。"
+          ],
+          "maintenance": "核查时 archived=false，仓库 pushed_at=2026-11-04T07:56:15Z。这是维护活动，不代表稳定版发布或已执行功能测试。"
+        }
+      },
+      {
+        "name": "Plotly.py",
+        "repo": "plotly/plotly.py",
+        "stars": 18881,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/plotly/plotly.py",
+        "en": {
+          "category": "Interactive charts · beginner to intermediate Python",
+          "tagline": "Share a chart readers can zoom, inspect and filter visually.",
+          "use": "Python charting built on plotly.js, with graph objects and the higher-level Plotly Express interface. Charts render in compatible notebooks or standalone HTML; static export uses Kaleido and requires Chrome/Chromium.",
+          "why": "Recommended when readers need to inspect individual points or change the visible range. Interactive HTML can accompany a written interpretation rather than replacing a clear chart design.",
+          "fit": "MIT code; compatible Python, a supported dataframe library for Express, and a browser/notebook renderer are needed. Works on major desktop OSs; no cloud account needed for local charts. Hosted services have separate terms. Large datasets can overwhelm browser memory. HTML can embed the underlying data; static output loses interaction and needs extra dependencies.",
+          "try": "15–25 minutes: follow https://plotly.com/python/ to create a tiny bar or scatter chart. Add axis units, hover labels and a meaningful title; save as standalone HTML with bundled JavaScript and reopen locally. Check whether the shared file contains only data intended for readers.",
+          "help": [
+            "Plot a public time series and zoom into a short interval to inspect a spike.",
+            "Compare groups in a scatter plot with hover labels, then verify that units and category colors are clear."
+          ],
+          "maintenance": "At review archived=false; repository pushed_at=2026-11-06T21:47:19Z. This is maintenance activity, not a release or executed feature test."
+        },
+        "zh": {
+          "category": "交互图表 · Python 初级至中等门槛",
+          "tagline": "让读者缩放图表、查看具体点并探索范围。",
+          "use": "基于 plotly.js 的 Python 绘图库，提供 graph objects 和较高层的 Plotly Express。可在兼容笔记本或独立 HTML 查看；静态导出使用 Kaleido，并需要 Chrome/Chromium。",
+          "why": "当读者需要查看点值或改变可见范围时值得尝试。交互 HTML 可以配合文字解读，不能代替清晰的图表设计。",
+          "fit": "代码为 MIT，需要兼容 Python、Express 所需的支持表格库以及浏览器/笔记本渲染器，主要桌面系统均可用。本地图表无需云账号，托管服务另有条款。大数据可能耗尽浏览器内存；HTML 可包含底层数据，静态输出丢失交互且需额外依赖。",
+          "try": "用 15–25 分钟按 https://plotly.com/python/ 创建小型柱状或散点图，加入单位、悬浮标签与明确标题。保存为捆绑 JavaScript 的独立 HTML 后本地重开，检查文件仅包含准备交给读者的数据。",
+          "help": [
+            "绘制公开时间序列，缩放短区间检查峰值。",
+            "用带悬浮标签的散点图比较类别，再核对单位和分类颜色是否清楚。"
+          ],
+          "maintenance": "核查时 archived=false，仓库 pushed_at=2026-11-06T21:47:19Z。这是维护活动，不代表稳定版发布或已执行功能测试。"
+        }
+      },
+      {
+        "name": "Gradio",
+        "repo": "gradio-app/gradio",
+        "stars": 44002,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/gradio-app/gradio",
+        "en": {
+          "category": "Python function demos · beginner with Python",
+          "tagline": "Wrap a working function in a browser interface for a small demonstration.",
+          "use": "Interface maps input/output components to a Python function. Blocks supports custom layouts and events, while ChatInterface provides a chat-oriented UI. A local launch serves a browser app; optional share links make it publicly reachable.",
+          "why": "Recommended when a collaborator should test a function without editing Python. Start with a deterministic function before adding a model or a remote API.",
+          "fit": "Apache-2.0 package; README requires Python 3.10+. A compatible Windows/macOS/Linux Python environment and browser are needed. UI code does not include model weights, GPU resources or API credits. Not a complete production deployment plan. Public sharing changes who can access the app; compute remains on the running host and function errors remain your responsibility.",
+          "try": "20–30 minutes: follow https://www.gradio.app/getting-started/ and wrap a greeting or string-length function with Interface. Launch locally without share=True, test empty and long input, and stop the server after review. Add model calls only after checking dependencies and costs.",
+          "help": [
+            "Let someone vary two harmless numeric inputs and inspect the computed result.",
+            "Build a small text-cleaning demo to compare input and output on fabricated examples."
+          ],
+          "maintenance": "At review archived=false; repository pushed_at=2026-11-07T20:13:49Z. This is maintenance activity, not a release or executed feature test."
+        },
+        "zh": {
+          "category": "Python 函数演示 · 有 Python 基础即可",
+          "tagline": "把可运行函数包装成浏览器界面，用于小型演示。",
+          "use": "Interface 将输入输出组件映射到 Python 函数，Blocks 支持自定义布局和事件，ChatInterface 提供聊天界面。本地启动提供浏览器应用，可选分享链接可使其公开访问。",
+          "why": "当协作者需要测试函数、又不想编辑 Python 时值得尝试。先用确定性函数验证，再加入模型或远程 API。",
+          "fit": "Apache-2.0 包，README 要求 Python 3.10+，需要兼容的 Windows/macOS/Linux Python 环境和浏览器。界面不附带模型权重、GPU 或 API 额度，不是完整生产部署方案。公开分享改变访问范围，计算仍在运行主机进行，函数错误仍需自行处理。",
+          "try": "用 20–30 分钟按 https://www.gradio.app/getting-started/ 用 Interface 包装问候或字符串长度函数。本地启动，不设 share=True，测试空输入与长输入，检查后停止服务。确认依赖和费用后再加入模型调用。",
+          "help": [
+            "让他人调整两个无敏感内容的数值输入，查看计算结果。",
+            "建立小型文字清洗演示，用虚构样例比较输入和输出。"
+          ],
+          "maintenance": "核查时 archived=false，仓库 pushed_at=2026-11-07T20:13:49Z。这是维护活动，不代表稳定版发布或已执行功能测试。"
+        }
+      }
+    ]
   }
 ];
