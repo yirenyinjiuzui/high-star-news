@@ -2146,5 +2146,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-09",
+    "checkedAt": "2026-11-09 19:11–19:13",
+    "pick": {
+      "en": "For an existing Python script, start with one meaningful pytest check or Ruff reporting. Use Pydantic at a data boundary and FastAPI only when HTTP access is useful. Add pre-commit after you know which checks should run consistently.",
+      "zh": "已有 Python 脚本可先添加一项有意义的 pytest 检查或 Ruff 报告。数据边界用 Pydantic，需要 HTTP 访问再用 FastAPI。确定需一致执行的检查后，再接入 pre-commit。"
+    },
+    "note": {
+      "en": "Reviewed five official READMEs, pre-commit's official documentation and repository metadata. All exceed 10,000 stars and are new relative to the previous twelve editions. Exact API star snapshots do not establish ranking or daily growth; no previous-day snapshot exists for these projects. Recommendations and scenarios are editorial judgments. No recommended code was installed or run, and no speed or defect-reduction benefit was measured. English and Chinese are prepared together without visitor API or translation calls.",
+      "zh": "核对五个官方 README、pre-commit 官方文档与仓库元数据，全部超过 1 万 stars，与此前十二期不重复。精确 API 星标快照不能证明排名或日增量，这些项目没有前日快照。推荐与场景属于编辑判断；本期未安装或运行推荐代码，未测量提速或缺陷减少。中英文预先准备，不需要访问者 API 或翻译调用。"
+    },
+    "projects": [
+      {
+        "name": "FastAPI",
+        "repo": "fastapi/fastapi",
+        "stars": 104589,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/fastapi/fastapi",
+        "en": {
+          "category": "Python APIs · intermediate",
+          "tagline": "Expose a Python operation through a documented HTTP interface.",
+          "use": "Uses type hints, Starlette and Pydantic to define endpoints, validate request data and generate OpenAPI-based interactive documentation.",
+          "why": "Useful when another program needs a stable interface to an existing function. Defining inputs explicitly helps clients discover what to send without reading implementation code.",
+          "fit": "MIT library for compatible Python on Windows, macOS and Linux. Needs a server process and framework dependencies, not a GPU; hosting, databases and external API use cost separately. Not a complete application or deployment. Authentication, resource limits and business rules still require design; async endpoints do not automatically speed CPU-heavy work.",
+          "try": "20–30 minutes: follow https://fastapi.tiangolo.com/tutorial/ to create one local read-only endpoint. Inspect /docs and compare one valid input with an invalid one. Stop the development server afterward; leave deployment and model integration for a separate exercise.",
+          "help": [
+            "Provide a small conversion function as a local endpoint for a separate UI.",
+            "Try valid and invalid request examples through generated API documentation."
+          ],
+          "maintenance": "Not archived at review; repository pushed_at=2026-11-08T18:01:45Z. This is maintenance evidence, not a stable-release claim or executed test."
+        },
+        "zh": {
+          "category": "Python 接口 · 中等门槛",
+          "tagline": "通过有文档的 HTTP 接口提供 Python 操作。",
+          "use": "使用类型提示、Starlette 和 Pydantic 定义端点、校验请求，并生成基于 OpenAPI 的交互文档。",
+          "why": "已有函数需要让其他程序调用时值得尝试。明确输入能帮助调用方了解如何传参，无需阅读实现。",
+          "fit": "MIT 库，可用于兼容 Python 的 Windows、macOS、Linux。需要服务进程和框架依赖，不需要 GPU；托管、数据库及外部 API 另有费用。不是完整应用或部署方案，认证、资源限制与业务规则仍需设计；异步不会自动加速 CPU 密集工作。",
+          "try": "用 20–30 分钟按 https://fastapi.tiangolo.com/tutorial/ 建立本地只读端点，在 /docs 对比合法与非法输入后停止开发服务。部署与模型集成留到后续练习。",
+          "help": [
+            "为独立界面提供本地小型转换函数接口。",
+            "通过生成的文档对比合法与非法请求。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-08T18:01:45Z。这是维护证据，不代表稳定版发布或已执行测试。"
+        }
+      },
+      {
+        "name": "Pydantic",
+        "repo": "pydantic/pydantic",
+        "stars": 29401,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/pydantic/pydantic",
+        "en": {
+          "category": "Data validation · intermediate Python",
+          "tagline": "State the expected shape of incoming data and inspect failures.",
+          "use": "Uses Python type hints and models to validate input and create typed objects. Its README demonstrates conversion of compatible values, so validation is not the same as refusing every differing input type.",
+          "why": "Recommended at a boundary where configuration or request data becomes internal state. A declared model makes assumptions visible; domain truth still needs explicit rules.",
+          "fit": "MIT local Python library, usable on major OSs with compatible packages and compiled core wheels. No service or GPU is necessary; Logfire is a separate product. V1/V2 have breaking differences. Coercion may accept inputs you expected to reject, so review strictness; valid structure does not prove factual correctness.",
+          "try": "15–25 minutes: follow the documentation linked by the README, define a two-field BaseModel and compare valid, missing and invalid inputs. Inspect the parsed values and errors, then compare strict behavior for one field. Use fabricated data and match examples to your installed major version.",
+          "help": [
+            "Validate a fabricated settings object before a script uses it.",
+            "Check missing fields and invalid values in mock request records."
+          ],
+          "maintenance": "Not archived at review; repository pushed_at=2026-11-09T08:46:17Z. This is maintenance evidence, not a stable-release claim or executed test."
+        },
+        "zh": {
+          "category": "数据校验 · Python 中等门槛",
+          "tagline": "声明输入结构，并检查失败原因。",
+          "use": "使用 Python 类型提示与模型校验输入并创建类型化对象。README 演示兼容值转换，因此校验不等于拒绝所有类型不同的输入。",
+          "why": "适合在配置或请求进入内部状态的边界使用。声明模型让假设可见，领域事实仍需明确规则。",
+          "fit": "MIT 本地 Python 库，主要系统需有兼容包与编译核心 wheel，不需要服务或 GPU；Logfire 是独立产品。V1/V2 有不兼容变化，类型转换可能接受你原本想拒绝的输入，应检查严格程度；结构正确不证明事实正确。",
+          "try": "用 15–25 分钟按 README 所链文档建立两个字段的 BaseModel，对比合法、缺失、非法输入，查看解析值和错误，再比较一个字段的严格行为。使用虚构数据，示例与安装主版本匹配。",
+          "help": [
+            "脚本使用配置前先校验虚构设置对象。",
+            "检查模拟请求中缺失字段及非法值。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-09T08:46:17Z。这是维护证据，不代表稳定版发布或已执行测试。"
+        }
+      },
+      {
+        "name": "pytest",
+        "repo": "pytest-dev/pytest",
+        "stars": 14675,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/pytest-dev/pytest",
+        "en": {
+          "category": "Behavior tests · beginner with Python",
+          "tagline": "Turn a concrete expected behavior into a repeatable check.",
+          "use": "Discovers test functions, reports plain-assert failures and offers fixtures for shared test resources. It also supports existing unittest suites and optional plugins.",
+          "why": "Recommended for a bug or behavior that matters enough to preserve. A small example with a known expected result is easier to assess than a large suite mirroring implementation.",
+          "fit": "MIT framework; README lists Python 3.10+ or PyPy3. Runs locally on compatible Windows, macOS and Linux, with CPU/time costs determined by the tested code. No GPU unless that code needs one. Not proof of completeness: tests only cover selected cases, and plugins or test imports can execute code.",
+          "try": "15–25 minutes: follow https://docs.pytest.org/en/stable/getting-started.html in a disposable environment. Write two small tests with manually known results, deliberately make one fail, inspect the failure, then correct the expectation or function as appropriate. Do not add a plugin until a real need appears.",
+          "help": [
+            "Record a regression where a parser previously mishandled an empty value.",
+            "Use a temporary test fixture for a small file-reading function."
+          ],
+          "maintenance": "Not archived at review; repository pushed_at=2026-11-09T06:57:30Z. This is maintenance evidence, not a stable-release claim or executed test."
+        },
+        "zh": {
+          "category": "行为测试 · 有 Python 基础即可",
+          "tagline": "把明确的预期行为变成可重复检查。",
+          "use": "发现测试函数、报告普通 assert 失败，并提供 fixture 管理共享测试资源，也支持已有 unittest 和可选插件。",
+          "why": "适合需要长期保留的缺陷或行为。结果已知的小例子，比照抄实现的大量测试更容易判断。",
+          "fit": "MIT 框架，README 列出 Python 3.10+ 或 PyPy3，可在兼容 Windows、macOS、Linux 本地运行，CPU/时间取决于被测代码，除非代码需要，否则无需 GPU。通过不证明完备性，仅覆盖选定案例；插件和测试导入可以执行代码。",
+          "try": "用 15–25 分钟按 https://docs.pytest.org/en/stable/getting-started.html 在测试环境写两个预期明确的小测试，故意让一个失败，查看提示后按实际情况修正预期或函数。没有实际需求不添加插件。",
+          "help": [
+            "记录解析器曾错误处理空值的回归用例。",
+            "用临时测试资源检查小型文件读取函数。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-09T06:57:30Z。这是维护证据，不代表稳定版发布或已执行测试。"
+        }
+      },
+      {
+        "name": "Ruff",
+        "repo": "astral-sh/ruff",
+        "stars": 51129,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/astral-sh/ruff",
+        "en": {
+          "category": "Python lint and format · beginner",
+          "tagline": "Check common code issues and formatting with one tool.",
+          "use": "A Rust-based Python linter and formatter with pyproject.toml configuration, editor integration, caching and optional fixes. Rule coverage is selectable; linting and formatting are distinct operations.",
+          "why": "Recommended when repeated style and simple static issues distract from code review. Start with reporting, then inspect any changes before enabling automatic fixes.",
+          "fit": "MIT; binaries and Python-package installation on supported Windows, macOS and Linux systems. Needs disk for the executable/cache, no GPU or hosted service. Not a type checker, test runner or logic verifier. Formatting and fixes can change files; rule choices should match the project. No speed benchmark was run for this report.",
+          "try": "15–20 minutes after installation: follow https://docs.astral.sh/ruff/ and use ruff check plus ruff format --check on a disposable file. Read the diagnostic, fix one issue manually, then inspect the diff. Introduce automatic fixes only after understanding the selected rule.",
+          "help": [
+            "Find an unused import in a small script.",
+            "Check whether a changed file matches the project's formatting policy before submitting it."
+          ],
+          "maintenance": "Not archived at review; repository pushed_at=2026-11-09T11:04:12Z. This is maintenance evidence, not a stable-release claim or executed test."
+        },
+        "zh": {
+          "category": "Python 检查与格式 · 初级门槛",
+          "tagline": "用一个工具检查常见代码问题和格式。",
+          "use": "基于 Rust 的 Python linter 与 formatter，支持 pyproject.toml、编辑器集成、缓存和可选修复。规则可选择，静态检查与格式化是不同操作。",
+          "why": "当格式与简单静态问题分散审阅精力时值得尝试。先仅报告，再检查修改后决定是否启用自动修复。",
+          "fit": "MIT，支持系统可使用二进制或 Python 包安装，覆盖 Windows、macOS、Linux。需要程序和缓存磁盘，不需要 GPU 或托管服务。不是类型检查器、测试运行器或逻辑验证器；格式化和修复会改文件，规则应匹配项目。本期未做速度测试。",
+          "try": "安装后用 15–20 分钟按 https://docs.astral.sh/ruff/ 在测试文件执行 ruff check 与 ruff format --check，阅读提示，手动修正一项并查看差异。理解所选规则后再引入自动修复。",
+          "help": [
+            "在小脚本中发现未使用的导入。",
+            "提交前检查改动文件是否符合项目格式。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-09T11:04:12Z。这是维护证据，不代表稳定版发布或已执行测试。"
+        }
+      },
+      {
+        "name": "pre-commit",
+        "repo": "pre-commit/pre-commit",
+        "stars": 15688,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/pre-commit/pre-commit",
+        "en": {
+          "category": "Git checks · intermediate setup",
+          "tagline": "Keep a small chosen set of checks close to the commit workflow.",
+          "use": "Runs configured hooks and manages their environments. Documentation at https://pre-commit.com/ explains setup and manual execution. It coordinates checks; it does not decide which policies suit a project.",
+          "why": "Recommended when an already useful check is easy to forget. Begin with one check and add others only when the team understands their purpose.",
+          "fit": "MIT framework for compatible Python/Git environments on major OSs. Hook runtimes, caches and first setup can need network/disk/time; service offerings are separate. Not a substitute for CI or review. Hooks execute selected code and may modify files; pinned revisions and inspected diffs matter.",
+          "try": "20–30 minutes: follow https://pre-commit.com/ in a disposable Git repository, configure one reviewed hook at a fixed revision and run it manually. Compare a valid file with a deliberately invalid test copy and inspect changes. Install the Git hook only after the manual run behaves as expected.",
+          "help": [
+            "Run a selected YAML check before reviewing a configuration change.",
+            "Apply the same pinned hook configuration to a small repository's contributors."
+          ],
+          "maintenance": "Not archived at review; repository pushed_at=2026-11-04T20:54:57Z. This is maintenance evidence, not a stable-release claim or executed test."
+        },
+        "zh": {
+          "category": "Git 检查 · 配置中等门槛",
+          "tagline": "让少量选定检查贴近提交流程。",
+          "use": "运行配置的钩子并管理其环境。https://pre-commit.com/ 说明配置和手动执行方式。它负责编排，不会替项目决定政策。",
+          "why": "当已有有用检查却容易忘记时可尝试。先加一项，团队理解目的后再逐步增加。",
+          "fit": "MIT 框架，需要主要系统上兼容的 Python/Git。钩子运行时、缓存和首次配置可能消耗网络、磁盘与时间，服务产品另算。不替代 CI 或审阅；钩子执行所选代码且可能修改文件，应固定版本并检查差异。",
+          "try": "用 20–30 分钟按 https://pre-commit.com/ 在一次性 Git 仓库配置一项已审阅、固定版本的钩子并手动执行，比较合法文件与故意无效的测试副本，检查修改。确认手动运行符合预期后再安装 Git 钩子。",
+          "help": [
+            "审阅配置改动前运行选定 YAML 检查。",
+            "在小仓库中为协作者使用相同固定版本的钩子配置。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-04T20:54:57Z。这是维护证据，不代表稳定版发布或已执行测试。"
+        }
+      }
+    ]
   }
 ];
