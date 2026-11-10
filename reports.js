@@ -2325,5 +2325,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-10",
+    "checkedAt": "2026-11-10 10:13–10:16",
+    "pick": {
+      "en": "For a small first trial, choose the role you need: Actual Budget for sample records, Mealie for recipes, linkding for links, wallabag for article text, or Home Assistant for supported devices. Most server options involve maintenance; a demo or requirements review is a valid first session.",
+      "zh": "按需求选一项小试：Actual Budget 试记录，Mealie 整理食谱，linkding 保存链接，wallabag 保存正文，Home Assistant 查看支持设备。多数服务端方案需要维护，首次只看演示或评估要求也合理。"
+    },
+    "note": {
+      "en": "Reviewed five selected official READMEs and current repository metadata. All exceed 10,000 stars and do not repeat the previous thirteen editions. Stars are exact API snapshots, not a global ranking. No previous-day snapshot exists for these projects, so daily growth is unknown. Fit and scenarios are editorial judgments. No recommended software was installed or run; no savings or productivity gain was measured. English and Chinese are prewritten without visitor API or translation calls.",
+      "zh": "核对五个官方 README 与当前仓库元数据，全部超过 1 万 stars，与此前十三期不重复。星标为 API 精确快照，并非全站排名；这些项目缺少前日快照，日增量未知。适用性与场景为编辑判断。本期未安装或运行推荐软件，未测量省钱或效率收益。中英文预先准备，不依赖访问者 API 或翻译调用。"
+    },
+    "projects": [
+      {
+        "name": "Actual Budget",
+        "repo": "actualbudget/actual",
+        "stars": 30128,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/actualbudget/actual",
+        "en": {
+          "category": "Personal records · beginner locally, intermediate for sync",
+          "tagline": "Keep a local-first household budget record with optional synchronization.",
+          "use": "A personal finance application organized around envelope budgeting, with local-only desktop apps and server-based synchronization options. The README links account-management and migration guides.",
+          "why": "Recommended as a way to evaluate whether a consistent record-keeping workflow suits you. Software organization does not determine a financial plan or guarantee savings.",
+          "fit": "MIT free application with Windows, macOS and Linux desktop options. Sync/self-hosting adds server, backup and configuration work; managed hosting and optional providers cost separately. No GPU is needed. Not investment advice or a substitute for checking balances. Imports and category mappings need review, and local-first does not eliminate backup needs.",
+          "try": "20–30 minutes: follow https://actualbudget.org/docs/getting-started/starting-fresh with a local test budget and five fabricated entries. Check categories and totals manually, close and reopen it, then read backup/export guidance before adding real records.",
+          "help": [
+            "Enter fictional transactions and compare two expense categories.",
+            "Explore a fresh sample budget before considering migration of an existing record."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T00:05:24Z at review. Recent push activity is not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "个人记录 · 本地初级，同步中等门槛",
+          "tagline": "本地优先保存家庭预算记录，可选同步。",
+          "use": "围绕信封预算法的个人财务应用，提供仅本地桌面程序及服务端同步选项。README 链接账户管理与迁移指南。",
+          "why": "推荐用于判断一致的记录流程是否适合自己。软件整理不决定财务计划，也不保证省钱。",
+          "fit": "MIT 免费应用，提供 Windows、macOS、Linux 桌面方式。同步与自托管增加服务、备份和配置工作，托管与可选提供方另有费用。不需要 GPU；不是投资建议，也不能替代余额核对。导入与分类映射需复核，本地优先也仍需备份。",
+          "try": "用 20–30 分钟按 https://actualbudget.org/docs/getting-started/starting-fresh 建立本地测试预算并录入五笔虚构记录，手工核对类别与总计，关闭重开。读完备份/导出指南再加入真实记录。",
+          "help": [
+            "录入虚构交易，比较两类支出记录。",
+            "先探索新建测试预算，再考虑迁移现有记录。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T00:05:24Z。近期推送不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Mealie",
+        "repo": "mealie-recipes/mealie",
+        "stars": 13863,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/mealie-recipes/mealie",
+        "en": {
+          "category": "Recipes and meal planning · intermediate hosting",
+          "tagline": "Put recipes, a meal plan and a shopping list in one web workspace.",
+          "use": "A self-hosted recipe manager with manual entry and URL import, cookbooks, meal planning and shopping lists. Its API supports integration with other applications, and Docker deployment is documented.",
+          "why": "Useful when recipes scattered across pages make planning awkward. Keeping a few repeatable recipes together can help assemble a list, without claiming dietary or nutrition benefits.",
+          "fit": "AGPL-3.0 application accessed in a browser; needs a compatible server/container host, persistent storage and backups. Client browsers can be on major desktop/mobile platforms. Hosting, electricity and optional services are separate costs. Not a diet planner or proof of ingredient safety. Imports can miss quantities, and automatic lists require manual checks.",
+          "try": "15–25 minutes: explore existing data in the demo linked at https://docs.mealie.io/ without adding private data. If you already have a test instance, add one invented recipe and inspect a two-meal list. Use the first session to assess deployment requirements rather than assuming installation fits within that time.",
+          "help": [
+            "Group three familiar recipes into a cookbook for later reference.",
+            "Plan two meals and inspect ingredient quantities before using the shopping list."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T00:23:27Z at review. Recent push activity is not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "食谱与餐单 · 自托管中等门槛",
+          "tagline": "在一个网页工作区整理食谱、餐单和购物清单。",
+          "use": "自托管食谱管理器，支持手工录入、URL 导入、食谱集、餐单与购物清单。API 可与其他应用集成，官方说明提供 Docker 部署。",
+          "why": "食谱散落多个网页、安排时难查找时值得尝试。集中少量常做食谱有助于汇总清单，不承诺饮食或营养收益。",
+          "fit": "AGPL-3.0 网页应用，需要兼容服务器/容器主机、持久存储与备份，主要桌面及移动浏览器可作为客户端。托管、电力与可选服务另算。不是膳食方案，也不证明食材安全；导入可能遗漏数量，自动清单需人工检查。",
+          "try": "用 15–25 分钟查看 https://docs.mealie.io/ 所链演示的已有数据，不加入私人信息。已有测试实例时可建一份虚构食谱、检查两餐清单。首次以评估部署要求为主，不默认能在此时长内装好。",
+          "help": [
+            "将三份熟悉食谱归入食谱集方便查找。",
+            "安排两餐，使用购物清单前检查配料数量。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T00:23:27Z。近期推送不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "linkding",
+        "repo": "sissbruecker/linkding",
+        "stars": 11404,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/sissbruecker/linkding",
+        "en": {
+          "category": "Bookmarks · intermediate hosting",
+          "tagline": "Find saved links through tags, notes and a focused interface.",
+          "use": "Self-hosted bookmark management with tags, bulk editing, Markdown notes, read-later status, browser extensions and HTML import/export. It can retrieve metadata and offers local or external website-archiving options.",
+          "why": "Recommended when browser bookmarks lack the context needed to find a link again. A short note explaining why it was saved may be more valuable than a large unreviewed archive.",
+          "fit": "MIT web application with Docker setup and browser clients on major platforms; server disk and backup administration are required. Managed hosting costs separately. Not a guarantee that a linked page remains accessible. Metadata retrieval and external archiving can contact other services; stored pages take additional space.",
+          "try": "15–25 minutes: inspect the demo linked by https://linkding.link/ using only existing data. With a test instance, save three public links with distinct tags and notes, search for one, and export the small test set. Review archiving settings before using confidential URLs.",
+          "help": [
+            "Tag public documentation links by project and add a sentence about their relevance.",
+            "Import a small test bookmark file, then check an exported copy before migrating more."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-10-26T04:13:35Z at review. Recent push activity is not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "书签管理 · 自托管中等门槛",
+          "tagline": "通过标签、笔记与简洁界面找回保存链接。",
+          "use": "自托管书签管理器，支持标签、批量编辑、Markdown 笔记、稍后读、浏览器扩展及 HTML 导入导出。可取得网页元数据，并提供本地或外部网页归档选项。",
+          "why": "浏览器书签缺少找回链接所需上下文时值得尝试。简短记录为何保存，可能比大量未整理归档更有用。",
+          "fit": "MIT 网页应用，支持 Docker 配置，主要平台可用浏览器访问。需要服务器磁盘和备份管理，托管另收费。不能保证链接永远可访问；元数据获取及外部归档可能联系其他服务，网页存档额外占用空间。",
+          "try": "用 15–25 分钟查看 https://linkding.link/ 所链演示的已有数据。已有测试实例时保存三条公开链接，分别加标签和笔记，搜索一条并导出测试集。使用保密 URL 前先检查归档设置。",
+          "help": [
+            "按项目标记公开文档链接，并写一句关联说明。",
+            "导入小型测试书签文件，检查导出副本后再迁移更多。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-10-26T04:13:35Z。近期推送不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "wallabag",
+        "repo": "wallabag/wallabag",
+        "stars": 13056,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/wallabag/wallabag",
+        "en": {
+          "category": "Read later · intermediate hosting",
+          "tagline": "Save extracted article content for a quieter reading view.",
+          "use": "A web application that extracts page content for later reading, with browser-extension and mobile-app options linked by the project. It can be self-hosted or used through its separate hosted service.",
+          "why": "Consider it when you save an article to read, rather than just save its address. Extraction can reduce page clutter, but should be checked against the source.",
+          "fit": "MIT server application accessed through browsers and supported clients; self-hosting requires the documented web stack, database/storage and backups. Hosted accounts have separate terms and pricing. Not a universal page archiver: dynamic pages, access controls and complex layouts may not extract correctly. Saving an article does not grant redistribution rights.",
+          "try": "15–25 minutes: read https://doc.wallabag.org installation requirements and compare hosting choices. If a test instance is already available, save one public article, check three headings and an image against the source, then reopen it. Avoid using a real personal reading library for the first trial.",
+          "help": [
+            "Save an openly accessible tutorial for a later focused reading session.",
+            "Compare an extracted long article with the original headings and images before relying on it."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-09T22:07:28Z at review. Recent push activity is not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "稍后阅读 · 自托管中等门槛",
+          "tagline": "保存提取后的文章正文，以较少干扰的视图阅读。",
+          "use": "提取网页内容供稍后阅读的网页应用，项目链接浏览器扩展与移动应用。可自托管，也可选独立托管服务。",
+          "why": "目的在于阅读文章、而非仅收藏地址时可考虑。正文提取有助于减少页面干扰，但仍需对照来源检查。",
+          "fit": "MIT 服务端应用，通过浏览器及支持客户端访问。自托管需要文档规定的网页环境、数据库/存储及备份，托管账户另有条款和价格。不是通用网页归档器，动态页面、访问限制及复杂排版可能提取失败；保存不授予再分发权。",
+          "try": "用 15–25 分钟阅读 https://doc.wallabag.org 部署要求并比较托管方式。已有测试实例时保存一篇公开文章，对照三个标题与一张图片，再重新打开。首次不要迁入真实个人阅读库。",
+          "help": [
+            "保存公开教程，留给后续专注阅读时段。",
+            "依赖长文章提取内容前，核对原文标题与图片。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-09T22:07:28Z。近期推送不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Home Assistant",
+        "repo": "home-assistant/core",
+        "stars": 92110,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/home-assistant/core",
+        "en": {
+          "category": "Home automation · intermediate to advanced",
+          "tagline": "Bring supported home devices and automations into a locally controlled platform.",
+          "use": "A modular home-automation system with integrations, dashboards and automation documentation. The core repository recommends a Raspberry Pi or local server; actual device support depends on its integration and connection method.",
+          "why": "Recommended only when supported devices and a reason to combine them already exist. A single overview can clarify device state; start with observation before automating physical actions.",
+          "fit": "Apache-2.0 core; needs compatible hardware or a VM/appliance environment, storage, power and ongoing updates. Browser clients work across common platforms. Devices, radios, hosting and optional cloud services cost separately. Local control varies by integration; some require vendor clouds. Not suitable as an unverified safety-critical control system, and automations can act on real devices.",
+          "try": "20–30 minutes: use the official demo at https://demo.home-assistant.io to inspect dashboards and states. Read https://www.home-assistant.io/getting-started/ and check compatibility for one device you actually own. Do not buy hardware or enable a real automation for this first evaluation.",
+          "help": [
+            "Inspect supported sensor states together instead of opening several vendor apps.",
+            "Sketch a simple lighting routine, then verify each device's integration requirements before enabling it."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T01:25:47Z at review. Recent push activity is not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "家庭自动化 · 中高门槛",
+          "tagline": "将支持的家居设备与自动化接入本地控制平台。",
+          "use": "模块化家庭自动化系统，提供集成、仪表盘与自动化文档。核心仓库推荐树莓派或本地服务器，实际设备支持取决于集成及连接方式。",
+          "why": "已有支持设备、且确需集中管理时再考虑。统一视图有助于了解设备状态，先观察，再让自动化触发实物动作。",
+          "fit": "核心采用 Apache-2.0，需要兼容硬件或虚拟机/专用系统、存储、电力和持续更新，常见平台可浏览器访问。设备、无线适配器、托管及可选云服务另收费。本地控制因集成而异，有些依赖厂商云；未经验证不宜用于安全关键控制，自动化会影响真实设备。",
+          "try": "用 20–30 分钟在 https://demo.home-assistant.io 查看仪表盘和状态，阅读 https://www.home-assistant.io/getting-started/ 并核对一个已有设备兼容性。首次评估不购买硬件、不启用真实自动化。",
+          "help": [
+            "集中查看支持传感器状态，减少切换厂商应用。",
+            "先草拟简单照明流程，核实每个设备集成要求后再启用。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T01:25:47Z。近期推送不代表稳定版发布或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
