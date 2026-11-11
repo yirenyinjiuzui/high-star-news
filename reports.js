@@ -2504,5 +2504,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-11",
+    "checkedAt": "2026-11-11 17:04–17:07",
+    "pick": {
+      "en": "Begin with Datasets for a tiny data-preparation exercise or Transformers for a clearly specified model task. llama.cpp targets local inference, vLLM targets serving, and ONNX Runtime targets exported-model execution. Pick one role; these are not five mandatory installations.",
+      "zh": "先用 Datasets 做微型数据准备，或用 Transformers 尝试明确模型任务。llama.cpp 面向本地推理，vLLM 面向服务，ONNX Runtime 面向导出模型执行。按角色选一项，无需全部安装。"
+    },
+    "note": {
+      "en": "Reviewed five official READMEs and current repository metadata. All exceed 10,000 stars and do not repeat the previous fourteen editions. Exact API star snapshots are not a global ranking; no previous-day snapshot exists for these projects, so daily growth is unknown. Fit and scenarios are editorial judgments. No models, datasets or recommended code were downloaded or executed, and no throughput or quality benchmark was run. Library licenses do not determine model or dataset licenses. English and Chinese are prewritten without visitor API or translation calls.",
+      "zh": "核对五个官方 README 与当前仓库元数据，全部超过 1 万 stars，与此前十四期不重复。精确 API 星标快照并非全站排名，这些项目缺少前日快照，日增量未知。适用性与场景为编辑判断；本期未下载或执行模型、数据集及推荐代码，未做吞吐或质量测试。库许可不决定模型或数据许可。中英文预先准备，不依赖访问者 API 或翻译调用。"
+    },
+    "projects": [
+      {
+        "name": "Transformers",
+        "repo": "huggingface/transformers",
+        "stars": 168795,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/huggingface/transformers",
+        "en": {
+          "category": "Model use and customization · intermediate Python",
+          "tagline": "Load supported pretrained models through a common model-definition framework.",
+          "use": "Provides model definitions and high-level pipelines for text, vision, audio and multimodal inference and training. Tokenizers and preprocessing connect raw inputs to each model's expected representation.",
+          "why": "Useful when a task needs a known model and reproducible configuration. It exposes more modeling choices than a chat interface, but still requires selecting and evaluating an appropriate checkpoint.",
+          "fit": "Apache-2.0 library; current README specifies Python 3.11+ and PyTorch 2.6+. Compatible environments exist on major desktop OSs, but accelerators and packages vary. Model downloads consume disk; RAM/VRAM depends on model and task. Model licenses, gated access and cloud compute are separate. Not a guarantee of factual answers or suitability; remote model code deserves explicit review.",
+          "try": "20–30 minutes: follow https://huggingface.co/docs/transformers/pipeline_tutorial and first inspect a small model card, license and download size. If an environment is ready, try a small task on fabricated inputs and record model/revision/settings. Otherwise spend the session assessing requirements, without downloading a large checkpoint.",
+          "help": [
+            "Compare a small text classifier's outputs on ten fabricated sentences.",
+            "Inspect a tokenizer's output before preparing inputs for a supported model."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-11T08:55:43Z at review. Recent activity is maintenance evidence, not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "模型使用与定制 · Python 中等门槛",
+          "tagline": "通过统一模型定义框架加载支持的预训练模型。",
+          "use": "提供文本、视觉、音频和多模态推理与训练的模型定义及高层 pipeline。分词与预处理将原始输入转成各模型需要的表示。",
+          "why": "任务需要明确模型及可复现配置时值得尝试。相比聊天界面可控制更多模型细节，仍需选择并评估合适权重。",
+          "fit": "库采用 Apache-2.0，当前 README 要求 Python 3.11+、PyTorch 2.6+。主要桌面系统存在兼容环境，加速器和包支持各异。模型下载占磁盘，内存/显存取决于任务；模型许可、受限访问及云资源另算。不能保证回答真实或适用，远程模型代码需明确审查。",
+          "try": "用 20–30 分钟按 https://huggingface.co/docs/transformers/pipeline_tutorial 先查小模型卡、许可与下载体积。环境已就绪再用虚构输入尝试，记录模型/修订/配置；否则仅评估要求，不下载大权重。",
+          "help": [
+            "用十句虚构文本比较小型分类模型的输出。",
+            "为支持模型准备输入前，先检查分词结果。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-11T08:55:43Z。近期活动为维护证据，不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Datasets",
+        "repo": "huggingface/datasets",
+        "stars": 22125,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/huggingface/datasets",
+        "en": {
+          "category": "Dataset preparation · intermediate Python",
+          "tagline": "Load and transform examples with explicit, reusable preprocessing steps.",
+          "use": "Loads public datasets or local files and supports map-based preprocessing, caching, Arrow-backed storage and streaming. Optional dependencies enable different media formats and framework integrations.",
+          "why": "Recommended when dataset preparation needs to be repeatable rather than a sequence of manual edits. Inspecting features and a tiny subset first can expose schema assumptions.",
+          "fit": "Apache-2.0 library for compatible Python environments on major OSs; CPU, disk/cache and network depend on input. Media extras add dependencies; no GPU is needed for a small text example. Dataset licenses are independent. Streaming still transfers data and does not make every operation available or free of memory limits. Cache reuse does not prove data quality or split validity.",
+          "try": "15–25 minutes: follow https://huggingface.co/docs/datasets/ using five local fabricated JSONL records. Load them, inspect features, map one derived field and verify every result. Before trying a Hub dataset, read its card, license and split provenance; do not download a full large corpus for the first attempt.",
+          "help": [
+            "Load a local fabricated JSONL file and add a text-length column.",
+            "Inspect a small public dataset subset and compare its documented split definitions before use."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T17:24:28Z at review. Recent activity is maintenance evidence, not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "数据集预处理 · Python 中等门槛",
+          "tagline": "以明确、可复用步骤加载与转换样本。",
+          "use": "加载公开数据集或本地文件，支持 map 预处理、缓存、Arrow 存储与流式读取。可选依赖支持不同媒体格式及框架集成。",
+          "why": "预处理需要可重复、而非不断手动编辑时值得尝试。先看字段和极小子集，可以暴露结构假设。",
+          "fit": "Apache-2.0 库，主要系统需兼容 Python。CPU、缓存磁盘和网络取决于输入，媒体额外包增加依赖，小文本不需要 GPU。数据许可独立；流式仍传输数据，也不代表支持全部操作或没有内存限制。缓存复用不证明质量或划分有效。",
+          "try": "用 15–25 分钟按 https://huggingface.co/docs/datasets/ 加载五条本地虚构 JSONL，检查字段、映射派生列并逐条核对。尝试 Hub 数据前看卡片、许可及划分来源，首次不下载大型完整语料。",
+          "help": [
+            "加载虚构本地 JSONL 文件并增加文本长度列。",
+            "检查小型公开数据子集，对照文档划分定义后再使用。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T17:24:28Z。近期活动为维护证据，不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "llama.cpp",
+        "repo": "ggml-org/llama.cpp",
+        "stars": 134033,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/ggml-org/llama.cpp",
+        "en": {
+          "category": "Local model inference · intermediate setup",
+          "tagline": "Run supported language models through a C/C++ inference stack.",
+          "use": "Provides local inference tools, a compatible API server, quantized-model support and CPU/GPU backends. CPU and GPU execution can be combined, depending on build and supported model.",
+          "why": "Consider it to understand local inference requirements and control an actual model file. It is a lower-level option than a packaged chat application; quantization trades memory and other behavior that must be evaluated.",
+          "fit": "MIT engine with Windows, macOS and Linux build/binary options. Requires supported weights, disk, RAM and compatible backend libraries; GPU acceleration is optional, not universal. Model licenses are separate. No cloud API credits are included. Unsupported architectures or excessive context can fail or exhaust memory, and local output can still be wrong.",
+          "try": "20–30 minutes: read the official README and build/backend guide, compare one small GGUF model's size with available memory, and inspect its license. If already installed with suitable weights, run a short prompt locally and record settings. Otherwise stop at a resource plan; this report did not run a model.",
+          "help": [
+            "Compare a small quantized model's responses on a fixed set of harmless prompts.",
+            "Explore a local API server as the backend for an existing test UI."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-11T08:55:56Z at review. Recent activity is maintenance evidence, not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "本地模型推理 · 配置中等门槛",
+          "tagline": "通过 C/C++ 推理栈运行支持的语言模型。",
+          "use": "提供本地推理工具、兼容 API 服务、量化模型支持及 CPU/GPU 后端。根据构建与模型，可结合 CPU 与 GPU 执行。",
+          "why": "希望了解本地推理要求、直接控制模型文件时可考虑。比打包聊天应用更底层，量化改变内存占用及其他行为，需要评估。",
+          "fit": "MIT 引擎，提供 Windows、macOS、Linux 构建/二进制方式。需要支持权重、磁盘、内存和兼容后端库；GPU 可选且非通用，模型许可另算，不附云 API 额度。不支持架构或过长上下文可能失败、耗尽内存，本地输出也会错误。",
+          "try": "用 20–30 分钟阅读官方 README 与构建/后端指南，将一个小型 GGUF 体积与可用内存对照并查许可。已有合适环境与权重再运行短提示、记录设置，否则只完成资源计划。本期未运行模型。",
+          "help": [
+            "对固定无敏感提示比较小型量化模型响应。",
+            "将本地 API 服务作为已有测试界面的后端。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-11T08:55:56Z。近期活动为维护证据，不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "vLLM",
+        "repo": "vllm-project/vllm",
+        "stars": 96716,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/vllm-project/vllm",
+        "en": {
+          "category": "Model serving · advanced deployment",
+          "tagline": "Serve supported models with request scheduling and memory-management features.",
+          "use": "An inference and serving engine with continuous batching, PagedAttention, caching, quantization options and compatible API endpoints. Supported backends and model architectures vary, with plugins for some hardware.",
+          "why": "Recommended when serving several requests is an actual requirement. It offers scheduling infrastructure; any throughput advantage must be measured with the intended model, hardware and workload.",
+          "fit": "Apache-2.0 software; choose a documented OS/backend/hardware combination rather than assuming a generic desktop install works. Model weights, driver stack, RAM/VRAM and compilation caches can be substantial. GPU/cloud costs and model terms are separate. Not the simplest first local-chat option. Batching can change latency, and unsupported kernels/models can block setup.",
+          "try": "20–30 minutes: review https://docs.vllm.ai/en/latest/getting_started/ and supported models. Write down model, backend, available memory and a tiny request budget. If a ready test deployment exists, inspect its configuration; otherwise do not provision paid compute merely to finish the exercise. No serving benchmark was executed here.",
+          "help": [
+            "Plan a controlled comparison of single-request latency and concurrent-request throughput.",
+            "Expose an already validated model behind a test client while observing resource use."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-11T08:52:54Z at review. Recent activity is maintenance evidence, not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "模型服务 · 高部署门槛",
+          "tagline": "利用请求调度与内存管理特性提供支持模型服务。",
+          "use": "推理与服务引擎，提供连续批处理、PagedAttention、缓存、量化选项及兼容 API。后端与架构支持各异，部分硬件依赖插件。",
+          "why": "确有多请求服务需求时推荐评估。它提供调度设施，吞吐优势仍需在目标模型、硬件和负载下实测。",
+          "fit": "Apache-2.0 软件，应选择文档支持的系统/后端/硬件组合，不能假设通用桌面直接可装。权重、驱动、内存/显存和编译缓存可能很大，GPU/云费用与模型条款另算。不是首次本地聊天最简单选择；批处理会影响延迟，不兼容内核或模型可阻断配置。",
+          "try": "用 20–30 分钟查看 https://docs.vllm.ai/en/latest/getting_started/ 及模型列表，记录模型、后端、可用内存和小请求预算。已有测试服务再查配置，否则不为完成练习而开付费资源。本期未做服务性能测试。",
+          "help": [
+            "计划受控比较单请求延迟与并发吞吐。",
+            "将已验证模型接入测试客户端，同时观察资源。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-11T08:52:54Z。近期活动为维护证据，不代表稳定版发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "ONNX Runtime",
+        "repo": "microsoft/onnxruntime",
+        "stars": 22281,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/microsoft/onnxruntime",
+        "en": {
+          "category": "Model deployment runtime · intermediate to advanced",
+          "tagline": "Execute a supported exported model through a cross-platform runtime.",
+          "use": "Runs machine-learning models with graph optimizations and execution providers for different hardware. The repository covers inference and training; this recommendation focuses on inference of an already exported model.",
+          "why": "Useful when deployment should be decoupled from a training framework. Conversion and execution are separate stages: verify numerical agreement before assessing speed.",
+          "fit": "MIT runtime with platform-specific packages and providers, including major desktop environments. Needs a compatible model/opset, CPU or supported accelerator and provider dependencies. Optional GPU drivers and cloud resources cost separately. Not every operation exports or runs on every provider. README notes possible telemetry; review privacy settings. No speedup is guaranteed.",
+          "try": "20–30 minutes: follow https://onnxruntime.ai/docs/ and choose a tiny official inference example. Inspect model inputs, shapes, opset and provider requirements first. In an existing environment compare a few outputs against reference results; otherwise record conversion/installation requirements before trying a large model.",
+          "help": [
+            "Run a small public ONNX sample and inspect input/output names and shapes.",
+            "Compare a converted model's outputs against its original framework on the same test inputs."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-11T08:54:13Z at review. Recent activity is maintenance evidence, not a stable-release or compatibility test."
+        },
+        "zh": {
+          "category": "模型部署运行时 · 中高门槛",
+          "tagline": "以跨平台运行时执行支持的导出模型。",
+          "use": "使用图优化及不同硬件执行提供程序运行机器学习模型。仓库涵盖推理与训练，本推荐聚焦已有导出模型的推理。",
+          "why": "希望部署与训练框架解耦时有用。转换和执行是不同步骤，应先验证数值一致性，再评估速度。",
+          "fit": "MIT 运行时，按平台与提供程序选包，包含主要桌面环境。需要兼容模型/opset、CPU 或支持加速器与对应依赖；GPU 驱动、云资源另算。不是所有操作都能导出或在所有后端运行。README 提及可能的遥测，应检查隐私设置；不保证提速。",
+          "try": "用 20–30 分钟按 https://onnxruntime.ai/docs/ 选择微型官方推理示例，先检查输入、形状、opset 与后端要求。环境已就绪再对比少量参考输出，否则先记录转换/安装要求，不直接尝试大模型。",
+          "help": [
+            "运行小型公开 ONNX 样例，检查输入输出名称和形状。",
+            "同一测试输入下，将转换模型输出与原框架比较。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-11T08:54:13Z。近期活动为维护证据，不代表稳定版发布或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
