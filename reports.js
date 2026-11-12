@@ -2683,5 +2683,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-12",
+    "checkedAt": "2026-11-12 12:32–12:36",
+    "pick": {
+      "en": "Choose VitePress for a built static documentation project, docsify for browser-rendered Markdown, or Sphinx for technical cross-references. BookStack and Outline fit browser-editing teams but require server administration. Outline has BSL restrictions; Sphinx is today's explicit star-threshold exception.",
+      "zh": "构建式静态文档选 VitePress，浏览器渲染 Markdown 选 docsify，技术交叉引用考虑 Sphinx。BookStack 与 Outline 面向浏览器编辑团队，但需服务管理。Outline 有 BSL 限制，Sphinx 是本期明确星标例外。"
+    },
+    "note": {
+      "en": "Reviewed official READMEs and repository metadata for five final selections, plus Outline's LICENSE. Four exceed 10,000 stars; Sphinx is the explained exception. No repeats among the previous fifteen editions. Counts are exact API snapshots; no previous-day snapshot means daily growth is unknown. Fit and scenarios are editorial judgments. No recommended code was installed or executed. Candidate Material for MkDocs announces end of life on May 5, 2027 and is not presented as a fresh starting point here. English and Chinese are prewritten without visitor API or translation calls.",
+      "zh": "核对五个最终项目的官方 README、仓库元数据及 Outline LICENSE。四个超过 1 万 stars，Sphinx 为已解释例外，与此前十五期不重复。数字为精确 API 快照，缺少前日快照，日增量未知。适用性与场景为编辑判断，本期未安装或执行推荐代码。候选 Material for MkDocs 公告于 2027 年 5 月 5 日结束维护，本期不作为新项目起点。中英文预先准备，无需访问者 API 或翻译调用。"
+    },
+    "projects": [
+      {
+        "name": "VitePress",
+        "repo": "vuejs/vitepress",
+        "stars": 18488,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/vuejs/vitepress",
+        "en": {
+          "category": "Static documentation · intermediate Node.js",
+          "tagline": "Build a documentation website from text sources with a Vue-based toolchain.",
+          "use": "A static site generator powered by Vue and Vite. It builds deployable site assets; content and configuration stay in a project rather than a running collaborative editor.",
+          "why": "Recommended when documentation should be reviewed with source changes and published as static files. It fits an existing Node.js workflow better than a nontechnical team editing pages directly.",
+          "fit": "MIT software; requires a compatible Node.js/package-manager environment on Windows, macOS or Linux and browser testing. Hosting is separate; no database or GPU is needed for a small static site. Dependencies and custom components require maintenance. Not a ready-made permission-controlled team wiki, and generated pages still need layout/link review.",
+          "try": "20–30 minutes: follow https://vitepress.dev/guide/getting-started in a disposable project. Add two Markdown pages and a navigation link, preview locally, build the site and check links in the output. Do not publish until the content and base path are checked.",
+          "help": [
+            "Publish a small installation guide beside a code repository.",
+            "Organize a project walkthrough into linked topic pages."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T13:33:47Z at review. Push activity is not a release or compatibility test."
+        },
+        "zh": {
+          "category": "静态文档 · Node.js 中等门槛",
+          "tagline": "用基于 Vue 的工具链从文本源码建立文档站。",
+          "use": "基于 Vue 与 Vite 的静态站点生成器，构建可部署资源；内容和配置保存在项目中，而非持续运行的协作编辑器。",
+          "why": "文档需要随源码审阅、以静态文件发布时值得尝试。更适合已有 Node.js 工作流，而非非技术团队直接编辑页面。",
+          "fit": "MIT 软件，需要 Windows、macOS、Linux 上兼容的 Node.js/包管理环境及浏览器检查，托管另算。小静态站无需数据库或 GPU，依赖与自定义组件需维护。不是现成的权限团队 Wiki，生成页面仍需检查版式和链接。",
+          "try": "用 20–30 分钟按 https://vitepress.dev/guide/getting-started 建立测试项目，加两页 Markdown 和导航，本地预览、构建并检查输出链接。内容与基础路径确认后再发布。",
+          "help": [
+            "在代码仓库旁发布小型安装指南。",
+            "将项目操作说明整理成互相链接的主题页。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T13:33:47Z。推送不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "docsify",
+        "repo": "docsifyjs/docsify",
+        "stars": 31583,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/docsifyjs/docsify",
+        "en": {
+          "category": "Browser-rendered documentation · beginner to intermediate",
+          "tagline": "Serve Markdown as a documentation site without a static-page build step.",
+          "use": "Uses browser-side rendering to turn Markdown files into a website, with themes and optional search/plugins. Unlike a static HTML generator, it relies on JavaScript while readers navigate the content.",
+          "why": "Useful for a small documentation collection where avoiding a build pipeline matters. The tradeoff is runtime rendering and responsibility for scripts and plugins.",
+          "fit": "MIT project; needs a static web server and a JavaScript-capable browser. CLI setup may use Node.js, while hosting and CDN services have separate terms. No database/GPU required. Not ideal when JavaScript-free reading or prebuilt page HTML is essential. Pin or host dependencies deliberately; plugins and remote assets affect reliability.",
+          "try": "15–25 minutes: follow https://docsify.js.org/#/quickstart with harmless sample pages on a local static server. Add a second page and sidebar link, test navigation, then inspect what scripts are loaded. Verify the eventual hosting path before sharing.",
+          "help": [
+            "Turn a few public Markdown instructions into a browsable manual.",
+            "Try a searchable FAQ prototype before selecting a larger publishing system."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-10T06:32:13Z at review. Push activity is not a release or compatibility test."
+        },
+        "zh": {
+          "category": "浏览器渲染文档 · 初中级门槛",
+          "tagline": "无需静态页面构建步骤，将 Markdown 提供为文档站。",
+          "use": "浏览器端渲染 Markdown，提供主题及可选搜索/插件。与静态 HTML 生成器不同，读者浏览时依赖 JavaScript。",
+          "why": "小型文档集合希望避免构建流水线时适用，代价是运行时渲染，以及对脚本与插件的管理。",
+          "fit": "MIT 项目，需要静态网页服务器和支持 JavaScript 的浏览器。CLI 配置可能用 Node.js，托管/CDN 另有条款，无需数据库或 GPU。需要无 JavaScript 阅读或预构建 HTML 时不理想，应明确固定或自托管依赖，插件及远程资源影响可靠性。",
+          "try": "用 15–25 分钟按 https://docsify.js.org/#/quickstart 在本地静态服务器使用无敏感样页，加第二页与侧栏链接，测试导航并检查加载脚本。分享前验证目标托管路径。",
+          "help": [
+            "将几份公开 Markdown 操作说明整理成可浏览手册。",
+            "选择更大系统前试做可搜索 FAQ 原型。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-10T06:32:13Z。推送不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "BookStack",
+        "repo": "BookStackApp/BookStack",
+        "stars": 19140,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/BookStackApp/BookStack",
+        "en": {
+          "category": "Editable knowledge base · intermediate hosting",
+          "tagline": "Give contributors a structured place to write and organize documentation.",
+          "use": "A documentation platform designed for simple, word-processor-like content creation. Its README links a demo, administrator installation guidance and documentation; current development links point to Codeberg.",
+          "why": "Recommended when contributors should edit through a browser rather than Git. An opinionated structure can reduce setup decisions, but should match the way a team retrieves information.",
+          "fit": "MIT application; needs the documented server/database stack, persistent storage and backups, accessed through common browsers. Hosting and administration cost separately; no GPU required. Not a general-purpose extensible application builder. Access settings, updates and restore procedures remain operator responsibilities. GitHub activity alone does not describe all upstream work.",
+          "try": "15–25 minutes: visit the demo linked by https://www.bookstackapp.com/docs and inspect existing sample organization. In your own test instance, create a harmless procedure page and retrieve it again. Read installation/backup requirements before deciding to migrate real documents.",
+          "help": [
+            "Organize a small onboarding guide and recurring procedure pages.",
+            "Evaluate whether nontechnical contributors can update a sample instruction without source control."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-12T04:31:10Z at review. Push activity is not a release or compatibility test."
+        },
+        "zh": {
+          "category": "可编辑知识库 · 托管中等门槛",
+          "tagline": "给协作者结构化的文档编写与整理空间。",
+          "use": "文档平台，设计为类似基础文字处理器的内容编辑体验。README 链接演示、管理员部署和文档，当前开发链接指向 Codeberg。",
+          "why": "协作者希望通过浏览器编辑、而非 Git 提交时可考虑。固定结构减少配置决策，但应符合团队找资料的方式。",
+          "fit": "MIT 应用，需要文档指定的服务器/数据库、持久存储与备份，通过常见浏览器访问，托管和管理另算，无需 GPU。不是通用可扩展应用构建器，权限、更新和恢复仍需运营方负责。GitHub 活动不代表全部上游工作。",
+          "try": "用 15–25 分钟查看 https://www.bookstackapp.com/docs 所链演示的现有组织方式。在自己的测试实例建立无敏感操作页并找回，迁移真实文档前阅读部署与备份要求。",
+          "help": [
+            "整理小型入职指南和常用操作页面。",
+            "评估非技术协作者能否不使用源码管理就更新示例说明。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-12T04:31:10Z。推送不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Outline",
+        "repo": "outline/outline",
+        "stars": 41239,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/outline/outline",
+        "en": {
+          "category": "Collaborative team knowledge · intermediate hosting",
+          "tagline": "Evaluate a browser-based knowledge workspace with an explicit hosting and license decision.",
+          "use": "A React/Node.js collaborative knowledge base, available through the vendor's hosted service or a self-hosted production configuration documented by the project.",
+          "why": "Recommended when a team wants shared browser editing and an organized knowledge destination. Compare the actual editing workflow and administration burden before moving existing notes.",
+          "fit": "Current source is BSL 1.1, not OSI open source; the fetched license restricts commercial Document Service offerings for third parties. Review the exact version's LICENSE for your use. Hosted plans cost separately; self-hosting needs documented services, identity configuration, storage, backups and updates. Browser clients work across common platforms. Not a zero-maintenance notes folder.",
+          "try": "20–30 minutes: read https://docs.getoutline.com/s/guide and https://docs.getoutline.com/s/hosting/ , compare hosted/self-hosted requirements and the repository LICENSE. If an authorized test workspace exists, draft one harmless page and check retrieval. Do not create a paid account or migrate documents just to complete this evaluation.",
+          "help": [
+            "Draft a shared project handover using fabricated information.",
+            "Evaluate how a small team would find and update one recurring procedure."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-12T04:32:31Z at review. Push activity is not a release or compatibility test."
+        },
+        "zh": {
+          "category": "协作团队知识库 · 托管中等门槛",
+          "tagline": "在明确托管与许可选择后评估浏览器知识工作区。",
+          "use": "基于 React/Node.js 的协作知识库，可用厂商托管服务，也可按项目生产部署文档自托管。",
+          "why": "团队需要共享浏览器编辑与集中知识入口时可考虑。迁移笔记前，应比较真实编辑流程及管理成本。",
+          "fit": "当前源码采用 BSL 1.1，并非 OSI 开源；已读许可限制向第三方提供商业 Document Service。应对照所用版本 LICENSE 核查用途。托管套餐另收费，自托管需要文档指定服务、身份配置、存储、备份与更新，常见平台浏览器可访问。不是零维护笔记文件夹。",
+          "try": "用 20–30 分钟阅读 https://docs.getoutline.com/s/guide 与 https://docs.getoutline.com/s/hosting/ ，比较托管/自托管要求及仓库 LICENSE。已有授权测试空间再建无敏感页并测试查找，不为完成评估开付费账户或迁移资料。",
+          "help": [
+            "用虚构信息起草共享项目交接页。",
+            "评估小团队如何找到并更新一项常用流程。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-12T04:32:31Z。推送不代表发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "Sphinx",
+        "repo": "sphinx-doc/sphinx",
+        "stars": 8091,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/sphinx-doc/sphinx",
+        "en": {
+          "category": "Technical reference · intermediate; below-star-threshold exception",
+          "tagline": "Generate linked technical documentation and multiple output formats.",
+          "use": "Uses reStructuredText, semantic cross-references, document trees, indices and extensions for API documentation. Its builders support HTML and formats including EPUB and PDF through appropriate tooling.",
+          "why": "Included despite fewer than 10,000 stars because cross-references, API-oriented extensions and multi-format output make it a distinct technical-documentation option. It remains recently active; this is an explicit exception rather than a lowered general threshold.",
+          "fit": "BSD-2-Clause according to README; Python/pip and compatible dependencies on major desktop OSs are needed. PDF may need a separate TeX toolchain and fonts; extensions add requirements. Hosting and build resources cost separately. Not a visual team editor. Broken references and extension/version conflicts need review; do not assume a PDF build works out of the box.",
+          "try": "20–30 minutes: follow https://www.sphinx-doc.org/ to create two tiny reStructuredText pages, a contents tree and one cross-reference. Build HTML and inspect warnings and links. Treat PDF tooling as a later decision rather than installing a large toolchain for the first test.",
+          "help": [
+            "Link a function reference to an explanatory tutorial without manually duplicating the URL.",
+            "Build a small reference manual as HTML and assess another output format's dependencies."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-09T01:54:44Z at review. Push activity is not a release or compatibility test."
+        },
+        "zh": {
+          "category": "技术参考文档 · 中等门槛，星标例外",
+          "tagline": "生成相互链接的技术文档及多种输出格式。",
+          "use": "使用 reStructuredText、语义交叉引用、文档树、索引及 API 文档扩展。构建器支持 HTML，也可配合相应工具输出 EPUB、PDF 等。",
+          "why": "虽少于 1 万 stars，仍因交叉引用、API 扩展与多格式输出的独特技术文档场景纳入，近期仍有活动。这是明确例外，不降低一般门槛。",
+          "fit": "README 标明 BSD-2-Clause，需要主要系统上兼容 Python/pip 与依赖。PDF 可能另需 TeX 工具链和字体，扩展增加要求，托管和构建资源另算。不是团队图形编辑器；坏引用、扩展与版本冲突需处理，不默认 PDF 开箱即用。",
+          "try": "用 20–30 分钟按 https://www.sphinx-doc.org/ 建立两页微型 reStructuredText、目录树和一个交叉引用，构建 HTML，检查警告与链接。PDF 环境留到后续决策，首次不安装大型工具链。",
+          "help": [
+            "将函数参考链接到解释教程，避免手工复制 URL。",
+            "构建小型 HTML 参考手册，并评估另一输出格式的依赖。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-09T01:54:44Z。推送不代表发布或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
