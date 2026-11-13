@@ -2862,5 +2862,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-13",
+    "checkedAt": "2026-11-13 15:40–15:43",
+    "pick": {
+      "en": "Choose NumPy for numerical arrays, SymPy for symbolic expressions, marimo for dependent notebook calculations, Manim for animated explanation, or Quarto for a narrative report. Start with one small example rather than installing all five. Quarto is today's explicit star-threshold exception.",
+      "zh": "数值数组选 NumPy，符号表达式选 SymPy，依赖计算笔记选 marimo，动画讲解选 Manim，文字报告选 Quarto。从一个小示例开始，无需全部安装。Quarto 是本期明确星标例外。"
+    },
+    "note": {
+      "en": "Reviewed five final official READMEs and repository metadata. Four exceed 10,000 stars; Quarto is the explained exception. No repeats among the previous sixteen editions. Stars are exact API snapshots; without a previous-day snapshot for these projects, daily growth is unknown. Scenarios and fit are editorial judgments. No recommended code was installed or run, and no performance or educational benefit was measured. English and Chinese are prewritten without visitor GitHub or translation API calls.",
+      "zh": "核对五个最终项目官方 README 与仓库元数据。四个超过 1 万 stars，Quarto 为已解释例外，与此前十六期不重复。数字为精确 API 快照，缺少这些项目前日快照，日增量未知。场景与适用性为编辑判断。本期未安装或运行推荐代码，未测量性能或教学收益。中英文预先准备，不需要访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "marimo",
+        "repo": "marimo-team/marimo",
+        "stars": 23555,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/marimo-team/marimo",
+        "en": {
+          "category": "Reactive notebooks · intermediate Python",
+          "tagline": "Keep dependent calculations connected to the inputs they use.",
+          "use": "Reactive Python notebooks stored as .py files: changing a cell or UI value reruns dependent cells, or marks them stale in a lazy configuration. Notebooks can also run as scripts or apps.",
+          "why": "Recommended when manual cell reruns make it hard to track which results match current inputs. Dependency tracking helps manage execution order but does not establish that the analysis itself is correct.",
+          "fit": "Apache-2.0 software for compatible Python environments on Windows, macOS and Linux, with a browser editor. Needs RAM/CPU for your code; no GPU for a tiny example. Optional AI APIs and hosting have separate costs. Existing Jupyter workflows may need adaptation. Automatic reruns can repeat expensive or external side effects; configure lazy behavior where appropriate.",
+          "try": "20–30 minutes: follow https://docs.marimo.io/ and the intro tutorial. Build three tiny cells: one input, one calculation and one output. Change the input and observe dependencies, then inspect the saved Python file. Use only local, harmless calculations in the first trial.",
+          "help": [
+            "Use a slider to vary a harmless parameter and inspect dependent outputs.",
+            "Review a notebook's .py diff alongside a change in a calculation."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-13T06:58:04Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "响应式笔记 · Python 中等门槛",
+          "tagline": "让依赖计算随实际输入保持关联。",
+          "use": "保存为 .py 的响应式 Python 笔记：改动单元格或界面值会重跑依赖单元格，惰性配置则标记过期，也可作为脚本或应用运行。",
+          "why": "手工重跑单元格导致结果与输入难对应时值得尝试。依赖跟踪帮助管理执行顺序，不证明分析本身正确。",
+          "fit": "Apache-2.0 软件，需要 Windows、macOS、Linux 上兼容 Python 及浏览器编辑器。CPU/内存取决于代码，小示例无需 GPU；可选 AI API 与托管另收费。已有 Jupyter 工作流可能需调整，自动重跑可能重复昂贵计算或外部副作用，应适时用惰性配置。",
+          "try": "用 20–30 分钟按 https://docs.marimo.io/ 入门教程建立输入、计算、输出三个小单元格，改输入观察依赖，再查看保存的 Python 文件。首次仅用无害本地计算。",
+          "help": [
+            "用滑块改变无敏感参数，观察依赖输出。",
+            "修改计算时，连同笔记 .py 差异一起审阅。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-13T06:58:04Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "NumPy",
+        "repo": "numpy/numpy",
+        "stars": 33353,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/numpy/numpy",
+        "en": {
+          "category": "Numerical arrays · beginner to intermediate Python",
+          "tagline": "Represent numerical data as arrays and calculate across dimensions.",
+          "use": "Provides N-dimensional arrays, broadcasting, linear algebra, Fourier transforms and random-number capabilities. It underpins many scientific Python workflows but is useful directly for small, explicit calculations.",
+          "why": "Recommended for learning shapes, axes and vectorized operations before adding a larger data or modeling framework. Correct dimensions and data types matter more than shorter syntax.",
+          "fit": "Free scientific Python package; check the repository license and bundled dependency notices. Compatible wheels exist for major OSs and supported Python versions. CPU/RAM and temporary array storage grow with data; standard use does not require a GPU. Not symbolic algebra or a spreadsheet UI. Broadcasting can silently express the wrong calculation if shapes are misunderstood; floating-point values are approximate.",
+          "try": "15–25 minutes: follow https://numpy.org/doc/ with a 2-by-3 array. Print its shape and dtype, calculate row and column sums and compare each with manual totals. Try one deliberate shape mismatch and read the error before using larger data.",
+          "help": [
+            "Compute column summaries for a small fabricated measurements matrix.",
+            "Compare a matrix operation with a hand-worked two-by-two example."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-13T04:17:37Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "数值数组 · Python 初中级门槛",
+          "tagline": "用数组表示数值数据并按维度计算。",
+          "use": "提供多维数组、广播、线性代数、傅里叶变换和随机数能力，是许多科学 Python 工作流基础，也可直接用于小型明确计算。",
+          "why": "增加更大数据或建模框架前，推荐先理解形状、轴和向量化。正确维度与类型比代码更短重要。",
+          "fit": "免费科学 Python 包，需查看仓库许可及捆绑依赖声明。主要系统和支持 Python 版本提供兼容 wheel，CPU/内存及临时数组存储随数据增长，标准使用无需 GPU。不是符号代数或表格界面；误解形状时广播可能算出错误含义，浮点数是近似值。",
+          "try": "用 15–25 分钟按 https://numpy.org/doc/ 创建 2×3 数组，打印形状和类型，分别求行列和并手工对照。故意制造一次形状不匹配，读懂错误后再处理大数据。",
+          "help": [
+            "对虚构测量矩阵计算各列汇总。",
+            "将矩阵操作与手算二阶示例比较。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-13T04:17:37Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "SymPy",
+        "repo": "sympy/sympy",
+        "stars": 15084,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/sympy/sympy",
+        "en": {
+          "category": "Symbolic mathematics · intermediate",
+          "tagline": "Work with expressions as symbols before substituting numbers.",
+          "use": "A Python symbolic-mathematics library. The README demonstrates exact symbolic expressions and series expansion; its documentation covers the supported algebraic operations and assumptions.",
+          "why": "Useful for checking a small derivation or obtaining an expression that remains parameterized. Symbolic output should be interpreted with its domain and assumptions rather than treated as an unrestricted identity.",
+          "fit": "README identifies the New BSD license, with exceptions noted per file. Runs in compatible Python on major desktop OSs, without a GPU for small algebra. Large expressions can consume substantial time/RAM. Not a proof of every modeling assumption; branch choices, domains and simplification conventions matter. Numerical approximation and symbolic equality are different tasks.",
+          "try": "15–25 minutes: follow https://docs.sympy.org/ using one symbol and the README's series example. Check the first few terms manually, substitute a value away from singularities, and inspect how assumptions change a simple expression. Keep the problem small rather than sending a long expression to an unrestricted simplifier.",
+          "help": [
+            "Compare a short series expansion with a manually derived term.",
+            "Substitute sample values into a symbolic expression to check a derivation's implementation."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-13T00:35:58Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "符号数学 · 中等门槛",
+          "tagline": "代入数值前先以符号表达式运算。",
+          "use": "Python 符号数学库，README 演示精确符号表达式和级数展开，支持的代数操作与假设见官方文档。",
+          "why": "适合核对小段推导或保留参数表达式。应结合定义域与假设解释输出，不能当作无限制恒等式。",
+          "fit": "README 标明 New BSD 许可，个别文件例外另看。主要桌面系统兼容 Python 可用，小代数无需 GPU，大表达式可能耗费大量时间和内存。不证明全部建模假设，分支、定义域和化简约定都重要；数值近似与符号相等不同。",
+          "try": "用 15–25 分钟按 https://docs.sympy.org/ 用一个符号重现 README 级数示例，手算前几项，避开奇点代入数值，并查看假设如何改变简单表达式。保持问题小，不直接无限制化简长表达式。",
+          "help": [
+            "将简短级数展开与手工推导项比较。",
+            "代入样本值，检查推导在程序中的实现。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-13T00:35:58Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "Manim Community",
+        "repo": "manimCommunity/manim",
+        "stars": 42459,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/manimCommunity/manim",
+        "en": {
+          "category": "Explanatory animation · intermediate Python",
+          "tagline": "Describe mathematical animations as explicit scenes and transformations.",
+          "use": "A programmatic animation engine for explanatory math videos. The community edition supplies scenes, geometric objects and transformations, with low-quality preview options and notebook integration.",
+          "why": "Recommended when a change over time communicates more than a static picture. It lets you control the sequence precisely, but good teaching still needs a clear explanation and correct labels.",
+          "fit": "MIT community edition; follow its own OS-specific instructions for Windows, macOS or Linux. Python, rendering dependencies and disk for video are required; formula rendering may add TeX/font needs. Render time grows with scene complexity. Not interchangeable with 3b1b/manim examples. More animation does not establish mathematical correctness.",
+          "try": "20–30 minutes after setup: follow https://docs.manim.community/ and render the README's SquareToCircle at low quality. Change one color or timing and compare outputs. If dependencies are not ready, use the officially linked trial environment or spend the session assessing requirements rather than installing a large toolchain.",
+          "help": [
+            "Animate a square changing into a circle while identifying the transformation.",
+            "Show a vector or geometric construction in a few deliberate steps."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-12T13:43:17Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "解释性动画 · Python 中等门槛",
+          "tagline": "用明确场景与变换描述数学动画。",
+          "use": "面向数学讲解的视频动画引擎，社区版提供场景、几何对象和变换，支持低质量预览及笔记集成。",
+          "why": "时间变化比静态图片更能解释问题时可试。可精确控制顺序，教学仍需清楚解说与正确标注。",
+          "fit": "MIT 社区版，需遵循自身 Windows、macOS、Linux 部署指引。需要 Python、渲染依赖及视频磁盘，公式可能另需 TeX/字体，耗时随场景增长。不能混用 3b1b/manim 示例；动画更多不证明数学正确。",
+          "try": "环境就绪后用 20–30 分钟按 https://docs.manim.community/ 低质量渲染 README 的 SquareToCircle，改一个颜色或时长再比较。依赖未就绪时可选官方所链试用环境或仅评估要求，不急装大型工具链。",
+          "help": [
+            "动画展示方形变成圆形，并说明变换。",
+            "用少量明确步骤展示向量或几何构造。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-12T13:43:17Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "Quarto",
+        "repo": "quarto-dev/quarto-cli",
+        "stars": 6177,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/quarto-dev/quarto-cli",
+        "en": {
+          "category": "Technical publishing · intermediate; star-threshold exception",
+          "tagline": "Publish explanatory text with code outputs in a document project.",
+          "use": "A Pandoc-based technical publishing system with Markdown authoring, code execution via supported engines, cross-references and project-level websites/books. It integrates with Jupyter, Knitr and other authoring tools.",
+          "why": "Included below 10,000 stars because combining narrative, computation and multi-document publishing is a concrete use case distinct from a generic site theme. It is recently active; this is an explicit exception.",
+          "fit": "README states MIT licensing for Quarto; dependencies and content have separate terms. CLI installers support Windows, macOS and Linux; Python/R/Julia engines are separate when used. PDF can need a TeX toolchain, fonts and extra disk. Not a guarantee of computational reproducibility: record environments and data. Executing documents runs embedded code.",
+          "try": "20–30 minutes: follow https://quarto.org/docs/get-started/ and render a tiny Markdown document to HTML with headings and one cross-reference. Add a harmless code block only if its engine already exists. Check the output and execution settings; PDF dependencies can wait until a later trial.",
+          "help": [
+            "Prepare a small report that keeps a chart's code near its explanation.",
+            "Render linked chapters with shared project settings instead of duplicating options."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-12T17:22:41Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "技术出版 · 中等门槛，星标例外",
+          "tagline": "将解释文字与代码输出一起发布为文档项目。",
+          "use": "基于 Pandoc 的技术出版系统，支持 Markdown、经支持引擎执行代码、交叉引用及项目级网站/书籍，集成 Jupyter、Knitr 等工具。",
+          "why": "虽少于 1 万 stars，因文字、计算与多文档出版结合的明确场景纳入，区别于通用站点主题，近期仍活跃。这是明确例外。",
+          "fit": "README 标明 Quarto 为 MIT，依赖及内容条款另算。CLI 提供 Windows、macOS、Linux 安装方式，所用 Python/R/Julia 引擎需另配。PDF 可能需要 TeX、字体及额外磁盘。不保证计算可复现，需记录环境和数据；执行文档会运行内嵌代码。",
+          "try": "用 20–30 分钟按 https://quarto.org/docs/get-started/ 将含标题和交叉引用的小 Markdown 文档转成 HTML。已有执行引擎再加无害代码块，检查输出和执行设置。PDF 依赖留到后续。",
+          "help": [
+            "将图表代码与解释放在同一份小报告中。",
+            "用共享项目设置渲染互相链接的章节，减少重复配置。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-12T17:22:41Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      }
+    ]
   }
 ];
