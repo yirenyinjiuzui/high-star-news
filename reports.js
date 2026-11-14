@@ -3041,5 +3041,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-14",
+    "checkedAt": "2026-11-14 15:33–15:36",
+    "pick": {
+      "en": "Choose Glow for reading, just for a few known project commands, hyperfine for a controlled timing question, GitHub CLI for remote repository inspection, or Atuin for contextual history. Try one role first; none requires adopting all the others.",
+      "zh": "阅读选 Glow，保存少量已有项目命令选 just，受控计时选 hyperfine，查看远程仓库选 GitHub CLI，检索上下文历史选 Atuin。先试一项，无需整套采用。"
+    },
+    "note": {
+      "en": "Reviewed five final official READMEs and current repository metadata. All exceed 10,000 stars and do not repeat the previous seventeen editions. Stars are exact API snapshots, not a global ranking; no previous-day snapshot exists for these projects, so daily growth is unknown. Fit and scenarios are editorial judgments. No recommended executable or script was installed or run, and no speed benefit was measured. English and Chinese are prewritten without visitor GitHub or translation API calls.",
+      "zh": "核对五个最终项目官方 README 与当前仓库元数据，全部超过 1 万 stars，与此前十七期不重复。数字为精确 API 快照，并非全站排名，缺少这些项目的前日快照，日增量未知。适用性与场景为编辑判断。本期未安装或执行推荐程序和脚本，未测量提速收益。中英文预先准备，不需要访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "GitHub CLI",
+        "repo": "cli/cli",
+        "stars": 47007,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/cli/cli",
+        "en": {
+          "category": "GitHub workflow · intermediate terminal",
+          "tagline": "Inspect repository work without leaving the terminal.",
+          "use": "The official gh client brings issues, pull requests and other GitHub resources to command-line workflows. It supports GitHub.com and supported Enterprise services on Windows, macOS and Linux.",
+          "why": "Useful when you already work in a terminal and need to inspect remote work alongside local Git state. It complements Git rather than replacing version control.",
+          "fit": "MIT client; requires network access and appropriate authentication for many operations. Enterprise accounts and hosted services have separate terms. No GPU needed. Permissions and selected account still matter; write commands can change remote state. It does not bypass repository access or rate limits.",
+          "try": "15–25 minutes after setup: follow https://cli.github.com/manual/ and check gh auth status privately. Use read-only commands on a public repository, such as viewing repository metadata and listing a few issues. Confirm the target before trying any write operation; this report does not execute gh.",
+          "help": [
+            "Read a public repository's pull-request status before reviewing local changes.",
+            "Inspect an issue's details and open its canonical page when more context is needed."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-13T16:00:07Z at review. Recent activity is not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "GitHub 工作流 · 终端中等门槛",
+          "tagline": "不用离开终端即可查看仓库工作。",
+          "use": "官方 gh 客户端将议题、拉取请求等资源接入命令行，支持 Windows、macOS、Linux 上的 GitHub.com 与支持的企业服务。",
+          "why": "已有终端工作习惯，需要同时查看远程任务和本地 Git 状态时有用。它补充 Git，不替代版本控制。",
+          "fit": "MIT 客户端，需要网络，许多操作还需相应认证。企业账户与托管服务另有条款，无需 GPU。权限和选中账号仍重要，写命令会改变远程状态，不能绕过访问控制或限流。",
+          "try": "配置后用 15–25 分钟按 https://cli.github.com/manual/ 私下检查 gh auth status。在公开仓库仅用只读命令查看元数据、列出少量议题。尝试写操作前确认目标；本期不执行 gh。",
+          "help": [
+            "审阅本地改动前查看公开仓库拉取请求状态。",
+            "检查议题详情，需要更多上下文时打开原始页面。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-13T16:00:07Z。近期活动不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "hyperfine",
+        "repo": "sharkdp/hyperfine",
+        "stars": 29270,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/sharkdp/hyperfine",
+        "en": {
+          "category": "Command timing · intermediate",
+          "tagline": "Compare command runtimes through repeated measurements.",
+          "use": "Provides repeated-run statistics, warmups, parameter scans and result export. Current README distinguishes directly executed commands from explicit shell interpretation via -S.",
+          "why": "Recommended when a concrete performance claim needs a small reproducible timing comparison. It measures a chosen workload; it cannot establish which implementation is correct or generally fastest.",
+          "fit": "Apache-2.0 tool with cross-platform binaries. Needs the measured executables, CPU/time and any output storage; no GPU unless measured code needs one. Repeated commands repeat side effects. Background load, caches and different output semantics can invalidate comparisons. Avoid applying privileged cache-clearing examples casually.",
+          "try": "20–30 minutes: follow the official README, select two harmless commands with checked equivalent results, set a small explicit run count and export JSON. Record OS, command versions, input and warmup policy. Compare variation as well as averages; no benchmark was executed for this report.",
+          "help": [
+            "Compare two equivalent read-only transformations on the same tiny input.",
+            "Inspect how warmup affects a command that repeatedly reads a test file."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-01T03:02:36Z at review. Recent activity is not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "命令计时 · 中等门槛",
+          "tagline": "用重复测量比较命令运行时间。",
+          "use": "提供多次运行统计、预热、参数扫描和结果导出。当前 README 区分默认直接执行与通过 -S 明确启用 Shell 解释。",
+          "why": "当具体性能说法需要小型可复现比较时推荐。它测量选定负载，不证明实现正确，也不证明普遍最快。",
+          "fit": "Apache-2.0 跨平台工具，需要被测程序、CPU/时间和输出存储，被测代码不需要时无需 GPU。重复命令也重复副作用；后台负载、缓存和输出语义差异会破坏比较。不要随意套用需提权的清缓存示例。",
+          "try": "用 20–30 分钟按官方 README 选择结果已核对等价的无害命令，明确少量运行次数并导出 JSON。记录系统、版本、输入和预热策略，同时看波动与平均值；本期未执行性能测试。",
+          "help": [
+            "同一小输入上比较两个等价只读转换。",
+            "查看预热如何影响反复读取测试文件的命令。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-01T03:02:36Z。近期活动不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "just",
+        "repo": "casey/just",
+        "stars": 36697,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/casey/just",
+        "en": {
+          "category": "Project commands · beginner to intermediate",
+          "tagline": "Save a small set of project tasks under readable recipe names.",
+          "use": "Stores recipes in a justfile, with arguments, recipe listing, shell selection and optional imports/modules. It is a command runner rather than a dependency-tracking build system.",
+          "why": "Useful when repeatable project commands are scattered through notes. A short recipe can make the intended invocation visible, without introducing a larger task framework.",
+          "fit": "CC0-1.0 project, with binaries for Windows, macOS and Linux. Recipes need their own tools and a compatible shell. On Windows use an available sh or explicitly configure PowerShell. No GPU needed for the runner. It does not make shell scripts portable automatically, and a justfile can execute arbitrary commands.",
+          "try": "15–25 minutes: read https://just.systems/man/en/ and create a disposable justfile with one harmless print recipe and one version-check recipe. List recipes, run each and inspect the file before execution. Add an existing project command only after verifying its working directory and arguments.",
+          "help": [
+            "Give the existing documentation-preview command one memorable name.",
+            "List the project's validation commands for a collaborator before they run them."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-14T06:32:11Z at review. Recent activity is not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "项目命令 · 初中级门槛",
+          "tagline": "把少量项目任务保存为易读配方名称。",
+          "use": "在 justfile 存储命令配方，支持参数、列表、Shell 选择及可选导入/模块。它是命令运行器，不是依赖跟踪构建系统。",
+          "why": "重复项目命令散落笔记时适用。短配方让实际调用方式可见，无需增加大型任务框架。",
+          "fit": "CC0-1.0 项目，提供 Windows、macOS、Linux 二进制。配方另需对应工具及兼容 Shell，Windows 可用已有 sh 或明确配置 PowerShell，运行器本身无需 GPU。不会自动让脚本跨平台，justfile 可以执行任意命令。",
+          "try": "用 15–25 分钟读 https://just.systems/man/en/ ，建测试 justfile，写无害打印与版本检查两个配方。先查看文件、列出配方再运行，核对工作目录和参数后才加入已有项目命令。",
+          "help": [
+            "为已有文档预览命令设置易记名称。",
+            "在协作者运行前列出项目校验命令。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-14T06:32:11Z。近期活动不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "Glow",
+        "repo": "charmbracelet/glow",
+        "stars": 28033,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/charmbracelet/glow",
+        "en": {
+          "category": "Markdown reading · beginner",
+          "tagline": "Read local Markdown as a formatted document in the terminal.",
+          "use": "Renders Markdown in a command-line interface and can discover files in subdirectories or a local Git repository. The project supplies terminal UI and platform-specific packages/binaries.",
+          "why": "Recommended when a README or operational note should stay near your terminal session. It is a reader, so the source can remain in the existing editor and version-control workflow.",
+          "fit": "MIT reader with Windows, macOS, Linux and several Unix packages. Needs a compatible terminal, fonts and local files; no database or GPU. Terminal rendering differs from the final web/PDF destination, especially for wide tables, images or embedded HTML. It is not a substitute for checking a published page.",
+          "try": "15–20 minutes: follow the official README, open a harmless local Markdown file with headings, a list and code block, then try directory discovery. Compare with the raw text and check whether the terminal width hides information. Do not treat this as a final website preview.",
+          "help": [
+            "Browse a small repository's Markdown instructions without a browser.",
+            "Review a local checklist while preparing a command sequence."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-04T12:06:23Z at review. Recent activity is not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "Markdown 阅读 · 初级门槛",
+          "tagline": "在终端中按格式阅读本地 Markdown。",
+          "use": "在命令行渲染 Markdown，并可发现子目录或本地 Git 仓库中的文件，提供终端界面和各平台包/二进制。",
+          "why": "希望 README 或操作说明贴近终端会话时推荐。它负责阅读，源码仍可在已有编辑器及版本管理中维护。",
+          "fit": "MIT 阅读器，提供 Windows、macOS、Linux 及部分 Unix 包。需要兼容终端、字体与文件，无需数据库或 GPU。终端与最终网页/PDF 渲染不同，宽表、图像及内嵌 HTML 尤其如此，不能替代发布页面检查。",
+          "try": "用 15–20 分钟按官方 README 打开含标题、列表和代码块的无害本地文件，再试目录发现。与原文对照，检查终端宽度是否遮挡信息，不将其作为最终网站预览。",
+          "help": [
+            "不用浏览器即可查看小型仓库 Markdown 说明。",
+            "准备命令步骤时对照本地清单。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-04T12:06:23Z。近期活动不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "Atuin",
+        "repo": "atuinsh/atuin",
+        "stars": 32350,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/atuinsh/atuin",
+        "en": {
+          "category": "Shell history · intermediate setup",
+          "tagline": "Search recorded commands together with the context in which they ran.",
+          "use": "Stores terminal history in SQLite with fields such as working directory, exit status and duration. Current README also describes agent-session capture and optional end-to-end-encrypted synchronization.",
+          "why": "Useful when recalling the correct earlier command depends on where it ran or whether it succeeded. Start with limited local history rather than enabling every capture and sync integration.",
+          "fit": "MIT project with documented shell integrations including bash, zsh, fish and PowerShell; OS and shell setup must match current guidance. Local capture needs disk; optional sync/server services and hosting have separate requirements or terms. History may contain secrets or private paths despite filtering. Encryption is not a substitute for controlling capture and access.",
+          "try": "20–30 minutes: follow https://docs.atuin.sh/ and inspect capture, exclusion and deletion settings first. In a disposable shell session, record only harmless test commands, search by context and edit a selected entry before reuse. Leave optional sync and agent capture disabled until their scope is understood.",
+          "help": [
+            "Find a successful prior test command within a project directory.",
+            "Recover the structure of a harmless earlier query, edit it and recheck its target before reuse."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-14T05:56:57Z at review. Recent activity is not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "Shell 历史 · 配置中等门槛",
+          "tagline": "结合执行上下文检索已记录命令。",
+          "use": "用 SQLite 保存终端历史及工作目录、退出状态、耗时等字段。当前 README 还说明代理会话采集及可选端到端加密同步。",
+          "why": "回想旧命令需要知道执行位置或是否成功时有用。先尝试少量本地历史，不直接开启全部采集与同步集成。",
+          "fit": "MIT 项目，文档列出 bash、zsh、fish、PowerShell 等集成，系统及 Shell 配置需匹配当前指南。本地记录占磁盘，可选同步/服务器和托管另有要求或条款。过滤后历史仍可能含秘密或私人路径，加密不能代替采集范围和访问控制。",
+          "try": "用 20–30 分钟按 https://docs.atuin.sh/ 先检查采集、排除和删除设置。在测试 Shell 会话仅记录无害命令，按上下文搜索，复用前先编辑。理解范围前保持可选同步及代理采集关闭。",
+          "help": [
+            "在项目目录中找回之前成功的测试命令。",
+            "找回无害查询的结构，编辑并重新核对目标后复用。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-14T05:56:57Z。近期活动不代表已执行功能或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
