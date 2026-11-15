@@ -3220,5 +3220,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-15",
+    "checkedAt": "2026-11-15 14:14–14:17",
+    "pick": {
+      "en": "Uptime Kuma checks availability, changedetection.io compares content, and ntfy carries notifications from a trustworthy event source. Homepage emphasizes service access and widgets; Glance emphasizes chosen information feeds. Choose the missing role rather than deploying all five.",
+      "zh": "Uptime Kuma 检查可用性，changedetection.io 对比内容，ntfy 传递可靠事件源的通知。Homepage 侧重服务入口与组件，Glance 侧重选定信息源。只补需要的角色，不必部署全部。"
+    },
+    "note": {
+      "en": "Reviewed five final official READMEs and current repository metadata. All exceed 10,000 stars and do not repeat the previous eighteen editions. Stars are exact API snapshots, not a global ranking; no previous-day snapshot exists for these projects, so daily growth is unknown. Fit and scenarios are editorial judgments. No recommended code was installed or run, no target monitoring was enabled and no test notifications were sent. English and Chinese are prewritten without visitor GitHub or translation API calls.",
+      "zh": "核对五个最终官方 README 与仓库元数据，全部超过 1 万 stars，与此前十八期不重复。星标为精确 API 快照，并非全站排名，缺少这些项目的前日快照，日增量未知。适用性与场景为编辑判断。本期未安装或运行推荐代码、未开启目标监控、未发送测试通知。中英文预先准备，无需访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "Uptime Kuma",
+        "repo": "louislam/uptime-kuma",
+        "stars": 94314,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/louislam/uptime-kuma",
+        "en": {
+          "category": "Availability monitoring · intermediate hosting",
+          "tagline": "Check whether a service responds and inspect its recent availability.",
+          "use": "Self-hosted monitoring for HTTP, TCP, DNS, ping and other targets, with status pages, response charts and notification integrations. A check reports what its configured probe observed, not a complete diagnosis.",
+          "why": "Useful when you operate a small service and repeatedly check it manually. Start with one meaningful probe and decide what a failure should mean before adding alerts.",
+          "fit": "MIT application with Docker deployment and documented non-Docker Linux/Windows options. Needs an always-running host, local persistent storage and backups; README excludes NFS storage. No GPU required. Hosting and notification providers can cost separately. The monitor can fail with the host it watches; a green probe does not prove every application function works.",
+          "try": "20–30 minutes: read the official installation guide and inspect the temporary demo linked by the README. In an existing test instance add only a service you control, choose a modest interval and examine results without connecting notifications. Review retention and backup needs before normal use.",
+          "help": [
+            "Inspect a local demo service's HTTP response over time.",
+            "Compare a DNS check with an HTTP check to narrow a test outage."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-15T00:04:55Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "可用性监控 · 托管中等门槛",
+          "tagline": "检查服务是否响应，并查看近期可用性。",
+          "use": "自托管监控工具，支持 HTTP、TCP、DNS、Ping 等目标，提供状态页、响应图和通知集成。检查仅代表配置的探针所见，不是完整诊断。",
+          "why": "自己运营小服务、反复手动检查时有用。先选有意义的探针，明确失败含义后再增加提醒。",
+          "fit": "MIT 应用，提供 Docker 及文档规定的 Linux/Windows 非容器方式。需要持续运行主机、本地持久存储和备份，README 不支持 NFS 存储。无需 GPU，托管和通知提供方另算。监控可能随同一主机一起失败，探针绿色不证明所有功能正常。",
+          "try": "用 20–30 分钟读官方部署指南，查看 README 所链临时演示。已有测试实例时仅添加自己控制的服务，设适当间隔，不接通知先看结果。正常使用前评估保留期与备份。",
+          "help": [
+            "观察本地演示服务的 HTTP 响应变化。",
+            "对照 DNS 与 HTTP 检查，缩小测试故障范围。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-15T00:04:55Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "changedetection.io",
+        "repo": "dgtlmoon/changedetection.io",
+        "stars": 35816,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/dgtlmoon/changedetection.io",
+        "en": {
+          "category": "Page changes · intermediate hosting",
+          "tagline": "Compare selected webpage content rather than repeatedly rereading it.",
+          "use": "Tracks page changes with differences, filters and selectors; JavaScript/browser interaction needs the appropriate fetcher. Optional AI summaries and triggers connect a separately configured model service.",
+          "why": "Recommended for a stable public page where a specific content change matters. Targeting one region can reduce navigation noise, but detected differences still need source verification.",
+          "fit": "Apache-2.0 project; browser UI needs a persistent server/container deployment and storage. Browser fetchers consume more CPU/RAM; hosted plans, proxies and model APIs have separate costs. No LLM is necessary for basic diffs. Dynamic pages, access limits and layout changes can produce failures or noise. Follow target-site rules and keep sensitive content out of external summarizers.",
+          "try": "20–30 minutes: read the official README and fetcher requirements. In a ready test instance watch a harmless page you control, choose one selector, edit the page and inspect the raw diff. Leave browser steps, AI calls and outbound notifications unconfigured during this first check.",
+          "help": [
+            "Track an allowed public project announcement section at a reasonable interval.",
+            "Compare revisions of a small test page you control while ignoring a changing timestamp."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-14T15:52:55Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "网页变更 · 托管中等门槛",
+          "tagline": "对比指定网页内容，减少反复重读。",
+          "use": "提供差异、过滤与选择器；JavaScript/浏览器交互需要对应抓取器。可选 AI 摘要和触发规则连接另行配置的模型服务。",
+          "why": "稳定公开页面中某项具体变化重要时可考虑。限定区域能减少导航噪声，差异仍需核查原始来源。",
+          "fit": "Apache-2.0 项目，浏览器界面需要持久服务器/容器和存储，浏览器抓取器更占 CPU/内存。托管、代理与模型 API 另收费，基础差异不需要 LLM。动态页面、访问限制和版式变化会导致失败或噪声，应遵守目标规则，敏感内容不交外部摘要。",
+          "try": "用 20–30 分钟读官方 README 与抓取器要求。已有测试实例时监测自己控制的无害网页，选一个区域，修改页面后查看原始差异。首次不配置浏览器动作、AI 调用或对外通知。",
+          "help": [
+            "按网站允许的合理间隔关注公开项目公告区域。",
+            "修改自己控制的测试页，对比正文并排除变化时间戳。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-14T15:52:55Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "ntfy",
+        "repo": "binwiederhier/ntfy",
+        "stars": 35562,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/binwiederhier/ntfy",
+        "en": {
+          "category": "Notification transport · intermediate setup",
+          "tagline": "Deliver a short event from a script to a subscribed device.",
+          "use": "An HTTP publish/subscribe notification service with phone and desktop clients, optional self-hosting and a hosted service with free and paid options. It transports an event generated elsewhere; it does not decide whether a task succeeded.",
+          "why": "Useful when an existing job already has a trustworthy completion or failure signal. A concise, deduplicated notification can surface that signal without copying logs full of private data.",
+          "fit": "Server metadata identifies Apache-2.0 licensing; client and provider terms should be checked separately. Needs network, a reachable server and a compatible web/mobile client. Self-hosting adds storage, authentication and updates. Provider limits, paid plans and platform delivery behavior vary. Topic names alone should not be treated as access control, and delivery is not guaranteed.",
+          "try": "15–25 minutes: follow https://ntfy.sh/docs/ and first review authentication, access and retention. If you already have a private authorized test topic, send one fabricated message to your own device and inspect it. Do not use a public topic for secrets or assume the tutorial creates a private channel.",
+          "help": [
+            "Send a harmless completion event from a test script to your own subscribed client.",
+            "Route one distinct failure type from a private test service instead of every routine log line."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-14T07:44:51Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "通知传递 · 配置中等门槛",
+          "tagline": "将脚本中的简短事件传到订阅设备。",
+          "use": "HTTP 发布订阅通知服务，提供手机与桌面客户端、可选自托管，以及有免费和付费选项的托管服务。它传递其他程序生成的事件，不判断任务是否成功。",
+          "why": "已有任务能提供可靠完成/失败信号时有用。简短去重通知可突出信号，避免复制包含私人内容的大量日志。",
+          "fit": "服务端元数据标为 Apache-2.0，客户端及提供方条款另查。需要网络、可达服务器和兼容网页/移动客户端，自托管另需存储、认证和更新。限额、付费套餐和平台送达行为各异，不能仅以主题名当访问控制，也不保证送达。",
+          "try": "用 15–25 分钟按 https://ntfy.sh/docs/ 先看认证、权限和保留期。已有私人授权测试主题再向自己设备发送一条虚构消息并检查。不向公开主题发秘密，也不默认教程建立私人频道。",
+          "help": [
+            "将测试脚本无害完成事件传给自己的订阅客户端。",
+            "将私人测试服务的一种特定失败送出，而非推送全部例行日志。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-14T07:44:51Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "Homepage",
+        "repo": "gethomepage/homepage",
+        "stars": 33679,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/gethomepage/homepage",
+        "en": {
+          "category": "Service dashboard · intermediate hosting",
+          "tagline": "Put known service links and selected status widgets on one page.",
+          "use": "A configurable application dashboard with bookmarks, search, service widgets and optional Docker discovery. YAML configuration and backend-proxied integrations connect the page to existing services.",
+          "why": "Recommended when the problem is locating and checking several services, rather than building a new monitoring engine. Keep the first page limited to links and one useful status signal.",
+          "fit": "GPL-3.0 project; needs a compatible container/Node deployment, config storage and browser clients on common platforms. Server, backups and external widget APIs have separate costs. No GPU required. Proxying API keys does not make the dashboard safe to expose publicly: follow its authentication/TLS/host-header guidance. Docker integration is optional and grants additional access.",
+          "try": "20–30 minutes: read https://gethomepage.dev/ and prepare a local-only test page with two harmless bookmarks. If already running, add one supported read-only widget and compare it with the original service. Avoid Docker socket discovery and public exposure until requirements and access controls are understood.",
+          "help": [
+            "Group your own test-service links by task.",
+            "Inspect one supported service widget beside its canonical management link."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-15T01:01:20Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "服务仪表盘 · 托管中等门槛",
+          "tagline": "把已知服务链接与选定状态组件集中到一页。",
+          "use": "可配置应用仪表盘，提供书签、搜索、服务组件及可选 Docker 发现，通过 YAML 和服务端代理集成已有服务。",
+          "why": "问题在于找到并查看多个服务、而非建立新监控引擎时推荐。首屏保持少量链接及一项有用状态即可。",
+          "fit": "GPL-3.0 项目，需要兼容容器/Node 部署、配置存储及常见平台浏览器，服务器、备份和外部组件 API 另算。无需 GPU，代理 API 密钥不代表可安全公开，应遵守认证/TLS/Host 头指引。Docker 集成可选，赋予额外访问能力。",
+          "try": "用 20–30 分钟读 https://gethomepage.dev/ ，准备仅本地访问、含两条无害书签的测试页。已有实例再加一个支持的只读组件并与原服务核对。理解要求和访问控制前不接 Docker socket、不公开页面。",
+          "help": [
+            "按任务分组自己的测试服务链接。",
+            "在原管理链接旁查看一个支持的服务组件。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-15T01:01:20Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      },
+      {
+        "name": "Glance",
+        "repo": "glanceapp/glance",
+        "stars": 38198,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/glanceapp/glance",
+        "en": {
+          "category": "Feed dashboard · intermediate configuration",
+          "tagline": "Read a chosen set of feeds and information widgets in a compact page.",
+          "use": "A configurable dashboard with RSS, video-channel and other information widgets, page layouts and themes. Distributed binaries and Docker options provide ways to run the server; YAML controls the content.",
+          "why": "Recommended when you want a small information overview rather than an application launcher. Selecting a few sources deliberately can be more useful than filling every available panel.",
+          "fit": "AGPL-3.0 project, with binaries for multiple OSs/architectures and a Docker image. Needs an always-running compatible host, network for feeds and config storage; common desktop/mobile browsers are clients. Hosting and third-party data APIs cost separately. Cached or unavailable sources can be stale; community widgets add their own dependencies. Not a reliable source of urgent alerts by itself.",
+          "try": "15–25 minutes: inspect the official example YAML and documentation at https://github.com/glanceapp/glance . In a ready local instance use one calendar and two public RSS sources, limit visible entries and compare timestamps with originals. Skip private integrations and community widgets until the basic configuration is clear.",
+          "help": [
+            "Put two public RSS feeds beside a calendar for a focused reading start page.",
+            "Compare the dashboard's cached feed item with its original source before acting on it."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-07T15:59:44Z at review. Recent activity is not a stable-release or executed compatibility test."
+        },
+        "zh": {
+          "category": "信息源仪表盘 · 配置中等门槛",
+          "tagline": "在紧凑页面阅读自己选择的信息源与组件。",
+          "use": "可配置仪表盘，包含 RSS、视频频道等组件、页面布局及主题。提供多系统/架构二进制与 Docker，YAML 决定内容。",
+          "why": "需要小型信息总览、而非应用启动入口时推荐。认真选少量来源，可能比填满全部面板更有用。",
+          "fit": "AGPL-3.0 项目，提供多平台/架构二进制和 Docker。需要持续运行兼容主机、信息源网络及配置存储，常见桌面/移动浏览器作为客户端。托管与第三方数据 API 另算，缓存或失效来源可能过期，社区组件另有依赖。不能单独当紧急提醒可靠来源。",
+          "try": "用 15–25 分钟查看 https://github.com/glanceapp/glance 的官方 YAML 与文档。已有本地实例时仅用日历和两份公开 RSS，限制条数并对照原始时间。基础配置清楚前跳过私人集成和社区组件。",
+          "help": [
+            "将两份公开 RSS 与日历放在专注阅读起始页。",
+            "采取行动前，将缓存信息项与原始来源核对。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-07T15:59:44Z。近期活动不代表稳定版发布或已执行兼容性测试。"
+        }
+      }
+    ]
   }
 ];
