@@ -3399,5 +3399,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "checkedAt": "2026-11-16 09:35–09:38",
+    "pick": {
+      "en": "Datasette suits browsing a small database; SQLFluff checks SQL conventions; Superset and Metabase offer shared exploration; Evidence keeps a narrative report in code. Choose the missing step. Evidence is today's explicit threshold exception, and Metabase features must be checked by edition.",
+      "zh": "Datasette 适合浏览小库，SQLFluff 检查 SQL 规范，Superset 与 Metabase 提供共享探索，Evidence 将叙述报告保存在代码中。只补所需步骤。Evidence 为门槛例外，Metabase 功能需按版本核查。"
+    },
+    "note": {
+      "en": "Reviewed five final official READMEs and current repository metadata. Four exceed 10,000 stars; Evidence is the explained exception. No repeats among the previous nineteen editions. Exact API snapshots do not establish global ranking or daily growth; no previous-day snapshot exists for these projects. Scenarios and fit are editorial judgments. No recommended code was installed or run, no databases were connected and no reports were published through the recommended tools. English/Chinese are prewritten without visitor GitHub or translation API calls.",
+      "zh": "核对五个最终官方 README 与仓库元数据，四个超过 1 万 stars，Evidence 为已解释例外，与此前十九期不重复。精确 API 快照不能证明全站排名或日增量，这些项目没有前日快照。场景与适用性为编辑判断。本期未安装运行推荐代码、未连接数据库、未通过推荐工具发布报告。中英文预先准备，不需要访问者调用 GitHub 或翻译 API。"
+    },
+    "projects": [
+      {
+        "name": "Datasette",
+        "repo": "simonw/datasette",
+        "stars": 11575,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/simonw/datasette",
+        "en": {
+          "category": "Data exploration · intermediate Python",
+          "tagline": "Explore a small database through a browser and an accompanying API.",
+          "use": "Publishes data as an interactive website/API. Basic use serves a SQLite database locally, and metadata can describe source and license. A separate browser-based Datasette Lite option is linked by the project.",
+          "why": "Useful when someone needs to inspect records without installing a database GUI. A tiny public or fabricated database is a clearer starting point than publishing a real working dataset.",
+          "fit": "Apache-2.0 library; README requires Python 3.11+, with compatible desktop/server environments and Docker options. Needs a database, CPU/RAM and storage; hosting costs separately, no GPU needed. Serving data is not automatically anonymization or permission management. Database contents and metadata need review before exposure.",
+          "try": "15–25 minutes: follow https://docs.datasette.io/ using a tiny fabricated SQLite file in a local-only session. Browse two tables, inspect a JSON response and verify counts. Read deployment/access guidance before publishing; do not point the first test at private browser history or a production database.",
+          "help": [
+            "Browse a fabricated catalog and filter for one category.",
+            "Attach source/license metadata to a public data snapshot before sharing it."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-16T00:10:20Z at review. Recent activity is not an executed compatibility or correctness test."
+        },
+        "zh": {
+          "category": "数据浏览 · Python 中等门槛",
+          "tagline": "通过浏览器和配套 API 查看小型数据库。",
+          "use": "将数据提供为交互网站/API，基础方式在本地服务 SQLite，元数据可注明来源和许可。项目还链接独立的浏览器版 Datasette Lite。",
+          "why": "他人需要看记录、又不想安装数据库界面时有用。公开或虚构微型数据库比直接发布工作数据更适合作为起点。",
+          "fit": "Apache-2.0 库，README 要求 Python 3.11+，有兼容桌面/服务器环境和 Docker 方式。需数据库、CPU/内存与存储，托管另算，无需 GPU。提供数据不等于匿名化或权限管理，暴露前需检查内容和元数据。",
+          "try": "用 15–25 分钟按 https://docs.datasette.io/ 在仅本地会话读取虚构小 SQLite，浏览两表、查看 JSON 响应并核对计数。发布前读部署/访问指南，首次不接私人浏览历史或生产库。",
+          "help": [
+            "浏览虚构目录并按类别筛选。",
+            "分享公开数据快照前附来源与许可元数据。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-16T00:10:20Z。近期活动不代表已执行兼容性或正确性测试。"
+        }
+      },
+      {
+        "name": "SQLFluff",
+        "repo": "sqlfluff/sqlfluff",
+        "stars": 10026,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/sqlfluff/sqlfluff",
+        "en": {
+          "category": "SQL review · beginner with SQL",
+          "tagline": "Check SQL against an explicit dialect and a selected rule set.",
+          "use": "A configurable SQL linter with dialect and templating support, including Jinja and optional dbt integration. It can report issues or apply supported fixes; dialect coverage is not necessarily complete.",
+          "why": "Recommended when SQL style and small static issues repeatedly distract from review. It checks configured rules rather than validating query intent or result correctness.",
+          "fit": "MIT Python tool for compatible Windows, macOS and Linux environments. Needs package dependencies, with extras for some templaters; ordinary linting needs no GPU. Templating plugins may access project context or services. Fixes change files, and a clean lint result does not establish schema validity, efficient execution or correct joins.",
+          "try": "15–20 minutes: follow https://docs.sqlfluff.com/ on a disposable .sql file with known dialect. Run lint first, read one diagnostic, fix it manually and inspect the diff. Do not run bulk fixes over an existing project during the first trial.",
+          "help": [
+            "Report layout issues in a small query before code review.",
+            "Compare lint output under the correct dialect with a deliberately mismatched one."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-15T18:42:15Z at review. Recent activity is not an executed compatibility or correctness test."
+        },
+        "zh": {
+          "category": "SQL 审阅 · 有 SQL 基础即可",
+          "tagline": "按明确方言和所选规则检查 SQL。",
+          "use": "可配置 SQL linter，支持多种方言和模板，包括 Jinja 与可选 dbt 集成。可报告或应用支持修复，方言覆盖不一定完整。",
+          "why": "格式与小型静态问题反复分散审阅精力时推荐。检查配置规则，不验证查询意图或结果正确性。",
+          "fit": "MIT Python 工具，适用于兼容 Windows、macOS、Linux，部分模板器另需依赖，普通检查无需 GPU。模板插件可能访问项目上下文或服务，修复会改文件，检查通过不证明结构有效、执行高效或连接正确。",
+          "try": "用 15–20 分钟按 https://docs.sqlfluff.com/ 在方言明确的测试 .sql 上先运行 lint，阅读一项提示，手工修改并看差异。首次不对已有项目批量自动修复。",
+          "help": [
+            "审阅前报告小查询的布局问题。",
+            "对比正确方言与故意不匹配方言的提示。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-15T18:42:15Z。近期活动不代表已执行兼容性或正确性测试。"
+        }
+      },
+      {
+        "name": "Apache Superset",
+        "repo": "apache/superset",
+        "stars": 75528,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/apache/superset",
+        "en": {
+          "category": "Data dashboards · intermediate to advanced hosting",
+          "tagline": "Explore existing SQL data and assemble charts in a web application.",
+          "use": "A business-intelligence platform with chart building, a SQL editor, dimensions/metrics, caching and role/authentication options. Data connections depend on supported drivers and dialects.",
+          "why": "Useful when multiple readers need interactive exploration over an existing data source. It offers a shared UI, but consistent metric definitions and operational administration remain necessary.",
+          "fit": "Apache-2.0 application; requires a supported server/container stack, metadata storage, database drivers and browser clients. Query/storage/hosting costs are separate; no GPU required. More demanding than a static chart file. Database permissions, authentication and updates need active management, and cached results can be stale.",
+          "try": "20–30 minutes: read https://superset.apache.org/user-docs/ and administrator requirements. If a ready authorized demo instance exists, inspect sample charts and change a filter, checking the underlying definition. Otherwise plan a minimal test deployment rather than assuming a full installation fits this session.",
+          "help": [
+            "Compare a chart's grouped totals with a read-only SQL query.",
+            "Build a sample dashboard from a small non-sensitive dataset and inspect its filters."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-15T23:21:21Z at review. Recent activity is not an executed compatibility or correctness test."
+        },
+        "zh": {
+          "category": "数据仪表盘 · 中高托管门槛",
+          "tagline": "在网页应用中探索已有 SQL 数据并组合图表。",
+          "use": "商业智能平台，提供图表构建、SQL 编辑、维度/指标、缓存及角色认证选项，数据连接取决于支持驱动和方言。",
+          "why": "多个读者需要交互探索已有数据源时有用。提供共享界面，指标定义一致性和运营管理仍需负责。",
+          "fit": "Apache-2.0 应用，需支持服务器/容器、元数据存储、数据库驱动与浏览器客户端。查询、存储和托管另算，无需 GPU，比静态图文件更需维护。数据库权限、认证和更新需管理，缓存可能过期。",
+          "try": "用 20–30 分钟读 https://superset.apache.org/user-docs/ 及管理员要求。已有授权演示实例时查看样图、改筛选并核对定义；否则先计划最小测试环境，不默认能在此时段完成全套部署。",
+          "help": [
+            "将图表分组总计与只读 SQL 对照。",
+            "用小型非敏感数据建立示例仪表盘，检查筛选。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-15T23:21:21Z。近期活动不代表已执行兼容性或正确性测试。"
+        }
+      },
+      {
+        "name": "Metabase",
+        "repo": "metabase/metabase",
+        "stars": 50350,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/metabase/metabase",
+        "en": {
+          "category": "Team data questions · intermediate hosting",
+          "tagline": "Give readers a question-and-dashboard interface over connected data.",
+          "use": "Offers visual questions, a SQL editor and interactive dashboards. The repository also describes advanced capabilities whose availability depends on edition; it contains both open-source and commercial source.",
+          "why": "Recommended when non-SQL collaborators should inspect a defined dataset. Evaluate a few known questions before deciding whether a shared server and edition-specific features are justified.",
+          "fit": "Open-source edition is AGPL; commercial editions have a separate Metabase license. Hosting/cloud, database resources and some features cost separately. Self-hosting needs the documented runtime/container, application storage, backups and browser clients. No GPU required for basic dashboards. A chart is not proof of data quality; broad database access and feature assumptions need review.",
+          "try": "20–30 minutes: use the official tour at https://www.metabase.com/learn/metabase-basics/overview/tour-of-metabase . In an existing authorized test instance, use sample data for one question and filter. Check which edition provides each desired feature before connecting real data or starting a paid trial.",
+          "help": [
+            "Create a sample category-count question and compare it with known totals.",
+            "Add a dashboard filter and check that every included chart responds as intended."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-16T01:28:04Z at review. Recent activity is not an executed compatibility or correctness test."
+        },
+        "zh": {
+          "category": "团队数据提问 · 托管中等门槛",
+          "tagline": "让读者通过问题与仪表盘界面查看已连接数据。",
+          "use": "提供可视化提问、SQL 编辑和交互仪表盘，仓库也介绍随版本而异的高级能力，包含开源与商业源码。",
+          "why": "非 SQL 协作者需要查看明确数据集时推荐。先评估少数结果已知问题，再决定共享服务器和特定版本功能是否值得。",
+          "fit": "开源版为 AGPL，商业版另有 Metabase 许可；托管/云、数据库资源与部分功能另收费。自托管需指定运行时/容器、应用存储、备份及浏览器，基础仪表盘无需 GPU。图表不证明数据质量，应检查数据库访问范围及功能版本。",
+          "try": "用 20–30 分钟查看官方 https://www.metabase.com/learn/metabase-basics/overview/tour-of-metabase 。已有授权测试实例时以样例数据建立一个问题和筛选，接真实数据或开付费试用前核实各功能所属版本。",
+          "help": [
+            "建立类别计数示例问题，与已知总计比较。",
+            "加入仪表盘筛选，检查每张图是否按预期响应。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-16T01:28:04Z。近期活动不代表已执行兼容性或正确性测试。"
+        }
+      },
+      {
+        "name": "Evidence",
+        "repo": "evidence-dev/evidence",
+        "stars": 7119,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/evidence-dev/evidence",
+        "en": {
+          "category": "Reports in code · intermediate; star-threshold exception",
+          "tagline": "Combine SQL and Markdown into a reviewable report project.",
+          "use": "A code-based reporting tool using SQL and Markdown, with local development and self-hosted static output or hosted publishing options. Current README supplies CLI installation guidance for major platforms.",
+          "why": "Included below 10,000 stars because narrative reporting in source files is a distinct alternative to drag-and-drop dashboards. Recent activity supports this explicit exception, not a claim that stars prove quality.",
+          "fit": "MIT project; current CLI documentation covers Windows, macOS and Linux. Needs the documented development environment and data connectors, plus disk for outputs. Hosted plans, database queries and optional AI/agent tools have separate terms/costs. Static output can embed data, so publishing is an intentional data-sharing decision. It does not make a query correct.",
+          "try": "20–30 minutes: read https://docs.evidence.studio and create a disposable project only if the environment is ready. Use fabricated data and a single SQL/Markdown report, preview locally and inspect generated content. Otherwise compare CLI/connector requirements; do not publish or connect a production database for the first test.",
+          "help": [
+            "Put a small query's explanation beside its report output.",
+            "Review a metric-definition change as a source diff before republishing."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-15T19:22:24Z at review. Recent activity is not an executed compatibility or correctness test."
+        },
+        "zh": {
+          "category": "代码式报告 · 中等门槛，星标例外",
+          "tagline": "把 SQL 与 Markdown 组合成可审阅报告项目。",
+          "use": "用 SQL、Markdown 编写报告，支持本地开发、自托管静态输出或托管发布，当前 README 提供主要平台 CLI 安装指引。",
+          "why": "虽少于 1 万 stars，因源码式叙述报告是拖拽仪表盘的不同选择而纳入。近期活动支持这一明确例外，星标不证明质量。",
+          "fit": "MIT 项目，当前 CLI 文档覆盖 Windows、macOS、Linux，需要指定开发环境、连接器和输出磁盘。托管、数据库查询及可选 AI/代理工具另有条款费用。静态输出可能嵌入数据，发布是明确的数据分享决定，不证明查询正确。",
+          "try": "用 20–30 分钟读 https://docs.evidence.studio ，环境就绪再建测试项目，用虚构数据制作单个 SQL/Markdown 报告、本地预览并检查输出。否则只评估 CLI/连接器要求，首次不发布、不接生产库。",
+          "help": [
+            "将小查询的解释放在报告输出旁。",
+            "重新发布前，用源码差异审阅指标定义变化。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-15T19:22:24Z。近期活动不代表已执行兼容性或正确性测试。"
+        }
+      }
+    ]
   }
 ];
