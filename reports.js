@@ -3578,5 +3578,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-17",
+    "checkedAt": "2026-11-17 16:01–16:04",
+    "pick": {
+      "en": "Dust shows space use, eza improves listings, Krokiet finds duplicate candidates, ImHex inspects bytes and PeaZip manages archives. Start with an observational task on disposable files; large or similar files are not automatically safe to remove. PeaZip is today's explicit threshold exception.",
+      "zh": "Dust 看占用，eza 看列表，Krokiet 找重复候选，ImHex 看字节，PeaZip 管归档。先在测试文件上观察，大文件或相似文件不自动等于可删除。PeaZip 为本期明确门槛例外。"
+    },
+    "note": {
+      "en": "Reviewed five final official READMEs, Krokiet's frontend guide and current repository metadata. Four exceed 10,000 stars; PeaZip is the explained exception. No repeats among the previous twenty editions. Stars are exact API snapshots, not a ranking; no previous-day snapshot means daily growth is unknown. eza's last push is older than other selections and is stated explicitly. Scenarios and fit are editorial judgments. No recommended code was installed or run, and no user files were scanned, edited or deleted. English/Chinese are prewritten without visitor API or translation calls.",
+      "zh": "核对五个最终官方 README、Krokiet 界面指南及仓库元数据，四个超过 1 万 stars，PeaZip 为已解释例外，与此前二十期不重复。星标为精确 API 快照，并非排名，缺少前日快照，日增量未知。eza 最近推送早于其他选项，已明确列出。场景与适用性为编辑判断。本期未安装运行推荐代码，未扫描、编辑或删除用户文件。中英文预先准备，无需访问者 API 或翻译调用。"
+    },
+    "projects": [
+      {
+        "name": "Dust",
+        "repo": "bootandy/dust",
+        "stars": 12642,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/bootandy/dust",
+        "en": {
+          "category": "Disk overview · beginner terminal",
+          "tagline": "See which directories account for a chosen folder's disk use.",
+          "use": "A Rust disk-usage tool that presents large subdirectories and files with a hierarchical terminal view. Depth and item-count controls help focus the output without manually sorting a long listing.",
+          "why": "Recommended for deciding where to investigate space use before touching any files. A size overview is evidence of occupancy, not evidence that a directory is unnecessary.",
+          "fit": "Apache-2.0 tool with Windows, macOS and Linux installation options. Needs filesystem read access and time for scanning; some Windows builds need the documented runtime. No GPU required. Permissions, links and filesystem allocation can affect totals. It does not decide what can safely be deleted, and scans can cause substantial I/O.",
+          "try": "15–20 minutes: read the official README and scan a small test directory with dust -n 10. Compare two entries with filesystem properties, then vary the depth. Keep the exercise observational; do not delete files based only on the largest bar.",
+          "help": [
+            "Inspect a disposable project folder to distinguish source files from generated output.",
+            "Compare two known folders' reported sizes before planning an archive."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-01T20:33:00Z at review. This timestamp is activity evidence, not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "空间总览 · 终端初级",
+          "tagline": "查看指定文件夹中哪些目录占用空间。",
+          "use": "Rust 磁盘用量工具，以层次化终端视图呈现较大子目录和文件，可调深度与条数，无需手工排序长列表。",
+          "why": "推荐先据此确定空间调查方向，再决定文件操作。占用量不证明目录没用。",
+          "fit": "Apache-2.0，支持 Windows、macOS、Linux 安装方式。需要读取权限和扫描时间，部分 Windows 构建需文档指定运行时，无需 GPU。权限、链接、文件系统分配影响总计；不判断可安全删除内容，扫描可产生大量 I/O。",
+          "try": "用 15–20 分钟读官方 README，在小测试目录运行 dust -n 10，将两项与文件属性对照，再调整深度。仅观察，不凭最大条形就删除文件。",
+          "help": [
+            "查看测试项目，区分源码与生成物占用。",
+            "计划归档前比较两个已知文件夹的报告大小。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-01T20:33:00Z。时间仅为活动证据，不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "eza",
+        "repo": "eza-community/eza",
+        "stars": 23930,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/eza-community/eza",
+        "en": {
+          "category": "File listings · beginner terminal",
+          "tagline": "Read file types and metadata in a richer terminal listing.",
+          "use": "An ls alternative using colors and optional metadata such as symlink information and Git status. A single binary supports platform-specific installation; it changes the listing interface, not the underlying files.",
+          "why": "Useful when an ordinary directory listing hides the context needed to choose a file. Keep explicit commands while learning because its options are not identical to ls.",
+          "fit": "EUPL-1.2 project with Windows, macOS and Linux options. Requires a suitable terminal; fonts and platform metadata affect display. No GPU or service needed. Not a content searcher or disk-cleaning tool. Flags differ from ls, and recent repository activity is less frequent than other selections; the actual timestamp is recorded below.",
+          "try": "15–20 minutes: follow the README/INSTALL.md, list a harmless test folder, then inspect a long listing and a repository listing using documented flags. Compare the output with file properties. Do not replace an existing ls alias until familiar with option differences.",
+          "help": [
+            "Inspect a small repository's file types and Git-related listing information.",
+            "Compare a symlink entry with its target information before opening the file."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-08-06T19:53:22Z at review. This timestamp is activity evidence, not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "文件列表 · 终端初级",
+          "tagline": "在更丰富的终端列表中查看文件类型与元数据。",
+          "use": "ls 替代工具，通过颜色及可选元数据展示链接、Git 状态等，提供各平台单一二进制安装方式。它改变列表界面，不改变底层文件。",
+          "why": "普通列表缺乏选择文件所需上下文时有用。选项不完全等同 ls，学习时保留明确命令。",
+          "fit": "EUPL-1.2 项目，支持 Windows、macOS、Linux，需要合适终端，字体与平台元数据影响显示，无需 GPU 或服务。不是正文搜索器或清理工具，选项不同于 ls；近期仓库活动频率较本期其他项目低，下方记录实际时间。",
+          "try": "用 15–20 分钟按 README/INSTALL.md 列出无害测试目录，再按文档试长列表及仓库列表，对照文件属性。熟悉选项差异前不替换已有 ls 别名。",
+          "help": [
+            "查看小仓库的文件类型及 Git 列表信息。",
+            "打开文件前比较符号链接条目和目标信息。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-08-06T19:53:22Z。时间仅为活动证据，不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "Krokiet / Czkawka Core",
+        "repo": "qarmin/czkawka",
+        "stars": 35255,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/qarmin/czkawka",
+        "en": {
+          "category": "Duplicate inspection · beginner GUI, careful review",
+          "tagline": "Find candidate duplicate or unnecessary files for manual inspection.",
+          "use": "The repository now recommends the Krokiet GUI over its legacy Czkawka GTK GUI. It includes duplicate searches by name/size/hash, similar-image tools and other file checks; similarity and exact duplication are different tests.",
+          "why": "Recommended as an inspection aid for a known collection. It can identify candidates, while the decision about which copy matters still depends on content and context.",
+          "fit": "Free multi-platform tools; licensing and requirements differ by component/frontend, so inspect the chosen package's terms. Krokiet binaries cover Windows 10/11, macOS and supported Linux; similar-video tools require ffmpeg. Scans/cache use disk, CPU and RAM. Deletion/metadata-removal features change files, and similar results are not necessarily redundant. Legacy GTK version 12.0 is its last release.",
+          "try": "20–30 minutes: follow the repository's Krokiet README and use only disposable copied files. Scan exact duplicates, open candidate paths and compare contents without deleting. Try one similar-image case separately. Review export/cache behavior before scanning a real collection.",
+          "help": [
+            "Scan a fabricated folder containing deliberately duplicated test files.",
+            "Compare a resized image with its original to learn the difference between similarity and a matching hash."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-16T11:40:07Z at review. This timestamp is activity evidence, not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "重复文件查看 · 图形初级，需复核",
+          "tagline": "寻找重复或多余文件候选，供人工检查。",
+          "use": "仓库当前推荐 Krokiet GUI 替代旧 Czkawka GTK 界面，包含按名称/大小/哈希找重复、相似图片等检查。相似与完全重复是不同测试。",
+          "why": "适合检查熟悉的文件集合。工具找候选，哪份有价值仍取决于内容和上下文。",
+          "fit": "免费跨平台工具，许可与要求因组件/界面而异，应查所选包条款。Krokiet 提供 Windows 10/11、macOS 和支持 Linux 二进制，相似视频需 ffmpeg。扫描/缓存占磁盘、CPU、内存。删除和去元数据功能会改文件，相似不代表多余。旧 GTK 的 12.0 为最后发行版。",
+          "try": "用 20–30 分钟按仓库 Krokiet README，仅在可丢弃副本中扫描精确重复，查看路径和内容，不删除。单独试相似图片，扫描真实集合前检查导出与缓存行为。",
+          "help": [
+            "扫描故意放入重复测试文件的虚构文件夹。",
+            "将缩放图片与原图比较，理解相似与哈希相同的区别。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-16T11:40:07Z。时间仅为活动证据，不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "ImHex",
+        "repo": "WerWolv/ImHex",
+        "stars": 55901,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/WerWolv/ImHex",
+        "en": {
+          "category": "Byte-level inspection · intermediate to advanced",
+          "tagline": "Inspect a file's bytes and structured views rather than guessing from its extension.",
+          "use": "A hex editor with byte search, typed interpretations, bookmarks, patch management and a pattern language for describing file structures. It also links a web version and detailed documentation.",
+          "why": "Useful for learning a small known binary format or checking a header. It is a specialized inspection/editor tool; ordinary documents rarely need this level of detail.",
+          "fit": "GPL-2.0 metadata; check package/component terms. Desktop builds and the linked browser version have different runtime/platform requirements; desktop graphics support and plugins may matter. No model needed. Editing bytes can corrupt files, and a pattern's interpretation is only as good as its definition. Not a tool that automatically proves a file is safe.",
+          "try": "20–30 minutes: follow https://docs.werwolv.net/ with a tiny non-sensitive sample copied for the exercise. Search a known byte sequence, inspect an integer in both byte orders and add a bookmark. Avoid patch/save actions on the original; this report performs no artifact analysis.",
+          "help": [
+            "Inspect a fabricated file's first bytes and compare ASCII with hexadecimal.",
+            "View a harmless sample through different integer interpretations to understand endianness."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-16T00:37:45Z at review. This timestamp is activity evidence, not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "字节检查 · 中高门槛",
+          "tagline": "查看实际字节与结构视图，而非仅凭扩展名猜测。",
+          "use": "十六进制编辑器，支持字节搜索、类型解释、书签、补丁管理及描述结构的模式语言，也链接网页版与详细文档。",
+          "why": "学习已知小型二进制格式、核对文件头时有用。属于专业查看/编辑工具，普通文档通常不需这层细节。",
+          "fit": "元数据标 GPL-2.0，组件/包条款另查。桌面构建与所链浏览器版运行要求不同，桌面图形支持和插件可能影响使用，无需模型。改字节可损坏文件，模式解释取决于定义，不会自动证明文件安全。",
+          "try": "用 20–30 分钟按 https://docs.werwolv.net/ 查看非敏感微型副本，搜索已知字节，比较两种字节序并加书签，不对原件补丁/保存。本期不执行文件逆向分析。",
+          "help": [
+            "查看虚构文件起始字节，对照 ASCII 和十六进制。",
+            "用不同整数解释查看无害样例，理解字节序。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-16T00:37:45Z。时间仅为活动证据，不代表已执行功能或兼容性测试。"
+        }
+      },
+      {
+        "name": "PeaZip",
+        "repo": "PeaZip/PeaZip",
+        "stars": 8158,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/PeaZip/PeaZip",
+        "en": {
+          "category": "Archive management · beginner; star-threshold exception",
+          "tagline": "Inspect and create archives through a cross-platform visual interface.",
+          "use": "An archive manager supporting many formats, split/join operations, archive browsing and hashing tools. Some formats can be read but not necessarily created by the same backend.",
+          "why": "Included below 10,000 stars because a cross-platform GUI and portable packages offer a concrete alternative to command-line archive workflows. This is an explicit exception, supported by recent repository activity.",
+          "fit": "LGPLv3 application with Windows, macOS, Linux and BSD packages; bundled backends have their own licenses and format capabilities. CPU/time and extra disk are needed for compression/extraction; no GPU. Not a guarantee that archive contents are harmless. Extraction paths, overwrites and unexpectedly large expanded sizes require review; encryption is not recovery without the password.",
+          "try": "15–25 minutes: follow https://peazip.github.io and choose the official package for your OS. With three fabricated files, create a ZIP, inspect it, extract into a new disposable folder and compare content/counts. Do not overwrite original files or use unknown archives for the first exercise.",
+          "help": [
+            "Create a small ZIP from disposable files and inspect its entries.",
+            "Check a downloaded public archive's file list before choosing a separate extraction folder."
+          ],
+          "maintenance": "Not archived; repository pushed_at=2026-11-13T20:33:46Z at review. This timestamp is activity evidence, not an executed feature or compatibility test."
+        },
+        "zh": {
+          "category": "归档管理 · 初级，星标例外",
+          "tagline": "用跨平台图形界面查看和创建归档。",
+          "use": "支持多种格式、拆分合并、归档浏览与哈希工具。某些格式可读取，不代表同一后端也可创建。",
+          "why": "虽少于 1 万 stars，因跨平台 GUI 和便携包为命令行归档提供明确替代而纳入，近期仓库活动支持这一例外。",
+          "fit": "LGPLv3 应用，提供 Windows、macOS、Linux、BSD 包，捆绑后端许可与格式能力各异。压缩/解压需 CPU、时间与额外磁盘，无需 GPU。不保证内容无害；需检查路径、覆盖及异常膨胀体积，丢密码不能靠加密恢复。",
+          "try": "用 15–25 分钟按 https://peazip.github.io 选系统官方包，用三个虚构文件建 ZIP，查看后解压到新测试目录，对照内容与数量。首次不覆盖原件、不用未知归档。",
+          "help": [
+            "用测试文件创建小 ZIP 并检查条目。",
+            "先查看公开下载归档的文件列表，再选择独立解压目录。"
+          ],
+          "maintenance": "核查时未归档，仓库 pushed_at=2026-11-13T20:33:46Z。时间仅为活动证据，不代表已执行功能或兼容性测试。"
+        }
+      }
+    ]
   }
 ];
