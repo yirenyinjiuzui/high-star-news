@@ -3757,5 +3757,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "checkedAt": "2026-11-18 11:15–11:18",
+    "pick": {
+      "en": "Today follows a local media workflow: record a demonstration with OBS Studio, edit speech with Audacity, extract useful video segments with LosslessCut, inspect or convert files with FFmpeg, and review playback with mpv. Start with the one task you already have; these are alternatives for different stages, not a required five-tool installation.",
+      "zh": "今天围绕本地音视频流程：用 OBS Studio 录制演示，用 Audacity 整理语音，用 LosslessCut 提取有用片段，用 FFmpeg 检查或转换文件，再用 mpv 回看。先选择眼前已有的一项任务；五款工具对应不同环节，无需全部安装。"
+    },
+    "note": {
+      "en": "Checked five selected public repositories, their official READMEs, repository metadata and linked official guidance during the stated Asia/Shanghai window. All exceed 10,000 stars and none appeared in the previous 30 days of this archive. Counts are exact API snapshots at this check, not a GitHub-wide ranking. No previous-day snapshots exist for these five, so daily star gains cannot be calculated. Recent pushes and archived=false indicate repository activity, not verified release quality. Features and licensing descriptions follow official sources; priorities, scenarios and suitability are editorial judgments. No recommended software was installed, executed or benchmarked. Suggested trials are for readers, not completed tests. Both language versions are stored locally in the report data.",
+      "zh": "在所列北京时间范围内核对了五个公开仓库、官方 README、仓库元数据及所链接的官方指南。全部超过一万 stars，且未在本档案前 30 天出现。星标为本次 API 精确快照，并非 GitHub 全站排名；缺少这五款项目前一日快照，不能计算日增量。近期推送与未归档只能说明仓库有活动，不能证明发布版本质量。功能与许可说明来自官方资料，优先级、场景和适用性属于编辑判断。本期没有安装、运行或性能测试推荐软件；入门步骤供读者尝试，并非已完成的测试。两种语言内容均预先存入报告数据。"
+    },
+    "projects": [
+      {
+        "name": "OBS Studio",
+        "repo": "obsproject/obs-studio",
+        "stars": 79806,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/obsproject/obs-studio",
+        "en": {
+          "category": "Screen recording and presentations · Visual setup",
+          "tagline": "Compose a screen, camera and microphone into a reusable recording scene.",
+          "use": "OBS captures sources, combines them in scenes, encodes video and records locally or streams. A scene can include a window capture, webcam and text, with audio devices selected separately. The official quick-start guide covers the configuration wizard, sources, meters and test recordings: https://obsproject.com/kb/quick-start-guide .",
+          "why": "Recommend it when a repeatable demonstration needs more control than a single screen-record button. Saving a scene makes the composition explicit; recording quality still depends on device setup and encoder choices.",
+          "help": [
+            "Record a software walkthrough with one application window and spoken explanation, then check that menus and pointer actions remain readable.",
+            "Prepare a practice presentation with slides and a small camera view, and review microphone balance before making the final recording."
+          ],
+          "fit": "Fits Windows, macOS and Linux users who can configure sources and permissions; less suitable for someone wanting only a one-click clip or a video editor. OBS itself is free under GPL-2.0-or-later; third-party plugins and streaming services have separate terms. Encoding consumes CPU/GPU and storage; streaming also needs upload bandwidth. Capture methods differ by platform, and a powerful computer does not guarantee a suitable recording configuration.",
+          "try": "Allow 25 minutes: use the auto-configuration wizard for recording, add one window and microphone, make a one-minute local sample, then watch it for legibility, silence and missing audio. Change one setting and compare. Keep this trial local; streaming is unnecessary.",
+          "maintenance": "GitHub metadata showed archived=false and pushed_at=2026-11-18T01:09:58Z. The README documents GPL-2.0-or-later and links official setup and developer guides; the push timestamp is repository activity, not a release date."
+        },
+        "zh": {
+          "category": "录屏与演示 · 图形界面配置",
+          "tagline": "把屏幕、摄像头和麦克风组合成可复用的录制场景。",
+          "use": "OBS 可捕获素材源、组合场景、编码视频，并本地录制或推流。一个场景可以包含窗口、摄像头与文字，音频设备另行选择。官方入门指南介绍配置向导、素材源、音量表和试录：https://obsproject.com/kb/quick-start-guide 。",
+          "why": "适合需要反复录制演示、希望控制画面组成的人。保存场景可以明确录制布局；实际质量仍取决于设备与编码设置。",
+          "help": [
+            "录制某个软件窗口并加上语音讲解，随后检查菜单文字和鼠标操作是否看得清。",
+            "将幻灯片和小摄像头画面组合成练习演讲录像，正式录制前回听麦克风音量。"
+          ],
+          "fit": "适合愿意设置素材源和权限的 Windows、macOS、Linux 用户；只想一键录一小段或需要视频剪辑器的人未必需要它。OBS 本身免费，采用 GPL-2.0-or-later；第三方插件与推流服务另有条款。编码消耗 CPU/GPU 和磁盘空间，直播还需上行带宽。不同系统的捕获方式不同，高配置电脑也不代表录制设置必然合适。",
+          "try": "用 25 分钟运行面向录制的自动配置向导，添加一个窗口和麦克风，录一分钟本地样片，检查可读性、静音段及漏录音频。只调整一项设置后比较；试用无需直播。",
+          "maintenance": "GitHub 元数据显示未归档，最近推送为 2026-11-18T01:09:58Z。README 说明 GPL-2.0-or-later 许可并链接官方配置和开发文档；推送时间不等于发布日期。"
+        }
+      },
+      {
+        "name": "Audacity",
+        "repo": "audacity/audacity",
+        "stars": 19097,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/audacity/audacity",
+        "en": {
+          "category": "Audio recording and editing · Beginner-friendly desktop workflow",
+          "tagline": "Record speech and arrange audio on a visible multitrack timeline.",
+          "use": "Audacity is a desktop multitrack audio editor and recorder. It can capture a microphone and let you edit recorded material in tracks. The official microphone guide explains device selection, mono recording and checking clipping by listening and watching levels: https://support.audacityteam.org/basics/recording-your-voice-and-microphone .",
+          "why": "Recommend it for deliberate work on speech recordings when you want to see and review edits. It separates audio preparation from video capture; it cannot repair every problem caused by a poor microphone or distorted input.",
+          "help": [
+            "Record a short spoken explanation, remove an unwanted opening section and listen to the transition before exporting a copy.",
+            "Place two practice narration takes in separate tracks, compare delivery and keep the clearer take for a presentation."
+          ],
+          "fit": "Fits Windows, macOS and GNU/Linux users editing local audio; not a substitute for video editing or automatic transcription. The application is free and GPLv3, with per-file and third-party exceptions described in LICENSE.txt. A microphone is needed for new recordings, and long multitrack sessions require disk space. The README says master is undergoing major Audacity 4 UI and structural changes, while 3.x work uses audacity3; choose a published release rather than assuming master instructions match it. External plugins or services may have separate prices and terms.",
+          "try": "Spend 20–25 minutes with a published release: choose the correct microphone, make a 30-second mono sample, listen for clipping, trim a copy and export it to a new file. Reopen the exported file and compare with the original. Menu names can differ by release.",
+          "maintenance": "Metadata showed archived=false and pushed_at=2026-11-17T14:41:12Z. The current README explicitly documents the Audacity 4 transition and the audacity3 branch; activity does not establish that development builds are stable."
+        },
+        "zh": {
+          "category": "音频录制与编辑 · 易入门桌面流程",
+          "tagline": "在可视化多轨时间线上录制语音、整理音频。",
+          "use": "Audacity 是桌面多轨音频编辑和录制软件，可以录入麦克风并在轨道中编辑素材。官方麦克风指南说明如何选择设备、使用单声道，并结合回听和音量表检查削波：https://support.audacityteam.org/basics/recording-your-voice-and-microphone 。",
+          "why": "适合想看清并逐步回听语音剪辑的人。它将音频整理与视频录制分开，但不能修复所有劣质麦克风或输入失真造成的问题。",
+          "help": [
+            "录一段口头说明，移除不需要的开场部分，导出副本前回听剪接处。",
+            "把两次旁白练习放在不同轨道，比较表达，选择更清晰的一次用于演示。"
+          ],
+          "fit": "适合 Windows、macOS、GNU/Linux 本地音频编辑；不能替代视频剪辑或自动转写。应用免费，采用 GPLv3，逐文件与第三方例外见 LICENSE.txt。新录音需要麦克风，长时间多轨项目需要磁盘空间。README 表示 master 正进行 Audacity 4 界面及结构改版，3.x 工作使用 audacity3；应选正式发布版本，不应假定主分支说明完全对应已安装版本。外部插件和服务可能另有价格与条款。",
+          "try": "用 20–25 分钟在正式发布版本中选好麦克风，录 30 秒单声道样片，回听削波，在副本上裁剪并导出新文件。重新打开导出结果，与原件比较；不同版本的菜单名可能不同。",
+          "maintenance": "元数据显示未归档，最近推送为 2026-11-17T14:41:12Z。当前 README 明确说明 Audacity 4 迁移与 audacity3 分支；开发活跃不代表开发构建已经稳定。"
+        }
+      },
+      {
+        "name": "LosslessCut",
+        "repo": "mifi/lossless-cut",
+        "stars": 46143,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/mifi/lossless-cut",
+        "en": {
+          "category": "Media trimming · Visual tools with codec constraints",
+          "tagline": "Extract useful sections and rearrange tracks without routinely re-encoding everything.",
+          "use": "This FFmpeg-powered desktop app trims media, merges compatible segments, extracts or replaces tracks, edits metadata and remuxes containers. Its README distinguishes preview playback from exporting the original streams. Official limitations: https://losslesscut.app/docs/troubleshooting .",
+          "why": "Recommend it for rough selection from existing recordings when preserving encoded media matters more than adding effects. Copying streams avoids an additional encode in supported operations, but does not imply frame-accurate cuts or universal compatibility.",
+          "help": [
+            "Keep the useful demonstration section from a long screen recording and inspect both ends of the exported segment.",
+            "Extract an audio track from a recording, or remove an unwanted track from a copy before sharing the result."
+          ],
+          "fit": "Fits desktop Windows, macOS and Linux users doing rough cuts and track operations; not ideal for transitions, titles or guaranteed arbitrary-frame cuts. Manual official downloads are free; paid store versions support development and offer store installation/updates. The repository is GPL-2.0; bundled components have their own licensing. Expect space for input and exported media. Preview codec support varies, keyframes constrain cuts, and merging needs compatible streams. Test exported playback and audio sync; do not delete originals based solely on a successful export message.",
+          "try": "In 20 minutes, open a short disposable copy, mark one 15-second segment and export to a new file. Play its start and end in a separate player and compare the requested boundaries and audio sync. If the boundary shifts, read the keyframe-cut section rather than assuming data corruption.",
+          "maintenance": "Metadata showed archived=false and pushed_at=2026-11-14T02:45:16Z. The README links maintained feature, download and troubleshooting guides and identifies a solo maintainer; this is activity evidence, not a guarantee of support capacity."
+        },
+        "zh": {
+          "category": "音视频裁剪 · 图形工具，有编解码限制",
+          "tagline": "提取有用片段和整理轨道，避免每次都重新编码整段素材。",
+          "use": "这款基于 FFmpeg 的桌面应用可裁剪媒体、合并兼容片段、提取或替换轨道、编辑元数据并转换封装。README 区分了预览播放与从原始媒体流导出。官方限制说明：https://losslesscut.app/docs/troubleshooting 。",
+          "why": "适合已有录像的粗选，尤其在保留已编码素材比添加特效更重要时。受支持的流复制操作无需再编码，但不代表可以任意帧精确切割，也不保证所有文件兼容。",
+          "help": [
+            "从很长的录屏中保留有用演示段，并检查导出片段两端是否符合预期。",
+            "从录像中提取一条音轨，或在分享前从副本移除不需要的轨道。"
+          ],
+          "fit": "适合 Windows、macOS、Linux 桌面的粗剪和轨道处理；不适合做转场、字幕特效或要求任意帧精确切割的任务。官方手动下载免费，付费商店版支持开发并提供商店安装和更新。仓库采用 GPL-2.0，内含组件另有许可。需为输入和导出文件预留空间。预览受编解码支持影响，切点受关键帧约束，合并要求流兼容。检查导出播放及音画同步，不要仅因导出提示成功就删除原件。",
+          "try": "用 20 分钟打开一个可丢弃的短视频副本，标记 15 秒片段并导出新文件。在另一播放器中检查开头、结尾、切点和音画同步。若切点偏移，先读关键帧切割说明，不要直接认定文件损坏。",
+          "maintenance": "元数据显示未归档，最近推送为 2026-11-14T02:45:16Z。README 链接功能、下载及故障指南，并说明由个人维护；这些是活动证据，不保证支持响应能力。"
+        }
+      },
+      {
+        "name": "FFmpeg",
+        "repo": "FFmpeg/FFmpeg",
+        "stars": 67617,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/FFmpeg/FFmpeg",
+        "en": {
+          "category": "Media inspection and conversion · Command-line familiarity",
+          "tagline": "Inspect streams and perform repeatable audio/video transformations.",
+          "use": "The toolkit includes ffmpeg for conversion and streaming, ffprobe for stream inspection and ffplay for simple playback, alongside codec, container and filtering libraries. The official site documents commands at https://ffmpeg.org/ffmpeg.html and identifies this GitHub repository as a mirror at https://ffmpeg.org/download.html .",
+          "why": "Recommend it when a visible command and repeatable settings matter: first inspect the file, then decide whether remuxing, stream copying or re-encoding is actually needed. This control comes with a steeper learning curve than a visual editor.",
+          "help": [
+            "Inspect a recording's video and audio streams before investigating why it fails to play in another application.",
+            "Apply the same conversion settings to a small set of presentation clips after validating one representative output."
+          ],
+          "fit": "Fits command-line users on Linux, Windows and macOS; unsuitable for someone expecting a timeline editor or one universally correct conversion preset. Upstream supplies source and links external binary providers; build features and codec availability differ. Most code is LGPL with optional GPL components; additional build options and dependencies can affect redistribution terms. Source is available without a purchase, but packaging, commercial integration and codec rights require separate consideration. Re-encoding consumes CPU/GPU, time and storage and can reduce quality; stream copy cannot perform arbitrary filtered edits.",
+          "try": "Allow 20–30 minutes using a build linked from the official download page. Run ffprobe sample.mp4 on a non-sensitive copy, identify its streams, then try ffmpeg -i sample.mp4 -vn sample.wav to create a separate audio file. Check duration and playback. This example requires a usable input audio stream and is not a universal conversion recipe.",
+          "maintenance": "The GitHub mirror was unarchived with pushed_at=2026-11-18T00:26:15Z. The README directs contributions to upstream Forgejo or the mailing list rather than GitHub pull requests. Mirror activity is not a binary-release or compatibility test."
+        },
+        "zh": {
+          "category": "媒体检查与转换 · 需要命令行基础",
+          "tagline": "检查媒体流，并以可重复的参数转换音视频。",
+          "use": "工具集包括负责转换和推流的 ffmpeg、检查媒体流的 ffprobe、简易播放的 ffplay，以及编解码、封装与滤镜库。官方命令文档为 https://ffmpeg.org/ffmpeg.html ，下载页 https://ffmpeg.org/download.html 明确将该 GitHub 仓库列为镜像。",
+          "why": "适合需要明确命令与重复设置的任务：先看文件里有什么流，再决定是否只换封装、复制流或重新编码。相比图形编辑器，这种控制能力也意味着更高学习门槛。",
+          "help": [
+            "先检查录像的视频和音频流，再调查它为什么不能在另一应用中播放。",
+            "先验证一个代表性输出，再对少量演示短片使用一致的转换设置。"
+          ],
+          "fit": "适合 Linux、Windows、macOS 命令行用户；不适合期待时间线编辑器或万能转换预设的人。上游提供源码并链接外部二进制提供者，不同构建的功能和编解码器支持不同。主体为 LGPL，可选部分为 GPL；其他构建选项及依赖也可能影响再分发条款。源码无需购买，但打包、商业集成及编解码专利权需另行考虑。重新编码消耗 CPU/GPU、时间和存储，且可能损失质量；流复制不能完成任意滤镜编辑。",
+          "try": "用 20–30 分钟从官方下载页所链接的渠道选择构建。对非敏感副本运行 ffprobe sample.mp4，识别媒体流，再尝试 ffmpeg -i sample.mp4 -vn sample.wav 生成独立音频文件，检查时长和播放。示例要求输入有可用音轨，不是万能转换方案。",
+          "maintenance": "GitHub 镜像未归档，最近推送为 2026-11-18T00:26:15Z。README 指引向上游 Forgejo 或邮件列表贡献，而非 GitHub PR。镜像活动不等于二进制发布或兼容性测试。"
+        }
+      },
+      {
+        "name": "mpv",
+        "repo": "mpv-player/mpv",
+        "stars": 38173,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/mpv-player/mpv",
+        "en": {
+          "category": "Media playback and review · Keyboard and optional configuration",
+          "tagline": "Review local media with a minimal player and configurable playback behavior.",
+          "use": "mpv is a command-line media player supporting many media containers, codecs and subtitle types. It provides a minimal playback interface rather than a full library manager. The README links the manual and installation options: https://mpv.io/manual/master/ and https://mpv.io/installation/ .",
+          "why": "Recommend it as a separate playback check after recording or exporting, particularly if you prefer keyboard control and explicit configuration. Successful playback in mpv alone does not establish compatibility with every recipient's device.",
+          "help": [
+            "Review an exported presentation clip independently from the editor to spot missing audio or an unexpected start point.",
+            "Open a local video with its subtitle file and assess legibility and timing before distributing study material."
+          ],
+          "fit": "Fits users comfortable with a minimal interface on current Linux, Windows 10 1607+ or macOS 10.15+ per README; not a rich media-library or editing suite. Software is free, GPLv2-or-later by default, with LGPLv2.1-or-later available through a restricted build configuration. The installation page lists semi-official and third-party packages, whose packaging varies. CPU/GPU capability matters for high-resolution media; hardware decoding is not enabled by default and is selected with --hwdec. Old hardware and unsupported OS versions are not guaranteed to work.",
+          "try": "Spend 15–20 minutes with a package from the installation page: run mpv sample.mp4, practice pause and seek, then load a local subtitle and check its timing. Compare the same clip in its intended destination player. Leave scripts and extensive configuration for later.",
+          "maintenance": "Metadata showed archived=false and pushed_at=2026-11-17T13:31:12Z. README states that older releases are unsupported and releases normally receive only security-related maintenance; package choice and version still matter despite active development."
+        },
+        "zh": {
+          "category": "媒体播放与复核 · 键盘操作，可选配置",
+          "tagline": "用简洁播放器回看本地素材，并按需配置播放行为。",
+          "use": "mpv 是命令行媒体播放器，支持多种封装、编解码与字幕类型，提供简洁播放界面，并非完整媒体库管理器。README 链接手册与安装渠道：https://mpv.io/manual/master/ 、https://mpv.io/installation/ 。",
+          "why": "适合作为录制或导出后的独立回看工具，尤其面向偏好键盘控制和明确配置的人。仅在 mpv 中播放成功，不能证明所有接收设备都兼容。",
+          "help": [
+            "离开编辑器单独播放导出的演示短片，检查是否漏掉音轨或起点不符。",
+            "打开本地视频及字幕文件，分发学习资料前检查字幕可读性与时序。"
+          ],
+          "fit": "适合愿意使用简洁界面的人。README 列出较新 Linux、Windows 10 1607+、macOS 10.15+；它不是功能丰富的媒体库或剪辑套件。软件免费，默认 GPLv2-or-later；受限构建配置可采用 LGPLv2.1-or-later。安装页列有半官方及第三方包，打包方式不同。高分辨率播放取决于 CPU/GPU；硬件解码默认未启用，使用 --hwdec 选择。旧硬件与不受支持的系统不保证可用。",
+          "try": "用 15–20 分钟从安装页选择包，运行 mpv sample.mp4，练习暂停和定位，再加载本地字幕检查时间。也在最终目标播放器里比较同一片段，脚本和大量配置留到以后。",
+          "maintenance": "元数据显示未归档，最近推送为 2026-11-17T13:31:12Z。README 表示旧版本不再支持，正式版本通常仅处理安全问题；即使开发活跃，所选包和版本仍然重要。"
+        }
+      }
+    ]
   }
 ];
