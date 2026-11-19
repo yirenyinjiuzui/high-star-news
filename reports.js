@@ -3936,5 +3936,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-19",
+    "checkedAt": "2026-11-19 17:05–17:08",
+    "pick": {
+      "en": "For handwritten PDF work, start with Xournal++. Choose SiYuan for block links, Trilium for a personal note tree, or Zettlr for a Markdown draft with citations. HedgeDoc is the shared-document alternative and the only star-threshold exception today.",
+      "zh": "手写 PDF 批注先看 Xournal++；块引用笔记可看 SiYuan，个人层级知识库可看 Trilium，带引用的 Markdown 写作可看 Zettlr。HedgeDoc 对应共享协作文档，是今天唯一未达星标门槛的例外。"
+    },
+    "note": {
+      "en": "Reviewed six note-oriented candidates plus Standard Notes, selecting five from official READMEs and current repository API metadata. Four exceed 10,000 stars; HedgeDoc's 7,518 is an explicit collaboration-focused exception. All counts are exact check-time snapshots. No prior-day snapshot exists for these projects, so daily growth cannot be calculated. None repeats the archive's previous 30 days. Feature statements follow official sources; scenarios and suitability are editorial judgments. No recommended software was installed or run, and trials are suggestions rather than completed tests. Paid services and optional dependencies are not assumed free. English and Chinese are prepared together without live translation.",
+      "zh": "核对六个笔记方向候选及 Standard Notes 的官方 README 和实时仓库 API 元数据，最终选出五款。四款超过一万 stars，HedgeDoc 的 7,518 stars 是基于协作场景的明确例外。星标均为本次核查精确快照；没有这些项目前一日快照，无法计算日增量。与档案前 30 天不重复。功能依据官方资料，场景与适用性属于编辑判断。没有安装或运行推荐软件，入门尝试为建议而非已完成测试。不假定付费服务和可选依赖免费，中英文预先准备，无需实时翻译。"
+    },
+    "projects": [
+      {
+        "name": "SiYuan",
+        "repo": "siyuan-note/siyuan",
+        "stars": 47284,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/siyuan-note/siyuan",
+        "en": {
+          "category": "Personal knowledge · Visual block editor",
+          "tagline": "Link individual ideas rather than only whole documents.",
+          "use": "SiYuan combines a Markdown WYSIWYG block editor, block references, backlinks, PDF annotation links, export and spaced-repetition flashcards. Its local workspace is the starting point; AI writing is optional.",
+          "why": "Try it when reusable paragraphs and linked study notes matter. A small connected notebook is a better evaluation than importing an entire archive.",
+          "fit": "Desktop Windows/macOS/Linux and mobile apps, plus Docker hosting. AGPLv3 source; most features are free, but some require paid membership (https://b3log.org/siyuan/en/pricing.html). AI API usage may cost extra. Allow storage for assets and backups. Fits personal linked notes, less suited to a requirement that every feature be free or every note remain a plain Markdown file. Export is not the same as native storage; test portability first.",
+          "try": "Spend 20 minutes creating two notes with one block reference, one image and one flashcard. Export to Markdown with assets and inspect the result before deciding to migrate.",
+          "help": [
+            "Connect a definition in reading notes to a worked example without copying the definition.",
+            "Create a few flashcards from a topic and check whether review fits your routine."
+          ],
+          "maintenance": "Official README and repository metadata checked; archived=false, pushed_at=2026-11-19T08:41:59Z. This is repository activity, not a tested release or a guarantee of support."
+        },
+        "zh": {
+          "category": "个人知识管理 · 可视化块编辑器",
+          "tagline": "不仅链接整篇文档，也链接具体想法。",
+          "use": "SiYuan 将 Markdown 所见即所得块编辑、块引用、双向链接、PDF 批注链接、导出及间隔重复闪卡结合起来，以本地工作空间为起点，AI 写作属于可选功能。",
+          "why": "适合需要复用段落和关联学习笔记的人。先评估一个小型关联笔记本，再考虑导入整个档案。",
+          "fit": "提供 Windows/macOS/Linux 桌面端、移动应用和 Docker 部署。源码为 AGPLv3；大部分功能免费，部分需付费会员，见 https://b3log.org/siyuan/en/pricing.html 。AI API 可能另收费。需为附件和备份留空间。适合个人关联笔记，不适合要求所有功能免费或所有原生笔记均为纯 Markdown 的需求；导出不等于原生存储，迁移前先测试可移植性。",
+          "try": "用 20 分钟建立两篇笔记，添加一个块引用、一张图片和一张闪卡；导出带附件的 Markdown，检查结果后再考虑迁移。",
+          "help": [
+            "把阅读笔记中的定义关联到解题示例，无需复制定义正文。",
+            "从一个主题建立少量闪卡，观察复习方式是否符合习惯。"
+          ],
+          "maintenance": "已核对官方 README 与仓库元数据；未归档，最近推送为 2026-11-19T08:41:59Z。这表示仓库有活动，不代表已测试发布版本或保证支持。"
+        }
+      },
+      {
+        "name": "Trilium Notes",
+        "repo": "TriliumNext/Trilium",
+        "stars": 39001,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/TriliumNext/Trilium",
+        "en": {
+          "category": "Hierarchical knowledge base · Desktop first trial",
+          "tagline": "Organize a growing note tree with links, attributes and multiple placements.",
+          "use": "Trilium offers rich-text and code notes, a deep hierarchy, full-text search, revisions and attributes. Cloning places the same note in multiple tree locations; a self-hosted server enables synchronization and browser access. Guide: https://docs.triliumnotes.org/ .",
+          "why": "Consider it when folder-like organization is useful but duplicating the same material across folders is becoming confusing.",
+          "fit": "Free AGPLv3-or-later software for Windows/macOS/Linux; server web access and mobile frontends are available. Hosting and third-party services may cost money. Fits a structured personal database, less suited to plain-file-only workflows or effortless team collaboration. Budget disk space for the database, attachments and backups. Sync versions must match, including third-party mobile clients; old zadam migrations have version constraints. Back up before upgrades.",
+          "try": "Use a stable release for a 25-minute trial: create three branches, clone one note into two branches, edit it and verify both placements change. Export a small sample and inspect it; leave server deployment for later.",
+          "help": [
+            "Place one shared project glossary under both a project and a reference branch using a cloned note.",
+            "Keep code snippets beside an explanation, then find the explanation using full-text search."
+          ],
+          "maintenance": "Official README and repository metadata checked; archived=false, pushed_at=2026-11-19T08:44:20Z. This is repository activity, not a tested release or a guarantee of support."
+        },
+        "zh": {
+          "category": "层级知识库 · 先试桌面端",
+          "tagline": "用树、链接、属性和多位置引用整理不断增长的笔记。",
+          "use": "Trilium 提供富文本及代码笔记、深层树结构、全文搜索、版本记录和属性。克隆可让同一笔记出现在多个树位置，自托管服务器支持同步与浏览器访问。指南：https://docs.triliumnotes.org/ 。",
+          "why": "适合仍喜欢文件夹式结构，但已被多处重复资料困扰的人。",
+          "fit": "免费 AGPLv3-or-later 软件，支持 Windows/macOS/Linux，并有服务器网页及移动前端。托管和第三方服务可能收费。适合结构化个人数据库，不适合只接受普通文件或期待无配置团队协作的人。数据库、附件和备份需要磁盘空间。同步版本需匹配，第三方移动客户端也一样；旧 zadam 版本迁移存在限制，升级前先备份。",
+          "try": "用正式稳定版做 25 分钟试用：建立三个分支，将一篇笔记克隆到两个位置，编辑并确认两处同步变化。导出少量样例并检查，服务器部署留到以后。",
+          "help": [
+            "把同一个项目术语表克隆到项目分支与参考资料分支。",
+            "将代码片段和解释放在一起，再通过全文搜索找到解释。"
+          ],
+          "maintenance": "已核对官方 README 与仓库元数据；未归档，最近推送为 2026-11-19T08:44:20Z。这表示仓库有活动，不代表已测试发布版本或保证支持。"
+        }
+      },
+      {
+        "name": "Xournal++",
+        "repo": "xournalpp/xournalpp",
+        "stars": 15690,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/xournalpp/xournalpp",
+        "en": {
+          "category": "Handwritten notes and PDF markup · Pen recommended",
+          "tagline": "Write diagrams and annotations directly over a page.",
+          "use": "Xournal++ supports pressure-sensitive pens, PDF backgrounds, highlighting, text, shapes, layers and export to PDF/PNG/SVG. Audio recording can accompany handwritten notes; optional LaTeX requires a working LaTeX installation.",
+          "why": "Choose it when equations, sketches or spatial annotations communicate more clearly than typed paragraphs.",
+          "fit": "Free GPL-2.0 software with desktop Linux, Windows and macOS packages. A stylus is useful but extra hardware costs money; large PDFs and audio need storage. Fits handwriting and annotation, not OCR search or a modern collaborative mobile notebook. The README says traditional .xopp files link PDF backgrounds rather than embedding them; retain the PDF with the notes and check your version's format. The separate mobile project has stalled, and macOS installation has caveats documented upstream.",
+          "try": "Spend 20 minutes on a two-page PDF copy: add handwriting and a text label on separate layers, save the editable notes, export PDF, reopen both and check annotations. Keep the original PDF alongside the editable file.",
+          "help": [
+            "Annotate a lecture PDF with a diagram and questions on a separate layer.",
+            "Work through a derivation on ruled paper, then export a readable PDF for review."
+          ],
+          "maintenance": "Official README and repository metadata checked; archived=false, pushed_at=2026-11-15T04:21:41Z. This is repository activity, not a tested release or a guarantee of support."
+        },
+        "zh": {
+          "category": "手写笔记与 PDF 批注 · 推荐数位笔",
+          "tagline": "在页面上直接写图解和批注。",
+          "use": "Xournal++ 支持压感笔、PDF 背景、高亮、文字、图形、图层和 PDF/PNG/SVG 导出，也能配合手写笔记录音；可选 LaTeX 功能需要可用的 LaTeX 安装。",
+          "why": "当公式、草图或空间批注比打字段落更清楚时，可以优先考虑。",
+          "fit": "免费 GPL-2.0 软件，提供 Linux、Windows、macOS 桌面包。数位笔有帮助但硬件另收费，大 PDF 和录音需要存储。适合手写批注，不适合 OCR 检索或现代移动协作笔记需求。README 说明传统 .xopp 链接 PDF 背景而非内嵌；应保留背景 PDF，并核对所用版本格式。独立移动项目已停滞，macOS 安装也有上游说明的限制。",
+          "try": "用 20 分钟对两页 PDF 副本分别添加手写和文字图层，保存可编辑笔记并导出 PDF，重新打开两种文件检查批注；背景 PDF 与可编辑文件一起保留。",
+          "help": [
+            "在课件 PDF 的独立图层上画示意图并标记疑问。",
+            "在横线纸上推导公式，再导出清晰的 PDF 用于回顾。"
+          ],
+          "maintenance": "已核对官方 README 与仓库元数据；未归档，最近推送为 2026-11-15T04:21:41Z。这表示仓库有活动，不代表已测试发布版本或保证支持。"
+        }
+      },
+      {
+        "name": "Zettlr",
+        "repo": "Zettlr/Zettlr",
+        "stars": 13937,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/Zettlr/Zettlr",
+        "en": {
+          "category": "Research writing · Markdown familiarity helps",
+          "tagline": "Draft linked text with citations and publication-oriented exports.",
+          "use": "Zettlr combines Markdown writing, full-text search, snippets, Zettelkasten links and reference-manager integration. Export workflows use Pandoc and, for some profiles, LaTeX; official documentation is https://docs.zettlr.com/ .",
+          "why": "Recommend it when notes need to become a longer draft with citations and an export target, while keeping text-based authoring.",
+          "fit": "Free GPLv3 application for macOS, Windows and Linux; brand assets have separate restrictions. Official builds target 64-bit/ARM combinations listed in README, not 32-bit. Fits Markdown-oriented writing, less suitable for simultaneous team editing or exact word-processor layout during drafting. LaTeX-based export requires additional installation and disk space; templates and export dependencies must be configured, and citation metadata still needs checking.",
+          "try": "In 25 minutes, open a small test folder, write two linked Markdown notes, add one citation from your bibliography if available, and try one export profile. Inspect headings and bibliography in the output; if a dependency is missing, record it rather than assuming every profile is ready.",
+          "help": [
+            "Connect several reading notes to an outline and retrieve a passage using full-text search.",
+            "Prepare a short cited draft and inspect whether the intended Word or PDF export preserves the structure."
+          ],
+          "maintenance": "Official README and repository metadata checked; archived=false, pushed_at=2026-11-18T11:30:17Z. This is repository activity, not a tested release or a guarantee of support."
+        },
+        "zh": {
+          "category": "研究写作 · 熟悉 Markdown 更方便",
+          "tagline": "将关联笔记写成带引用、可导出的长文。",
+          "use": "Zettlr 集成 Markdown 写作、全文搜索、片段、卡片盒链接和文献管理器对接。导出使用 Pandoc，部分配置需要 LaTeX；官方文档：https://docs.zettlr.com/ 。",
+          "why": "适合希望将笔记逐渐写成带引用长文，同时保留文本写作方式的人。",
+          "fit": "免费 GPLv3 应用，支持 macOS、Windows、Linux，品牌素材另有限制。官方构建支持 README 列出的 64 位与 ARM 组合，不支持 32 位。适合 Markdown 写作，不适合实时团队协作或要求写作时完全呈现文字处理器版式的人。LaTeX 导出需额外安装和磁盘空间；模板及依赖需要配置，文献元数据仍需检查。",
+          "try": "用 25 分钟打开小型测试文件夹，写两篇关联 Markdown 笔记，若已有文献库则加入一个引用，尝试一种导出配置。检查标题与参考文献；若缺少依赖则记录，不要假定所有配置开箱即用。",
+          "help": [
+            "把多篇阅读笔记连接到大纲，通过全文搜索找回某段内容。",
+            "准备一份带引用的短稿，检查目标 Word 或 PDF 导出是否保留结构。"
+          ],
+          "maintenance": "已核对官方 README 与仓库元数据；未归档，最近推送为 2026-11-18T11:30:17Z。这表示仓库有活动，不代表已测试发布版本或保证支持。"
+        }
+      },
+      {
+        "name": "HedgeDoc",
+        "repo": "hedgedoc/hedgedoc",
+        "stars": 7518,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/hedgedoc/hedgedoc",
+        "en": {
+          "category": "Collaborative Markdown · Server setup; star exception",
+          "tagline": "Edit shared Markdown notes together in a browser.",
+          "use": "HedgeDoc provides real-time collaborative Markdown notes. The official README links a demo and installation guide at https://docs.hedgedoc.org/setup/getting-started/ . The current development branch is the incomplete HedgeDoc 2 rewrite; stable 1.x is maintenance-only.",
+          "why": "Included below 10,000 stars because shared live Markdown fills a distinct role beside personal notebooks. Evaluate stable behavior and deployment needs before choosing it for important records.",
+          "fit": "Free AGPLv3 source; hosting, database operation, backups and administration still cost resources. Browser access works across desktop systems, subject to instance support. Fits shared Markdown documents, not an offline personal notebook or a feature-complete HedgeDoc 2 production promise. Instance permissions and retention matter. Do not put sensitive material into a public demo; use an instance you control or trust.",
+          "try": "Spend 15–20 minutes on a permitted test instance with disposable text: create a note, open a second session, compare edits and access permissions, then preserve the Markdown independently. Server installation may take longer and is outside this short trial.",
+          "help": [
+            "Use an approved instance to outline meeting notes with headings and action items while participants edit together.",
+            "Prepare a small shared workshop handout and export or copy the Markdown for an independent archive."
+          ],
+          "maintenance": "Official README and repository metadata checked; archived=false, pushed_at=2026-11-19T00:57:26Z. This is repository activity, not a tested release or a guarantee of support."
+        },
+        "zh": {
+          "category": "协作 Markdown · 需服务器配置；星标例外",
+          "tagline": "在浏览器中共同编辑 Markdown 笔记。",
+          "use": "HedgeDoc 提供实时协作 Markdown 笔记。官方 README 链接演示与安装指南：https://docs.hedgedoc.org/setup/getting-started/ 。当前开发分支是尚未完整实现功能的 HedgeDoc 2 重写，稳定 1.x 仅做维护。",
+          "why": "虽未达一万 stars，仍少量例外纳入，因为实时共享 Markdown 与个人笔记本承担不同角色。用于重要记录前需评估稳定版行为和部署需求。",
+          "fit": "源码免费，采用 AGPLv3；托管、数据库、备份和管理仍需资源。桌面系统可通过浏览器访问，具体依实例支持。适合共享 Markdown 文档，不适合离线个人笔记或期待 HedgeDoc 2 已全面可用于生产的人。实例权限与保留策略很重要，公开演示不要放敏感材料，应使用可控或可信实例。",
+          "try": "用 15–20 分钟在获准的测试实例中输入可丢弃文字，建立笔记，用第二会话比较编辑和访问权限，再独立保存 Markdown。服务器安装可能更久，不属于此短试用。",
+          "help": [
+            "在获准使用的实例中，参与者共同编辑带标题与行动项的会议提纲。",
+            "准备小型共享工作坊讲义，并导出或复制 Markdown 形成独立档案。"
+          ],
+          "maintenance": "已核对官方 README 与仓库元数据；未归档，最近推送为 2026-11-19T00:57:26Z。这表示仓库有活动，不代表已测试发布版本或保证支持。"
+        }
+      }
+    ]
   }
 ];
