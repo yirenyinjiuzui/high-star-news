@@ -4115,5 +4115,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "checkedAt": "2026-11-20 14:13–14:17",
+    "pick": {
+      "en": "Try Flow Launcher for keyboard navigation or QuickLook for file triage. Files offers a different organization interface; UniGetUI is for reviewing software maintenance. TranslucentTB is an optional appearance tool rather than an essential installation.",
+      "zh": "键盘导航可先试 Flow Launcher，筛选文件可试 QuickLook。Files 提供另一种整理界面，UniGetUI 面向软件维护检查；TranslucentTB 是可选外观工具，无需全装。"
+    },
+    "note": {
+      "en": "Selected five of seven researched Windows-oriented repositories using official READMEs and current GitHub metadata; UniGetUI also lists macOS/Linux builds. All five exceed 10,000 stars and do not repeat the archive's previous 30 days. Counts are exact API snapshots at check time, not a ranking or growth trend. No prior-day snapshots exist for these projects, so daily star gains cannot be calculated. Features follow official sources; fit, priorities and scenarios are editorial judgments. No recommended software was installed, run or benchmarked. Trial steps are reader suggestions. Packaging, plugins and managed software can have separate costs and terms. Both languages are prepared offline.",
+      "zh": "基于官方 README 和实时 GitHub 元数据，从七个 Windows 方向候选中选出五款；UniGetUI 当前也提供 macOS/Linux 构建。全部超过一万 stars，与档案前 30 天不重复。星标为核查时 API 精确快照，并非排名或增长趋势。缺少这些项目前一日快照，不能计算日增量。功能来自官方资料，适用性、优先级和场景属于编辑判断。没有安装、运行或性能测试推荐软件；入门步骤供读者尝试。分发渠道、插件和所管理软件可能另有费用与条款，两种语言均预先准备。"
+    },
+    "projects": [
+      {
+        "name": "UniGetUI",
+        "repo": "Devolutions/UniGetUI",
+        "stars": 27138,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/Devolutions/UniGetUI",
+        "en": {
+          "category": "Software maintenance · Package-source awareness",
+          "tagline": "Review several package managers in one interface.",
+          "use": "A GUI to discover, install, update and remove packages across managers such as WinGet, Scoop and Chocolatey. It also exports package lists and exposes per-package update controls. Official home: https://devolutions.net/unigetui/ .",
+          "why": "Useful when installed software comes from several managers and you want to inspect update sources together.",
+          "fit": "Windows-first for Windows 10/11, with macOS and Linux builds now listed in README. Free MIT software; managed packages and third-party repositories retain their own licenses and costs. Needs network access, storage for caches and functioning package managers; installation can need elevation. Not a package trust guarantee or full machine backup. Exported lists do not preserve every application's data. Avoid bulk changes until individual package identity is clear.",
+          "try": "Spend 20 minutes reviewing installed-package metadata and one available update, then export a small list without installing it elsewhere. Compare publisher and manager fields. Leave automatic updating disabled during evaluation.",
+          "help": [
+            "Review which source supplies an installed application before choosing its update.",
+            "Export a selected package list as a starting inventory for another machine."
+          ],
+          "maintenance": "Official README and API checked: archived=false; pushed_at=2026-11-19T21:17:02Z. This is repository activity, not a verified release or a successful compatibility test."
+        },
+        "zh": {
+          "category": "软件维护 · 需要理解包来源",
+          "tagline": "在同一界面检查多个包管理器。",
+          "use": "提供发现、安装、更新和移除软件包的图形界面，整合 WinGet、Scoop、Chocolatey 等，也可导出包列表及逐包控制更新。官网：https://devolutions.net/unigetui/ 。",
+          "why": "适合已使用多个包管理器，希望统一查看更新来源的人。",
+          "fit": "以 Windows 10/11 为主，当前 README 也列出 macOS 和 Linux 构建。软件免费、MIT 许可；所管理的软件包和第三方源另有许可及费用。需联网、缓存空间和可用包管理器，安装可能需要提权。不能保证包可信，也不等于整机备份；包清单不保留所有应用数据。身份未核清前不要批量改动。",
+          "try": "用 20 分钟查看已安装包元数据及一项可用更新，导出小清单但不在其他机器执行。比较发布者与管理器字段，评估阶段先不启用自动更新。",
+          "help": [
+            "更新前检查已装应用究竟来自哪个来源。",
+            "导出选定包列表，作为另一台电脑的软件清单起点。"
+          ],
+          "maintenance": "已核对官方 README 与 API：未归档，最近推送为 2026-11-19T21:17:02Z。这是仓库活动证据，不代表已验证发布版本或通过兼容性测试。"
+        }
+      },
+      {
+        "name": "Flow Launcher",
+        "repo": "Flow-Launcher/Flow.Launcher",
+        "stars": 16054,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/Flow-Launcher/Flow.Launcher",
+        "en": {
+          "category": "Keyboard navigation · Easy start",
+          "tagline": "Launch applications and find files from a keyboard search box.",
+          "use": "Flow searches apps, files and settings, performs calculations, opens bookmarks and supports plugins. File search integrates Everything and Windows Index. Official docs: https://flowlauncher.com/docs .",
+          "why": "A practical option for repeated navigation when you prefer naming a destination to browsing menus.",
+          "fit": "Free MIT software for Windows 10+. Fits keyboard-oriented navigation, not a replacement for a file manager or a guarantee that unindexed content is searchable. Runs in the background and indexing backends use resources. Plugins may require runtimes, external services or paid accounts and can execute code. Configure hotkeys to avoid conflicts; README says no official Microsoft Store release yet.",
+          "try": "Use 20 minutes to set a conflict-free hotkey, launch three known apps, locate one indexed file and try a calculation. Stay with built-in functions; record missing search locations before adding plugins.",
+          "help": [
+            "Open a regularly used application using a short query.",
+            "Find a project folder and open its containing location without navigating the whole tree."
+          ],
+          "maintenance": "Official README and API checked: archived=false; pushed_at=2026-11-15T12:06:06Z. This is repository activity, not a verified release or a successful compatibility test."
+        },
+        "zh": {
+          "category": "键盘导航 · 容易上手",
+          "tagline": "从键盘搜索框启动应用、查找文件。",
+          "use": "Flow 可搜索应用、文件和设置、计算、打开书签并通过插件扩展。文件搜索对接 Everything 和 Windows Index。官方文档：https://flowlauncher.com/docs 。",
+          "why": "适合更喜欢输入目标名称、经常重复导航的人。",
+          "fit": "免费 MIT 软件，支持 Windows 10+。适合键盘导航，不替代文件管理器，也不保证未索引内容可搜到。后台运行与索引后端需要资源。插件可能需要运行时、外部服务或付费账户，也能执行代码。应避免快捷键冲突；README 表示尚无官方 Microsoft Store 版本。",
+          "try": "用 20 分钟设置无冲突热键，启动三个已知应用，找到一个已索引文件并做一次计算。先用内置功能，记录遗漏搜索位置后再决定是否加插件。",
+          "help": [
+            "输入短查询打开常用应用。",
+            "找到项目文件夹并打开所在位置，无需逐层浏览。"
+          ],
+          "maintenance": "已核对官方 README 与 API：未归档，最近推送为 2026-11-15T12:06:06Z。这是仓库活动证据，不代表已验证发布版本或通过兼容性测试。"
+        }
+      },
+      {
+        "name": "Files",
+        "repo": "files-community/Files",
+        "stars": 46717,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/files-community/Files",
+        "en": {
+          "category": "File organization · Desktop GUI",
+          "tagline": "Organize folders with a multitasking-oriented Windows file manager.",
+          "use": "Files provides a modern Windows file-management interface with multitasking, file tags and integrations. Its official README is https://github.com/files-community/Files/blob/main/.github/README.md and download page is https://files.community/download .",
+          "why": "Consider it if folder organization needs a different visual workflow. Evaluate basic copy and navigation behavior before adopting it for important files.",
+          "fit": "MIT-licensed Windows source; the README offers a paid Microsoft Store purchase and a classic installer channel, so open source does not mean every distribution is free. Check current OS requirements on the official download page. Needs desktop memory and storage for copied data. Fits visual file organization, not backup or a promise of compatibility with every Explorer extension. Preview builds may behave differently from stable releases.",
+          "try": "Spend 20–25 minutes on a test folder: create two topic folders, copy five sample files, tag a few and reopen them. Compare file counts and contents with the originals. Keep original data until the workflow is understood.",
+          "help": [
+            "Organize disposable copies of downloaded study materials into topic folders.",
+            "Use tags to distinguish draft and reviewed files in a small working collection."
+          ],
+          "maintenance": "Official README and API checked: archived=false; pushed_at=2026-11-19T22:49:33Z. This is repository activity, not a verified release or a successful compatibility test."
+        },
+        "zh": {
+          "category": "文件整理 · 桌面图形界面",
+          "tagline": "用面向多任务的 Windows 文件管理器整理文件夹。",
+          "use": "Files 提供现代 Windows 文件管理界面，包含多任务、文件标签和集成。官方 README：https://github.com/files-community/Files/blob/main/.github/README.md ，下载页：https://files.community/download 。",
+          "why": "适合希望改变文件夹整理方式的人，重要数据迁移前先验证基础复制与导航行为。",
+          "fit": "Windows 源码采用 MIT；README 提供付费 Microsoft Store 购买和经典安装渠道，开源不代表所有分发方式免费。当前系统要求应看官方下载页。需桌面内存和复制文件的空间。适合图形化文件整理，不等于备份，也不保证兼容所有 Explorer 扩展。预览版与稳定版行为可能不同。",
+          "try": "用 20–25 分钟在测试文件夹建立两个主题目录，复制五个样例文件、添加少量标签并重新打开。与原件比较数量和内容，掌握流程前保留原始数据。",
+          "help": [
+            "把下载的学习资料副本按主题整理到文件夹。",
+            "对小型工作资料集加标签，区分草稿与已审阅文件。"
+          ],
+          "maintenance": "已核对官方 README 与 API：未归档，最近推送为 2026-11-19T22:49:33Z。这是仓库活动证据，不代表已验证发布版本或通过兼容性测试。"
+        }
+      },
+      {
+        "name": "QuickLook",
+        "repo": "QL-Win/QuickLook",
+        "stars": 25836,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/QL-Win/QuickLook",
+        "en": {
+          "category": "File preview · Easy keyboard workflow",
+          "tagline": "Peek at a selected file before opening its full editor.",
+          "use": "QuickLook runs in the tray and toggles previews with Space in File Explorer. It supports text, images and other formats, with plugins for additional viewers. Official plugin and distribution guidance: https://github.com/QL-Win/QuickLook/wiki .",
+          "why": "Useful for triaging a folder when filenames alone do not identify the right item. Preview is an aid to selection, not proof that an entire document rendered correctly.",
+          "fit": "Free GPL-3.0 Windows software. Formats vary by viewer/plugin; Office support may need an additional viewer. Store and installer distributions differ, including Open/Save dialog integration. Needs a background process and resources for large files; third-party plugins have separate dependencies and terms. Not a document editor, a universal-format guarantee or a measured speed improvement.",
+          "try": "Spend 15–20 minutes with five non-sensitive sample files: select each and press Space, close with Esc, and compare one preview with its original application. Note unsupported formats before considering any plugin.",
+          "help": [
+            "Inspect several image candidates before choosing one for a presentation.",
+            "Preview text or a supported document while sorting downloaded reference material."
+          ],
+          "maintenance": "Official README and API checked: archived=false; pushed_at=2026-11-16T18:29:31Z. This is repository activity, not a verified release or a successful compatibility test."
+        },
+        "zh": {
+          "category": "文件预览 · 简单键盘流程",
+          "tagline": "打开完整编辑器前先看一眼选中的文件。",
+          "use": "QuickLook 在托盘运行，在文件资源管理器按 Space 切换预览，支持文字、图片等，并能通过插件增加查看器。官方插件与分发说明：https://github.com/QL-Win/QuickLook/wiki 。",
+          "why": "适合文件名不足以判断内容时快速筛选。预览帮助选择，但不证明整份文档都被正确呈现。",
+          "fit": "免费 GPL-3.0 Windows 软件。格式支持取决于查看器与插件，Office 可能需额外查看器。商店版与安装版有区别，包括打开/保存对话框集成。后台进程和大文件需要资源；第三方插件另有依赖与条款。它不是编辑器，不保证任意格式，也未在本期测量速度收益。",
+          "try": "用 15–20 分钟选择五个非敏感样例，按 Space 预览、Esc 关闭，将一个预览与原应用比较。先记录不支持格式，再决定是否需要插件。",
+          "help": [
+            "演示选图前先查看多个候选图片。",
+            "整理下载资料时预览文字或受支持文档。"
+          ],
+          "maintenance": "已核对官方 README 与 API：未归档，最近推送为 2026-11-16T18:29:31Z。这是仓库活动证据，不代表已验证发布版本或通过兼容性测试。"
+        }
+      },
+      {
+        "name": "TranslucentTB",
+        "repo": "TranslucentTB/TranslucentTB",
+        "stars": 20866,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/TranslucentTB/TranslucentTB",
+        "en": {
+          "category": "Desktop appearance · Optional customization",
+          "tagline": "Change taskbar appearance according to window state.",
+          "use": "TranslucentTB changes Windows taskbar color and transparency, with dynamic states for visible/maximized windows, Start and search. Blur support is restricted to Windows 10 and Windows 11 build 22000 in the README.",
+          "why": "An optional comfort choice if taskbar appearance distracts you. This is visual customization; no productivity or performance gain is claimed.",
+          "fit": "Free GPLv3 utility for Windows 10/11. Microsoft Store distribution is free; the portable ZIP is Windows 11 only. Runs in the background and consumes resources, although the README describes a small footprint; no measurement was made here. Fits appearance preferences, not application launching or file organization. OS/taskbar changes can affect compatibility and transparency can reduce contrast.",
+          "try": "Spend 15 minutes trying one static color and one maximized-window mode. Check icon readability over two backgrounds, then exit and confirm the normal taskbar returns. Enable startup only if the appearance remains comfortable.",
+          "help": [
+            "Use different taskbar appearances with a maximized window and an otherwise empty desktop.",
+            "Compare a higher-contrast taskbar color against a busy wallpaper."
+          ],
+          "maintenance": "Official README and API checked: archived=false; pushed_at=2026-11-05T03:14:58Z. This is repository activity, not a verified release or a successful compatibility test."
+        },
+        "zh": {
+          "category": "桌面外观 · 可选定制",
+          "tagline": "根据窗口状态改变任务栏外观。",
+          "use": "TranslucentTB 可调任务栏颜色和透明度，并按可见窗口、最大化窗口、开始菜单和搜索等状态变化。README 说明模糊效果仅支持 Windows 10 和 Windows 11 build 22000。",
+          "why": "仅作为任务栏外观影响使用舒适度时的可选工具，不宣称提高生产力或性能。",
+          "fit": "免费 GPLv3 工具，支持 Windows 10/11。Microsoft Store 分发免费，便携 ZIP 仅限 Windows 11。后台运行会消耗资源，README 虽描述占用较小，本期未测量。适合外观偏好，不负责启动应用或整理文件。系统任务栏变化可能影响兼容性，透明度也可能降低对比度。",
+          "try": "用 15 分钟试一种静态颜色与一种最大化窗口模式，在两张背景上检查图标可读性，再退出确认恢复普通任务栏。感觉舒适后再决定是否开机启动。",
+          "help": [
+            "给最大化窗口与空桌面设置不同任务栏外观。",
+            "在复杂壁纸上比较高对比度任务栏颜色。"
+          ],
+          "maintenance": "已核对官方 README 与 API：未归档，最近推送为 2026-11-05T03:14:58Z。这是仓库活动证据，不代表已验证发布版本或通过兼容性测试。"
+        }
+      }
+    ]
   }
 ];
