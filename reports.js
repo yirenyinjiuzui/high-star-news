@@ -4473,5 +4473,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "checkedAt": "2026-11-22 04:59",
+    "pick": {
+      "en": "For a camera RAW file, start in darktable to set exposure and color. For repeated exports, choose ImageMagick in a shell, Pillow in Python or sharp in a Node.js build. Try OxiPNG when the PNG artwork is already approved and only the download size is open to change.",
+      "zh": "相机 RAW 原片先用 darktable 调曝光和色彩。需要反复导出时，命令行可用 ImageMagick，Python 脚本可用 Pillow，Node.js 构建可用 sharp。如果 PNG 图稿已定，只想减少下载体积，可试 OxiPNG。"
+    },
+    "note": {
+      "en": "Star counts are exact GitHub API snapshots for the five selected repositories. Four exceed 10,000 stars. The archive has no previous-day counts for these projects, so daily gains are unavailable. Features and maintenance details come from official documentation and commits. Scenarios and suggested trials are editorial judgments. No project code was installed or run.",
+      "zh": "星标为核查时 GitHub API 返回的五个入选仓库的精确数值，其中四个超过一万星。档案缺少这五个仓库的前一日星标快照，无法计算日增量。功能和维护信息来自官方文档及提交，场景和试用建议属于编辑判断。本次未安装或运行推荐项目。"
+    },
+    "projects": [
+      {
+        "name": "ImageMagick",
+        "repo": "ImageMagick/ImageMagick",
+        "stars": 17909,
+        "approx": false,
+        "evidence": "https://github.com/ImageMagick/ImageMagick/commit/d31fb69eb28e581ca14ca347c5735b76f143abb5",
+        "en": {
+          "category": "Command line · Basic shell skills",
+          "tagline": "Turn a repeatable image edit into a shell command.",
+          "use": "Resize, convert and composite images. A single command can apply several operations in order and write a separate output file.",
+          "why": "A saved command lets a second person reproduce the same export dimensions next week.",
+          "help": [
+            "Scale a folder of screenshots to a common width for a manual.",
+            "Arrange test images into a contact sheet to spot cropping errors."
+          ],
+          "fit": "Free desktop binaries for Windows, macOS and Linux. Suitable for recurring exports. A visual editor is easier for hand retouching. Supported formats depend on the installed delegates, and large images can use temporary disk space.",
+          "try": "Allow 15 minutes. On a sample copy, run `magick input.png -resize 800x800 preview.png`. Check the preview dimensions with `magick identify preview.png` and confirm that the aspect ratio is preserved.",
+          "maintenance": "Default branch commit d31fb69e has author date 2026-11-21 UTC. The repository is active and unarchived."
+        },
+        "zh": {
+          "category": "命令行 · 需基础终端操作",
+          "tagline": "把反复执行的图片处理步骤写成一条命令。",
+          "use": "可缩放、转格式及合成图片。一条命令可以按顺序完成多项操作，并另存结果。",
+          "why": "保存命令后，同事下周也能按同一尺寸导出。",
+          "help": [
+            "把说明书截图缩放到统一宽度。",
+            "把测试图排成索引图，逐张检查裁切是否偏移。"
+          ],
+          "fit": "Windows、macOS 和 Linux 均有免费版本，适合反复导出。手工修图用可视化编辑器更方便。可读写的格式取决于安装的外部组件，大图可能占用临时磁盘空间。",
+          "try": "预留 15 分钟。对样图副本运行 `magick input.png -resize 800x800 preview.png`，再用 `magick identify preview.png` 核对预览图尺寸，确认长宽比保持一致。",
+          "maintenance": "已核对默认分支提交 d31fb69e，作者日期为 2026-11-21（UTC）。仓库处于未归档状态。"
+        }
+      },
+      {
+        "name": "Pillow",
+        "repo": "python-pillow/Pillow",
+        "stars": 14004,
+        "approx": false,
+        "evidence": "https://github.com/python-pillow/Pillow/commit/5cdbe88ccc3db2067235f6c22d553abb61654997",
+        "en": {
+          "category": "Python library · Basic Python",
+          "tagline": "Make image layout decisions inside a Python script.",
+          "use": "Open an image, inspect its dimensions and mode, crop a region, draw labels and save a new file. The Pillow handbook illustrates these operations with small examples.",
+          "why": "Choose it when the crop or label depends on a value already computed in Python, such as the page number of a scan.",
+          "help": [
+            "Crop the same margin from a batch of scanned worksheets.",
+            "Add the sample ID below each experiment thumbnail."
+          ],
+          "fit": "Free open-source library for supported Python environments on major desktop platforms. It requires scripting and memory for decoded pixels. Check image mode before saving, especially when converting transparent images to JPEG.",
+          "try": "Allow 20 minutes. Follow the handbook tutorial to open two images in different orientations, print their sizes, call `thumbnail((320, 320))` on each and save as new PNGs. Compare their longest edges.",
+          "maintenance": "Default branch commit 5cdbe88c has author date 2026-11-21 UTC. The repository is active and unarchived."
+        },
+        "zh": {
+          "category": "Python 库 · 需 Python 基础",
+          "tagline": "在 Python 脚本中按条件决定图片布局。",
+          "use": "可以打开图片、读取尺寸和颜色模式、裁切区域、绘制标签并另存。Pillow 手册提供了小型示例。",
+          "why": "如果裁切或标签取决于 Python 已算出的值，例如扫描件页码，可以直接在同一脚本中完成。",
+          "help": [
+            "从一组扫描练习册中裁掉相同宽度的页边。",
+            "在每张实验缩略图下方标出样本编号。"
+          ],
+          "fit": "主要桌面系统上受支持的 Python 环境均可使用这个免费开源库。需要编写脚本，并为解码后的像素预留内存。保存前检查颜色模式，尤其是将透明图转换为 JPEG 时。",
+          "try": "预留 20 分钟。按手册教程打开一张横图和一张竖图，打印尺寸，分别调用 `thumbnail((320, 320))` 并另存为 PNG，对比两张图的最长边。",
+          "maintenance": "已核对默认分支提交 5cdbe88c，作者日期为 2026-11-21（UTC）。仓库处于未归档状态。"
+        }
+      },
+      {
+        "name": "sharp",
+        "repo": "lovell/sharp",
+        "stars": 32867,
+        "approx": false,
+        "evidence": "https://github.com/lovell/sharp/commit/9a34cfeda175bb30538157a24a0c681d7180496c",
+        "en": {
+          "category": "Node.js library · Basic JavaScript",
+          "tagline": "Generate several web image sizes during a site build.",
+          "use": "The libvips-based module accepts paths, buffers or streams and can resize, crop and encode common web formats within a Node.js application.",
+          "why": "An existing JavaScript build can regenerate thumbnails whenever the source photography changes.",
+          "help": [
+            "Export a small card thumbnail and a wider article image from one photo.",
+            "Normalize portrait orientation before generating an image gallery."
+          ],
+          "fit": "Apache-2.0 module with prebuilt packages for common Windows, macOS and Linux targets. Check the supported runtime and architecture before deployment. Concurrent builds share CPU and memory. A desktop editor suits occasional manual crops.",
+          "try": "Allow 20 minutes. Adapt the official resize example to write 320- and 960-pixel-wide WebP files from one large JPEG. Compare both at their intended display sizes and record their byte sizes.",
+          "maintenance": "Default branch commit 9a34cfed has author date 2026-11-16 UTC. The repository is active and unarchived."
+        },
+        "zh": {
+          "category": "Node.js 库 · 需 JavaScript 基础",
+          "tagline": "在网站构建时生成多种尺寸的配图。",
+          "use": "这个基于 libvips 的模块接受路径、缓冲区或数据流，可在 Node.js 应用中缩放、裁切并编码常见网页图片格式。",
+          "why": "源照片变动时，现有 JavaScript 构建流程就能重新生成缩略图。",
+          "help": [
+            "从同一张照片导出列表卡片缩略图和正文大图。",
+            "生成图库前，先按方向信息将竖拍照片转正。"
+          ],
+          "fit": "模块采用 Apache-2.0 许可，为常见 Windows、macOS 和 Linux 平台提供预构建包。部署前应核对运行时和处理器架构。并发构建会共用 CPU 和内存；偶尔手工裁图用桌面编辑器更方便。",
+          "try": "预留 20 分钟。修改官方缩放示例，从一张大 JPEG 生成宽 320 和 960 像素的 WebP。在各自预定的显示尺寸下观察，并记录文件字节数。",
+          "maintenance": "已核对默认分支提交 9a34cfed，作者日期为 2026-11-16（UTC）。仓库处于未归档状态。"
+        }
+      },
+      {
+        "name": "darktable",
+        "repo": "darktable-org/darktable",
+        "stars": 13486,
+        "approx": false,
+        "evidence": "https://github.com/darktable-org/darktable/commit/6052ce7dbfadb6c98ad5b9e02a58075cbe8508fe",
+        "en": {
+          "category": "Desktop photography · Graphical interface",
+          "tagline": "Develop a camera RAW file and keep its original for later edits.",
+          "use": "Organize photos in the lighttable, edit exposure and color in the darkroom, then export rendered copies. The editing history lets you revisit earlier decisions.",
+          "why": "A photographer can compare treatments of one exposure before committing to a finished JPEG.",
+          "help": [
+            "Recover detail in a dim foreground and compare it with the original rendering.",
+            "Apply consistent adjustments to a sequence shot under the same lighting."
+          ],
+          "fit": "Free GPL desktop software with Windows, macOS and Linux packages. Check camera support before importing a collection. Large RAW files need memory and preview storage. The workflow takes more learning than a one-click photo filter.",
+          "try": "Allow 25 minutes. Import one supported RAW sample, adjust exposure, compare before and after, then export a small JPEG. Reopen the RAW in darktable and locate the exposure adjustment in its history.",
+          "maintenance": "Default branch commit 6052ce7d has author date 2026-10-21 UTC. The repository is active and unarchived."
+        },
+        "zh": {
+          "category": "桌面摄影 · 图形界面",
+          "tagline": "冲洗相机 RAW 文件，保留原片供以后重新调整。",
+          "use": "在光台中整理照片，在暗房中调整曝光和色彩，再导出成片。编辑历史方便回看之前的调整。",
+          "why": "摄影者可以用同一张原片比较不同处理效果，再决定如何导出 JPEG。",
+          "help": [
+            "调亮偏暗的前景，对照初始效果检查细节。",
+            "给同一光线下连拍的一组照片应用一致的调整。"
+          ],
+          "fit": "免费 GPL 桌面软件，提供 Windows、macOS 和 Linux 版本。导入整个图库前先确认相机型号受支持。大型 RAW 文件需要内存与预览缓存空间；其工作流比一键滤镜需要更多学习时间。",
+          "try": "预留 25 分钟。导入一张受支持的 RAW 样片，调整曝光并对比前后效果，导出一张小尺寸 JPEG。重新打开 RAW，在历史记录中找到刚才的曝光调整。",
+          "maintenance": "已核对默认分支提交 6052ce7d，作者日期为 2026-10-21（UTC）。仓库处于未归档状态。"
+        }
+      },
+      {
+        "name": "OxiPNG",
+        "repo": "oxipng/oxipng",
+        "stars": 4330,
+        "approx": false,
+        "evidence": "https://github.com/oxipng/oxipng/commit/7f95b1ab3c42b3078d9e09934f02f4e8d9a3b934",
+        "en": {
+          "category": "PNG optimization · Basic shell skills",
+          "tagline": "Recompress a finished PNG while preserving its pixel content.",
+          "use": "This multithreaded optimizer searches PNG compression settings. Keeping the original and writing a new output makes it easy to measure the savings for each asset.",
+          "why": "Included below the 10,000-star preference because it answers a narrower question than resizing or format conversion. Can an already approved PNG ship in fewer bytes?",
+          "help": [
+            "Reduce the transfer size of a documentation screenshot with fine text.",
+            "Check whether a set of UI icons benefits from recompression before release."
+          ],
+          "fit": "MIT-licensed local CLI for Windows, macOS and Linux. Higher effort consumes additional CPU time and an optimized file may barely shrink. Metadata stripping is optional and can affect downstream use. JPEG photographs need a different tool.",
+          "try": "Allow 15 minutes. Run `oxipng -o 2 --out smaller.png input.png` on a sample PNG. Compare dimensions and byte sizes. Repeat on a different screenshot before deciding whether to add the step to a build.",
+          "maintenance": "Default branch commit 7f95b1ab has author date 2026-11-13 UTC. The repository is active and unarchived."
+        },
+        "zh": {
+          "category": "PNG 优化 · 需基础终端操作",
+          "tagline": "保留像素内容，重新压缩已定稿的 PNG。",
+          "use": "这个多线程工具会尝试不同的 PNG 压缩设置。保留原件、另存输出，便于逐张衡量文件体积变化。",
+          "why": "本期破例收录这款不足一万星的工具，因为它解决一个更具体的问题：已经定稿的 PNG 在保持像素内容的前提下还能缩小多少？",
+          "help": [
+            "减小含细小文字的文档截图的传输体积。",
+            "发布前检查一组界面图标是否值得重新压缩。"
+          ],
+          "fit": "MIT 许可的本地命令行工具，支持 Windows、macOS 和 Linux。更高压缩强度消耗更多 CPU 时间，已优化的文件可能几乎不再缩小。删除元数据是可选操作，可能影响后续使用；JPEG 照片需用其他工具。",
+          "try": "预留 15 分钟。对样图运行 `oxipng -o 2 --out smaller.png input.png`，比较尺寸和字节数。换一张截图再试，以决定是否值得加入构建流程。",
+          "maintenance": "已核对默认分支提交 7f95b1ab，作者日期为 2026-11-13（UTC）。仓库处于未归档状态。"
+        }
+      }
+    ]
   }
 ];
