@@ -4294,5 +4294,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-21",
+    "checkedAt": "2026-11-21 18:18–18:21",
+    "pick": {
+      "en": "Choose Jellyfin for a general media library, Navidrome for music, or Audiobookshelf for long-form audio progress. HandBrake prepares compatible video copies; yt-dlp is an optional command-line tool for permitted archiving. Start with one small collection rather than deploying all three servers.",
+      "zh": "综合媒体库选 Jellyfin，音乐库看 Navidrome，长音频进度管理看 Audiobookshelf。HandBrake 用于准备兼容视频副本，yt-dlp 用于获准的命令行归档。先试小型资料集，无需同时部署三套服务器。"
+    },
+    "note": {
+      "en": "Five selected repositories were checked using current official READMEs and GitHub metadata; spotDL was also reviewed, while two other candidate paths were unavailable or redirected. All five exceed 10,000 stars and do not repeat the archive's previous 30 days. Counts are exact check-time API snapshots, not a ranking. No previous-day snapshots exist for these projects, so daily gains cannot be calculated. Features follow official sources; scenarios and suitability are editorial judgments. No recommended code was installed, run or benchmarked. Suggested trials are not completed tests. Hosting, clients, dependencies and media rights have separate requirements. Both language versions are prepared offline.",
+      "zh": "依据实时官方 README 与 GitHub 元数据核对五个入选仓库，也查看了 spotDL，另有两个候选路径不可用或重定向。五款均超过一万 stars，与档案前 30 天不重复。星标为核查时 API 精确快照，并非排名；没有这些项目前一日快照，不能计算日增量。功能来自官方资料，场景和适用性属于编辑判断。未安装、运行或测试推荐代码，入门步骤不代表已完成测试。托管、客户端、依赖和媒体使用权各有要求，中英文均预先准备。"
+    },
+    "projects": [
+      {
+        "name": "Jellyfin",
+        "repo": "jellyfin/jellyfin",
+        "stars": 59599,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/jellyfin/jellyfin",
+        "en": {
+          "category": "Personal media server · Hosting setup",
+          "tagline": "Serve your own media to several devices.",
+          "use": "Jellyfin manages and streams media from a dedicated server to browser and app clients. This repository is the backend; the web interface is a separate project. Official installation and quick-start links are in https://jellyfin.org/docs/ .",
+          "why": "Consider it when your existing video collection needs a shared library interface instead of separate folders on each device.",
+          "fit": "Free GPL-2.0 software without premium feature licenses according to README. Server packages cover major platforms; client support differs. Hardware, disks, electricity and hosting are separate costs. Transcoding can require substantial CPU/GPU resources; direct playback depends on codecs and client compatibility. Fits owned media libraries, not a service that supplies a subscription catalog. Administration and backups remain your responsibility.",
+          "try": "In 25–30 minutes, follow the stable-package quick start on a local test server, add a folder with two personal clips and compare browser playback. Inspect whether playback is direct or transcoded. Remote access and a large import can wait.",
+          "help": [
+            "Browse home-video copies from a second device on your local network.",
+            "Give household users separate access to selected media libraries."
+          ],
+          "maintenance": "Official README and metadata checked: archived=false, pushed_at=2026-11-21T01:33:54Z. This shows repository activity, not a tested release or compatibility result."
+        },
+        "zh": {
+          "category": "个人媒体服务器 · 需部署",
+          "tagline": "把自己的媒体提供给多种设备。",
+          "use": "Jellyfin 从专用服务器管理和播放媒体，客户端包括浏览器与应用。本仓库是后端，网页界面属于独立项目。官方安装及入门说明见 https://jellyfin.org/docs/ 。",
+          "why": "适合已有视频收藏，希望多个设备使用同一媒体库界面的人。",
+          "fit": "免费 GPL-2.0 软件，README 表示无付费高级功能许可。服务器包覆盖主要平台，客户端支持不同；硬件、磁盘、电费和托管另算。转码可能需要较多 CPU/GPU，直接播放取决于编码和客户端兼容性。适合自有媒体库，不提供订阅内容目录；管理和备份仍需自己负责。",
+          "try": "用 25–30 分钟按稳定包入门指南建立本地测试服务器，只添加两段个人录像并比较网页播放。检查是直接播放还是转码，远程访问和大批量导入留到以后。",
+          "help": [
+            "在局域网第二台设备浏览家庭录像副本。",
+            "给家庭用户分别开放选定媒体库。"
+          ],
+          "maintenance": "已核对官方 README 和元数据：未归档，最近推送为 2026-11-21T01:33:54Z。这是仓库活动证据，不代表已测试发布版本或兼容性。"
+        }
+      },
+      {
+        "name": "Navidrome",
+        "repo": "navidrome/navidrome",
+        "stars": 24876,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/navidrome/navidrome",
+        "en": {
+          "category": "Music library · Self-hosting familiarity",
+          "tagline": "Stream a tagged music collection through a browser or compatible client.",
+          "use": "Navidrome scans music and metadata, provides a browser player, per-user playlists and play counts, and supports Subsonic-compatible clients and on-the-fly transcoding. Installation: https://www.navidrome.org/docs/installation/ .",
+          "why": "Useful when you already have music files and want a focused audio library rather than a broader video server.",
+          "fit": "Free GPL-3.0 software on Linux, macOS, Windows and Docker, including Raspberry Pi binaries. Server storage, bandwidth and optional managed hosting cost resources; client apps may have separate pricing. Metadata quality determines organization, and transcoding adds processing load. Not a source of music rights or a streaming subscription catalog. README warns master can be unstable; use a release.",
+          "try": "Spend 20–30 minutes with a release and a test folder containing one album you may use. Check album grouping, play one track and create a playlist. If setup exceeds the window, stop after validating the installation configuration rather than importing everything.",
+          "help": [
+            "Check an album's metadata and artwork while browsing it on a second device.",
+            "Keep separate playlists and favourites for two household listeners."
+          ],
+          "maintenance": "Official README and metadata checked: archived=false, pushed_at=2026-11-21T10:09:13Z. This shows repository activity, not a tested release or compatibility result."
+        },
+        "zh": {
+          "category": "音乐库 · 需自托管基础",
+          "tagline": "通过浏览器或兼容客户端播放带标签的音乐收藏。",
+          "use": "Navidrome 扫描音乐及元数据，提供网页播放器、逐用户播放列表和播放次数，并支持 Subsonic 兼容客户端及实时转码。安装说明：https://www.navidrome.org/docs/installation/ 。",
+          "why": "适合已有音乐文件，希望使用专门音频库而非综合视频服务器的人。",
+          "fit": "免费 GPL-3.0 软件，支持 Linux、macOS、Windows、Docker，并有 Raspberry Pi 包。服务器存储、带宽和可选托管需要成本，客户端可能另收费。标签质量影响整理，转码增加处理负载。它不提供音乐授权或订阅曲库；README 警告 master 可能不稳定，应选正式版本。",
+          "try": "用 20–30 分钟选择正式版本和一个有权使用的专辑测试目录，检查分组、播放一曲并建列表。若部署超过时间，先验证安装配置，不要直接导入全部收藏。",
+          "help": [
+            "在第二台设备浏览专辑，检查分组、标签和封面。",
+            "为两位家庭听众保留各自播放列表和收藏。"
+          ],
+          "maintenance": "已核对官方 README 和元数据：未归档，最近推送为 2026-11-21T10:09:13Z。这是仓库活动证据，不代表已测试发布版本或兼容性。"
+        }
+      },
+      {
+        "name": "Audiobookshelf",
+        "repo": "advplyr/audiobookshelf",
+        "stars": 15083,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/advplyr/audiobookshelf",
+        "en": {
+          "category": "Audiobooks and podcasts · Server setup",
+          "tagline": "Keep listening progress with a self-hosted audio library.",
+          "use": "Audiobookshelf serves audiobooks and podcasts, keeps progress per user across devices, fetches metadata, edits chapters and supports podcast episode downloads. It also offers basic ebook support and metadata backups. Docs: https://audiobookshelf.org/docs .",
+          "why": "Consider it for long-form listening where resume position and chapter structure matter more than a general music player.",
+          "fit": "Free GPL-3.0 server software; hosting, media storage and network use are separate. Use supported server packages/containers and browser/PWA access. Mobile apps are beta; README says the iOS beta is full, so do not rely on immediate iOS enrollment. Directory naming matters, metadata backup is not a complete media backup, and reverse proxies need WebSockets. The Vue frontend is being rewritten to React; development activity does not guarantee UI stability.",
+          "try": "Spend 25 minutes on an existing or local test instance: add one authorized book folder, check chapters, play a minute and reopen to verify progress. Inspect backup scope and keep a separate copy of media. Full server deployment may require longer.",
+          "help": [
+            "Resume a personally recorded course audiobook after switching browser devices.",
+            "Organize an authorized podcast subscription and compare episode metadata and progress."
+          ],
+          "maintenance": "Official README and metadata checked: archived=false, pushed_at=2026-11-19T23:39:43Z. This shows repository activity, not a tested release or compatibility result."
+        },
+        "zh": {
+          "category": "有声书与播客 · 需部署",
+          "tagline": "通过自托管音频库保留收听进度。",
+          "use": "Audiobookshelf 管理有声书和播客，按用户跨设备保存进度，可获取元数据、编辑章节及下载播客单集，也有基础电子书支持和元数据备份。文档：https://audiobookshelf.org/docs 。",
+          "why": "适合重视长音频续播位置和章节结构的人。",
+          "fit": "免费 GPL-3.0 服务器软件，托管、媒体空间和网络另需资源。使用受支持服务器包/容器及浏览器/PWA。移动应用仍为 beta，README 表示 iOS beta 已满，不能依赖立即加入。目录命名重要，元数据备份不等于完整媒体备份，反向代理需要 WebSocket。Vue 前端正重写为 React；开发活动不保证界面稳定。",
+          "try": "用 25 分钟在已有或本地测试实例添加一本有权使用的书，检查章节、播放一分钟，再重开验证进度。检查备份范围并单独保留媒体副本；完整部署可能需要更久。",
+          "help": [
+            "切换浏览器设备后继续收听自己录制的课程音频书。",
+            "整理获准使用的播客订阅，核对单集元数据及进度。"
+          ],
+          "maintenance": "已核对官方 README 和元数据：未归档，最近推送为 2026-11-19T23:39:43Z。这是仓库活动证据，不代表已测试发布版本或兼容性。"
+        }
+      },
+      {
+        "name": "HandBrake",
+        "repo": "HandBrake/HandBrake",
+        "stars": 25079,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/HandBrake/HandBrake",
+        "en": {
+          "category": "Video conversion · Visual encoding choices",
+          "tagline": "Create a compatible video copy from an existing source.",
+          "use": "HandBrake transcodes common camera, phone and screen recordings into MP4, MKV or WebM using libraries such as FFmpeg and video encoders. Official documentation: https://handbrake.fr/docs .",
+          "why": "A visual alternative when you need to choose conversion settings without writing an FFmpeg command. Evaluate a small output before committing to a long encode.",
+          "fit": "Free desktop application for Linux, macOS and Windows. Compiled builds are GPLv2; component and graphic licenses differ, as LICENSE explains. Requires processing time, CPU/GPU capability and space for output. Fits conversion, not a full timeline editor or lossless trimming tool. Re-encoding can reduce quality, hardware support varies and protected inputs are not assumed supported. No size or speed improvement is promised.",
+          "try": "Use 20–30 minutes on a short non-sensitive source copy: select a target-oriented preset and new output path, encode a small sample, then inspect text, audio sync and playback on the intended device. Keep the original regardless of the test result.",
+          "help": [
+            "Make a playback-compatible copy of a personal recording for a target device.",
+            "Compare a smaller presentation-video copy against the original for text readability."
+          ],
+          "maintenance": "Official README and metadata checked: archived=false, pushed_at=2026-11-21T09:14:43Z. This shows repository activity, not a tested release or compatibility result."
+        },
+        "zh": {
+          "category": "视频转换 · 需选择编码参数",
+          "tagline": "从已有素材生成兼容的视频副本。",
+          "use": "HandBrake 使用 FFmpeg 等库和视频编码器，将相机、手机和录屏等常见素材转为 MP4、MKV 或 WebM。官方文档：https://handbrake.fr/docs 。",
+          "why": "适合希望通过图形界面选择转换设置、不想编写 FFmpeg 命令的人，长时间编码前先验证小样。",
+          "fit": "Linux、macOS、Windows 免费桌面应用，编译版本采用 GPLv2，组件和图形另有许可，见 LICENSE。需要处理时间、CPU/GPU 和输出空间。适合转换，不是完整时间线编辑器或无损裁剪器。重编码可能损失质量，硬件支持不同，不假定受保护输入可处理；不承诺体积或速度收益。",
+          "try": "用 20–30 分钟对一段非敏感素材副本选择面向目标设备的预设和新输出位置，编码短样片，检查文字、音画同步及目标设备播放。无论试用结果如何都保留原件。",
+          "help": [
+            "给个人录像生成目标设备可播放的副本。",
+            "将较小的演示视频副本与原件比较，检查文字清晰度。"
+          ],
+          "maintenance": "已核对官方 README 和元数据：未归档，最近推送为 2026-11-21T09:14:43Z。这是仓库活动证据，不代表已测试发布版本或兼容性。"
+        }
+      },
+      {
+        "name": "yt-dlp",
+        "repo": "yt-dlp/yt-dlp",
+        "stars": 209514,
+        "approx": false,
+        "evidence": "https://api.github.com/repos/yt-dlp/yt-dlp",
+        "en": {
+          "category": "Media archiving · Command-line setup",
+          "tagline": "Inspect available media formats and download permitted material reproducibly.",
+          "use": "yt-dlp is a command-line downloader with site extractors, format selection, subtitles, output naming and post-processing options. Its official README and wiki document installation and dependencies: https://github.com/yt-dlp/yt-dlp/wiki/Installation .",
+          "why": "Useful for authorized archiving when explicit format and naming choices matter. Site support changes frequently, so one successful download does not establish continuing compatibility.",
+          "fit": "Available on Windows, macOS and Linux/BSD; Python use currently requires 3.11+. Source is Unlicense, while bundled executables and dependencies have additional licenses, including GPLv3+ in PyInstaller builds. FFmpeg/ffprobe, yt-dlp-ejs and a supported JavaScript runtime are strongly recommended for full functionality. Needs bandwidth and storage; site changes can break extractors. It does not grant download rights or guarantee DRM-protected content access.",
+          "try": "Spend 15–25 minutes on one permitted URL: inspect yt-dlp --help and run yt-dlp --list-formats URL before selecting a small download. Verify filename, duration and audio. Stop if the site or account does not permit access; avoid cookies and account setup during this first trial.",
+          "help": [
+            "List formats for a video you own before choosing an archival copy.",
+            "Save an authorized educational recording with a consistent filename and available subtitles."
+          ],
+          "maintenance": "Official README and metadata checked: archived=false, pushed_at=2026-11-21T00:05:22Z. This shows repository activity, not a tested release or compatibility result."
+        },
+        "zh": {
+          "category": "媒体归档 · 需命令行配置",
+          "tagline": "先检查可用格式，再可重复地下载获准资料。",
+          "use": "yt-dlp 是命令行下载器，提供站点提取、格式选择、字幕、文件命名和后处理选项。官方 README 与 wiki 说明安装及依赖：https://github.com/yt-dlp/yt-dlp/wiki/Installation 。",
+          "why": "适合需要明确格式和命名规则的获准归档。站点支持经常变化，一次成功不代表持续兼容。",
+          "fit": "支持 Windows、macOS、Linux/BSD，Python 用法当前要求 3.11+。源码为 Unlicense，打包程序及依赖另有许可，例如 PyInstaller 构建包含 GPLv3+。完整功能强烈建议准备 FFmpeg/ffprobe、yt-dlp-ejs 和受支持 JavaScript 运行时。需要带宽和空间，站点变化可能破坏提取器；工具不授予下载权，也不保证能访问 DRM 内容。",
+          "try": "用 15–25 分钟对一个获准 URL 查看 yt-dlp --help，先运行 yt-dlp --list-formats URL，再选择小文件下载，检查文件名、时长及音频。若站点或账户不允许访问则停止，初次试用先不涉及 cookies 和账户配置。",
+          "help": [
+            "下载自己的视频前，先列出格式并选择归档副本。",
+            "将获准保存的教学录像按一致名称归档，并获取可用字幕。"
+          ],
+          "maintenance": "已核对官方 README 和元数据：未归档，最近推送为 2026-11-21T00:05:22Z。这是仓库活动证据，不代表已测试发布版本或兼容性。"
+        }
+      }
+    ]
   }
 ];
