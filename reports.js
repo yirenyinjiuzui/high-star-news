@@ -4652,5 +4652,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "checkedAt": "2026-11-23 12:49",
+    "pick": {
+      "en": "For a checkout form, start with the question you need answered. Vitest can check the total. React Testing Library can check the validation message. MSW can supply a failed payment response. Storybook can isolate the error panel for review. Playwright can follow the shopper from the cart to the confirmation screen.",
+      "zh": "以结算表单为例：计算总价的规则可以用 Vitest 检查，表单校验提示用 React Testing Library 验证。MSW 可以模拟支付失败响应，Storybook 可单独展示错误面板供审阅。如果需要验证从购物车到确认页的完整流程，再用 Playwright。"
+    },
+    "note": {
+      "en": "Counts are exact GitHub API snapshots for these five repositories. Each exceeds 10,000 stars and is new to the previous 30 days of this archive. No previous-day snapshots exist for these projects, so daily gains are unavailable. Features follow official documentation. Scenarios and time estimates are editorial suggestions for a prepared environment. No recommended software was installed or tested.",
+      "zh": "星标数取自核查时 GitHub API 对这五个仓库的精确快照。五款均超过一万星，过去 30 天的日报中均未收录。缺少这些项目前一日快照，无法计算日增量。功能依据官方资料；场景和试用时间为编辑建议，假设已有相应开发环境。本次未安装或测试推荐软件。"
+    },
+    "projects": [
+      {
+        "name": "Playwright",
+        "repo": "microsoft/playwright",
+        "stars": 100836,
+        "approx": false,
+        "evidence": "https://github.com/microsoft/playwright/commit/049226728d2da8054db18b04782a9848b755855e",
+        "en": {
+          "category": "Browser testing · JavaScript basics",
+          "tagline": "Check whether a whole task works in a real browser.",
+          "use": "Playwright Test opens pages in Chromium, Firefox or WebKit. Locators select controls by role and name, and assertions can wait for the expected page state.",
+          "why": "Choose it when a failure can occur between screens, such as a filter disappearing after navigation.",
+          "help": [
+            "Check that a selected filter survives opening a detail page and going back.",
+            "Verify that a keyboard user can open a dialog and return focus to its trigger."
+          ],
+          "fit": "Apache-2.0. The Node.js runner supports specified Windows, macOS and Linux versions. Budget disk space for browser binaries and time to start the app. Small arithmetic checks are cheaper to exercise directly.",
+          "try": "Allow 25–30 minutes on a supported machine. Point the starter test at a local demo, click a named link and assert the destination heading. Run once in Chromium, then run the same assertion in Firefox.",
+          "maintenance": "Default branch commit 04922672 was committed on 2026-11-21 UTC. The repository was unarchived at the time of review."
+        },
+        "zh": {
+          "category": "浏览器测试 · 需 JavaScript 基础",
+          "tagline": "在真实浏览器中验证用户能否完成一项任务。",
+          "use": "Playwright Test 可在 Chromium、Firefox 或 WebKit 中打开页面。可以按角色和名称定位控件，并用断言等待页面达到预期状态。",
+          "why": "如果故障可能发生在页面切换之间，例如返回列表后筛选项消失，可以选它。",
+          "help": [
+            "打开详情再返回，检查列表是否保留筛选项。",
+            "用键盘打开对话框，再关闭它，检查焦点是否回到触发按钮。"
+          ],
+          "fit": "采用 Apache-2.0 许可。Node.js 运行器支持指定版本的 Windows、macOS 和 Linux。需为浏览器二进制文件预留空间，并启动被测应用。简单计算规则直接做单元测试更省事。",
+          "try": "在受支持的机器上预留 25–30 分钟。将示例测试指向本地演示页，点击一个有名称的链接，断言目标页标题。先在 Chromium 中运行，再在 Firefox 中运行同一断言。",
+          "maintenance": "默认分支提交 04922672 的提交日期为 2026-11-21（UTC），核查时仓库未归档。"
+        }
+      },
+      {
+        "name": "Storybook",
+        "repo": "storybookjs/storybook",
+        "stars": 91687,
+        "approx": false,
+        "evidence": "https://github.com/storybookjs/storybook/commit/20075e60242c908616d9ce8783a0686fc0ba896d",
+        "en": {
+          "category": "Component workshop · Framework setup",
+          "tagline": "Give a hard-to-reach interface state its own preview.",
+          "use": "A story renders a component with named inputs. Save several stories for one component and switch between them in the browser.",
+          "why": "It gives designers and developers a repeatable way to discuss a single state without navigating an entire application.",
+          "help": [
+            "Compare a short button label with a long translation in a narrow container.",
+            "Review the empty state of a list before its data service is ready."
+          ],
+          "fit": "MIT-licensed core runs locally with a supported framework integration, Node.js and a browser. Hosted visual testing may cost extra. Stories need the same theme or providers as the real component to give a faithful preview.",
+          "try": "Allow 20 minutes in a configured project. Add two stories for the same button, changing only the label. Narrow the preview and record the first width at which either label clips.",
+          "maintenance": "Default branch commit 20075e60 was committed on 2026-11-20 UTC. The repository was unarchived at the time of review."
+        },
+        "zh": {
+          "category": "组件开发环境 · 需配置框架",
+          "tagline": "给难以触发的界面状态建立独立预览。",
+          "use": "每个 story 都可用指定输入渲染一个组件。可以为同一组件保存多个具名示例，在浏览器中切换查看。",
+          "why": "设计和开发人员可以反复打开同一状态讨论细节，省去每次走完整个应用流程的步骤。",
+          "help": [
+            "在窄容器内比较按钮短标签和较长译文。",
+            "在数据服务就绪前审阅列表的空状态。"
+          ],
+          "fit": "MIT 许可的核心工具可以本地运行，需要受支持的框架集成、Node.js 和浏览器。托管视觉测试可能另收费。若组件依赖主题或上下文，示例也要配好，预览才有代表性。",
+          "try": "在已配置的项目中预留 20 分钟。为同一按钮添加两个示例，只改标签。逐渐缩窄预览，记录首次发生文字截断的宽度。",
+          "maintenance": "默认分支提交 20075e60 的提交日期为 2026-11-20（UTC），核查时仓库未归档。"
+        }
+      },
+      {
+        "name": "Vitest",
+        "repo": "vitest-dev/vitest",
+        "stars": 17426,
+        "approx": false,
+        "evidence": "https://github.com/vitest-dev/vitest/commit/8b0ca603a8342aff1851a37ce0c0ae8cf4fa6b56",
+        "en": {
+          "category": "Unit testing · JavaScript or TypeScript",
+          "tagline": "Check a rule with small inputs and explicit expected results.",
+          "use": "Vitest runs test files, supports watch mode and can share Vite configuration with an application. Its assertions suit functions with deterministic outputs.",
+          "why": "A small failing case can tell you exactly which boundary input broke after an edit.",
+          "help": [
+            "Check whether a zero-item cart displays the correct total.",
+            "Pin down how a slug formatter handles repeated spaces."
+          ],
+          "fit": "MIT-licensed Node.js tool. Match the runner to the supported Vite and Node versions. The default Node environment is enough for pure functions. Layout and browser-specific behavior require a suitable browser environment.",
+          "try": "Allow 15 minutes. Pick one formatter, write cases for an ordinary string and an empty string, then run Vitest in watch mode. Change one expected value and check that the failure identifies that case.",
+          "maintenance": "Default branch commit 8b0ca603 was committed on 2026-11-20 UTC. The repository was unarchived at the time of review."
+        },
+        "zh": {
+          "category": "单元测试 · 需 JavaScript 或 TypeScript 基础",
+          "tagline": "用少量输入和明确的预期结果验证规则。",
+          "use": "Vitest 执行测试文件，支持监听修改，也可复用应用的 Vite 配置。它的断言适用于输出确定的函数。",
+          "why": "修改逻辑后，一个小型失败用例就能指出哪个边界输入出了问题。",
+          "help": [
+            "检查空购物车的总价。",
+            "用用例固定网址短名格式化函数对连续空格的处理。"
+          ],
+          "fit": "MIT 许可的 Node.js 工具。运行器需与受支持的 Vite 和 Node 版本匹配。纯函数可在默认 Node 环境下测试；页面布局与浏览器特有行为需要相应浏览器环境。",
+          "try": "预留 15 分钟。选一个格式化函数，分别测试普通字符串和空字符串，开启监听模式。改动一个预期值，观察失败信息能否指出对应的用例。",
+          "maintenance": "默认分支提交 8b0ca603 的提交日期为 2026-11-20（UTC），核查时仓库未归档。"
+        }
+      },
+      {
+        "name": "React Testing Library",
+        "repo": "testing-library/react-testing-library",
+        "stars": 19684,
+        "approx": false,
+        "evidence": "https://github.com/testing-library/react-testing-library/commit/20ce75f2907ca0e5c5a8ae595c0e9a4e368c7800",
+        "en": {
+          "category": "React component testing · Basic React",
+          "tagline": "Test the controls and messages a user can find on screen.",
+          "use": "Render a React component into a DOM and query the output by accessible role, name or label. After an interaction, assert that the visible result has changed.",
+          "why": "A test written against a named control can survive a refactor that changes internal component state but preserves behavior.",
+          "help": [
+            "Submit an empty form and find the validation message.",
+            "Toggle a disclosure button and check that its details become available."
+          ],
+          "fit": "MIT-licensed helpers require React, a separate test runner and a DOM environment such as jsdom or a browser. They suit behavior checks. A simulated DOM cannot confirm that text fits on screen.",
+          "try": "Allow 20 minutes in a React test project. Render a collapsed disclosure, query its button by role and name, click it and look for the details. Rename an internal state variable and rerun the test.",
+          "maintenance": "Default branch commit 20ce75f2 was committed on 2026-08-27 UTC. The repository was unarchived at the time of review."
+        },
+        "zh": {
+          "category": "React 组件测试 · 需 React 基础",
+          "tagline": "检查用户能找到的控件和提示。",
+          "use": "将 React 组件渲染到 DOM，按无障碍角色、名称或标签查询元素。执行交互后，断言可见结果是否发生预期变化。",
+          "why": "如果重构只改内部状态而保留交互行为，按控件名称编写的测试仍可继续使用。",
+          "help": [
+            "提交空表单并查找校验提示。",
+            "点击展开按钮并检查能否找到详细内容。"
+          ],
+          "fit": "MIT 许可的辅助库需要 React、独立测试运行器，以及 jsdom 或浏览器等 DOM 环境。适合验证行为。模拟 DOM 无法证实文字在屏幕上是否显示得下。",
+          "try": "在 React 测试项目中预留 20 分钟。渲染收起的详情组件，按角色和名称找到按钮，点击后查找详细内容。重命名一个内部状态变量，再运行同一测试。",
+          "maintenance": "默认分支提交 20ce75f2 的提交日期为 2026-08-27（UTC），核查时仓库未归档。"
+        }
+      },
+      {
+        "name": "Mock Service Worker (MSW)",
+        "repo": "mswjs/msw",
+        "stars": 18359,
+        "approx": false,
+        "evidence": "https://github.com/mswjs/msw/commit/b3df8504adc30538e9634a46b7303a850a817928",
+        "en": {
+          "category": "API simulation · JavaScript basics",
+          "tagline": "Give the same screen predictable success and error responses.",
+          "use": "Request handlers describe responses at the network boundary. Browser development uses a service worker, while Node.js tests can reuse handlers through the Node integration.",
+          "why": "Use it when an unusual response is difficult to produce reliably against a shared development server.",
+          "help": [
+            "Show an empty search result without modifying shared records.",
+            "Return a temporary server error and check that the retry control appears."
+          ],
+          "fit": "MIT-licensed library for supported browsers and Node.js. Local examples need no paid backend. The browser worker must be registered within the correct scope. Simulated responses can drift from the real API contract.",
+          "try": "Allow 20–30 minutes with a local demo. Give its list request a handler returning an empty array, then switch that handler to a 503 response. Verify that the page shows different empty and error states.",
+          "maintenance": "Default branch commit b3df8504 was committed on 2026-11-18 UTC. The repository was unarchived at the time of review."
+        },
+        "zh": {
+          "category": "API 模拟 · 需 JavaScript 基础",
+          "tagline": "为同一界面提供可重复的成功和错误响应。",
+          "use": "请求处理器在网络请求层描述响应。浏览器开发环境使用 service worker，Node.js 测试可以通过对应集成复用处理器。",
+          "why": "如果共用开发服务器难以稳定返回某种少见的响应，可用它重现该状态。",
+          "help": [
+            "不改动共享记录就能展示空搜索结果。",
+            "模拟临时服务器错误，并检查是否出现重试控件。"
+          ],
+          "fit": "MIT 许可的库，支持浏览器与 Node.js。本地示例无需付费后端。浏览器端必须在正确的作用域注册 worker。模拟响应可能与真实 API 的约定逐渐偏离。",
+          "try": "在本地演示应用中预留 20–30 分钟。让列表请求的处理器先返回空数组，再改为返回 503。检查页面是否分别显示无结果提示和错误提示。",
+          "maintenance": "默认分支提交 b3df8504 的提交日期为 2026-11-18（UTC），核查时仓库未归档。"
+        }
+      }
+    ]
   }
 ];
