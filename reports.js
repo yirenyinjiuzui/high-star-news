@@ -4831,5 +4831,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-24",
+    "checkedAt": "2026-11-24 16:29–16:30",
+    "pick": {
+      "en": "Start with a library’s monthly loans. Chart.js can show the trend on a plain page. Choose ECharts if readers need to zoom or toggle branches, or Recharts if a React page already owns those controls. Vega-Lite makes the aggregation easy to review. D3 gives you control over every endpoint when comparing two months.",
+      "zh": "以图书馆逐月借阅量为例：普通网页用 Chart.js 展示趋势；需要缩放或切换分馆时可用 ECharts；如果控件已在 React 页面中，可用 Recharts。需要审阅聚合方式时选 Vega-Lite；要单独控制两个月份之间每条连线的端点时选 D3。"
+    },
+    "note": {
+      "en": "Counts are exact GitHub API snapshots for five selected repositories. Four exceed 10,000 stars. Vega-Lite is included for its reviewable chart grammar. None appeared in the preceding 30 days of this archive. Previous-day snapshots for these projects were unavailable, so daily gains cannot be calculated. Features follow official sources. The loan data examples and trial times are editorial suggestions. No recommended project was installed or run.",
+      "zh": "星标取自核查时 GitHub API 对五个仓库的精确快照。四个超过一万星，Vega-Lite 因便于审阅的图表语法入选。五款在过去 30 天的日报中均未出现。缺少这些项目前一天的星标快照，无法计算日增量。功能依据官方资料；借阅量示例和试用时长为编辑建议。本次未安装或运行推荐项目。"
+    },
+    "projects": [
+      {
+        "name": "Chart.js",
+        "repo": "chartjs/Chart.js",
+        "stars": 67822,
+        "approx": false,
+        "evidence": "https://github.com/chartjs/Chart.js/commit/cdfab70bf6466645c252183aeeadcfecd1498d0d",
+        "en": {
+          "category": "Browser charts · Basic JavaScript",
+          "tagline": "Add a monthly trend to a plain HTML page.",
+          "use": "Supply month labels and a dataset to a line chart. Chart.js draws into a canvas and can show the value of a point in a tooltip.",
+          "why": "A single trend and a few labels fit its built-in chart types with little setup.",
+          "help": [
+            "Show a library’s monthly loan count beside its annual total.",
+            "Add a second series for the prior year and compare the same month across years."
+          ],
+          "fit": "MIT-licensed browser library. A local HTML page and the library are sufficient for a small chart. Canvas pixels alone do not give screen readers the underlying values, so include a text summary or data table.",
+          "try": "Allow 15 minutes. Adapt the official line example to six months of sample loans. Change one count to zero, then to null. Inspect the difference and label missing observations explicitly.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit cdfab70b has a commit date of 2026-11-24 UTC."
+        },
+        "zh": {
+          "category": "网页图表 · 需 JavaScript 基础",
+          "tagline": "在普通 HTML 页面上展示逐月趋势。",
+          "use": "给折线图传入月份标签和一组数值。Chart.js 在画布中绘图，读者可通过提示框查看数据点的值。",
+          "why": "只有一条趋势线和几个标签时，内置图表类型就够用，配置也少。",
+          "help": [
+            "在图书馆全年借阅总量旁展示逐月借阅量。",
+            "添加上年序列，比较两年同月借阅量。"
+          ],
+          "fit": "MIT 许可的浏览器库。小图只需本地 HTML 页面和库文件。单靠画布像素无法让读屏软件读出数值，应附文字摘要或数据表。",
+          "try": "预留 15 分钟。把官方折线图示例改成六个月的借阅量，将其中一个值先改为零，再改为 null。观察两次显示的区别，给缺失值加上说明。",
+          "maintenance": "核查时仓库未归档。默认分支提交 cdfab70b 的提交日期为 2026-11-24（UTC）。"
+        }
+      },
+      {
+        "name": "Apache ECharts",
+        "repo": "apache/echarts",
+        "stars": 67789,
+        "approx": false,
+        "evidence": "https://github.com/apache/echarts/commit/34f4d927eafe251f26f63afd3aeefa30f2feba30",
+        "en": {
+          "category": "Interactive dashboards · JavaScript configuration",
+          "tagline": "Let readers explore a time range inside a chart.",
+          "use": "Configure axes and series in an option object. A dataZoom control narrows the displayed range, while a legend lets readers choose which series remain visible.",
+          "why": "It suits a dashboard where someone needs to move between a long history and a few months without losing the other branches for comparison.",
+          "help": [
+            "Zoom to the months around a branch renovation to inspect a temporary drop.",
+            "Hide the largest branch so changes at two smaller branches are easier to see."
+          ],
+          "fit": "Apache-2.0 library for web pages, available as a download or npm package. It needs a chart container with a defined size. Dense data and many series warrant testing on the intended device.",
+          "try": "Allow 20 minutes. Adapt a line-chart example to two branches and twelve months, add a slider dataZoom, then narrow it to one quarter. Check the month labels and tooltips at both ends.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 34f4d927 has a commit date of 2026-10-04 UTC."
+        },
+        "zh": {
+          "category": "交互式仪表板 · 需编写 JavaScript 配置",
+          "tagline": "让读者在图上选取一段时间查看。",
+          "use": "在配置对象中定义坐标轴和数据序列，用 dataZoom 控件缩小显示范围，用图例选择要显示的序列。",
+          "why": "适合既要回看长期趋势，又要放大几个月并对照多家分馆的仪表板。",
+          "help": [
+            "放大分馆装修前后的月份，查看借阅量何时下降。",
+            "暂时隐藏规模最大的分馆，观察两家小分馆的波动。"
+          ],
+          "fit": "适用于网页，采用 Apache-2.0 许可，可下载或通过 npm 安装。图表容器需要明确尺寸；数据点和序列很多时，应在目标设备上验证交互表现。",
+          "try": "预留 20 分钟。把折线图示例改成两家分馆十二个月的数据，加入滑块式 dataZoom，缩小到一个季度，核对首尾月份的标签和提示数值。",
+          "maintenance": "核查时仓库未归档。默认分支提交 34f4d927 的提交日期为 2026-10-04（UTC）。"
+        }
+      },
+      {
+        "name": "Vega-Lite",
+        "repo": "vega/vega-lite",
+        "stars": 5562,
+        "approx": false,
+        "evidence": "https://github.com/vega/vega-lite/commit/9d3a9a2e87ebbae0a525f1169b85b82fed986a21",
+        "en": {
+          "category": "Declarative visualization · JSON basics",
+          "tagline": "Describe a chart in a text specification that a colleague can review.",
+          "use": "Map fields to position and color, choose a mark and specify aggregations. Vega-Lite compiles the description into a Vega specification. The official browser editor can render a small inline dataset.",
+          "why": "Included below the usual star threshold because its compact specification makes an analytical choice, such as summing by branch, visible in a review.",
+          "help": [
+            "Review whether a branch comparison uses total or average monthly loans.",
+            "Reuse one specification with next quarter’s records and inspect the changes in version control."
+          ],
+          "fit": "BSD-3-Clause software. The web editor is enough for a first exercise. Embedding a chart requires the Vega runtime and a compatible embedding setup. Highly bespoke layouts can exceed the grammar’s convenient defaults.",
+          "try": "Allow 20 minutes. Open the official bar example in Vega Editor, enter six sample rows with branch and count fields, and encode the sum by branch. Switch sum to mean and explain the changed axis units.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 9d3a9a2e has a commit date of 2026-11-13 UTC."
+        },
+        "zh": {
+          "category": "声明式可视化 · 需 JSON 基础",
+          "tagline": "把图表写成同事可以逐行审阅的文本规范。",
+          "use": "将字段映射到位置和颜色，选择图形标记并指定聚合方式。Vega-Lite 会将描述编译成 Vega 规范；官方网页编辑器可渲染内嵌的小数据集。",
+          "why": "虽然低于通常的一万星门槛，仍收录它，因为按分馆求和等分析选择能直接体现在简短的图表规范中，便于审核。",
+          "help": [
+            "核对分馆比较采用借阅总数还是月均借阅量。",
+            "下季度沿用同一份规范，并在版本控制中核对改动。"
+          ],
+          "fit": "采用 BSD-3-Clause 许可，首次练习只需网页编辑器。嵌入网页需要 Vega 运行时和兼容的嵌入配置；高度定制的布局可能超出这套语法便于表达的范围。",
+          "try": "预留 20 分钟。在 Vega Editor 打开官方柱状图示例，输入六行含分馆和借阅量的数据，按分馆求和绘图。将求和改为均值，再说明纵轴单位如何变化。",
+          "maintenance": "核查时仓库未归档。默认分支提交 9d3a9a2e 的提交日期为 2026-11-13（UTC）。"
+        }
+      },
+      {
+        "name": "Recharts",
+        "repo": "recharts/recharts",
+        "stars": 27741,
+        "approx": false,
+        "evidence": "https://github.com/recharts/recharts/commit/7e99e6fcea9c1bb6b81deab20da7aa60ab6aebee",
+        "en": {
+          "category": "React components · Basic React",
+          "tagline": "Keep a chart and its surrounding React controls on the same data.",
+          "use": "Compose an SVG chart from React components for axes, lines, grids and tooltips. Pass records to the chart and bind a series to a field with dataKey.",
+          "why": "It is a natural fit when the page already has a branch selector and the same selection should update the chart and a table.",
+          "help": [
+            "Drive a detail chart from the selected branch in a dashboard.",
+            "Reuse one chart component for loans and returns by passing different series keys."
+          ],
+          "fit": "MIT-licensed React library. Match react-is to the installed React version. Check the dimensions of the parent when using a responsive container. Adding React solely for one chart entails extra setup.",
+          "try": "Allow 20 minutes in a React project. Feed six monthly records to a LineChart. Add a selector for loans or returns and have a small table show the same field. After switching, compare the last value in each view.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 7e99e6fc has a commit date of 2026-11-24 UTC."
+        },
+        "zh": {
+          "category": "React 组件 · 需 React 基础",
+          "tagline": "让图表与旁边的 React 控件使用同一组数据。",
+          "use": "用坐标轴、折线、网格和提示框等 React 组件组合出 SVG 图表。将记录传入图表，再用 dataKey 绑定序列字段。",
+          "why": "如果页面已有分馆选择器，且切换后图表和表格都要更新，这种做法便于保持二者一致。",
+          "help": [
+            "让仪表板的明细图跟随选中的分馆更新。",
+            "传入不同的序列字段，让借阅量和归还量共用一个图表组件。"
+          ],
+          "fit": "采用 MIT 许可，react-is 版本要与已安装的 React 匹配。使用响应式容器时应检查父容器尺寸。若只为一张图引入 React，需要额外配置。",
+          "try": "在 React 项目中预留 20 分钟。将六个月的数据传入 LineChart，添加借阅量和归还量选择器，让小表格同步显示同一字段。切换后比对图表与表格中的最后一个值。",
+          "maintenance": "核查时仓库未归档。默认分支提交 7e99e6fc 的提交日期为 2026-11-24（UTC）。"
+        }
+      },
+      {
+        "name": "D3",
+        "repo": "d3/d3",
+        "stars": 113998,
+        "approx": false,
+        "evidence": "https://github.com/d3/d3/commit/7b634fc81455388e8ac4c2f7fbf79b20e16b94a8",
+        "en": {
+          "category": "Custom graphics · JavaScript and SVG",
+          "tagline": "Build a chart whose geometry or labels need individual control.",
+          "use": "Scales map values to positions, and a data join associates records with elements. You can use these pieces to draw and update marks in an SVG without adopting a preset chart layout.",
+          "why": "Consider D3 when the placement of a label or the way two values are connected carries part of the story.",
+          "help": [
+            "Connect January and June counts for each branch with a slope line.",
+            "Label branch names next to the endpoints and highlight one branch with a distinct stroke."
+          ],
+          "fit": "Free ISC-licensed JavaScript library for the web. A browser and basic SVG knowledge are enough for the exercise. Layout, label collisions and keyboard interaction need explicit design, which adds work for a routine chart.",
+          "try": "Allow 30 minutes if you know SVG. Use three branches and two months. Map counts to a common vertical scale, draw one line per branch and label its June endpoint. Try two equal June counts and inspect the overlap.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 7b634fc8 has a commit date of 2026-11-23 UTC."
+        },
+        "zh": {
+          "category": "定制图形 · 需 JavaScript 和 SVG 基础",
+          "tagline": "逐项控制图形位置和标签，绘制定制图表。",
+          "use": "比例尺把数值映射为位置，数据绑定把记录关联到图形元素。可以利用这些工具绘制并更新 SVG 标记，自行决定布局。",
+          "why": "如果标签放在哪里、两个数值怎样连起来本身就是叙述的一部分，D3 值得考虑。",
+          "help": [
+            "用斜线连接每家分馆一月和六月的借阅量。",
+            "在端点旁标注分馆名称，用不同线型突出其中一家。"
+          ],
+          "fit": "适用于网页的免费 JavaScript 库，采用 ISC 许可。练习只需浏览器和基本 SVG 知识。布局、标签重叠和键盘交互需自行设计，绘制常规图表时工作量较大。",
+          "try": "熟悉 SVG 的读者可预留 30 分钟。选三家分馆和两个月，将借阅量映射到同一纵轴，每家画一条线并标注六月端点。令两家六月数值相同，检查标签重叠情况。",
+          "maintenance": "核查时仓库未归档。默认分支提交 7b634fc8 的提交日期为 2026-11-23（UTC）。"
+        }
+      }
+    ]
   }
 ];
