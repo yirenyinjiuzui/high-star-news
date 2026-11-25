@@ -5010,5 +5010,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-25",
+    "checkedAt": "2026-11-25 17:45–17:46",
+    "pick": {
+      "en": "Pick the task that matters for your next book. Use calibre to clean up a collection or Calibre-Web to make an existing library browsable on another device. KOReader gives you control over a difficult page on an e-ink screen. Koodo Reader can turn highlights into a reading log, while Readest puts two editions side by side.",
+      "zh": "可以按下一本书的阅读任务选工具。书目杂乱用 calibre 整理，有了书库再用 Calibre-Web 供其他设备浏览。墨水屏遇到难读的版面可试 KOReader；想把高亮整理成读书记录可试 Koodo Reader；对照两个版本可用 Readest。"
+    },
+    "note": {
+      "en": "Counts are exact GitHub API snapshots for the five selected repositories. All exceed 10,000 stars and are new to the preceding 30 days of this archive. There is no previous-day snapshot for these projects, so daily star gains are unavailable. Features and activity were checked against official project sources. The scenarios and trial times are editorial suggestions. No recommended software was installed or run.",
+      "zh": "星标为本次核查时 GitHub API 返回的五个入选仓库的精确数值，均超过一万星，过去 30 天的日报中均未收录。缺少这些项目前一日的星标快照，无法计算日增量。功能与维护记录依据官方资料核对，场景和试用时长为编辑建议。本次未安装或运行推荐软件。"
+    },
+    "projects": [
+      {
+        "name": "calibre",
+        "repo": "kovidgoyal/calibre",
+        "stars": 26521,
+        "approx": false,
+        "evidence": "https://github.com/kovidgoyal/calibre/commit/3ff561d7e9d884f99c824f728703fe299d463e2d",
+        "en": {
+          "category": "Desktop library · Graphical interface",
+          "tagline": "Give a folder of ebooks a searchable catalog.",
+          "use": "Import books, edit title and author metadata, view them locally, and convert supported formats for a reading device. The catalog keeps multiple formats of a title together.",
+          "why": "Start here when inconsistent author names or filenames make a collection hard to search.",
+          "help": [
+            "Give the volumes of a series a common series name and a reading order.",
+            "Keep an EPUB original alongside a converted copy for a second device."
+          ],
+          "fit": "Free GPL desktop application for Windows, macOS and Linux. Allow disk space for the library and converted copies. Conversion of a fixed-layout PDF may scramble columns or footnotes. A single book that already opens well needs little catalog work.",
+          "try": "Set aside 20 minutes. Import two public-domain EPUBs into a small library, standardize the author spelling and add a tag. Search by that tag, then open each result to check that its title matches the cover.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 3ff561d7 has a commit date of 2026-11-25 UTC."
+        },
+        "zh": {
+          "category": "桌面书库 · 图形界面",
+          "tagline": "把散放在文件夹里的电子书整理成可检索的书库。",
+          "use": "可导入书籍、编辑书名与作者、在本地阅读，并为阅读设备转换受支持的格式。同一本书的多种格式可归在一条书目下。",
+          "why": "如果同一作者有多种写法，或文件名很难辨认，先从整理书目入手。",
+          "help": [
+            "给同一套书填写统一的丛书名和卷号，按顺序阅读。",
+            "为另一台设备转换一份副本，并与 EPUB 原件放在同一条书目下。"
+          ],
+          "fit": "免费的 GPL 桌面应用，支持 Windows、macOS 和 Linux。书库和转换副本都需要磁盘空间。固定版式 PDF 转换后可能出现分栏或脚注错位；如果只读一本且已能正常打开，建库的收益有限。",
+          "try": "预留 20 分钟。在小型书库中导入两本公版 EPUB，统一作者名的写法并加标签。按标签检索，打开两条结果，核对书名与封面是否一致。",
+          "maintenance": "核查时仓库未归档，默认分支提交 3ff561d7 的提交日期为 2026-11-25（UTC）。"
+        }
+      },
+      {
+        "name": "KOReader",
+        "repo": "koreader/koreader",
+        "stars": 31317,
+        "approx": false,
+        "evidence": "https://github.com/koreader/koreader/commit/25183e27bcb3f14f1bd7e36c23196894da2cdc2c",
+        "en": {
+          "category": "E-ink reading · Device-specific setup",
+          "tagline": "Make a dense page easier to read on a small screen.",
+          "use": "KOReader adjusts margins, line spacing and contrast. It also offers zoom for fixed pages and reflow for PDF or DjVu scans. Its paginated menus are designed for e-ink screens.",
+          "why": "It is worth trying when wide margins or small fixed text make you pan across every line.",
+          "help": [
+            "Adjust spacing in an EPUB until a paragraph is comfortable to follow on your device.",
+            "Compare zoom and reflow on a two-column public-domain scan and check the reading order."
+          ],
+          "fit": "Free AGPL software with builds for Android, Linux and selected e-readers. Installation depends on the exact model and firmware. Tables, illustrations and columns can lose context during reflow. Android is a convenient trial platform if the e-reader needs extra setup.",
+          "try": "Allow 15–20 minutes on a supported device with the reader ready. Open one scanned page, fit its content to the width, then turn reflow on. Read a paragraph across a column break and choose the mode that preserves the intended order.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 25183e27 has a commit date of 2026-11-24 UTC."
+        },
+        "zh": {
+          "category": "墨水屏阅读 · 需按设备配置",
+          "tagline": "让排版密集的页面在小屏幕上更易读。",
+          "use": "可调整页边距、行距和对比度。固定页面可以缩放，PDF 或 DjVu 扫描件可尝试重排；分页菜单针对墨水屏设计。",
+          "why": "如果页面留白太多，或字号固定导致每行都要横向移动，可以用它试读。",
+          "help": [
+            "在自己的设备上调整 EPUB 行距，直到能舒适地逐段阅读。",
+            "对双栏公版扫描件分别试用缩放和重排，检查阅读顺序。"
+          ],
+          "fit": "免费的 AGPL 软件，支持 Android、Linux 与部分电子阅读器。安装方式取决于具体型号和固件。重排时表格、插图和分栏可能失去上下文；若阅读器配置繁琐，可先在 Android 上试用。",
+          "try": "在已装好软件的受支持设备上预留 15–20 分钟。打开一页扫描件，先让内容适应屏宽，再开启重排。读一段跨栏文字，选择能保持原文顺序的模式。",
+          "maintenance": "核查时仓库未归档，默认分支提交 25183e27 的提交日期为 2026-11-24（UTC）。"
+        }
+      },
+      {
+        "name": "Koodo Reader",
+        "repo": "koodo-reader/koodo-reader",
+        "stars": 28972,
+        "approx": false,
+        "evidence": "https://github.com/koodo-reader/koodo-reader/commit/3f8726f874c7f34779b66f5eca7b53f6f1feafcc",
+        "en": {
+          "category": "Reading notes · Graphical interface",
+          "tagline": "Take highlighted passages and your own comments out of the reader.",
+          "use": "Koodo imports EPUB, PDF and other formats, and supports bookmarks, highlighting and notes. Export options include Markdown and CSV, which let you work with excerpts in a text editor or spreadsheet.",
+          "why": "Choose it when the deliverable is a reading log you can keep working on after closing the book.",
+          "help": [
+            "Collect passages from one chapter in Markdown for a discussion outline.",
+            "Open exported notes in a spreadsheet and group comments by theme."
+          ],
+          "fit": "Windows, macOS, Linux, Android, iOS and web versions are available. Basic reading has a free tier. The official plan comparison lists a 20-book free mobile limit and cross-device library sync under Pro. Keep space for imports and exports. Check the plan if you intend to carry a large mobile library. See https://www.koodoreader.com/en/pricing .",
+          "try": "Allow 15 minutes. Import a sample EPUB, highlight two passages and add your own question to one. Export the notes as Markdown and check whether you can distinguish each excerpt from your comment without reopening the book.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 3f8726f8 has a commit date of 2026-11-25 UTC."
+        },
+        "zh": {
+          "category": "阅读笔记 · 图形界面",
+          "tagline": "把书中的高亮段落和自己的评论一起导出。",
+          "use": "可导入 EPUB、PDF 等格式，添加书签、高亮和笔记。导出格式包括 Markdown 和 CSV，可在文本编辑器或表格中继续处理摘录。",
+          "why": "如果读完还要整理一份读书记录，可优先试它的导出功能。",
+          "help": [
+            "将一章的摘录汇集成 Markdown，用于整理讨论提纲。",
+            "用表格打开导出的笔记，再按主题归类评论。"
+          ],
+          "fit": "提供 Windows、macOS、Linux、Android、iOS 和网页版本。基础阅读有免费档。官方方案表列出免费移动端最多 20 本，跨设备书库同步属于 Pro。导入与导出需要存储空间；打算在手机上保存大量书籍时，应先核对方案。见 https://www.koodoreader.com/en/pricing 。",
+          "try": "预留 15 分钟。导入一本示例 EPUB，高亮两段文字，给其中一段写下自己的问题。将笔记导出为 Markdown，检查能否在不重新翻书的情况下区分摘录和评论。",
+          "maintenance": "核查时仓库未归档，默认分支提交 3f8726f8 的提交日期为 2026-11-25（UTC）。"
+        }
+      },
+      {
+        "name": "Readest",
+        "repo": "readest/readest",
+        "stars": 26665,
+        "approx": false,
+        "evidence": "https://github.com/readest/readest/commit/f30a6d91a96d4305564fbe0dcf7596256c3b9564",
+        "en": {
+          "category": "Parallel reading · Graphical interface",
+          "tagline": "Read a passage beside its translation or commentary.",
+          "use": "Parallel Read displays two documents in separate panes. Search, bookmarks and highlights help locate corresponding passages even when editions use different pagination.",
+          "why": "It suits a comparison in which you frequently return to the exact wording of a second text.",
+          "help": [
+            "Compare two public-domain translations of the same paragraph.",
+            "Keep a commentary open beside the primary text and mark a point of disagreement."
+          ],
+          "fit": "The AGPL reader runs on desktop, mobile and the web. Two panes benefit from a wide screen. Local reading is free. The free plan lists 500 MB of cloud sync storage, with larger quotas on paid plans. See https://readest.com/pricing .",
+          "try": "Allow 20 minutes on a laptop. Open two editions side by side, find the same paragraph by its opening words and highlight one difference in each. Check whether both texts remain readable at your preferred font size.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit f30a6d91 has a commit date of 2026-11-25 UTC."
+        },
+        "zh": {
+          "category": "对照阅读 · 图形界面",
+          "tagline": "把原文与译文或评注并排阅读。",
+          "use": "并排阅读功能可在两个窗格中显示两份文档。即使版本页码不同，也可以用搜索、书签和高亮找到对应段落。",
+          "why": "如果阅读时频繁切换到另一份文本核对措辞，双栏能让两段原文同时可见。",
+          "help": [
+            "比较两份公版译文对同一段落的译法。",
+            "将评注与原文并列，标出两者观点不同之处。"
+          ],
+          "fit": "这款 AGPL 阅读器可在桌面、移动设备和网页上使用，宽屏更适合并排显示。可免费本地阅读；免费方案列有 500 MB 云同步空间，付费方案提供更高配额。见 https://readest.com/pricing 。",
+          "try": "在笔记本电脑上预留 20 分钟。并排打开两个版本，根据段首文字定位同一段落，分别标出一处差异。调到平常使用的字号，检查两个窗格能否舒适阅读。",
+          "maintenance": "核查时仓库未归档，默认分支提交 f30a6d91 的提交日期为 2026-11-25（UTC）。"
+        }
+      },
+      {
+        "name": "Calibre-Web",
+        "repo": "janeczku/calibre-web",
+        "stars": 18618,
+        "approx": false,
+        "evidence": "https://github.com/janeczku/calibre-web/commit/79d35711d73491881ecd2b13ded02c277543dbcb",
+        "en": {
+          "category": "Self-hosted catalog · Server setup",
+          "tagline": "Browse an existing calibre library from a second device.",
+          "use": "Calibre-Web reads a valid calibre database and exposes a searchable catalog, browser reader and OPDS feed. Per-user permissions control actions such as downloading a book.",
+          "why": "Consider it when several readers need access to the same collection and someone can maintain the host.",
+          "help": [
+            "Browse a household library on a tablet while its files stay on the home server.",
+            "Let an OPDS-compatible reading app find a title from a shared catalog."
+          ],
+          "fit": "GPL-licensed web application. It needs a running host with access to the book files and metadata.db, plus a browser or compatible client. Budget for storage, backups and uptime. Optional format conversion needs calibre binaries. A single offline reader usually has little use for this setup.",
+          "try": "Allow 25–30 minutes with an available host and a two-book test library. Follow the local quick start, point it at the test library and change the initial administrator password. Create a reader account and verify which of the two titles it can browse and download.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 79d35711 has a commit date of 2026-11-22 UTC."
+        },
+        "zh": {
+          "category": "自托管书目 · 需配置服务器",
+          "tagline": "在另一台设备上浏览已有的 calibre 书库。",
+          "use": "Calibre-Web 读取有效的 calibre 数据库，提供可搜索的书目、网页阅读器和 OPDS 馈送。可以按用户设置下载等操作权限。",
+          "why": "当多人要访问同一收藏，且有人能维护主机时，值得考虑。",
+          "help": [
+            "文件留在家庭服务器上，用平板浏览家里的书目。",
+            "让支持 OPDS 的阅读应用直接在共享目录里找到书籍。"
+          ],
+          "fit": "GPL 许可的网页应用。需要可读取书籍文件和 metadata.db 的常开主机，以及浏览器或兼容客户端。需考虑存储、备份和主机在线时间。可选的格式转换需要 calibre 程序。仅在一台离线设备上阅读时，这种部署的用途有限。",
+          "try": "在已有主机和含两本书的测试书库上预留 25–30 分钟。按本地快速入门配置测试书库，更改初始管理员密码。创建读者账号，实际查看它能浏览和下载哪几本书。",
+          "maintenance": "核查时仓库未归档，默认分支提交 79d35711 的提交日期为 2026-11-22（UTC）。"
+        }
+      }
+    ]
   }
 ];
