@@ -5189,5 +5189,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-26",
+    "checkedAt": "2026-11-26 10:27–10:29",
+    "pick": {
+      "en": "For a workshop with optional explanations, try a vertical slide stack in reveal.js. Choose Slidev when the code example changes with the lesson. A terminal talk can use presenterm for the slides and asciinema for a rehearsed command sequence. Choose impress.js when moving between locations on an overview helps explain their relationship.",
+      "zh": "有备用讲解页的课程可用 reveal.js 的纵向页组；代码示例经常随课程更新时可用 Slidev。终端课程可用 presenterm 放映讲稿，用 asciinema 回放排练好的命令序列。若要通过全景和局部之间的移动解释位置关系，可选 impress.js。"
+    },
+    "note": {
+      "en": "Counts are exact GitHub API snapshots for these five repositories. Four exceed 10,000 stars. The archive has no previous-day counts for them, so daily gains are unavailable. All five are new to the preceding 30 days of this archive. Features and commit dates come from official sources. The use cases and trial times are editorial suggestions. No recommended project was installed or run.",
+      "zh": "星标为本次核查时 GitHub API 对五个入选仓库的精确快照，其中四款超过一万星。缺少这些项目前一天的快照，无法计算日增量。五款在过去 30 天的日报中均未收录。功能和提交日期依据官方资料；场景和试用时长为编辑建议。本次未安装或运行推荐项目。"
+    },
+    "projects": [
+      {
+        "name": "reveal.js",
+        "repo": "hakimel/reveal.js",
+        "stars": 72635,
+        "approx": false,
+        "evidence": "https://github.com/hakimel/reveal.js/commit/e240e175232fa2de660a02bc0d7bf5f655b159bb",
+        "en": {
+          "category": "Browser slides · Basic HTML",
+          "tagline": "Keep an optional explanation one keystroke away.",
+          "use": "Nested HTML sections form vertical slide stacks. Left and right move through the main topics, while up and down open supporting slides. Speaker notes can hold cues for each topic.",
+          "why": "A speaker can prepare a short route through a talk and still answer a detailed question without hunting through an appendix.",
+          "help": [
+            "Place a worked example directly below the formula it explains.",
+            "Keep a measurement method under a results slide for questions about how the number was obtained."
+          ],
+          "fit": "MIT-licensed HTML framework for modern browsers. Local slides can use bundled assets. Budget time for HTML edits and rehearsal of keyboard navigation. PDF handouts flatten the interactive route into pages.",
+          "try": "Allow 20 minutes. Make three top-level slides and put one detail slide below the second. Rehearse once using only the right arrow, then repeat and visit the detail. Check which slide appears when you continue right.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit e240e175 has a commit date of 2026-09-30 UTC."
+        },
+        "zh": {
+          "category": "浏览器幻灯片 · 需 HTML 基础",
+          "tagline": "让备用讲解页离主线只差一次按键。",
+          "use": "嵌套的 HTML section 可以组成纵向页组。左右键切换主题，上下键查看补充页；每个主题的讲解提示可以写入演讲者备注。",
+          "why": "讲者可以先按短路线讲完，也能在被追问时就地展示细节，省去翻找附录。",
+          "help": [
+            "将完整算例放在对应公式正下方。",
+            "在结果页下方放测量方法，方便回答数字从何而来。"
+          ],
+          "fit": "采用 MIT 许可，运行于现代浏览器，本地放映可以使用随稿保存的资源。需预留时间修改 HTML 并排练按键操作。导出 PDF 后，交互路线会变成逐页阅读。",
+          "try": "预留 20 分钟。建三个主线页，在第二页下方加一页细节。先只用右键讲一遍，再排练一次并进入补充页，核对按右键后会到哪一页。",
+          "maintenance": "核查时仓库未归档，默认分支提交 e240e175 的提交日期为 2026-09-30（UTC）。"
+        }
+      },
+      {
+        "name": "Slidev",
+        "repo": "slidevjs/slidev",
+        "stars": 49639,
+        "approx": false,
+        "evidence": "https://github.com/slidevjs/slidev/commit/437f139ccd4c8482a193b217922e7800a5b3baec",
+        "en": {
+          "category": "Technical talks · Markdown and Node.js",
+          "tagline": "Explain a code change in slides you can review alongside the code.",
+          "use": "Write slides in Markdown with highlighted code blocks. The Vite preview updates as you edit, and Vue components can add interaction where an example needs it.",
+          "why": "A small change to a code example is easy to locate in a text diff before a workshop.",
+          "help": [
+            "Step through two versions of a function while highlighting the changed lines.",
+            "Let learners vary an input in a Vue component and inspect the result on the slide."
+          ],
+          "fit": "MIT-licensed. Use the online starter or a local Node.js environment meeting the README requirements. Themes and components add dependencies. Interactive controls need the browser version during a talk, so inspect static exports separately.",
+          "try": "Allow 20 minutes. Open the official starter, make a two-slide explanation of a small function and highlight the line that changes its result. Edit that line and check both the browser preview and the exported page for readability.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 437f139c has a commit date of 2026-11-05 UTC."
+        },
+        "zh": {
+          "category": "技术演讲 · 需 Markdown 和 Node.js 基础",
+          "tagline": "把代码改动写成可以随源码一起审阅的讲稿。",
+          "use": "用 Markdown 和高亮代码块编写幻灯片。编辑时 Vite 预览随之更新；示例需要交互时，可嵌入 Vue 组件。",
+          "why": "开课前若改动了某个代码示例，同事可以在文本差异中直接找到它。",
+          "help": [
+            "逐步展示函数的两个版本，并突出改动的行。",
+            "让学员在幻灯片内的 Vue 组件中改动输入并观察结果。"
+          ],
+          "fit": "采用 MIT 许可，可用在线起步项目，或使用符合 README 要求的本地 Node.js 环境。主题和组件会引入依赖。现场使用交互控件需要浏览器版本，静态导出稿需单独核对。",
+          "try": "预留 20 分钟。打开官方起步项目，用两页解释一个小函数，标出影响结果的那行代码。修改这一行，在浏览器预览和导出页中分别检查字体与换行。",
+          "maintenance": "核查时仓库未归档，默认分支提交 437f139c 的提交日期为 2026-11-05（UTC）。"
+        }
+      },
+      {
+        "name": "asciinema",
+        "repo": "asciinema/asciinema",
+        "stars": 17989,
+        "approx": false,
+        "evidence": "https://github.com/asciinema/asciinema/commit/e2c66002a208bfb33f218461967b4cce79cbacbc",
+        "en": {
+          "category": "Terminal recording · Basic shell skills",
+          "tagline": "Replay a command-line demonstration at the audience’s pace.",
+          "use": "The CLI records terminal output and timing into an asciicast file. The player supports pausing, changing speed and limiting idle time. A separate web player can embed the recording in a page.",
+          "why": "A rehearsal becomes a reusable teaching example when rebuilding the same terminal state during a talk would take too long.",
+          "help": [
+            "Pause a recorded test run at the first failing assertion and ask the audience to interpret it.",
+            "Replay a short text-processing pipeline and skip the idle time between commands."
+          ],
+          "fit": "GPL-3.0 CLI for GNU/Linux, macOS and FreeBSD. Local recording and playback need a terminal and storage for the cast file. Graphical application windows require another capture method. Anything printed to the terminal becomes part of the recording.",
+          "try": "Allow 15 minutes in a sample directory. Run `asciinema rec demo.cast`, display a short sample text file and count its lines, then exit the recording shell. Replay with `asciinema play demo.cast` and pause where the count appears.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit e2c66002 has a commit date of 2026-11-17 UTC."
+        },
+        "zh": {
+          "category": "终端录制 · 需基础命令行操作",
+          "tagline": "按听众能跟上的速度重放命令行演示。",
+          "use": "命令行工具把终端输出和时间信息记入 asciicast 文件，可暂停、变速和缩短空闲等待。也可借助独立的网页播放器嵌入页面。",
+          "why": "如果现场重新准备终端状态很耗时，可将排练录成可重复使用的教学示例。",
+          "help": [
+            "在首个失败断言处暂停录好的测试过程，让听众解释输出。",
+            "重放一段文本处理流程，跳过输入命令之间的等待。"
+          ],
+          "fit": "GPL-3.0 命令行工具，支持 GNU/Linux、macOS 和 FreeBSD。本地录制和回放需要终端及保存文件的空间。图形窗口需另选录制方式；终端显示的文字会进入录制文件。",
+          "try": "在示例目录中预留 15 分钟。运行 `asciinema rec demo.cast`，显示一个示例文本并统计行数，然后退出录制用的 shell。用 `asciinema play demo.cast` 回放，在行数出现处暂停。",
+          "maintenance": "核查时仓库未归档，默认分支提交 e2c66002 的提交日期为 2026-11-17（UTC）。"
+        }
+      },
+      {
+        "name": "presenterm",
+        "repo": "mfontanini/presenterm",
+        "stars": 9003,
+        "approx": false,
+        "evidence": "https://github.com/mfontanini/presenterm/commit/aa667f91352e22e3376e1ed601f9be8559e0e1af",
+        "en": {
+          "category": "Terminal slides · Markdown and a terminal",
+          "tagline": "Present a Markdown deck directly in a terminal window.",
+          "use": "The presenter reads Markdown, highlights code and can reveal selected lines in stages. Changes to the source can reload the presentation during rehearsal.",
+          "why": "Included below the usual star threshold because it lets a terminal workshop use the same window dimensions and typography for both slides and shell examples.",
+          "help": [
+            "Walk through a configuration file a few lines at a time.",
+            "Rehearse a workshop at the terminal width available on the classroom projector."
+          ],
+          "fit": "BSD-2-Clause software with packages for multiple desktop platforms, including Windows. Text and code need a terminal. Images, font sizing and animations depend on terminal capabilities, so a graphics-heavy talk needs a rehearsal on the actual display.",
+          "try": "Allow 15–20 minutes. Adapt the project’s demo Markdown into two short slides with one code block. Open the deck at projector width, increase the terminal font and shorten any line that wraps away from its explanation.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit aa667f91 has a commit date of 2026-11-24 UTC."
+        },
+        "zh": {
+          "category": "终端幻灯片 · 需 Markdown 和终端基础",
+          "tagline": "直接在终端窗口中放映 Markdown 讲稿。",
+          "use": "读取 Markdown 后可为代码着色，分步强调选中的行。排练时改动源文件，可自动重新载入讲稿。",
+          "why": "虽然低于通常的一万星门槛，仍收录它，因为终端课程可以给讲稿和命令行示例使用相同的窗口尺寸及字体。",
+          "help": [
+            "讲配置文件时，每次只突出几行。",
+            "按教室投影能显示的终端宽度排练，提前发现过长的行。"
+          ],
+          "fit": "采用 BSD-2-Clause 许可，为包括 Windows 在内的多个桌面平台提供安装包。展示文本和代码需要终端。图片、字号调整和动画取决于终端能力，图片较多的讲稿应在实际显示环境中排练。",
+          "try": "预留 15–20 分钟。将项目示例 Markdown 改成含一个代码块的两页讲稿。按投影宽度打开，放大终端字体，缩短那些换行后脱离说明的代码行。",
+          "maintenance": "核查时仓库未归档，默认分支提交 aa667f91 的提交日期为 2026-11-24（UTC）。"
+        }
+      },
+      {
+        "name": "impress.js",
+        "repo": "impress/impress.js",
+        "stars": 38154,
+        "approx": false,
+        "evidence": "https://github.com/impress/impress.js/commit/b44b9694b41fd2c076c3d1ad7a0c3e0cea9eb262",
+        "en": {
+          "category": "Spatial presentations · HTML and CSS",
+          "tagline": "Move from a map of an idea into one of its details.",
+          "use": "Place HTML steps at chosen coordinates and scales. CSS transforms move the viewport between those steps, so the same layout can show a close-up and an overview.",
+          "why": "It suits explanations in which relative position carries meaning, such as a floor plan with three stations.",
+          "help": [
+            "Follow a visitor’s route through a small exhibition, zooming in on each stop.",
+            "Return to an overview after exploring one subsystem so the audience can locate it again."
+          ],
+          "fit": "MIT-licensed framework for modern browsers. You supply HTML, CSS and the layout coordinates. Long transitions or frequent rotation can make text harder to follow. A linear talk with little spatial information gains less from the setup.",
+          "try": "Allow 25 minutes. Adapt the official example into an overview and two close-ups of adjacent stations. Remove rotation, set the destination labels clearly, and check whether a viewer can point to both stops when you return to the overview.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit b44b9694 has a commit date of 2026-07-23 UTC."
+        },
+        "zh": {
+          "category": "空间布局演示 · 需 HTML 和 CSS 基础",
+          "tagline": "从全局示意图进入某个局部细节。",
+          "use": "为 HTML 演示步骤指定坐标与缩放比例，通过 CSS 变换移动视口，同一布局即可展示局部与全景。",
+          "why": "当位置关系本身有意义时更适合，例如讲解平面图中的三个站点。",
+          "help": [
+            "沿小型展览的参观路线逐站放大讲解。",
+            "讲完一个子系统后回到全景，让听众确认它在整体中的位置。"
+          ],
+          "fit": "采用 MIT 许可，运行于现代浏览器。需自行编写 HTML、CSS 并设置坐标。过长的转场或频繁旋转会增加阅读负担；空间关系较少的线性讲稿从这套布局中获益有限。",
+          "try": "预留 25 分钟。把官方示例改成一张全景和两个相邻站点的特写。先移除旋转，标清站名，回到全景时请观众指出两个站点，检验位置关系是否清楚。",
+          "maintenance": "核查时仓库未归档，默认分支提交 b44b9694 的提交日期为 2026-07-23（UTC）。"
+        }
+      }
+    ]
   }
 ];
