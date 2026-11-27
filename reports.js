@@ -5368,5 +5368,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "checkedAt": "2026-11-27 20:09–20:10",
+    "pick": {
+      "en": "Start with the output you need. OCRmyPDF keeps a scanned document searchable in a PDF reader. Tesseract extracts text from a page image, and Tesseract.js brings that engine into a browser. EasyOCR returns locations for labels in a photo. For a table, try PaddleOCR and verify that values land under the correct headings.",
+      "zh": "先看需要交付什么。想在 PDF 阅读器中搜索原扫描件，可用 OCRmyPDF；只需从单页图片提取文字，可用 Tesseract，网页内识别可用 Tesseract.js。照片里有多块标签时，EasyOCR 可返回各自的位置。表格可试 PaddleOCR，重点核对数值是否落在正确表头下。"
+    },
+    "note": {
+      "en": "Counts are exact GitHub API snapshots for the five selected repositories. All exceed 10,000 stars and are new to the preceding 30 days of this archive. No previous-day counts were recorded for them, so daily gains are unavailable. Features and maintenance dates follow official project sources. Use cases and trial times are editorial suggestions for a prepared environment. This review involved no installation or accuracy benchmarking.",
+      "zh": "星标为核查时 GitHub API 对五个入选仓库的精确快照。五款均超过一万星，过去 30 天的日报中均未收录。缺少这些仓库前一天的快照，无法计算日增量。功能和维护日期依据官方资料，应用场景及试用时长为针对已配置环境的编辑建议。本次未安装推荐软件或实测识别准确率。"
+    },
+    "projects": [
+      {
+        "name": "Tesseract",
+        "repo": "tesseract-ocr/tesseract",
+        "stars": 77681,
+        "approx": false,
+        "evidence": "https://github.com/tesseract-ocr/tesseract/commit/4292f6890aa86ef64eba32090358f40f69dd6d28",
+        "en": {
+          "category": "Local OCR engine · Basic shell skills",
+          "tagline": "Extract the printed words from a page image.",
+          "use": "The command-line engine reads images such as PNG, JPEG and TIFF using language-specific data. It can write plain text for editing or TSV containing word positions and confidence values.",
+          "why": "It gives you a simple baseline when you know the page language and can check the transcription against the original.",
+          "help": [
+            "Recover a quotation from a clear scan and check its punctuation before citing it.",
+            "Compare word positions against a catalog card to locate a misread shelf number."
+          ],
+          "fit": "Apache-2.0 engine available for Linux, macOS and Windows. Local CPU processing needs the matching language data. Small print, skew and multi-column layouts can change the result. A PDF input requires a separate page-rendering step.",
+          "try": "Allow 15 minutes with English language data installed. Run `tesseract page.png stdout -l eng` on a printed sample. Compare three lines with the scan, then crop one troublesome line and check whether the same characters are still wrong.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 4292f689 has a commit date of 2026-11-26 UTC."
+        },
+        "zh": {
+          "category": "本地文字识别引擎 · 需基础命令行操作",
+          "tagline": "从单页图片中提取印刷文字。",
+          "use": "命令行引擎使用相应语言的数据文件读取 PNG、JPEG、TIFF 等图像。可输出便于编辑的纯文本，也可输出含词语位置和置信度的 TSV。",
+          "why": "如果已知页面语言，又能对照原件校读，它适合作为第一次识别的基准。",
+          "help": [
+            "从清晰扫描页中提取引文，引用前对照原件核对标点。",
+            "对照目录卡上的文字位置，找到误读的索书号。"
+          ],
+          "fit": "采用 Apache-2.0 许可，可在 Linux、macOS 和 Windows 上运行。本地 CPU 识别需要对应语言数据。小字号、倾斜和分栏会影响结果；输入为 PDF 时需先将页面渲染成图像。",
+          "try": "安装好英文语言数据后预留 15 分钟。对印刷样图运行 `tesseract page.png stdout -l eng`，逐字核对三行。再裁出一行识别不佳的文字，检查错误是否仍出现在相同字符上。",
+          "maintenance": "核查时仓库未归档。默认分支提交 4292f689 的提交日期为 2026-11-26（UTC）。"
+        }
+      },
+      {
+        "name": "PaddleOCR",
+        "repo": "PaddlePaddle/PaddleOCR",
+        "stars": 93363,
+        "approx": false,
+        "evidence": "https://github.com/PaddlePaddle/PaddleOCR/commit/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+        "en": {
+          "category": "Document parsing · Python environment",
+          "tagline": "Keep track of where text and tables belong on a complex page.",
+          "use": "The PP-StructureV3 pipeline analyzes layout and exports structured results such as Markdown or JSON. Its coordinates can help trace a recognized table cell or text region back to the page.",
+          "why": "Use it when a correct number would still be misleading if assigned to the wrong row or column.",
+          "help": [
+            "Extract a timetable and verify that each departure is paired with its destination.",
+            "Convert a two-column report into reading order and check where a caption appears."
+          ],
+          "fit": "Apache-2.0 toolkit. Choose a supported Python environment, inference backend and model for your hardware. Downloads, memory and processing time depend on the pipeline. A full layout model adds setup for a page containing only one paragraph.",
+          "try": "Allow 25–30 minutes once the runtime and weights are ready. Process a single public timetable with PP-StructureV3, inspect its exported table, and trace three cells including one beside a merged heading back to the scan.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit dab3fe35 has a commit date of 2026-09-16 UTC."
+        },
+        "zh": {
+          "category": "文档解析 · 需 Python 环境",
+          "tagline": "识别复杂页面时保留文字与表格的位置关系。",
+          "use": "PP-StructureV3 流程分析页面布局，可导出 Markdown 或 JSON 等结构化结果。利用坐标可以在原页中定位识别出的单元格或文本区域。",
+          "why": "如果数字本身识别正确、放错行列却会改变含义，就值得试用版面解析。",
+          "help": [
+            "提取时刻表，核对每个发车时间与目的地是否一一对应。",
+            "整理双栏报告的阅读顺序，并检查图注被放在了哪段文字附近。"
+          ],
+          "fit": "工具包采用 Apache-2.0 许可，需选择与设备兼容的 Python 环境、推理后端和模型。下载量、内存及耗时取决于所选流程。只有一段文字的页面使用完整版面模型会增加配置工作。",
+          "try": "准备好运行环境和模型后预留 25–30 分钟。用 PP-StructureV3 处理一页公开时刻表，检查导出表格，再回到原图核对三个单元格，其中一个选在合并表头旁边。",
+          "maintenance": "核查时仓库未归档。默认分支提交 dab3fe35 的提交日期为 2026-09-16（UTC）。"
+        }
+      },
+      {
+        "name": "EasyOCR",
+        "repo": "JaidedAI/EasyOCR",
+        "stars": 30176,
+        "approx": false,
+        "evidence": "https://github.com/JaidedAI/EasyOCR/commit/2f77e2e8125d666af859a57d49014731ecbf40c6",
+        "en": {
+          "category": "Image text detection · Basic Python",
+          "tagline": "Find text on a photo and keep the box around each result.",
+          "use": "The Python reader returns a bounding box, recognized string and confidence score for each detection. A reader can load compatible languages together, including Simplified Chinese and English.",
+          "why": "The boxes help a reviewer see which sign or printed label produced a questionable result.",
+          "help": [
+            "Transcribe bilingual exhibit labels while keeping each label tied to its position.",
+            "Find a misread digit on a shelf label by comparing its box with the photograph."
+          ],
+          "fit": "Apache-2.0 Python package using PyTorch. A CPU-only reader is available. Model weights need local storage and may download on first use. Language combinations are constrained, and a high score still calls for checking consequential digits.",
+          "try": "Allow 20 minutes in a prepared environment. Create `easyocr.Reader(['ch_sim','en'], gpu=False)` and call `readtext` on a photo with three printed labels. Match each returned box to a label and compare all digits, including those in high-scoring results.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 2f77e2e8 has a commit date of 2026-11-13 UTC."
+        },
+        "zh": {
+          "category": "图片文字检测 · 需 Python 基础",
+          "tagline": "从照片中找出文字，并保留每条结果所在的位置。",
+          "use": "Python 阅读器为每条检测结果返回边界框、识别文字与置信分数。可同时加载兼容的语言，例如简体中文和英文。",
+          "why": "复核时可以借助边界框找到产生可疑结果的标牌或标签。",
+          "help": [
+            "转录双语展签，并保留每块展签对应的图像位置。",
+            "对照货架照片与检测框，定位标签上误读的一位数字。"
+          ],
+          "fit": "采用 Apache-2.0 许可的 Python 包，依赖 PyTorch，可仅用 CPU 运行。模型权重占用本地空间，首次使用可能需要下载。语言组合有兼容性要求，重要数字即使得分高也应核对。",
+          "try": "在已配置环境中预留 20 分钟。创建 `easyocr.Reader(['ch_sim','en'], gpu=False)`，对含三块印刷标签的照片调用 `readtext`。逐个匹配边界框和标签，核对全部数字，包括得分高的结果。",
+          "maintenance": "核查时仓库未归档。默认分支提交 2f77e2e8 的提交日期为 2026-11-13（UTC）。"
+        }
+      },
+      {
+        "name": "OCRmyPDF",
+        "repo": "ocrmypdf/OCRmyPDF",
+        "stars": 35415,
+        "approx": false,
+        "evidence": "https://github.com/ocrmypdf/OCRmyPDF/commit/2a34c21ee233fde8d5efef845f9afc34ef3aa3c1",
+        "en": {
+          "category": "Searchable PDF · Basic shell skills",
+          "tagline": "Search a scan while keeping its page image available for inspection.",
+          "use": "The CLI adds recognized text underneath scanned pages. Options include page rotation and deskewing. The output can be opened in a PDF reader for searching and copying.",
+          "why": "Choose it when the reader needs to jump from a search result directly to the original page.",
+          "help": [
+            "Find a surname across a scanned index and verify its spelling on the page.",
+            "Make a scanned meeting packet searchable while retaining its figures and page sequence."
+          ],
+          "fit": "MPL-2.0 software for a local command-line environment with the required OCR and PDF dependencies. Large documents need CPU time and temporary disk space. Search quality depends on recognition, and image cleanup can affect the visible page.",
+          "try": "Allow 15–20 minutes with dependencies ready. Run `ocrmypdf -l eng scan.pdf searchable.pdf` on a two-page English image-only sample. Search for a distinctive word on each page, copy one line, and compare its spelling with the scan.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 2a34c21e has a commit date of 2026-11-27 UTC."
+        },
+        "zh": {
+          "category": "可搜索 PDF · 需基础命令行操作",
+          "tagline": "让扫描件可以全文检索，同时保留可供核对的页面图像。",
+          "use": "命令行工具在扫描页下方加入识别文字，可选择自动旋转或纠偏。输出文件能在 PDF 阅读器中搜索和复制文字。",
+          "why": "如果希望从搜索结果直接跳到原始页面，这种交付形式很合适。",
+          "help": [
+            "在扫描索引中检索姓氏，再看原页核实拼写。",
+            "给扫描版会议资料增加检索功能，同时保留图表和页序。"
+          ],
+          "fit": "本地命令行软件采用 MPL-2.0 许可，需配齐文字识别与 PDF 处理依赖。大文件需要 CPU 时间和临时磁盘空间。检索效果取决于识别质量，图像清理也可能改变可见页面。",
+          "try": "依赖就绪后预留 15–20 分钟。对两页纯图片英文样本运行 `ocrmypdf -l eng scan.pdf searchable.pdf`。在每页各查一个有辨识度的词，复制一行并与原图核对拼写。",
+          "maintenance": "核查时仓库未归档。默认分支提交 2a34c21e 的提交日期为 2026-11-27（UTC）。"
+        }
+      },
+      {
+        "name": "Tesseract.js",
+        "repo": "naptha/tesseract.js",
+        "stars": 38856,
+        "approx": false,
+        "evidence": "https://github.com/naptha/tesseract.js/commit/a1ca80d9e31c34512d0ded75ff8821ddcf3f2f91",
+        "en": {
+          "category": "Browser OCR · Basic JavaScript",
+          "tagline": "Let someone read text from an image inside a web page.",
+          "use": "The library wraps Tesseract through WebAssembly for browsers and Node.js. Create a worker for a language, recognize multiple images with it, and terminate it after the last one.",
+          "why": "It fits a small web tool where the user should be able to correct the transcription immediately after choosing an image.",
+          "help": [
+            "Put an editable transcription beside an uploaded page image for proofreading.",
+            "Read several cropped labels in sequence and keep the same language worker warm."
+          ],
+          "fit": "Apache-2.0 library. The browser needs memory for the worker and access to the engine and language assets. Offline use requires making those assets available locally. PDF pages must first be rendered as images. Recognition uses the underlying Tesseract model.",
+          "try": "Allow 20–25 minutes. Adapt the official `createWorker('eng')` example to recognize two sample PNGs in sequence. Display both strings with their filenames, verify which output belongs to which image, then terminate the worker.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit a1ca80d9 has a commit date of 2026-05-17 UTC."
+        },
+        "zh": {
+          "category": "浏览器文字识别 · 需 JavaScript 基础",
+          "tagline": "让读者直接在网页里识别图片文字。",
+          "use": "通过 WebAssembly 封装 Tesseract，可在浏览器和 Node.js 中使用。先按语言创建 worker，复用它识别多张图片，完成后释放。",
+          "why": "适合做成小型网页工具，让用户选图后可以当场修正识别结果。",
+          "help": [
+            "在选入网页的页面图片旁放可编辑的转录文字，方便校读。",
+            "连续识别多张标签裁图，并复用已经加载好语言数据的 worker。"
+          ],
+          "fit": "采用 Apache-2.0 许可。浏览器需为 worker 预留内存，并能读取引擎和语言资源；离线使用需先在本地备齐资源。PDF 页面须先渲染为图像。识别使用底层 Tesseract 模型。",
+          "try": "预留 20–25 分钟。修改官方 `createWorker('eng')` 示例，让同一 worker 依次识别两张样例 PNG。将文字与文件名一并显示，检查结果对应关系后释放 worker。",
+          "maintenance": "核查时仓库未归档。默认分支提交 a1ca80d9 的提交日期为 2026-05-17（UTC）。"
+        }
+      }
+    ]
   }
 ];
