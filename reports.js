@@ -5547,5 +5547,184 @@ window.REPORTS = [
         }
       }
     ]
+  },
+  {
+    "date": "2026-11-28",
+    "checkedAt": "2026-11-28 13:44–13:45",
+    "pick": {
+      "en": "A library directory can start as a CSV in kepler.gl. Use Turf.js to count branches inside each district, or Leaflet to publish a simple locator with opening hours. MapLibre GL JS gives you control over how a basemap changes with zoom. Choose deck.gl when selecting a point should update a custom view in your application.",
+      "zh": "一份图书馆名录可以先作为 CSV 导入 kepler.gl。要统计各区分馆数，可用 Turf.js；要发布能查开放时间的地点图，可用 Leaflet。MapLibre GL JS 适合控制底图在缩放时显示的细节；如果选中地点还要更新应用中的自定义视图，可选 deck.gl。"
+    },
+    "note": {
+      "en": "Star counts are exact GitHub API snapshots for the five selected repositories. All exceed 10,000 stars and are new to the preceding 30 days of this archive. Previous-day counts for these repositories were unavailable, so daily gains cannot be calculated. Official sources support the feature descriptions and activity dates. The library examples and trial times are editorial suggestions, with no installation or performance testing.",
+      "zh": "星标为核查时 GitHub API 对五个入选仓库的精确快照，均超过一万星，过去 30 天的日报中均未出现。缺少这些仓库前一天的星标快照，无法计算日增量。功能说明和活动日期来自官方资料；图书馆示例和试用时长为编辑建议，本次未安装或实测性能。"
+    },
+    "projects": [
+      {
+        "name": "Leaflet",
+        "repo": "Leaflet/Leaflet",
+        "stars": 46004,
+        "approx": false,
+        "evidence": "https://github.com/Leaflet/Leaflet/commit/3701e81adcc1aedf18970c662dda0d14780c040b",
+        "en": {
+          "category": "Web maps · Basic HTML and JavaScript",
+          "tagline": "Put a short list of places on a map people can click.",
+          "use": "Add a tile layer to a web page, place markers at known coordinates and attach a popup to each marker. A visitor can pan, zoom and open the details on a phone or desktop.",
+          "why": "Choose it when a reader needs to find one place among a handful and read a few facts about it.",
+          "help": [
+            "Mark three public libraries and show opening hours on click.",
+            "Mark two park entrances and explain which one has a step-free path."
+          ],
+          "fit": "BSD-2-Clause browser library. A static page is enough for a small map. Tile services have separate terms, attribution and possible fees. A table is easier to scan if readers only need opening hours.",
+          "try": "Allow 15 minutes. Adapt the official quick start to three libraries. Set each marker using latitude then longitude, add its name and hours, and check every popup at phone width.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 3701e81a has a commit date of 2026-11-27 UTC."
+        },
+        "zh": {
+          "category": "网页地图 · 需 HTML 和 JavaScript 基础",
+          "tagline": "把地点清单做成可点击的地图。",
+          "use": "在网页中加入瓦片底图，按已知坐标放置标记，为每个标记添加弹窗。访客可用手机或电脑平移、缩放并查看详情。",
+          "why": "如果读者只需从几个地点中找到一个并查看详情，用它就能做出简洁的地图。",
+          "help": [
+            "标出三家公共图书馆，点击后显示开放时间。",
+            "标出公园两个入口，说明哪个入口设有无台阶步道。"
+          ],
+          "fit": "采用 BSD-2-Clause 许可。小地图可放在静态网页上。瓦片服务的使用条款、署名要求和费用另计；若读者只需比较开放时间，表格更方便。",
+          "try": "预留 15 分钟。将官方快速入门示例改为三家图书馆，按纬度、经度的顺序设置标记，添加馆名和开放时间，再以手机屏宽逐个检查弹窗。",
+          "maintenance": "核查时仓库未归档，默认分支提交 3701e81a 的提交日期为 2026-11-27（UTC）。"
+        }
+      },
+      {
+        "name": "MapLibre GL JS",
+        "repo": "maplibre/maplibre-gl-js",
+        "stars": 12195,
+        "approx": false,
+        "evidence": "https://github.com/maplibre/maplibre-gl-js/commit/97126afc028b372172a36bd2006e334c927aadea",
+        "en": {
+          "category": "Vector maps · JavaScript and map styles",
+          "tagline": "Choose what readers see as they zoom from a city to a street.",
+          "use": "The browser renders vector tiles with GPU acceleration. A style defines the data sources and drawing layers, including how colors and symbols change with zoom.",
+          "why": "It fits a map with a deliberate visual hierarchy, where adding every label to the citywide view would obscure the main subject.",
+          "help": [
+            "Keep park outlines visible across the city and reveal entrance labels at street scale.",
+            "Use a muted base style so a cycle-route overlay remains legible."
+          ],
+          "fit": "Open-source browser library. Budget separately for licensed tiles, fonts, hosting and traffic. The device needs compatible graphics support. A small set of fixed markers seldom needs a custom vector style.",
+          "try": "Allow 25 minutes. Start from the official display-a-map example. Add three park entrances as a GeoJSON source, give them a circle layer and set a minimum zoom. Zoom across the threshold twice to verify when the circles appear.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 97126afc has a commit date of 2026-11-27 UTC."
+        },
+        "zh": {
+          "category": "矢量地图 · 需 JavaScript 和地图样式基础",
+          "tagline": "决定读者从全城放大到街道时能看到哪些细节。",
+          "use": "浏览器借助 GPU 加速绘制矢量瓦片。样式文件定义数据源和绘制图层，可随缩放级别改变颜色与符号。",
+          "why": "如果地图需要明确的信息层级，且全城视图中显示所有标签会遮住主题，可选它。",
+          "help": [
+            "全城范围显示公园轮廓，放大到街道时再显示入口名称。",
+            "调淡底图，让叠加的自行车路线更清晰。"
+          ],
+          "fit": "开源浏览器库。瓦片与字体授权、托管和流量需单独核算，设备需支持相应图形功能。只展示少数固定标记时，通常无需专门制作矢量样式。",
+          "try": "预留 25 分钟。从官方基础地图示例开始，用 GeoJSON 加入三个公园入口，设置圆点图层及最低显示级别。在该级别上下缩放两次，确认圆点何时出现。",
+          "maintenance": "核查时仓库未归档，默认分支提交 97126afc 的提交日期为 2026-11-27（UTC）。"
+        }
+      },
+      {
+        "name": "Turf.js",
+        "repo": "Turfjs/turf",
+        "stars": 10558,
+        "approx": false,
+        "evidence": "https://github.com/Turfjs/turf/commit/938a6c6318b444636e086985c0d29cec19f5329b",
+        "en": {
+          "category": "Spatial analysis · JavaScript and GeoJSON",
+          "tagline": "Answer a geographic question before deciding how to draw the result.",
+          "use": "Turf provides modular operations on GeoJSON, including distance, area and point-in-polygon tests. Results can feed a table, a map layer or another calculation.",
+          "why": "Use it when a map suggests an answer but the report needs a count that someone else can reproduce.",
+          "help": [
+            "Count public libraries inside a district boundary.",
+            "Calculate the straight-line distance between park entrances as a first comparison."
+          ],
+          "fit": "MIT-licensed library for browsers and Node.js. Small local GeoJSON inputs need no map service. Coordinates use longitude then latitude. Straight-line distance cannot establish walking time, and a boundary point needs a counting rule.",
+          "try": "Allow 20 minutes. Draw a rectangular district, then place one point inside, one outside and one on an edge. Run booleanPointInPolygon twice with ignoreBoundary set to false and true. Record which count matches your report’s definition.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 938a6c63 has a commit date of 2026-11-17 UTC."
+        },
+        "zh": {
+          "category": "空间分析 · 需 JavaScript 和 GeoJSON 基础",
+          "tagline": "先算清地点之间的关系，再决定如何展示。",
+          "use": "Turf 对 GeoJSON 提供模块化运算，包括距离、面积及点是否落在多边形中的判断。结果可以用于表格、地图图层或后续计算。",
+          "why": "当地图上大致能看出答案，而报告需要可复算的数量时，它能把判断写成明确规则。",
+          "help": [
+            "统计行政区边界内的公共图书馆数量。",
+            "计算公园入口之间的直线距离，作为初步比较。"
+          ],
+          "fit": "采用 MIT 许可，支持浏览器和 Node.js。小型本地 GeoJSON 无需地图服务。坐标顺序为经度、纬度。直线距离无法推算实际步行时间；边界上的点也需要明确统计规则。",
+          "try": "预留 20 分钟。画一个矩形区域，在内部、外部和边线上各放一个点。分别将 ignoreBoundary 设为 false 和 true，运行 booleanPointInPolygon，记录哪种计数符合报告口径。",
+          "maintenance": "核查时仓库未归档，默认分支提交 938a6c63 的提交日期为 2026-11-17（UTC）。"
+        }
+      },
+      {
+        "name": "kepler.gl",
+        "repo": "keplergl/kepler.gl",
+        "stars": 12116,
+        "approx": false,
+        "evidence": "https://github.com/keplergl/kepler.gl/commit/3012621955e6e14a46cf88d796c62bc328ccd5d7",
+        "en": {
+          "category": "Map exploration · Browser interface",
+          "tagline": "Explore a table of locations before writing an application.",
+          "use": "Load location data into the web app, choose layers and fields, and apply filters. Its interface uses MapLibre GL and deck.gl for rendering and spatial aggregation.",
+          "why": "A good starting point for someone with a CSV who needs to inspect a pattern and discuss it with a colleague.",
+          "help": [
+            "Filter library branches by weekend opening and inspect which areas still have a branch.",
+            "Inspect a citywide point cloud for a stray coordinate before publishing the dataset."
+          ],
+          "fit": "MIT-licensed application accessible in a browser. Large imports consume memory and graphics resources. Hosting and basemap services may add costs. A visual cluster alone cannot explain why facilities are distributed that way.",
+          "try": "Allow 15–20 minutes. Load a sample CSV with name, latitude, longitude and a weekend flag. Create a point layer, filter the flag, and check three displayed records against their source rows.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 30126219 has a commit date of 2026-11-28 UTC."
+        },
+        "zh": {
+          "category": "地图探索 · 图形界面",
+          "tagline": "在开发应用之前，先用地图查看一张地点表。",
+          "use": "在网页应用中加载地点数据，选择图层和字段并添加筛选条件。其界面使用 MapLibre GL 和 deck.gl 绘制地图并进行空间聚合。",
+          "why": "如果手头已有 CSV，想先看数据分布并和同事讨论，适合从这里入手。",
+          "help": [
+            "筛选周末开放的分馆，查看哪些区域仍有服务点。",
+            "发布地点数据前，先在全城点位图上查找偏离城区的异常坐标。"
+          ],
+          "fit": "采用 MIT 许可，可通过浏览器使用。大文件导入会占用内存和图形资源，托管与底图服务可能另收费。视觉上的聚集无法单独解释设施分布的原因。",
+          "try": "预留 15–20 分钟。导入含名称、纬度、经度和周末开放标记的示例 CSV。建立点图层，按周末标记筛选，再抽取三个显示点与源表逐行核对。",
+          "maintenance": "核查时仓库未归档，默认分支提交 30126219 的提交日期为 2026-11-28（UTC）。"
+        }
+      },
+      {
+        "name": "deck.gl",
+        "repo": "visgl/deck.gl",
+        "stars": 14833,
+        "approx": false,
+        "evidence": "https://github.com/visgl/deck.gl/commit/0f9cff09b26d274d7a4e14f9482bcfe76f851b41",
+        "en": {
+          "category": "GPU visualization · JavaScript",
+          "tagline": "Give a web application direct control over dense map layers.",
+          "use": "Bind data records to layers such as points or polygons. Accessor functions determine position, color and size. Picking identifies the record under the pointer for a detail panel or tooltip.",
+          "why": "Choose it when a custom interaction must connect a map mark back to the application’s own data.",
+          "help": [
+            "Size library markers by annual visits and display the exact count on hover.",
+            "Overlay district polygons with branch points and show the selected branch in a side panel."
+          ],
+          "fit": "MIT-licensed JavaScript framework. It needs a supported browser and graphics backend. Test memory use and responsiveness on the intended device as data grows. For a small static locator its layer configuration adds work.",
+          "try": "Allow 25–30 minutes in a prepared JavaScript project. Adapt a ScatterplotLayer example to five branches. Enable picking and display the branch name and visits, then check the two closest points against their records.",
+          "maintenance": "The repository was unarchived at review time. Default branch commit 0f9cff09 has a commit date of 2026-11-28 UTC."
+        },
+        "zh": {
+          "category": "GPU 可视化 · 需 JavaScript 基础",
+          "tagline": "在网页应用中用代码控制密集的地图图层。",
+          "use": "将记录绑定到点或多边形等图层，通过函数指定位置、颜色和大小。拾取功能能识别指针所在的记录，供详情面板或提示框使用。",
+          "why": "如果需要把地图上选中的标记与应用内部的数据记录联动，可选择它。",
+          "help": [
+            "按年到访量设置图书馆标记大小，悬停时显示准确数值。",
+            "叠加行政区多边形和分馆点，在侧栏显示选中分馆的信息。"
+          ],
+          "fit": "采用 MIT 许可，需要受支持的浏览器和图形后端。数据量增加时，应在目标设备上检查内存占用和响应速度。只制作小型静态地点图时，配置图层会增加工作量。",
+          "try": "在已配置的 JavaScript 项目中预留 25–30 分钟。把 ScatterplotLayer 示例改成五个分馆，启用拾取并显示馆名与到访量。选择相距最近的两个点，分别与原始记录核对。",
+          "maintenance": "核查时仓库未归档，默认分支提交 0f9cff09 的提交日期为 2026-11-28（UTC）。"
+        }
+      }
+    ]
   }
 ];
